@@ -17,14 +17,14 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero, elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim. Curabitur mattis vulputate dui, tincidunt varius libero luctus eu. Mauris mauris nulla, scelerisque eget massa id, tincidunt congue felis. Sed convallis tempor ipsum rhoncus viverra. Pellentesque nulla orci, accumsan volutpat fringilla vitae, maximus sit amet tortor. Aliquam ultricies odio ut volutpat scelerisque. Donec nisl nisl, porttitor vitae pharetra quis, fringilla sed mi. Fusce pretium dolor ut aliquam consequat. Cras volutpat, tellus accumsan mattis molestie, nisl lacus tempus massa, nec malesuada tortor leo vel quam. Aliquam vel ex consectetur, vehicula leo nec, efficitur eros. Donec convallis non urna quis feugiat.
+Zixiang Xu (徐子翔) is an undergraduate student in the Computer Science College at Sichuan University, expected to graduate in June 2026 under the supervision of [Prof. Qijun Zhao](https://scholar.google.com/citations?user=c2fckoYAAAAJ&hl=en). Currently, his research interests are in large language models (LLMs) and multimodal models, particularly language agents and trustworthy AI.
 
-My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
+Previously, Zixiang participated in a summer research program at MIT, where he completed his first first-author paper under the guidance of [Prof. Elenna R Dugundji](https://scholar.google.com/citations?user=zNOQUvkAAAAJ&hl=en). He also has a semester of research internship experience at the Microsoft (Asia) Internet Engineering Institute, focusing on Visual Language Models (VLMs).
 
-
+> Actively seeking a research internship opportunity with a strong determination to apply for a PhD program in Fall 2026.
 # 🔥 News
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2024.07*: &nbsp;🎉🎉 One paper has been accepted by ACM MM 2024!. 
+> *Every grand ambition starts with a humble beginning—one day, this place will be filled with news.*
 
 # 📝 Publications 
 
