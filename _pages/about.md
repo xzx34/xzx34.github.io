@@ -38,7 +38,7 @@ Yikuan Hu\*, Wei Zhang\*, Xinyu Yang\*, Zixiang Xu\*, Guo Li\*, Nikolay Aristov,
 
 </div></div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACM MM 2024</div><img src='GenUDC.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACM MM 2024</div><img src='images/GenUDC.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [GenUDC: High Quality 3D Mesh Generation With Unsigned Dual Contouring Representation]()
@@ -51,10 +51,22 @@ Ruowei Wang, Jiaqi Li, Dan Zeng, Xueqi Ma, Xu Zixiang, Jianwei Zhang, Qijun Zhao
 
 
 # 🎖 Honors and Awards
-- *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- **Silver Medal, National Olympiad in Informatics (NOI) 2020**
+- **Gold Medal, 2022 ICPC Jinan Regional Contest**
+- First Prize, National Olympiad in Informatics in Provinces (NOIP) 2021, 6th Place in Hubei Province
+- Silver Medal, National Olympiad in Informatics Winter Camp (NOI WC) 2021
+- Bronze Medal, Asia-Pacific Informatics Olympiad (APIO) 2020
+- Silver Medal, 2022 ICPC Nanjing Regional Contest
+- Bronze Medal, 2022 ICPC East Continent Final
+- Silver Medal, 2022 China Collegiate Programming Contest (CCPC) Guangzhou Site
+- Gold Medal, 2022 ACM Provincial Contest, 3rd Place in Sichuan Province
+- Gold Medal, 2023 ACM Provincial Contest, 2nd Place in Sichuan Province
+- First Prize, CSP-S 2019
+- First Prize, CSP-S 2020
+- First Prize, CSP-S 2021
 
-# 📖 Educations
+
+<!-- # 📖 Educations
 - *2019.06 - 2022.04 (now)*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 - *2015.09 - 2019.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 
@@ -63,4 +75,4 @@ Ruowei Wang, Jiaqi Li, Dan Zeng, Xueqi Ma, Xu Zixiang, Jianwei Zhang, Qijun Zhao
 - *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/)
 
 # 💻 Internships
-- *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
+- *2019.05 - 2020.02*, [Lorem](https://github.com/), China. -->
