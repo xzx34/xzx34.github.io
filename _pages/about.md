@@ -29,16 +29,16 @@ Previously, Zixiang participated in a summer research program at MIT, where he c
 
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TRB 2024 under review</div><img src='images/IRL.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Temporal-IRL: Modeling Port Congestion and Berth Scheduling with Inverse Reinforcement Learning]()
 
-Yikuan Hu*, Wei Zhang*, Xinyu Yang*, Zixiang Xu*, Guo Li*, Nikolay Aristov, Mingjie Tang, Elenna R Dugundji(*: Equal contribution)
+Yikuan Hu\*, Wei Zhang\*, Xinyu Yang\*, Zixiang Xu\*, Guo Li\*, Nikolay Aristov, Mingjie Tang, Elenna R Dugundji(\*: Equal contribution)
 
 </div></div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACM MM 2024</div><img src='GenUDC.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [GenUDC: High Quality 3D Mesh Generation With Unsigned Dual Contouring Representation]()
