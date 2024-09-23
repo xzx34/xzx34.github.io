@@ -22,6 +22,7 @@ Zixiang Xu (徐子翔) is an undergraduate student in the Computer Science Colle
 Previously, Zixiang participated in a summer research program at MIT, where he completed his first first-author paper under the guidance of [Prof. Elenna R Dugundji](https://scholar.google.com/citations?user=zNOQUvkAAAAJ&hl=en). He also has a semester of research internship experience at the Microsoft (Asia) Internet Engineering Institute, focusing on Visual Language Models (VLMs).
 
 > Actively seeking a research internship opportunity with a strong determination to apply for a PhD program in Fall 2026.
+
 # 🔥 News
 - *2024.07*: &nbsp;🎉🎉 One paper has been accepted by ACM MM 2024!. 
 > *Every grand ambition starts with a humble beginning—one day, this place will be filled with news.*
