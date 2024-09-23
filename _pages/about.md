@@ -50,7 +50,10 @@ Ruowei Wang, Jiaqi Li, Dan Zeng, Xueqi Ma, Xu Zixiang, Jianwei Zhang, Qijun Zhao
 - [Text-Based Face Retrieval: Methods and Challenges.](), Yuchuan Deng, Qijun Zhao, Zhanpeng Hu, Zixiang Xu. CCBR 2023(Oral).
 
 
-# 🎖 Honors and Awards
+# 🎖 ACM and OI Awards
+Began studying algorithm competitions under the mentorship of Coach Xiang Qizhong at The No.1 Middle School Affiliated To Central China Normal University  in August 2019, achieving a silver medal at the NOI in July 2020. 
+In my first year at Sichuan University, I joined the ACM training team and secured a gold medal in my very first ICPC competition. Considering the limited competition slots available at the university, I subsequently decided to retire.
+The awards I have received include:
 - **Silver Medal, National Olympiad in Informatics (NOI) 2020**
 - **Gold Medal, 2022 ICPC Jinan Regional Contest**
 - First Prize, National Olympiad in Informatics in Provinces (NOIP) 2021, 6th Place in Hubei Province
