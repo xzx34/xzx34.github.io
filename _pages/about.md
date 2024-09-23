@@ -19,7 +19,7 @@ redirect_from:
 
 Zixiang Xu (徐子翔) is an undergraduate student in the Computer Science College at Sichuan University, expected to graduate in June 2026 under the supervision of [Prof. Qijun Zhao](https://scholar.google.com/citations?user=c2fckoYAAAAJ&hl=en). Currently, his research interests are in large language models (LLMs) and multimodal models, particularly language agents and trustworthy AI.
 
-Previously, Zixiang participated in a summer research program at MIT, where he completed his first first-author paper under the guidance of [Prof. Elenna R Dugundji](https://scholar.google.com/citations?user=zNOQUvkAAAAJ&hl=en). He also has a semester of research internship experience at the Microsoft (Asia) Internet Engineering Institute, focusing on Visual Language Models (VLMs).
+Previously, Zixiang participated in a summer research program at Massachusetts Institute of Technology, where he completed his first first-author paper under the guidance of [Prof. Elenna R Dugundji](https://scholar.google.com/citations?user=zNOQUvkAAAAJ&hl=en). He also has a semester of research internship experience at the Microsoft (Asia) Internet Engineering Institute, focusing on Visual Language Models (VLMs).
 
 > Actively seeking a research internship opportunity with a strong determination to apply for a PhD program in Fall 2026.
 
