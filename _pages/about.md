@@ -36,12 +36,16 @@ Previously, Zixiang participated in a summer research program at MIT, where he c
 
 Yikuan Hu*, Wei Zhang*, Xinyu Yang*, Zixiang Xu*, Guo Li*, Nikolay Aristov, Mingjie Tang, Elenna R Dugundji(*: Equal contribution)
 
+</div></div>
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [GenUDC: High Quality 3D Mesh Generation With Unsigned Dual Contouring Representation]()
 
 Ruowei Wang, Jiaqi Li, Dan Zeng, Xueqi Ma, Xu Zixiang, Jianwei Zhang, Qijun Zhao
+
+</div></div>
 
 - [Text-Based Face Retrieval: Methods and Challenges.](), Yuchuan Deng, Qijun Zhao, Zhanpeng Hu, Zixiang Xu. CCBR 2023(Oral).
 
