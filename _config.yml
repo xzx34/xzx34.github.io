@@ -23,7 +23,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "Zixiang Xu"
   avatar           : "images/zp.jpg"
-  bio              : "Sichuan University"
+  bio              : #"Sichuan University"
   location         : "Chengdu, China"
   employer         :
   pubmed           : 
