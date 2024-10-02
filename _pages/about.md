@@ -17,7 +17,9 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Zixiang Xu (徐子翔) is an undergraduate student in the Computer Science College at Sichuan University, expected to graduate in June 2026 under the supervision of [Prof. Qijun Zhao](https://scholar.google.com/citations?user=c2fckoYAAAAJ&hl=en). Currently, his research interests are in large language models (LLMs) and multimodal models, particularly language agents and trustworthy AI.
+<!-- Zixiang Xu (徐子翔) is an undergraduate student in the Computer Science College at Sichuan University, expected to graduate in June 2026 under the supervision of [Prof. Qijun Zhao](https://scholar.google.com/citations?user=c2fckoYAAAAJ&hl=en). Currently, his research interests are in large language models (LLMs) and multimodal models, particularly language agents and trustworthy AI. -->
+
+Zixiang Xu (徐子翔) is an undergraduate student in the Computer Science College, expected to graduate in June 2026. Currently, his research interests are in large language models (LLMs) and multimodal models, particularly language agents and trustworthy AI.
 
 Previously, Zixiang participated in a summer research program at Massachusetts Institute of Technology, where he completed his first first-author paper under the guidance of [Prof. Elenna R Dugundji](https://scholar.google.com/citations?user=zNOQUvkAAAAJ&hl=en). He also has a semester of research internship experience at the Microsoft (Asia) Internet Engineering Institute, focusing on Visual Language Models (VLMs).
 
@@ -53,7 +55,7 @@ Ruowei Wang, Jiaqi Li, Dan Zeng, Xueqi Ma, Xu Zixiang, Jianwei Zhang, Qijun Zhao
 
 # 🎖 ACM and OI Awards
 Began studying algorithm competitions under the mentorship of Coach Xiang Qizhong at The No.1 Middle School Affiliated To Central China Normal University  in August 2019, achieving a silver medal at the NOI in July 2020. 
-In my first year at Sichuan University, I joined the ACM training team and secured a gold medal in my very first ICPC competition. Considering the limited competition slots available at the university, I subsequently decided to retire.
+In my first year at university, I joined the ACM training team and secured a gold medal in my very first ICPC competition. Considering the limited competition slots available at the university, I subsequently decided to retire.
 The awards I have received include:
 - **Silver Medal, National Olympiad in Informatics (NOI) 2020**
 - **Gold Medal, 2022 ICPC Jinan Regional Contest**
