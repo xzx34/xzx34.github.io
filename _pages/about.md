@@ -24,12 +24,13 @@ Previously, Zixiang participated in a summer research program at Massachusetts I
 > Actively seeking a research internship opportunity with a strong determination to apply for a PhD program in Fall 2026.
 
 # 🔥 News
+- *2024.10*: &nbsp;🎉🎉 One paper has been accepted by TRB 2024!. 
 - *2024.07*: &nbsp;🎉🎉 One paper has been accepted by ACM MM 2024!. 
 > *Every grand ambition starts with a humble beginning—one day, this place will be filled with news.*
 
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TRB 2024 under review</div><img src='images/IRL.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TRB 2024</div><img src='images/IRL.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Temporal-IRL: Modeling Port Congestion and Berth Scheduling with Inverse Reinforcement Learning]()
