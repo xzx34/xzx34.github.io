@@ -66,8 +66,9 @@ The awards I have received include:
 - Gold Medal, 2022 ACM Provincial Contest, 3rd Place in Sichuan Province
 - Gold Medal, 2023 ACM Provincial Contest, 2nd Place in Sichuan Province
 - First Prize, CSP-S 2019
-- First Prize, CSP-S 2020
+- First Prize, CSP-S 2020, 2th Place in Hubei Province
 - First Prize, CSP-S 2021
+- CCF Elite Collegiate Award 2024
 
 
 # 📖 Educations
