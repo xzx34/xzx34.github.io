@@ -71,8 +71,8 @@ The awards I have received include:
 - CCF Elite Collegiate Award 2024
 
 
-# 📖 Educations
-- *2022.09 - 2026.06 (Expected)*, B.S. Candidate in Computer Science(**Top Student Program**), <img src='images/scu.png' style='width: 1.2em;'> [Sichuan University](https://www.scu.edu.cn/) 
+<!-- # 📖 Educations
+- *2022.09 - 2026.06 (Expected)*, B.S. Candidate in Computer Science(**Top Student Program**), <img src='images/scu.png' style='width: 1.2em;'> [Sichuan University](https://www.scu.edu.cn/)  -->
 
 
 <!-- 
