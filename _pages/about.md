@@ -32,6 +32,14 @@ Previously, Zixiang was a summer research student at the Massachusetts Institute
 
 # 📝 Publications 
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TRB 2024</div><img src='images/CLP.pdf' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Cross-Lingual Pitfalls: Automatic Probing Cross-Lingual Weakness of Multilingual Large Language Models](https://github.com/xzx34/Cross-Lingual-Pitfalls)
+Zixiang Xu\*, Yanbo Wang\*, Yue Huang\*, Xiuying Chen, Jieyu Zhao, Meng Jiang, Xiangliang Zhang (\*: Equal Contribution).
+
+</div></div>
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">TRB 2024</div><img src='images/CDV.pdf' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
@@ -53,33 +61,35 @@ Yikuan Hu\*, Wei Zhang\*, Xinyu Yang\*, Zixiang Xu\*, Guo Li\*, Nikolay Aristov,
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACM MM 2024</div><img src='images/GenUDC.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[GenUDC: High Quality 3D Mesh Generation With Unsigned Dual Contouring Representation]()
+[GenUDC: High Quality 3D Mesh Generation With Unsigned Dual Contouring Representation](https://arxiv.org/abs/2410.17802)
 
 Ruowei Wang, Jiaqi Li, Dan Zeng, Xueqi Ma, Xu Zixiang, Jianwei Zhang, Qijun Zhao
 
 </div></div>
 
-- [Text-Based Face Retrieval: Methods and Challenges.](), Yuchuan Deng, Qijun Zhao, Zhanpeng Hu, Zixiang Xu. CCBR 2023(Oral).
+- [MTFusion: Reconstructing Any 3D Object from Single Image Using Multi-word Textual Inversion](https://link.springer.com/chapter/10.1007/978-981-97-8508-7_12), Yu Liu, Ruowei Wang, Jiaqi Li, Zixiang Xu, Zixiang Xu, Qijun Zhao.  PRCV 2024 (oral).
+
+- [Text-Based Face Retrieval: Methods and Challenges](https://dl.acm.org/doi/10.1007/978-981-99-8565-4_15), Yuchuan Deng, Qijun Zhao, Zhanpeng Hu, Zixiang Xu. CCBR 2023(Oral).
 
 
-# 🎖 ACM and OI Awards
-Began studying algorithm competitions under the mentorship of Coach Xiang Qizhong at The No.1 Middle School Affiliated To Central China Normal University  in August 2019, achieving a silver medal at the NOI in July 2020. 
-In my first year at university, I joined the ACM training team and secured a gold medal in my very first ICPC competition. Considering the limited competition slots available at the university, I subsequently decided to retire.
-The awards I have received include:
-- **Silver Medal, National Olympiad in Informatics (NOI) 2020**
-- **Gold Medal, 2022 ICPC Jinan Regional Contest**
-- First Prize, National Olympiad in Informatics in Provinces (NOIP) 2021, 6th Place in Hubei Province
-- Silver Medal, National Olympiad in Informatics Winter Camp (NOI WC) 2021
-- Bronze Medal, Asia-Pacific Informatics Olympiad (APIO) 2020
-- Silver Medal, 2022 ICPC Nanjing Regional Contest
-- Bronze Medal, 2022 ICPC East Continent Final
-- Silver Medal, 2022 China Collegiate Programming Contest (CCPC) Guangzhou Site
-- Gold Medal, 2022 ACM Provincial Contest, 3rd Place in Sichuan Province
-- Gold Medal, 2023 ACM Provincial Contest, 2nd Place in Sichuan Province
-- First Prize, CSP-S 2019
-- First Prize, CSP-S 2020, 2th Place in Hubei Province
-- First Prize, CSP-S 2021
-- CCF Elite Collegiate Award 2024
+# 🎖 Honors and Awards
+
+### Major Awards
+- **CCF Elite Collegiate Award** *(2024)*
+- **Gold Medal, ACM-ICPC Asia Jinan Regional Contest** *(2022)*
+- **Silver Medal, National Olympiad in Informatics (NOI)** *(2020)*
+- **Bronze Medal, ACM-ICPC Asia-East Continent Final Contest** *(2022)*
+
+### Other Honors
+- **First Prize, National Olympiad in Informatics in Provinces (NOIP)** *(2021)* - *6th Place in Hubei Province*
+- **Silver Medal, National Olympiad in Informatics Winter Camp (NOI WC)** *(2021)*
+- **Bronze Medal, Asia-Pacific Informatics Olympiad (APIO)** *(2020)*
+- **Silver Medal, ICPC Nanjing Regional Contest** *(2022)*
+- **Bronze Medal, ICPC East Continent Final** *(2022)*
+- **Silver Medal, China Collegiate Programming Contest (CCPC)** *(2022)*
+- **Gold Medal, ACM Provincial Contest** *(2022)* - *3rd Place in Sichuan Province*
+- **Gold Medal, ACM Provincial Contest** *(2023)* - *2nd Place in Sichuan Province*
+- **First Prize, CSP-S** *(2019, 2020, 2021)*
 
 
 <!-- # 📖 Educations
