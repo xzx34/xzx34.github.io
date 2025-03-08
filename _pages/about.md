@@ -19,11 +19,11 @@ redirect_from:
 
 <!-- Zixiang Xu (徐子翔) is an undergraduate student in the Computer Science College at Sichuan University, expected to graduate in June 2026 under the supervision of [Prof. Qijun Zhao](https://scholar.google.com/citations?user=c2fckoYAAAAJ&hl=en). Currently, his research interests are in large language models (LLMs) and multimodal models, particularly language agents and trustworthy AI. -->
 
-Zixiang Xu (徐子翔) is an undergraduate student in the Computer Science College, expected to graduate in June 2026. Currently, his research interests are in large language models (LLMs) and multimodal models, particularly language agents and trustworthy AI.
+Zixiang Xu (徐子翔) is an undergraduate student at the College of Computer Science, and a visiting student at MBZUAI under the supervision of [Prof. Xiuying Chen](https://iriscxy.github.io/). He is expected to graduate in June 2026. His current research interests lie in AI alignment and AI4Science.  
 
-Previously, Zixiang participated in a summer research program at Massachusetts Institute of Technology, where he completed his first first-author paper under the guidance of [Prof. Elenna R Dugundji](https://scholar.google.com/citations?user=zNOQUvkAAAAJ&hl=en). He also has a semester of research internship experience at the Microsoft (Asia) Internet Engineering Institute, focusing on Visual Language Models (VLMs).
+Previously, Zixiang was a summer research student at the Massachusetts Institute of Technology (MIT), where he worked under the guidance of [Prof. Elenna R. Dugundji](https://scholar.google.com/citations?user=zNOQUvkAAAAJ&hl=en). Additionally, he completed a research internship at the Microsoft (Asia) Internet Engineering Institute, focusing on Visual Language Models (VLMs).  
 
-> Actively seeking a research internship opportunity with a strong determination to apply for a PhD program in Fall 2026.
+> Actively seeking research internship opportunities, with a strong determination to apply for a PhD program in Fall 2026.  
 
 # 🔥 News
 - *2024.10*: &nbsp;🎉🎉 One paper has been accepted by TRB 2024!. 
@@ -31,6 +31,15 @@ Previously, Zixiang participated in a summer research program at Massachusetts I
 > *Every grand ambition starts with a humble beginning—one day, this place will be filled with news.*
 
 # 📝 Publications 
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TRB 2024</div><img src='images/CDV.pdf' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Breaking Focus: Contextual Distraction Curse in Large Language Models](https://arxiv.org/abs/2502.01609)
+Yanbo Wang\*, Zixiang Xu\*, Yue Huang\*, Chujie Gao, Siyuan Wu, Jiayi Ye, Xiuying Chen, Pin-Yu Chen, Xiangliang Zhang (\*: Equal Contribution).
+
+</div></div>
+
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">TRB 2024</div><img src='images/IRL.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
