@@ -32,7 +32,7 @@ Previously, Zixiang was a summer research student at the Massachusetts Institute
 
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TRB 2024</div><img src='images/CLP.pdf' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images/CLP.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Cross-Lingual Pitfalls: Automatic Probing Cross-Lingual Weakness of Multilingual Large Language Models](https://github.com/xzx34/Cross-Lingual-Pitfalls)
@@ -40,7 +40,7 @@ Zixiang Xu\*, Yanbo Wang\*, Yue Huang\*, Xiuying Chen, Jieyu Zhao, Meng Jiang, X
 
 </div></div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TRB 2024</div><img src='images/CDV.pdf' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR workshop 2025</div><img src='images/CDV.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Breaking Focus: Contextual Distraction Curse in Large Language Models](https://arxiv.org/abs/2502.01609)
