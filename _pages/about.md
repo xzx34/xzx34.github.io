@@ -36,7 +36,8 @@ Previously, Zixiang was a summer research student at the Massachusetts Institute
 <div class='paper-box-text' markdown="1">
 
 [Cross-Lingual Pitfalls: Automatic Probing Cross-Lingual Weakness of Multilingual Large Language Models](https://github.com/xzx34/Cross-Lingual-Pitfalls)
-Zixiang Xu\*, Yanbo Wang\*, Yue Huang\*, Xiuying Chen, Jieyu Zhao, Meng Jiang, Xiangliang Zhang (\*: Equal Contribution).
+
+**Zixiang Xu\***, Yanbo Wang\*, Yue Huang\*, Xiuying Chen, Jieyu Zhao, Meng Jiang, Xiangliang Zhang (\*: Equal Contribution).
 
 </div></div>
 
@@ -44,7 +45,8 @@ Zixiang Xu\*, Yanbo Wang\*, Yue Huang\*, Xiuying Chen, Jieyu Zhao, Meng Jiang, X
 <div class='paper-box-text' markdown="1">
 
 [Breaking Focus: Contextual Distraction Curse in Large Language Models](https://arxiv.org/abs/2502.01609)
-Yanbo Wang\*, Zixiang Xu\*, Yue Huang\*, Chujie Gao, Siyuan Wu, Jiayi Ye, Xiuying Chen, Pin-Yu Chen, Xiangliang Zhang (\*: Equal Contribution).
+
+Yanbo Wang\*, **Zixiang Xu\***, Yue Huang\*, Chujie Gao, Siyuan Wu, Jiayi Ye, Xiuying Chen, Pin-Yu Chen, Xiangliang Zhang (\*: Equal Contribution).
 
 </div></div>
 
@@ -54,7 +56,7 @@ Yanbo Wang\*, Zixiang Xu\*, Yue Huang\*, Chujie Gao, Siyuan Wu, Jiayi Ye, Xiuyin
 
 [Temporal-IRL: Modeling Port Congestion and Berth Scheduling with Inverse Reinforcement Learning]()
 
-Yikuan Hu\*, Wei Zhang\*, Xinyu Yang\*, Zixiang Xu\*, Guo Li\*, Nikolay Aristov, Mingjie Tang, Elenna R Dugundji(\*: Equal contribution)
+Yikuan Hu\*, **Zixiang Xu\***, Wei Zhang\*, Xinyu Yang\*, Guo Li\*, Nikolay Aristov, Mingjie Tang, Elenna R Dugundji(\*: Equal contribution)
 
 </div></div>
 
@@ -63,13 +65,13 @@ Yikuan Hu\*, Wei Zhang\*, Xinyu Yang\*, Zixiang Xu\*, Guo Li\*, Nikolay Aristov,
 
 [GenUDC: High Quality 3D Mesh Generation With Unsigned Dual Contouring Representation](https://arxiv.org/abs/2410.17802)
 
-Ruowei Wang, Jiaqi Li, Dan Zeng, Xueqi Ma, Xu Zixiang, Jianwei Zhang, Qijun Zhao
+Ruowei Wang, Jiaqi Li, Dan Zeng, Xueqi Ma, **Xu Zixiang**, Jianwei Zhang, Qijun Zhao
 
 </div></div>
 
-- [MTFusion: Reconstructing Any 3D Object from Single Image Using Multi-word Textual Inversion](https://link.springer.com/chapter/10.1007/978-981-97-8508-7_12), Yu Liu, Ruowei Wang, Jiaqi Li, Zixiang Xu, Zixiang Xu, Qijun Zhao.  PRCV 2024 (oral).
+- [MTFusion: Reconstructing Any 3D Object from Single Image Using Multi-word Textual Inversion](https://link.springer.com/chapter/10.1007/978-981-97-8508-7_12), Yu Liu, Ruowei Wang, Jiaqi Li, **Zixiang Xu**, Zixiang Xu, Qijun Zhao.  PRCV 2024 (oral).
 
-- [Text-Based Face Retrieval: Methods and Challenges](https://dl.acm.org/doi/10.1007/978-981-99-8565-4_15), Yuchuan Deng, Qijun Zhao, Zhanpeng Hu, Zixiang Xu. CCBR 2023(Oral).
+- [Text-Based Face Retrieval: Methods and Challenges](https://dl.acm.org/doi/10.1007/978-981-99-8565-4_15), Yuchuan Deng, Qijun Zhao, Zhanpeng Hu, **Zixiang Xu**. CCBR 2023(Oral).
 
 
 # 🎖 Honors and Awards
