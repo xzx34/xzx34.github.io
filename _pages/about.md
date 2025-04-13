@@ -26,8 +26,9 @@ Previously, Zixiang was a summer research student at the Massachusetts Institute
 > Actively seeking research internship opportunities, with a strong determination to apply for a PhD program in Fall 2026.  
 
 # 🔥 News
-- *2024.10*: &nbsp;🎉🎉 One paper has been accepted by TRB 2024!. 
-- *2024.07*: &nbsp;🎉🎉 One paper has been accepted by ACM MM 2024!. 
+- *2025.03*: &nbsp;🎉🎉 One paper has been accepted by SynthData @ ICLR 2025!. (Workshop) 
+- *2024.10*: &nbsp;🎉🎉 Temporal-IRL has been accepted by TRB 2024!. (Poster)
+- *2024.07*: &nbsp;🎉🎉 GenUDC has been accepted by ACM MM 2024!. (Poster)
 > *Every grand ambition starts with a humble beginning—one day, this place will be filled with news.*
 
 # 📝 Publications 
@@ -69,7 +70,7 @@ Ruowei Wang, Jiaqi Li, Dan Zeng, Xueqi Ma, **Xu Zixiang**, Jianwei Zhang, Qijun 
 
 </div></div>
 
-- [MTFusion: Reconstructing Any 3D Object from Single Image Using Multi-word Textual Inversion](https://link.springer.com/chapter/10.1007/978-981-97-8508-7_12), Yu Liu, Ruowei Wang, Jiaqi Li, **Zixiang Xu**, Zixiang Xu, Qijun Zhao.  PRCV 2024 (oral).
+- [MTFusion: Reconstructing Any 3D Object from Single Image Using Multi-word Textual Inversion](https://link.springer.com/chapter/10.1007/978-981-97-8508-7_12), Yu Liu, Ruowei Wang, Jiaqi Li, **Zixiang Xu**, Qijun Zhao.  PRCV 2024 (oral).
 
 - [Text-Based Face Retrieval: Methods and Challenges](https://dl.acm.org/doi/10.1007/978-981-99-8565-4_15), Yuchuan Deng, Qijun Zhao, Zhanpeng Hu, **Zixiang Xu**. CCBR 2023(Oral).
 
