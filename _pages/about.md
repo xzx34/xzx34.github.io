@@ -26,6 +26,7 @@ Previously, Zixiang was a summer research student at the Massachusetts Institute
 > Actively seeking research internship opportunities, with a strong determination to apply for a PhD program in Fall 2026.  
 
 # 🔥 News
+- *2025.05*: &nbsp;🎉🎉 Cross-Lingual Pitfalls has been accepted by ACL 2025!. 
 - *2025.03*: &nbsp;🎉🎉 One paper has been accepted by SynthData @ ICLR 2025!. (Workshop) 
 - *2024.10*: &nbsp;🎉🎉 Temporal-IRL has been accepted by TRB 2024!. (Poster)
 - *2024.07*: &nbsp;🎉🎉 GenUDC has been accepted by ACM MM 2024!. (Poster)
@@ -33,7 +34,7 @@ Previously, Zixiang was a summer research student at the Massachusetts Institute
 
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images/CLP.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2025</div><img src='images/CLP.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Cross-Lingual Pitfalls: Automatic Probing Cross-Lingual Weakness of Multilingual Large Language Models](https://github.com/xzx34/Cross-Lingual-Pitfalls)
@@ -41,6 +42,25 @@ Previously, Zixiang was a summer research student at the Massachusetts Institute
 **Zixiang Xu\***, Yanbo Wang\*, Yue Huang\*, Xiuying Chen, Jieyu Zhao, Meng Jiang, Xiangliang Zhang (\*: Equal Contribution).
 
 </div></div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images/GTA.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[GTA: Graph Theory Agent and Benchmark for Algorithmic Graph Reasoning with LLMs](https://github.com/xzx34/GTA)  
+
+**Zixiang Xu**, Yanbo Wang, Chenxi Wang, Lang Gao, Zirui Song, Yue Huang, Zhaorun Chen, Xiangliang Zhang, Xiuying Chen  
+
+</div></div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images/socialmaze.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[SocialMaze: A Benchmark for Evaluating Social Reasoning in Large Language Models](https://github.com/xzx34/SocialMaze)  
+
+**Zixiang Xu**, Yanbo Wang, Yue Huang, Jiayi Ye, Haomin Zhuang, Zirui Song, Lang Gao, Chenxi Wang, Zhaorun Chen, Yujun Zhou, Sixian Li, Wang Pan, Yue Zhao, Jieyu Zhao, Xiangliang Zhang, Xiuying Chen  
+
+</div></div>
+
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR workshop 2025</div><img src='images/CDV.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
