@@ -95,6 +95,7 @@ Ruowei Wang, Jiaqi Li, Dan Zeng, Xueqi Ma, **Xu Zixiang**, Jianwei Zhang, Qijun 
 - [Text-Based Face Retrieval: Methods and Challenges](https://dl.acm.org/doi/10.1007/978-981-99-8565-4_15), Yuchuan Deng, Qijun Zhao, Zhanpeng Hu, **Zixiang Xu**. CCBR 2023(Oral).
 
 
+
 # 🎖 Honors and Awards
 
 ### Major Awards
@@ -113,6 +114,12 @@ Ruowei Wang, Jiaqi Li, Dan Zeng, Xueqi Ma, **Xu Zixiang**, Jianwei Zhang, Qijun 
 - **Gold Medal, ACM Provincial Contest** *(2022)* - *3rd Place in Sichuan Province*
 - **Gold Medal, ACM Provincial Contest** *(2023)* - *2nd Place in Sichuan Province*
 - **First Prize, CSP-S** *(2019, 2020, 2021)*
+
+# Service
+
+Reviewer: ACL EMNLP ARR NLPCC
+
+
 
 
 <!-- # 📖 Educations
