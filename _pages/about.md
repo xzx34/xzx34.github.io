@@ -26,6 +26,8 @@ Previously, Zixiang was a summer research student at the Massachusetts Institute
 > Actively seeking research internship opportunities, with a strong determination to apply for a PhD program in Fall 2026.  
 
 # 🔥 News
+- *2025.09*: &nbsp;🎉🎉 DyFlow and CDV have been accepted by NeurIPS 2025!. (Poster)
+- *2025.09*: &nbsp;🎉🎉 SocialMaze has been accepted by SocialSim @ COLM 2025!. (Spotlight Talk)
 - *2025.05*: &nbsp;🎉🎉 Cross-Lingual Pitfalls has been accepted by ACL 2025!. 
 - *2025.03*: &nbsp;🎉🎉 One paper has been accepted by SynthData @ ICLR 2025!. (Workshop) 
 - *2024.10*: &nbsp;🎉🎉 Temporal-IRL has been accepted by TRB 2024!. (Poster)
