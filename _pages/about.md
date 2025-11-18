@@ -26,7 +26,7 @@ Previously, Zixiang was a summer research student at the Massachusetts Institute
 > Actively seeking research internship opportunities, with a strong determination to apply for a PhD program in Fall 2026.  
 
 # 🔥 News
-- *2025.09*: &nbsp;🎉🎉 DyFlow and CDV have been accepted by NeurIPS 2025!. (Poster)
+- *2025.09*: &nbsp;🎉🎉 DyFlow and Adaptive Distraction have been accepted by NeurIPS 2025!. (Poster)
 - *2025.09*: &nbsp;🎉🎉 SocialMaze has been accepted by SocialSim @ COLM 2025!. (Spotlight Talk)
 - *2025.05*: &nbsp;🎉🎉 Cross-Lingual Pitfalls has been accepted by ACL 2025!. 
 - *2025.03*: &nbsp;🎉🎉 One paper has been accepted by SynthData @ ICLR 2025!. (Workshop) 
@@ -45,6 +45,24 @@ Previously, Zixiang was a summer research student at the Massachusetts Institute
 
 </div></div>
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2025</div><img src='images/CDV.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Adaptive Distraction: Probing LLM Contextual Robustness with Automated Tree Search](https://openreview.net/forum?id=WABbFRIpjc&referrer=%5Bthe%20profile%20of%20Jiayi%20Ye%5D(%2Fprofile%3Fid%3D~Jiayi_Ye2))
+
+Yanbo Wang\*, **Zixiang Xu\***, Yue Huang\*, Chujie Gao, Siyuan Wu, Jiayi Ye, Xiuying Chen, Pin-Yu Chen, Xiangliang Zhang (\*: Equal Contribution).
+
+</div></div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2025</div><img src='images/DyFlow.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[DyFlow: Dynamic Workflow Framework for Agentic Reasoning](https://openreview.net/forum?id=0pbUfmwNTy&referrer=%5Bthe%20profile%20of%20Yue%20Zhao%5D(%2Fprofile%3Fid%3D~Yue_Zhao13))
+
+Yanbo Wang, **Zixiang Xu**, Yue Huang, Xiangqi Wang, Zirui Song, Lang Gao, Chenxi Wang, Xiangru Tang, Yue Zhao, Arman Cohan, Xiangliang Zhang, Xiuying Chen
+
+</div></div>
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images/GTA.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
@@ -60,16 +78,6 @@ Previously, Zixiang was a summer research student at the Massachusetts Institute
 [SocialMaze: A Benchmark for Evaluating Social Reasoning in Large Language Models](https://github.com/xzx34/SocialMaze)  
 
 **Zixiang Xu**, Yanbo Wang, Yue Huang, Jiayi Ye, Haomin Zhuang, Zirui Song, Lang Gao, Chenxi Wang, Zhaorun Chen, Yujun Zhou, Sixian Li, Wang Pan, Yue Zhao, Jieyu Zhao, Xiangliang Zhang, Xiuying Chen  
-
-</div></div>
-
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR workshop 2025</div><img src='images/CDV.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[Breaking Focus: Contextual Distraction Curse in Large Language Models](https://arxiv.org/abs/2502.01609)
-
-Yanbo Wang\*, **Zixiang Xu\***, Yue Huang\*, Chujie Gao, Siyuan Wu, Jiayi Ye, Xiuying Chen, Pin-Yu Chen, Xiangliang Zhang (\*: Equal Contribution).
 
 </div></div>
 
@@ -95,8 +103,6 @@ Ruowei Wang, Jiaqi Li, Dan Zeng, Xueqi Ma, **Xu Zixiang**, Jianwei Zhang, Qijun 
 - [MTFusion: Reconstructing Any 3D Object from Single Image Using Multi-word Textual Inversion](https://link.springer.com/chapter/10.1007/978-981-97-8508-7_12), Yu Liu, Ruowei Wang, Jiaqi Li, **Zixiang Xu**, Qijun Zhao.  PRCV 2024 (oral).
 
 - [Text-Based Face Retrieval: Methods and Challenges](https://dl.acm.org/doi/10.1007/978-981-99-8565-4_15), Yuchuan Deng, Qijun Zhao, Zhanpeng Hu, **Zixiang Xu**. CCBR 2023(Oral).
-
-
 
 # 🎖 Honors and Awards
 
