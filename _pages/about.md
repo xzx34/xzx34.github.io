@@ -45,7 +45,7 @@ Previously, Zixiang was a summer research student at the Massachusetts Institute
 
 </div></div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2025</div><img src='images/CDV.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025</div><img src='images/CDV.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Adaptive Distraction: Probing LLM Contextual Robustness with Automated Tree Search](https://openreview.net/forum?id=WABbFRIpjc&referrer=%5Bthe%20profile%20of%20Jiayi%20Ye%5D(%2Fprofile%3Fid%3D~Jiayi_Ye2))
@@ -54,7 +54,7 @@ Yanbo Wang\*, **Zixiang Xu\***, Yue Huang\*, Chujie Gao, Siyuan Wu, Jiayi Ye, Xi
 
 </div></div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2025</div><img src='images/DyFlow.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025</div><img src='images/DyFlow.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [DyFlow: Dynamic Workflow Framework for Agentic Reasoning](https://openreview.net/forum?id=0pbUfmwNTy&referrer=%5Bthe%20profile%20of%20Yue%20Zhao%5D(%2Fprofile%3Fid%3D~Yue_Zhao13))
