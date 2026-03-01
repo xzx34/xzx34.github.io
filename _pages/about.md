@@ -141,8 +141,48 @@ Ruowei Wang, Jiaqi Li, Dan Zeng, Xueqi Ma, **Xu Zixiang**, Jianwei Zhang, Qijun 
 
 Reviewer: ACL EMNLP ARR NLPCC
 
+# 🎭 Miscellaneous
 
+Beyond research and competitive programming, I am a passionate enthusiast of films, games, and visual novels. I am especially fond of the works of **Tanaka Romeo** (田中ロミオ), particularly **CROSS†CHANNEL** and **Rewrite**.
 
+<div class="favorites-section">
+<div class="favorites-toggle" id="favorites-toggle">
+  <span class="favorites-toggle-icon">▶</span> My Favorite Works
+</div>
+<div class="favorites-content" id="favorites-content">
+
+<div class="favorites-list">
+
+蓝宝石般的被害妄想少女
+
+辯護人 / 大明王朝1566 / Yes, Minister / Yes, Prime Minister
+
+Fire Punch / さよなら絵梨 / Look Back
+
+逆境無頼カイジ / 銀と金
+
+家族計画 / 終のステラ / 加奈 〜いもうと〜
+
+サクラノ詩 / 素晴らしき日々～不連続存在～
+
+AIR / Angel Beats! / CLANNAD / Summer Pockets / Planetarian / Kanon
+
+Ever17 / WHITE ALBUM2 / STEINS;GATE / Danganronpa 2
+
+キラ☆キラ / 潜伏之赤途 / 魔法使いの夜 / narcissu
+
+うみねこのなく頃に / ひぐらしのなく頃に
+
+Slay the Spire / Balatro
+
+乙女理論とその周辺 / ISLAND
+
+鋼の錬金術師 / 進撃の巨人 / 葬送のフリーレン
+
+</div>
+
+</div>
+</div>
 
 <!-- # 📖 Educations
 - *2022.09 - 2026.06 (Expected)*, B.S. Candidate in Computer Science(**Top Student Program**), <img src='images/scu.png' style='width: 1.2em;'> [Sichuan University](https://www.scu.edu.cn/)  -->

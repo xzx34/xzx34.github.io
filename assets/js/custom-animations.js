@@ -97,4 +97,10 @@ $(document).ready(function(){
 
   initThemeToggle();
 
+  // Favorites collapsible toggle
+  $('#favorites-toggle').on('click', function() {
+    $(this).toggleClass('active');
+    $('#favorites-content').toggleClass('open');
+  });
+
 });

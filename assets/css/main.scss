@@ -642,4 +642,116 @@ body {
     .author__urls_sm a:hover {
         color: #58a6ff !important;
     }
+
+    /* Favorites collapsible section */
+    .favorites-section {
+        border-color: #30363d;
+    }
+
+    .favorites-toggle {
+        background: #161b22;
+        color: #c9d1d9;
+        border-color: #30363d;
+
+        &:hover {
+            background: #21262d;
+            border-color: #388bfd;
+            color: #58a6ff;
+        }
+    }
+
+    .favorites-content {
+        background: #0d1117;
+        border-color: #30363d;
+    }
+
+    .favorites-list p {
+        color: #8b949e;
+        border-bottom-color: #21262d;
+
+        &:hover {
+            color: #c9d1d9;
+            background: rgba(56, 139, 253, 0.06);
+        }
+    }
+}
+
+/* ==========================================================================
+   Favorites / Collapsible Works Section
+   ========================================================================== */
+
+.favorites-section {
+    margin: 1.5em 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e1e4e8;
+}
+
+.favorites-toggle {
+    display: block;
+    width: 100%;
+    padding: 0.8em 1.2em;
+    background: #f6f8fa;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95em;
+    font-weight: 600;
+    color: #333;
+    text-align: left;
+    transition: all 0.3s ease;
+    user-select: none;
+    border-bottom: 1px solid #e1e4e8;
+
+    &:hover {
+        background: #edf2f7;
+        color: #00369f;
+        border-bottom-color: #00369f;
+    }
+}
+
+.favorites-toggle-icon {
+    display: inline-block;
+    margin-right: 0.5em;
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+}
+
+.favorites-toggle.active .favorites-toggle-icon {
+    transform: rotate(90deg);
+}
+
+.favorites-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #fff;
+}
+
+.favorites-content.open {
+    max-height: 800px;
+}
+
+.favorites-list {
+    padding: 0.5em 1.2em;
+
+    p {
+        margin: 0;
+        padding: 0.5em 0.6em;
+        font-size: 0.9em;
+        color: #555;
+        border-bottom: 1px solid #f0f0f0;
+        transition: all 0.25s ease;
+        border-radius: 4px;
+        letter-spacing: 0.01em;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        &:hover {
+            color: #00369f;
+            background: rgba(0, 54, 159, 0.03);
+            transform: translateX(4px);
+        }
+    }
 }
