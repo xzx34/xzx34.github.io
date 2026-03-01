@@ -17,13 +17,21 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-<!-- Zixiang Xu (徐子翔) is an undergraduate student in the Computer Science College at Sichuan University, expected to graduate in June 2026 under the supervision of [Prof. Qijun Zhao](https://scholar.google.com/citations?user=c2fckoYAAAAJ&hl=en). Currently, his research interests are in large language models (LLMs) and multimodal models, particularly language agents and trustworthy AI. -->
+<div class="bio-section">
 
-Zixiang Xu (徐子翔) is an undergraduate student at the College of Computer Science, and a visiting student at MBZUAI under the supervision of [Prof. Xiuying Chen](https://iriscxy.github.io/). He is expected to graduate in June 2026. His current research interests lie in AI alignment and AI4Science.  
+Zixiang Xu (徐子翔) is an incoming PhD student in the [Department of Computer Science](https://www.cs.usc.edu/) at the [University of Southern California (USC)](https://www.usc.edu/), advised by [Prof. Yue Zhao](https://viterbi-web.usc.edu/~yzhao010/). His research interests include:
 
-Previously, Zixiang was a summer research student at the Massachusetts Institute of Technology (MIT), where he worked under the guidance of [Prof. Elenna R. Dugundji](https://scholar.google.com/citations?user=zNOQUvkAAAAJ&hl=en). Additionally, he completed a research internship at the Microsoft (Asia) Internet Engineering Institute, focusing on Visual Language Models (VLMs).  
+<div class="research-tags">
+  <span class="research-tag"><i class="fas fa-robot"></i> Agent Systems</span>
+  <span class="research-tag"><i class="fas fa-shield-alt"></i> Trustworthy AI</span>
+  <span class="research-tag"><i class="fas fa-globe"></i> AI for Science & Society</span>
+</div>
 
-> Actively seeking research internship opportunities, with a strong determination to apply for a PhD program in Fall 2026.  
+Previously, Zixiang graduated from [Sichuan University](https://www.scu.edu.cn/) with a B.S. in Computer Science, where he was fortunate to be mentored by [Prof. Qijun Zhao](https://scholar.google.com/citations?user=c2fckoYAAAAJ&hl=en) — a truly inspiring advisor whose generous guidance, unwavering encouragement, and invaluable support profoundly shaped his academic path and research vision. He is deeply grateful for everything Prof. Zhao has done for him.
+
+Zixiang has gained diverse research experience through internships at several institutions: he was a research intern at [MIT Center for Transportation & Logistics (CTL)](https://ctl.mit.edu/) with [Prof. Elenna R. Dugundji](https://scholar.google.com/citations?user=zNOQUvkAAAAJ&hl=en); a remote research intern at [MBZUAI](https://mbzuai.ac.ae/) advised by [Prof. Xiuying Chen](https://iriscxy.github.io/); a visiting researcher at the [University of Notre Dame](https://www.nd.edu/) collaborating with [Prof. Xiangliang Zhang](https://sites.nd.edu/xiangliang-zhang/); and a research intern at [Microsoft Research Asia](https://www.microsoft.com/) focusing on Vision-Language Models (VLMs).
+
+</div>  
 
 # 🔥 News
 - *2025.09*: &nbsp;🎉🎉 DyFlow and Adaptive Distraction have been accepted by NeurIPS 2025!. (Poster)

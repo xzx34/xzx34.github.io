@@ -95,4 +95,59 @@ $(document).ready(function(){
     midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
   });
 
+  // Scroll-triggered animations
+  function initScrollAnimations() {
+    // Add animate-on-scroll class to paper boxes and major sections
+    $('.paper-box').addClass('animate-on-scroll');
+    $('#-news, #-publications, #-honors-and-awards, #service').addClass('animate-on-scroll');
+
+    // Observer for scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          $(entry.target).addClass('animated');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all elements with animate-on-scroll class
+    $('.animate-on-scroll').each(function() {
+      observer.observe(this);
+    });
+  }
+
+  // Initialize scroll animations after a short delay to ensure DOM is ready
+  setTimeout(initScrollAnimations, 100);
+
+  // Add floating animation to badges on hover
+  $('.badge').hover(
+    function() {
+      $(this).css('animation', 'float 2s ease-in-out infinite');
+    },
+    function() {
+      $(this).css('animation', 'none');
+    }
+  );
+
+  // Smooth color transition for news items
+  $('#-news + ul li, #-news + * ul li').each(function(index) {
+    $(this).css('transition-delay', (index * 0.05) + 's');
+  });
+
+  // Add subtle parallax effect to paper box images on scroll
+  $(window).on('scroll', function() {
+    var scrolled = $(window).scrollTop();
+    $('.paper-box-image img').each(function(index) {
+      var speed = 0.1;
+      var offset = $(this).offset().top;
+      var yPos = -(scrolled - offset) * speed;
+      $(this).css('transform', 'translateY(' + yPos + 'px) scale(1)');
+    });
+  });
+
 });

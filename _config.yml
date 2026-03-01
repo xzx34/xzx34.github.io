@@ -8,7 +8,7 @@
 # Site Settings
 title                    : "Zixiang Xu's Website"
 description              : ""
-repository               : ""
+repository               : "xzx34/xzx34.github.io"
 google_scholar_stats_use_cdn : true
 
 # google analytics
@@ -23,8 +23,8 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "Zixiang Xu"
   avatar           : "images/zp.jpg"
-  bio              : #"Sichuan University"
-  location         : "Chengdu, China"
+  bio              : "Incoming PhD @ USC"
+  location         : "University of Southern California"
   employer         :
   pubmed           : 
   googlescholar    : #"https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"
