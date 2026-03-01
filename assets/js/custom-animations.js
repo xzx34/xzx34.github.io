@@ -70,5 +70,31 @@ $(document).ready(function(){
     $(this).css('transition-delay', (index * 0.05) + 's');
   });
 
+  // Dark mode toggle
+  function initThemeToggle() {
+    var toggle = $('#theme-toggle');
+    var icon = toggle.find('i');
+
+    function updateIcon() {
+      var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      icon.removeClass('fa-moon fa-sun').addClass(isDark ? 'fa-sun' : 'fa-moon');
+    }
+
+    updateIcon();
+
+    toggle.on('click', function() {
+      var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      if (isDark) {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+      }
+      updateIcon();
+    });
+  }
+
+  initThemeToggle();
 
 });

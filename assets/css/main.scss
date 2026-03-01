@@ -112,13 +112,14 @@
 }
 
 $scroll_offset : 2em;
-h1:before, .anchor:before { 
-    content: ''; 
-    display: block; 
-    position: relative; 
-    width: 0; 
-    height: $scroll_offset; 
+h1:before, .anchor:before {
+    content: '';
+    display: block;
+    position: relative;
+    width: 0;
+    height: $scroll_offset;
     margin-top: -$scroll_offset;
+    pointer-events: none;
 }
 
 /* Badge container needs position context */
@@ -267,26 +268,43 @@ body {
 /* Bilingual quote card */
 .quote-card {
     margin: 1.5em 0;
-    padding: 1.2em 1.5em;
+    padding: 1.5em 2em 1.5em 2.5em;
     border-left: 3px solid #00369f;
     background: linear-gradient(135deg, rgba(240, 248, 255, 0.5) 0%, rgba(230, 240, 255, 0.3) 100%);
-    border-radius: 0 8px 8px 0;
+    border-radius: 0 12px 12px 0;
     position: relative;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
     opacity: 0;
     transform: translateX(-20px);
     animation: slideInQuote 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.5s forwards;
 
+    &::before {
+        content: '\201C';
+        position: absolute;
+        top: -5px;
+        left: 8px;
+        font-size: 3.5em;
+        color: #00369f;
+        opacity: 0.15;
+        font-family: Georgia, "Times New Roman", serif;
+        line-height: 1;
+    }
+
     .quote-en {
+        font-family: Georgia, "Times New Roman", serif;
         font-style: italic;
         color: #333;
-        margin: 0 0 0.3em 0;
-        font-size: 0.95em;
+        margin: 0 0 0.5em 0;
+        font-size: 1.05em;
+        line-height: 1.6;
+        letter-spacing: 0.02em;
     }
 
     .quote-zh {
         color: #666;
         margin: 0;
-        font-size: 0.88em;
+        font-size: 0.9em;
+        letter-spacing: 0.05em;
     }
 }
 
@@ -306,5 +324,274 @@ body {
     &:hover {
         transform: translateX(8px);
         color: #00369f;
+    }
+}
+
+/* ==========================================================================
+   Theme Toggle Button
+   ========================================================================== */
+
+.masthead__menu {
+    position: relative;
+}
+
+.theme-toggle {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #7a8288;
+    padding: 0.4em 0.5em;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    line-height: 1;
+    z-index: 15;
+
+    &:hover {
+        color: #00369f;
+        background: rgba(0, 54, 159, 0.08);
+        border-color: rgba(0, 54, 159, 0.15);
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+/* ==========================================================================
+   Dark Mode
+   ========================================================================== */
+
+[data-theme="dark"] {
+    /* Body */
+    body {
+        background-color: #0d1117;
+        color: #c9d1d9;
+    }
+
+    body::before {
+        background: linear-gradient(
+            135deg,
+            rgba(13, 17, 23, 0.3) 0%,
+            rgba(22, 27, 34, 0.2) 25%,
+            rgba(13, 17, 23, 0.25) 50%,
+            rgba(22, 27, 34, 0.2) 75%,
+            rgba(13, 17, 23, 0.3) 100%
+        );
+    }
+
+    /* Masthead */
+    .masthead {
+        background-color: #161b22;
+        border-bottom-color: #30363d;
+    }
+
+    .greedy-nav {
+        background: #161b22;
+
+        a {
+            color: #8b949e;
+
+            &:hover {
+                color: #c9d1d9;
+            }
+        }
+
+        .visible-links a:before {
+            background: #388bfd;
+        }
+
+        .hidden-links {
+            background: #161b22;
+            border-color: #30363d;
+
+            &:after {
+                border-color: #161b22 transparent;
+            }
+
+            a:hover {
+                background: #21262d;
+            }
+        }
+    }
+
+    .theme-toggle {
+        color: #8b949e;
+
+        &:hover {
+            color: #f0c040;
+            background: rgba(240, 192, 64, 0.1);
+            border-color: rgba(240, 192, 64, 0.2);
+        }
+    }
+
+    /* Sidebar & Author Profile */
+    .author__avatar img {
+        border-color: #30363d !important;
+    }
+
+    .author__name {
+        color: #c9d1d9;
+    }
+
+    .author__bio {
+        color: #8b949e;
+    }
+
+    .author__urls {
+        @media (max-width: 924px) {
+            background: #161b22;
+            border-color: #30363d;
+
+            &:after {
+                border-color: #161b22 transparent;
+            }
+        }
+
+        a {
+            color: #8b949e !important;
+
+            &:hover {
+                color: #58a6ff !important;
+            }
+        }
+    }
+
+    .author__urls-wrapper {
+        color: #c9d1d9;
+    }
+
+    .author__urls_sm a {
+        color: #8b949e !important;
+
+        &:hover {
+            color: #58a6ff !important;
+        }
+    }
+
+    /* Main content */
+    .page__content {
+        color: #c9d1d9;
+
+        h1 {
+            color: #c9d1d9;
+            border-bottom-color: #30363d;
+
+            &::after {
+                background: linear-gradient(90deg, #1f6feb, #388bfd, #58a6ff);
+            }
+        }
+
+        h2, h3, h4, h5, h6 {
+            color: #c9d1d9;
+        }
+
+        a:not(.btn) {
+            color: #58a6ff;
+            background-image: linear-gradient(90deg, #1f6feb, #388bfd);
+        }
+
+        p, li, dl {
+            color: #c9d1d9;
+        }
+    }
+
+    /* Paper boxes */
+    .paper-box {
+        border-bottom-color: #30363d;
+
+        &:hover {
+            background-color: rgba(56, 139, 253, 0.04);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+        }
+    }
+
+    .paper-box-image img {
+        box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    .paper-box-text {
+        color: #c9d1d9;
+    }
+
+    .badge {
+        background: linear-gradient(135deg, #1f6feb 0%, #388bfd 100%);
+        box-shadow: 0 2px 8px rgba(31, 111, 235, 0.35);
+    }
+
+    /* Quote card */
+    .quote-card {
+        border-left-color: #388bfd;
+        background: linear-gradient(135deg, rgba(31, 111, 235, 0.08) 0%, rgba(56, 139, 253, 0.04) 100%);
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+
+        &::before {
+            color: #388bfd;
+        }
+
+        .quote-en {
+            color: #c9d1d9;
+        }
+
+        .quote-zh {
+            color: #8b949e;
+        }
+    }
+
+    /* Bio section */
+    .bio-section {
+        color: #c9d1d9;
+    }
+
+    /* Awards & honors hover */
+    .page__content h3 + ul li,
+    .page__content h3 ~ ul li {
+        &:hover {
+            color: #58a6ff;
+        }
+    }
+
+    /* News section hover */
+    #-news + ul li,
+    #-news + * ul li {
+        &:hover {
+            color: #58a6ff;
+        }
+    }
+
+    /* Code blocks */
+    p > code, a > code, li > code, figcaption > code, td > code {
+        background: #161b22;
+        border-color: #30363d;
+    }
+
+    /* Horizontal rules & borders */
+    hr {
+        border-top-color: #30363d;
+    }
+
+    blockquote {
+        border-left-color: #30363d;
+        color: #8b949e;
+    }
+
+    /* Links in base */
+    a {
+        color: #58a6ff;
+    }
+
+    /* Underline & ins */
+    u, ins {
+        border-bottom-color: #8b949e;
+    }
+
+    /* Social icon hover in dark mode */
+    .author__urls a:hover,
+    .author__urls_sm a:hover {
+        color: #58a6ff !important;
     }
 }
