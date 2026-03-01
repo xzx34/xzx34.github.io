@@ -9,5 +9,8 @@ main:
   - title: "Publications"
     url: "/#-publications"
 
-  - title: "Educations"
-    url: "/#-educations"
+  - title: "Honors"
+    url: "/#-honors-and-awards"
+
+  - title: "Internships"
+    url: "/#-internships"

@@ -32,7 +32,11 @@ Previously, he received his B.S. in Computer Science from [Sichuan University](h
 - *2025.03*: &nbsp;🎉🎉 One paper has been accepted by SynthData @ ICLR 2025!. (Workshop) 
 - *2024.10*: &nbsp;🎉🎉 Temporal-IRL has been accepted by TRB 2024!. (Poster)
 - *2024.07*: &nbsp;🎉🎉 GenUDC has been accepted by ACM MM 2024!. (Poster)
-> *Every grand ambition starts with a humble beginning—one day, this place will be filled with news.*
+
+<div class="quote-card">
+  <p class="quote-en">Every grand ambition starts with a humble beginning.</p>
+  <p class="quote-zh">每一个远大的理想都有个微不足道的开始。</p>
+</div>
 
 # 📝 Publications 
 
@@ -110,18 +114,26 @@ Ruowei Wang, Jiaqi Li, Dan Zeng, Xueqi Ma, **Xu Zixiang**, Jianwei Zhang, Qijun 
 - **CCF Elite Collegiate Award** *(2024)*
 - **Gold Medal, ACM-ICPC Asia Jinan Regional Contest** *(2022)*
 - **Silver Medal, National Olympiad in Informatics (NOI)** *(2020)*
-- **Bronze Medal, ACM-ICPC Asia-East Continent Final Contest** *(2022)*
 
 ### Other Honors
+- **Bronze Medal, ACM-ICPC Asia-East Continent Final Contest** *(2022)*
 - **First Prize, National Olympiad in Informatics in Provinces (NOIP)** *(2021)* - *6th Place in Hubei Province*
-- **Silver Medal, National Olympiad in Informatics Winter Camp (NOI WC)** *(2021)*
+- **First Prize, CSP-S** *(2021)* - *2nd Place in Hubei Province*
+
+<!-- - **Silver Medal, National Olympiad in Informatics Winter Camp (NOI WC)** *(2021)*
 - **Bronze Medal, Asia-Pacific Informatics Olympiad (APIO)** *(2020)*
 - **Silver Medal, ICPC Nanjing Regional Contest** *(2022)*
 - **Bronze Medal, ICPC East Continent Final** *(2022)*
 - **Silver Medal, China Collegiate Programming Contest (CCPC)** *(2022)*
 - **Gold Medal, ACM Provincial Contest** *(2022)* - *3rd Place in Sichuan Province*
 - **Gold Medal, ACM Provincial Contest** *(2023)* - *2nd Place in Sichuan Province*
-- **First Prize, CSP-S** *(2019, 2020, 2021)*
+- **First Prize, CSP-S** *(2019, 2020)* -->
+
+# 💻 Internships
+- *2025.03 - 2025.09*, Research Intern, [MBZUAI](https://mbzuai.ac.ae/), supervised by [Prof. Xiuying Chen](https://iriscxy.github.io/).
+- *2024.09 - 2025.08*, Visiting Researcher (Remote), [University of Notre Dame](https://www.nd.edu/), supervised by [Prof. Xiangliang Zhang](https://sites.nd.edu/xiangliang-zhang/).
+- *2024.07 - 2024.08*, Research Intern, [MIT CTL](https://ctl.mit.edu/), supervised by [Prof. Elenna R. Dugundji](https://scholar.google.com/citations?user=zNOQUvkAAAAJ&hl=en).
+- *2024.02 - 2024.03*, Research Intern, [Microsoft Research Asia](https://www.microsoft.com/).
 
 # Service
 

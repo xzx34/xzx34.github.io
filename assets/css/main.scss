@@ -188,29 +188,19 @@ body {
 .animate-on-scroll:nth-child(4) { transition-delay: 0.4s; }
 .animate-on-scroll:nth-child(5) { transition-delay: 0.5s; }
 
-/* Enhanced link hover effects */
+/* Enhanced link hover effects — background-based underline for proper inline rendering */
 .page__content a:not(.btn) {
     text-decoration: none;
-    position: relative;
-    transition: color 0.3s ease;
-
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: -1px;
-        left: 0;
-        width: 0;
-        height: 1.5px;
-        background: linear-gradient(90deg, #00369f, #0056d6);
-        transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
+    background-image: linear-gradient(90deg, #00369f, #0056d6);
+    background-size: 0% 1.5px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    padding-bottom: 1px;
+    transition: background-size 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
 
     &:hover {
         text-decoration: none;
-    }
-
-    &:hover::after {
-        width: 100%;
+        background-size: 100% 1.5px;
     }
 }
 
@@ -271,6 +261,39 @@ body {
     &:hover {
         transform: translateY(-2px);
         color: #00369f !important;
+    }
+}
+
+/* Bilingual quote card */
+.quote-card {
+    margin: 1.5em 0;
+    padding: 1.2em 1.5em;
+    border-left: 3px solid #00369f;
+    background: linear-gradient(135deg, rgba(240, 248, 255, 0.5) 0%, rgba(230, 240, 255, 0.3) 100%);
+    border-radius: 0 8px 8px 0;
+    position: relative;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideInQuote 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.5s forwards;
+
+    .quote-en {
+        font-style: italic;
+        color: #333;
+        margin: 0 0 0.3em 0;
+        font-size: 0.95em;
+    }
+
+    .quote-zh {
+        color: #666;
+        margin: 0;
+        font-size: 0.88em;
+    }
+}
+
+@keyframes slideInQuote {
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 

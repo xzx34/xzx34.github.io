@@ -23,7 +23,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "Zixiang Xu"
   avatar           : "images/zp.jpg"
-  bio              : "Incoming PhD in Computer Science"
+  bio              : # "Incoming PhD in Computer Science"
   location         : "University of Southern California"
   employer         :
   pubmed           : 
@@ -54,6 +54,7 @@ author:
   twitter          : "xzx_34"
   vine             :
   weibo            :
+  xiaohongshu      : "https://www.xiaohongshu.com/user/profile/6127c45b00000000010034ed"
   xing             :
   youtube          :
   wikipedia        :
