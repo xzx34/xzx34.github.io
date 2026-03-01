@@ -19,7 +19,7 @@ redirect_from:
 
 <div class="bio-section" markdown="1">
 
-He is an incoming PhD student in the [Department of Computer Science](https://www.cs.usc.edu/) at the [University of Southern California (USC)](https://www.usc.edu/), advised by [Prof. Yue Zhao](https://viterbi-web.usc.edu/~yzhao010/). His research interests include **Agent Systems**, **Trustworthy AI**, and **AI for Science & Society**.
+Zixiang Xu（徐子翔）is an incoming PhD student in the [Department of Computer Science](https://www.cs.usc.edu/) at the [University of Southern California (USC)](https://www.usc.edu/), advised by [Prof. Yue Zhao](https://viterbi-web.usc.edu/~yzhao010/). His research interests include **Agent Systems**, **Trustworthy AI**, and **AI for Science & Society**.
 
 Previously, he received his B.S. in Computer Science from [Sichuan University](https://www.scu.edu.cn/), supervised by [Prof. Qijun Zhao](https://scholar.google.com/citations?user=c2fckoYAAAAJ&hl=en). He has conducted research at [MIT CTL](https://ctl.mit.edu/), [MBZUAI](https://mbzuai.ac.ae/), and the [University of Notre Dame](https://www.nd.edu/), supervised by [Prof. Elenna R. Dugundji](https://scholar.google.com/citations?user=zNOQUvkAAAAJ&hl=en), [Prof. Xiuying Chen](https://iriscxy.github.io/), and [Prof. Xiangliang Zhang](https://sites.nd.edu/xiangliang-zhang/), respectively. He was also a research intern at [Microsoft Research Asia](https://www.microsoft.com/) working on Vision-Language Models.
 
@@ -141,7 +141,7 @@ Reviewer: ACL EMNLP ARR NLPCC
 
 # 🎭 Miscellaneous
 
-Beyond research and competitive programming, I am a passionate enthusiast of films, games, and visual novels. I am especially fond of the works of **Tanaka Romeo** (田中ロミオ), particularly **CROSS†CHANNEL** and **Rewrite**.
+Beyond research and competitive programming, he is a passionate enthusiast of films, games, and visual novels. He is especially fond of the works of **Tanaka Romeo** (田中ロミオ), particularly **CROSS†CHANNEL** and **Rewrite**.
 
 <div class="favorites-section">
 <div class="favorites-toggle" id="favorites-toggle">
