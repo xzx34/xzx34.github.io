@@ -210,14 +210,9 @@ body {
     animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s both;
 }
 
-/* Bio name line */
-.bio-name {
-    display: block;
-    font-size: 0.92em;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 0.3em;
-    letter-spacing: 0.02em;
+/* Sidebar author name — smaller to fit on one line */
+.sidebar .author__name {
+    font-size: 1em;
 }
 
 /* Section heading animations */
@@ -591,10 +586,6 @@ body {
         color: #c9d1d9;
     }
 
-    .bio-name {
-        color: #c9d1d9;
-    }
-
     /* Awards & honors hover */
     .page__content h3 + ul li,
     .page__content h3 ~ ul li {
@@ -665,7 +656,7 @@ body {
         border-color: #30363d;
     }
 
-    .favorites-list p {
+    .favorites-list li {
         color: #8b949e;
         border-bottom-color: #21262d;
 
@@ -733,10 +724,12 @@ body {
 
 .favorites-list {
     padding: 0.5em 1.2em;
+    list-style: none;
+    margin: 0;
 
-    p {
+    li {
         margin: 0;
-        padding: 0.5em 0.6em;
+        padding: 0.4em 0.6em;
         font-size: 0.9em;
         color: #555;
         border-bottom: 1px solid #f0f0f0;

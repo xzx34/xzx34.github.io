@@ -19,8 +19,6 @@ redirect_from:
 
 <div class="bio-section" markdown="1">
 
-<span class="bio-name">Zixiang Xu（徐子翔）</span>
-
 He is an incoming PhD student in the [Department of Computer Science](https://www.cs.usc.edu/) at the [University of Southern California (USC)](https://www.usc.edu/), advised by [Prof. Yue Zhao](https://viterbi-web.usc.edu/~yzhao010/). His research interests include **Agent Systems**, **Trustworthy AI**, and **AI for Science & Society**.
 
 Previously, he received his B.S. in Computer Science from [Sichuan University](https://www.scu.edu.cn/), supervised by [Prof. Qijun Zhao](https://scholar.google.com/citations?user=c2fckoYAAAAJ&hl=en). He has conducted research at [MIT CTL](https://ctl.mit.edu/), [MBZUAI](https://mbzuai.ac.ae/), and the [University of Notre Dame](https://www.nd.edu/), supervised by [Prof. Elenna R. Dugundji](https://scholar.google.com/citations?user=zNOQUvkAAAAJ&hl=en), [Prof. Xiuying Chen](https://iriscxy.github.io/), and [Prof. Xiangliang Zhang](https://sites.nd.edu/xiangliang-zhang/), respectively. He was also a research intern at [Microsoft Research Asia](https://www.microsoft.com/) working on Vision-Language Models.
@@ -137,7 +135,7 @@ Ruowei Wang, Jiaqi Li, Dan Zeng, Xueqi Ma, **Xu Zixiang**, Jianwei Zhang, Qijun 
 - *2024.07 - 2024.08*, Research Intern, [MIT CTL](https://ctl.mit.edu/), supervised by [Prof. Elenna R. Dugundji](https://scholar.google.com/citations?user=zNOQUvkAAAAJ&hl=en).
 - *2024.02 - 2024.03*, Research Intern, [Microsoft Research Asia](https://www.microsoft.com/).
 
-# Service
+# 🔍 Service
 
 Reviewer: ACL EMNLP ARR NLPCC
 
@@ -151,35 +149,46 @@ Beyond research and competitive programming, I am a passionate enthusiast of fil
 </div>
 <div class="favorites-content" id="favorites-content">
 
-<div class="favorites-list">
-
-蓝宝石般的被害妄想少女
-
-辯護人 / 大明王朝1566 / Yes, Minister / Yes, Prime Minister
-
-Fire Punch / さよなら絵梨 / Look Back
-
-逆境無頼カイジ / 銀と金
-
-家族計画 / 終のステラ / 加奈 〜いもうと〜
-
-サクラノ詩 / 素晴らしき日々～不連続存在～
-
-AIR / Angel Beats! / CLANNAD / Summer Pockets / Planetarian / Kanon
-
-Ever17 / WHITE ALBUM2 / STEINS;GATE / Danganronpa 2
-
-キラ☆キラ / 潜伏之赤途 / 魔法使いの夜 / narcissu
-
-うみねこのなく頃に / ひぐらしのなく頃に
-
-Slay the Spire / Balatro
-
-乙女理論とその周辺 / ISLAND
-
-鋼の錬金術師 / 進撃の巨人 / 葬送のフリーレン
-
-</div>
+<ul class="favorites-list">
+<li>蓝宝石般的被害妄想少女</li>
+<li>辯護人</li>
+<li>大明王朝1566</li>
+<li>Yes, Minister</li>
+<li>Yes, Prime Minister</li>
+<li>Fire Punch</li>
+<li>さよなら絵梨</li>
+<li>Look Back</li>
+<li>逆境無頼カイジ</li>
+<li>銀と金</li>
+<li>家族計画</li>
+<li>終のステラ</li>
+<li>加奈 〜いもうと〜</li>
+<li>サクラノ詩</li>
+<li>素晴らしき日々～不連続存在～</li>
+<li>AIR</li>
+<li>Angel Beats!</li>
+<li>CLANNAD</li>
+<li>Summer Pockets</li>
+<li>Planetarian</li>
+<li>Kanon</li>
+<li>Ever17</li>
+<li>WHITE ALBUM2</li>
+<li>STEINS;GATE</li>
+<li>Danganronpa 2</li>
+<li>キラ☆キラ</li>
+<li>潜伏之赤途</li>
+<li>魔法使いの夜</li>
+<li>narcissu</li>
+<li>うみねこのなく頃に</li>
+<li>ひぐらしのなく頃に</li>
+<li>Slay the Spire</li>
+<li>Balatro</li>
+<li>乙女理論とその周辺</li>
+<li>ISLAND</li>
+<li>鋼の錬金術師</li>
+<li>進撃の巨人</li>
+<li>葬送のフリーレン</li>
+</ul>
 
 </div>
 </div>
