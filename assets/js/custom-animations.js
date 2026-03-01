@@ -70,16 +70,5 @@ $(document).ready(function(){
     $(this).css('transition-delay', (index * 0.05) + 's');
   });
 
-  // Subtle parallax effect on paper box images
-  $(window).on('scroll', function() {
-    var scrolled = $(window).scrollTop();
-    $('.paper-box-image img').each(function() {
-      var speed = 0.05;
-      var offset = $(this).offset().top;
-      var yPos = -(scrolled - offset) * speed;
-      yPos = Math.max(-15, Math.min(15, yPos));
-      $(this).css('transform', 'translateY(' + yPos + 'px)');
-    });
-  });
 
 });

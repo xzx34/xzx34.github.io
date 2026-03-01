@@ -17,19 +17,11 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-<div class="bio-section">
+<div class="bio-section" markdown="1">
 
-Zixiang Xu (徐子翔) is an incoming PhD student in the [Department of Computer Science](https://www.cs.usc.edu/) at the [University of Southern California (USC)](https://www.usc.edu/), advised by [Prof. Yue Zhao](https://viterbi-web.usc.edu/~yzhao010/). His research interests include:
+Zixiang Xu (徐子翔) is an incoming PhD student in the [Department of Computer Science](https://www.cs.usc.edu/) at the [University of Southern California (USC)](https://www.usc.edu/), advised by [Prof. Yue Zhao](https://viterbi-web.usc.edu/~yzhao010/). His research interests include **Agent Systems**, **Trustworthy AI**, and **AI for Science & Society**.
 
-<div class="research-tags">
-  <span class="research-tag"><i class="fas fa-robot"></i> Agent Systems</span>
-  <span class="research-tag"><i class="fas fa-shield-alt"></i> Trustworthy AI</span>
-  <span class="research-tag"><i class="fas fa-globe"></i> AI for Science & Society</span>
-</div>
-
-Previously, Zixiang graduated from [Sichuan University](https://www.scu.edu.cn/) with a B.S. in Computer Science, where he was fortunate to be mentored by [Prof. Qijun Zhao](https://scholar.google.com/citations?user=c2fckoYAAAAJ&hl=en) — a truly inspiring advisor whose generous guidance, unwavering encouragement, and invaluable support profoundly shaped his academic path and research vision. He is deeply grateful for everything Prof. Zhao has done for him.
-
-Zixiang has gained diverse research experience through internships at several institutions: he was a research intern at [MIT Center for Transportation & Logistics (CTL)](https://ctl.mit.edu/) with [Prof. Elenna R. Dugundji](https://scholar.google.com/citations?user=zNOQUvkAAAAJ&hl=en); a remote research intern at [MBZUAI](https://mbzuai.ac.ae/) advised by [Prof. Xiuying Chen](https://iriscxy.github.io/); a visiting researcher at the [University of Notre Dame](https://www.nd.edu/) collaborating with [Prof. Xiangliang Zhang](https://sites.nd.edu/xiangliang-zhang/); and a research intern at [Microsoft Research Asia](https://www.microsoft.com/) focusing on Vision-Language Models (VLMs).
+Previously, he received his B.S. in Computer Science from [Sichuan University](https://www.scu.edu.cn/), supervised by [Prof. Qijun Zhao](https://scholar.google.com/citations?user=c2fckoYAAAAJ&hl=en). He has conducted research at [MIT CTL](https://ctl.mit.edu/), [MBZUAI](https://mbzuai.ac.ae/), and the [University of Notre Dame](https://www.nd.edu/), supervised by [Prof. Elenna R. Dugundji](https://scholar.google.com/citations?user=zNOQUvkAAAAJ&hl=en), [Prof. Xiuying Chen](https://iriscxy.github.io/), and [Prof. Xiangliang Zhang](https://sites.nd.edu/xiangliang-zhang/), respectively. He was also a research intern at [Microsoft Research Asia](https://www.microsoft.com/) working on Vision-Language Models.
 
 </div>  
 
