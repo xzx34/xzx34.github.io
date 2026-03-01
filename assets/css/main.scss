@@ -210,6 +210,16 @@ body {
     animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s both;
 }
 
+/* Bio name line */
+.bio-name {
+    display: block;
+    font-size: 0.92em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.3em;
+    letter-spacing: 0.02em;
+}
+
 /* Section heading animations */
 .page__content h1 {
     position: relative;
@@ -452,6 +462,10 @@ body {
             }
         }
 
+        li {
+            color: #c9d1d9;
+        }
+
         a {
             color: #8b949e !important;
 
@@ -470,6 +484,36 @@ body {
 
         &:hover {
             color: #58a6ff !important;
+        }
+    }
+
+    /* Override all social icon brand colors for dark mode visibility */
+    .social-icons {
+        .fa,
+        .fas,
+        .far,
+        .fab {
+            color: #8b949e !important;
+        }
+
+        /* Keep brand colors that are already visible on dark bg */
+        .fa-twitter,
+        .fa-twitter-square {
+            color: #55acee !important;
+        }
+
+        .fa-linkedin,
+        .fa-linkedin-square {
+            color: #5b9bd5 !important;
+        }
+
+        .fa-youtube,
+        .fa-youtube-square {
+            color: #ee5f5b !important;
+        }
+
+        .fa-weibo {
+            color: #e6162d !important;
         }
     }
 
@@ -544,6 +588,10 @@ body {
 
     /* Bio section */
     .bio-section {
+        color: #c9d1d9;
+    }
+
+    .bio-name {
         color: #c9d1d9;
     }
 
