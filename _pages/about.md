@@ -141,7 +141,7 @@ Reviewer: ACL EMNLP ARR NLPCC
 
 # 🎭 Miscellaneous
 
-Beyond research and competitive programming, he is a passionate enthusiast of films, games, and visual novels. He is especially fond of the works of **Tanaka Romeo** (田中ロミオ), particularly **CROSS†CHANNEL** and **Rewrite**.
+Beyond research and competitive programming, he is a passionate enthusiast of films, games, and visual novels. He is especially fond of the works of **Tanaka Romeo** (田中ロミオ), particularly **CROSS†CHANNEL** and **Rewrite**. As time passes, this list has grown shorter: what remains below are the works that have left the deepest and most vivid traces in his memory.
 
 <div class="favorites-section">
 <div class="favorites-toggle" id="favorites-toggle">
@@ -153,28 +153,29 @@ Beyond research and competitive programming, he is a passionate enthusiast of fi
 <li>蓝宝石般的被害妄想少女</li>
 <li>辯護人</li>
 <li>大明王朝1566</li>
-<li>Yes, Minister</li>
-<li>Yes, Prime Minister</li>
-<li>Fire Punch</li>
-<li>さよなら絵梨</li>
-<li>Look Back</li>
 <li>逆境無頼カイジ</li>
 <li>銀と金</li>
 <li>家族計画</li>
 <li>終のステラ</li>
 <li>加奈 〜いもうと〜</li>
 <li>サクラノ詩</li>
-<li>素晴らしき日々～不連続存在～</li>
 <li>AIR</li>
 <li>Angel Beats!</li>
-<li>CLANNAD</li>
 <li>Summer Pockets</li>
 <li>Planetarian</li>
-<li>Kanon</li>
-<li>Ever17</li>
 <li>WHITE ALBUM2</li>
 <li>STEINS;GATE</li>
 <li>Danganronpa 2</li>
+<!--
+<li>Yes, Minister</li>
+<li>Yes, Prime Minister</li>
+<li>Fire Punch</li>
+<li>さよなら絵梨</li>
+<li>Look Back</li>
+<li>素晴らしき日々～不連続存在～</li>
+<li>CLANNAD</li>
+<li>Kanon</li>
+<li>Ever17</li>
 <li>キラ☆キラ</li>
 <li>潜伏之赤途</li>
 <li>魔法使いの夜</li>
@@ -188,6 +189,7 @@ Beyond research and competitive programming, he is a passionate enthusiast of fi
 <li>鋼の錬金術師</li>
 <li>進撃の巨人</li>
 <li>葬送のフリーレン</li>
+-->
 </ul>
 
 </div>
@@ -203,4 +205,4 @@ Beyond research and competitive programming, he is a passionate enthusiast of fi
 - *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/)
 
 # 💻 Internships
-- *2019.05 - 2020.02*, [Lorem](https://github.com/), China. --> 
+- *2019.05 - 2020.02*, [Lorem](https://github.com/), China. -->
