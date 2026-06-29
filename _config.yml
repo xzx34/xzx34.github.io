@@ -7,7 +7,9 @@
 
 # Site Settings
 title                    : "Zixiang Xu's Website"
-description              : ""
+description              : "Zixiang Xu (徐子翔), incoming CS PhD student at the University of Southern California (USC). Research on LLM agent systems, trustworthy AI, and AI for science and society."
+url                      : "https://xzx34.github.io"
+baseurl                  : ""
 repository               : "xzx34/xzx34.github.io"
 google_scholar_stats_use_cdn : true
 
