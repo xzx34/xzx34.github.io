@@ -47,6 +47,8 @@ Previously, he received his B.S. in Computer Science from [Sichuan University](h
 
 **Zixiang Xu\***, Yanbo Wang\*, Yue Huang\*, Xiuying Chen, Jieyu Zhao, Meng Jiang, Xiangliang Zhang (\*: Equal Contribution).
 
+<div class="pub-links"><a class="pub-btn" href="/cross-lingual-pitfalls/">Project Page</a><a class="pub-btn" href="https://arxiv.org/abs/2505.18673">Paper</a></div>
+
 </div></div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025</div><img src='images/CDV.png' alt="sym" width="100%"></div></div>
@@ -56,6 +58,8 @@ Previously, he received his B.S. in Computer Science from [Sichuan University](h
 
 Yanbo Wang\*, **Zixiang Xu\***, Yue Huang\*, Chujie Gao, Siyuan Wu, Jiayi Ye, Xiuying Chen, Pin-Yu Chen, Xiangliang Zhang (\*: Equal Contribution).
 
+<div class="pub-links"><a class="pub-btn" href="https://openreview.net/forum?id=WABbFRIpjc">Paper</a></div>
+
 </div></div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025</div><img src='images/DyFlow.png' alt="sym" width="100%"></div></div>
@@ -64,6 +68,8 @@ Yanbo Wang\*, **Zixiang Xu\***, Yue Huang\*, Chujie Gao, Siyuan Wu, Jiayi Ye, Xi
 [DyFlow: Dynamic Workflow Framework for Agentic Reasoning](https://openreview.net/forum?id=0pbUfmwNTy&referrer=%5Bthe%20profile%20of%20Yue%20Zhao%5D(%2Fprofile%3Fid%3D~Yue_Zhao13))
 
 Yanbo Wang, **Zixiang Xu**, Yue Huang, Xiangqi Wang, Zirui Song, Lang Gao, Chenxi Wang, Xiangru Tang, Yue Zhao, Arman Cohan, Xiangliang Zhang, Xiuying Chen
+
+<div class="pub-links"><a class="pub-btn" href="https://openreview.net/forum?id=0pbUfmwNTy">Paper</a></div>
 
 </div></div>
 
@@ -83,6 +89,8 @@ Yanbo Wang, **Zixiang Xu**, Yue Huang, Xiangqi Wang, Zirui Song, Lang Gao, Chenx
 
 **Zixiang Xu**, Yanbo Wang, Yue Huang, Jiayi Ye, Haomin Zhuang, Zirui Song, Lang Gao, Chenxi Wang, Zhaorun Chen, Yujun Zhou, Sixian Li, Wang Pan, Yue Zhao, Jieyu Zhao, Xiangliang Zhang, Xiuying Chen  
 
+<div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2505.23713">Paper</a></div>
+
 </div></div>
 
 
@@ -101,6 +109,8 @@ Yikuan Hu\*, **Zixiang Xu\***, Wei Zhang\*, Xinyu Yang\*, Guo Li\*, Nikolay Aris
 [GenUDC: High Quality 3D Mesh Generation With Unsigned Dual Contouring Representation](https://arxiv.org/abs/2410.17802)
 
 Ruowei Wang, Jiaqi Li, Dan Zeng, Xueqi Ma, **Xu Zixiang**, Jianwei Zhang, Qijun Zhao
+
+<div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2410.17802">Paper</a></div>
 
 </div></div>
 
