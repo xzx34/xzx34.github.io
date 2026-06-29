@@ -30,4 +30,37 @@
   })();
 </script>
 
+<!-- Social card + structured data -->
+<meta property="og:image" content="{{ '/images/zp.jpg' | absolute_url }}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ site.title }}">
+<meta name="twitter:description" content="{{ site.description }}">
+<meta name="twitter:image" content="{{ '/images/zp.jpg' | absolute_url }}">
+{% if site.author.twitter %}<meta name="twitter:creator" content="@{{ site.author.twitter }}">{% endif %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Zixiang Xu",
+    "alternateName": "徐子翔",
+    "url": "https://xzx34.github.io/",
+    "image": "https://xzx34.github.io/images/zp.jpg",
+    "jobTitle": "Incoming Computer Science PhD Student",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "University of Southern California" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Sichuan University" },
+    "knowsAbout": ["Agent Systems", "Trustworthy AI", "Large Language Models", "AI for Science and Society"],
+    "sameAs": [
+      "https://scholar.google.com/citations?user=lPLP6H8AAAAJ",
+      "https://github.com/xzx34",
+      "https://www.linkedin.com/in/zixiang-xu-1a92b3321",
+      "https://x.com/xzx_34",
+      "https://aclanthology.org/people/zixiang-xu/"
+    ]
+  }
+}
+</script>
+
 <!-- end custom head snippets -->
