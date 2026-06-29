@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){var t=localStorage.getItem('theme');if(t!=='light'){document.documentElement.setAttribute('data-theme','dark');}})();</script>
 <title>Cross-Lingual Pitfalls: Automatic Probing Cross-Lingual Weakness of Multilingual Large Language Models (ACL 2025) | Why Multilingual LLMs Fail Across Languages</title>
 <meta name="description" content="Cross-Lingual Pitfalls (ACL 2025): an automatic method and 16-language dataset exposing where multilingual LLMs fail outside English — over 50% accuracy drops, even for GPT-4o.">
 <meta name="robots" content="index,follow">
@@ -29,21 +30,21 @@
 <meta name="citation_arxiv_id" content="2505.18673">
 <meta name="citation_pdf_url" content="https://xzx34.github.io/cross-lingual-pitfalls/paper.pdf">
 <meta name="citation_abstract_html_url" content="https://aclanthology.org/2025.acl-long.404/">
-<meta name="citation_image" content="https://xzx34.github.io/images/CLP.png">
+<meta name="citation_image" content="https://xzx34.github.io/images/clp-pipeline.png">
 
 <!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:title" content="Cross-Lingual Pitfalls (ACL 2025): Why Multilingual LLMs Fail Across Languages">
 <meta property="og:description" content="Cross-Lingual Pitfalls (ACL 2025): an automatic method and 16-language dataset exposing where multilingual LLMs fail outside English — over 50% accuracy drops, even for GPT-4o.">
 <meta property="og:url" content="https://xzx34.github.io/cross-lingual-pitfalls/">
-<meta property="og:image" content="https://xzx34.github.io/images/CLP.png">
+<meta property="og:image" content="https://xzx34.github.io/images/clp-pipeline.png">
 <meta property="og:site_name" content="Cross-Lingual Pitfalls (ACL 2025)">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Cross-Lingual Pitfalls (ACL 2025): Why Multilingual LLMs Fail Across Languages">
 <meta name="twitter:description" content="An automatic method and 16-language dataset exposing where multilingual LLMs fail outside English — over 50% accuracy drops, even for GPT-4o.">
-<meta name="twitter:image" content="https://xzx34.github.io/images/CLP.png">
+<meta name="twitter:image" content="https://xzx34.github.io/images/clp-pipeline.png">
 
 <script type="application/ld+json">
 {
@@ -52,7 +53,7 @@
   "headline": "Why Multilingual LLMs Fail Across Languages",
   "name": "Cross-Lingual Pitfalls: Automatic Probing Cross-Lingual Weakness of Multilingual Large Language Models",
   "url": "https://xzx34.github.io/cross-lingual-pitfalls/",
-  "image": "https://xzx34.github.io/images/CLP.png",
+  "image": "https://xzx34.github.io/images/clp-pipeline.png",
   "datePublished": "2025-07",
   "inLanguage": "en",
   "description": "Cross-Lingual Pitfalls (ACL 2025): an automatic method and 16-language dataset exposing where multilingual LLMs fail outside English, with over 50% accuracy drops, even for GPT-4o.",
@@ -134,40 +135,60 @@
 
 <style>
 :root{
-  --accent:#0056d6;
-  --accent-dark:#00369f;
-  --text:#1a1a1a;
-  --muted:#5b6470;
-  --bg:#ffffff;
-  --soft:#f6f8fa;
-  --border:#e1e4e8;
+  --accent:#0056d6;--accent-dark:#00369f;--accent-lite:#4a90e2;
+  --grad:linear-gradient(135deg,#00369f 0%,#0056d6 100%);
+  --text:#3a3f45;--muted:#6a737d;--bg:#ffffff;--soft:#f6f8fa;--card:#ffffff;--border:#e1e4e8;--shadow:rgba(20,40,80,.10);
+}
+[data-theme="dark"]{
+  --accent:#58a6ff;--accent-dark:#388bfd;--accent-lite:#1f6feb;
+  --grad:linear-gradient(135deg,#1f6feb 0%,#388bfd 100%);
+  --text:#c9d1d9;--muted:#8b949e;--bg:#0d1117;--soft:#161b22;--card:#161b22;--border:#30363d;--shadow:rgba(0,0,0,.5);
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{
-  margin:0;color:var(--text);background:var(--bg);
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  margin:0;position:relative;color:var(--text);background:var(--bg);
+  font-family:"Trebuchet MS",Helvetica,sans-serif;
   font-size:17px;line-height:1.7;
+  transition:background-color .3s ease,color .3s ease;
+}
+body::before{
+  content:'';position:fixed;top:0;left:0;width:100%;height:100%;
+  background-image:linear-gradient(135deg,rgba(240,248,255,0.3) 0%,rgba(230,240,255,0.2) 25%,rgba(245,250,255,0.25) 50%,rgba(235,245,255,0.2) 75%,rgba(240,248,255,0.3) 100%);
+  background-size:400% 400%;
+  animation:gradientShift 15s ease infinite;
+  z-index:-1;pointer-events:none;
+}
+[data-theme="dark"] body::before{
+  background-image:linear-gradient(135deg,rgba(13,17,23,0.3) 0%,rgba(22,27,34,0.2) 25%,rgba(13,17,23,0.25) 50%,rgba(22,27,34,0.2) 75%,rgba(13,17,23,0.3) 100%);
+}
+@keyframes gradientShift{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
 .wrap{max-width:820px;margin:0 auto;padding:34px 20px 64px}
 a{color:var(--accent);text-decoration:none}
-a:hover{color:var(--accent-dark);text-decoration:underline}
-h1{font-size:2rem;line-height:1.25;margin:.1em 0 .35em;letter-spacing:-.01em}
+a:not(.btn){background-image:linear-gradient(90deg,var(--accent-dark),var(--accent));background-size:0% 1.5px;background-repeat:no-repeat;background-position:left bottom;padding-bottom:1px;transition:background-size .3s cubic-bezier(.4,0,.2,1),color .3s ease}
+a:not(.btn):hover{color:var(--accent-dark);background-size:100% 1.5px;text-decoration:none}
+h1{font-size:2rem;line-height:1.25;margin:.1em 0 .35em;letter-spacing:-.01em;color:var(--text)}
 .subtitle{font-size:1.18rem;font-weight:500;color:var(--muted);line-height:1.5;margin:0 0 1em}
-h2{font-size:1.4rem;line-height:1.3;margin:2.6em 0 .75em;padding-left:.65rem;border-left:3px solid var(--accent)}
-h3{font-size:1.06rem;margin:1.3em 0 .25em}
+h2{position:relative;font-size:1.4rem;line-height:1.3;margin:2.6em 0 .8em;padding-bottom:.3em;color:var(--text)}
+h2::after{content:'';position:absolute;left:0;bottom:0;height:2px;width:0;background:linear-gradient(90deg,var(--accent-dark),var(--accent),var(--accent-lite));transition:width .8s cubic-bezier(.4,0,.2,1)}
+h2.animated::after{width:100%}
+h3{font-size:1.06rem;margin:1.3em 0 .25em;color:var(--text)}
 p{margin:.7em 0}
-.venue{display:inline-block;font-weight:600;color:var(--accent-dark);background:#eaf1ff;border:1px solid #cfe0ff;padding:3px 13px;border-radius:999px;font-size:.9rem;letter-spacing:.01em}
+.venue{display:inline-block;font-weight:600;color:#fff;background:var(--grad);padding:4px 14px;border-radius:999px;font-size:.9rem;letter-spacing:.02em;box-shadow:0 2px 8px var(--shadow)}
 .authors{margin:1.15em 0 .4em;line-height:1.85}
 .au{white-space:nowrap;margin-right:.15em}
 sup{font-size:.7em;line-height:0}
 .legend{color:var(--muted);font-size:.92rem;margin:.2em 0 .4em;line-height:1.7}
 .btns{display:flex;flex-wrap:wrap;gap:10px;margin:1.2em 0 .2em}
-.btn{display:inline-flex;align-items:center;gap:.45em;border:1px solid var(--accent);color:var(--accent);background:#fff;padding:.55em 1.05em;border-radius:999px;font-size:.95rem;font-weight:600;line-height:1;transition:background .15s ease,color .15s ease,box-shadow .15s ease,transform .15s ease}
-.btn:hover{background:var(--accent);color:#fff;text-decoration:none;box-shadow:0 4px 12px rgba(0,86,214,.22);transform:translateY(-1px)}
+.btn{display:inline-flex;align-items:center;gap:.45em;border:1px solid var(--accent);color:var(--accent);background:var(--card);padding:.55em 1.05em;border-radius:999px;font-size:.95rem;font-weight:600;line-height:1;transition:background .15s ease,color .15s ease,box-shadow .15s ease,transform .15s ease}
+.btn:hover{background:var(--grad);color:#fff;text-decoration:none;box-shadow:0 6px 16px var(--shadow);transform:translateY(-1px)}
 .btn .ic{width:1.05em;height:1.05em;flex:0 0 auto}
-figure{margin:2.4em auto .4em;max-width:720px}
-figure img{display:block;width:100%;height:auto;border:1px solid var(--border);border-radius:12px;background:#fff;padding:10px;box-shadow:0 6px 22px rgba(20,40,80,.10)}
+figure{width:min(94vw,940px);margin:2.4em 0 .4em;position:relative;left:50%;transform:translateX(-50%)}
+figure img{display:block;width:100%;height:auto;border:1px solid var(--border);border-radius:8px;box-shadow:0 6px 22px var(--shadow)}
 figcaption{color:var(--muted);font-size:.9rem;margin:.8em auto 0;text-align:center;max-width:640px}
 .block{background:var(--soft);border:1px solid var(--border);border-radius:8px;padding:18px 20px}
 .abstract p{margin:0}
@@ -192,21 +213,29 @@ strong.k{color:var(--accent-dark)}
 .citelist{margin:.7em 0;padding-left:1.2em}
 .citelist li{margin:.32em 0}
 .citesuggest{margin:1.1em 0 .2em;padding:.9em 1.1em;background:var(--soft);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:8px;font-size:.97rem;line-height:1.6}
+.citesuggest em{font-family:Georgia,Times,serif}
 details{border:1px solid var(--border);border-radius:8px;background:var(--soft);margin:.55em 0;padding:0 16px}
-details[open]{background:#fff}
-summary{cursor:pointer;font-weight:600;padding:.85em 0;list-style:none;outline-offset:3px}
+details[open]{background:var(--card)}
+summary{cursor:pointer;font-weight:600;padding:.85em 0;list-style:none;outline-offset:3px;color:var(--text)}
 summary::-webkit-details-marker{display:none}
 summary::before{content:"+";color:var(--accent);font-weight:800;margin-right:.55em;display:inline-block;width:1ch}
 details[open] summary::before{content:"\2013"}
 .ans{padding:0 0 .95em}
 .ans p{margin:.2em 0}
-pre{background:var(--soft);border:1px solid var(--border);border-radius:8px;padding:16px;overflow-x:auto;font-size:.84rem;line-height:1.55;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre{background:var(--soft);border:1px solid var(--border);border-radius:8px;padding:16px;overflow-x:auto;font-size:.84rem;line-height:1.55;font-family:Monaco,Consolas,"Lucida Console",monospace;color:var(--text)}
 .bibhead{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:.4em}
-.copy{border:1px solid var(--accent);color:var(--accent);background:#fff;border-radius:6px;padding:.4em .85em;font-size:.85rem;font-weight:600;cursor:pointer;line-height:1}
-.copy:hover{background:var(--accent);color:#fff}
+.copy{border:1px solid var(--accent);color:var(--accent);background:var(--card);border-radius:6px;padding:.4em .85em;font-size:.85rem;font-weight:600;cursor:pointer;line-height:1;transition:background .15s ease,color .15s ease,box-shadow .15s ease,transform .15s ease}
+.copy:hover{background:var(--grad);color:#fff;box-shadow:0 6px 16px var(--shadow);transform:translateY(-1px)}
 .reslist{list-style:none;padding:0;margin:.4em 0}
 .reslist li{margin:.4em 0}
 footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);color:var(--muted);font-size:.92rem}
+.theme-toggle{position:fixed;top:14px;right:16px;z-index:50;width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;padding:0;background:var(--card);border:1px solid var(--border);border-radius:50%;cursor:pointer;color:var(--muted);line-height:1;box-shadow:0 2px 8px var(--shadow);transition:color .3s ease,background .3s ease,border-color .3s ease,box-shadow .3s ease}
+.theme-toggle:hover{color:var(--accent);background:rgba(0,86,214,.08);border-color:rgba(0,86,214,.15)}
+[data-theme="dark"] .theme-toggle:hover{color:#f0c040;background:rgba(240,192,64,.1);border-color:rgba(240,192,64,.2)}
+.theme-toggle:focus{outline:none}
+.theme-toggle svg{width:20px;height:20px;display:block}
+.animate-on-scroll{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.4,0,.2,1),transform .8s cubic-bezier(.4,0,.2,1)}
+.animate-on-scroll.animated{opacity:1;transform:none}
 @media (max-width:600px){
   body{font-size:16px}
   h1{font-size:1.6rem}
@@ -214,9 +243,18 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
   .wrap{padding:24px 16px 48px}
   .langgrid{grid-template-columns:repeat(2,1fr)}
 }
+@media (prefers-reduced-motion: reduce){
+  body::before{animation:none}
+  .animate-on-scroll{opacity:1;transform:none;transition:none}
+  h2::after{transition:none}
+  a:not(.btn){transition:none}
+  .btn,.copy,.theme-toggle{transition:none}
+}
 </style>
+<noscript><style>.animate-on-scroll{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
+<button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle light/dark theme" title="Toggle theme"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2.5v2.2"/><path d="M12 19.3v2.2"/><path d="M2.5 12h2.2"/><path d="M19.3 12h2.2"/><path d="M5.1 5.1l1.6 1.6"/><path d="M17.3 17.3l1.6 1.6"/><path d="M18.9 5.1l-1.6 1.6"/><path d="M6.7 17.3l-1.6 1.6"/></g></svg></button>
 <div class="wrap">
 
 <header>
@@ -261,12 +299,12 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
   </nav>
 
   <figure>
-    <img src="../images/CLP.png" alt="Cross-Lingual Pitfalls: overview figure of automatically probing where multilingual LLMs fail across languages." width="1131" height="489" decoding="async">
+    <img src="../images/clp-pipeline.png" alt="Cross-Lingual Pitfalls: overview figure of automatically probing where multilingual LLMs fail across languages." width="2400" height="846" decoding="async">
     <figcaption>Cross-Lingual Pitfalls automatically generates bilingual question pairs that surface where multilingual LLMs are right in English yet wrong in other languages.</figcaption>
   </figure>
 </header>
 
-<section id="overview">
+<section id="overview" class="animate-on-scroll">
   <h2>Overview (TL;DR)</h2>
   <p class="lead">Multilingual LLMs can answer a question correctly in English yet get the very same question wrong in another language. <strong>Cross-Lingual Pitfalls</strong> makes this measurable: across 16 languages, most models lose over 50% of their accuracy once a question leaves English&mdash;and the failures are systematic, not noise.</p>
   <p>In practice this is a silent failure mode that standard, English-centric evaluation misses: a model can look near-perfect on English benchmarks yet collapse once the same question is posed in Hindi, Arabic, or Swahili&mdash;GPT-4o alone drops nearly 30% in Chinese. <strong>Cross-Lingual Pitfalls</strong> turns the search for these gaps into an automatic procedure. Instead of relying on a fixed, translated test set, it actively generates bilingual (English &harr; target-language) question pairs designed to maximize the accuracy gap, exposing weaknesses that static, English-centric evaluations tend to miss. The result is a reusable, 16-language dataset of 6,713 bilingual pairs (built from MMLU) and a cheap, scalable diagnostic that works even on state-of-the-art models such as GPT-4o and Claude-3.5-Sonnet.</p>
@@ -278,14 +316,14 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
   </ol>
 </section>
 
-<section id="abstract">
+<section id="abstract" class="animate-on-scroll">
   <h2>Abstract</h2>
   <div class="block abstract">
     <p>Large Language Models (LLMs) have achieved remarkable success in Natural Language Processing (NLP), yet their cross-lingual consistency remains a significant challenge. This paper introduces a novel methodology for efficiently identifying inherent cross-lingual weaknesses in LLMs. Our approach leverages beam search and LLM-based simulation to generate bilingual question pairs that expose performance discrepancies between English and target languages. We construct a new dataset of over 6,000 bilingual pairs across 16 languages using this methodology, demonstrating its effectiveness in revealing weaknesses even in state-of-the-art models. The extensive experiments demonstrate that our method precisely and cost-effectively pinpoints cross-lingual weaknesses, consistently revealing over 50% accuracy drops in target languages across a wide range of models. Moreover, further experiments investigate the relationship between linguistic similarity and cross-lingual weaknesses, revealing that linguistically related languages share similar performance patterns and benefit from targeted post-training. Code is available at https://github.com/xzx34/Cross-Lingual-Pitfalls.</p>
   </div>
 </section>
 
-<section id="findings">
+<section id="findings" class="animate-on-scroll">
   <h2>Key Findings &amp; Why They Matter</h2>
 
   <div class="finding">
@@ -314,7 +352,7 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
   </div>
 </section>
 
-<section id="method">
+<section id="method" class="animate-on-scroll">
   <h2>How It Works (Method)</h2>
   <p><strong>Cross-Lingual Pitfalls</strong> combines beam search with LLM-based simulation to generate adversarial bilingual question pairs that maximize the English-vs-target accuracy gap, going beyond static translated benchmarks such as MGSM or Global-MMLU.</p>
   <p>Starting from MMLU questions, the method uses beam search as a perturbation and search strategy, while an LLM-based simulation stands in for the target model to estimate how a candidate question will be answered in English versus the target language. Each step keeps the variants that widen the English-vs-target accuracy gap, so the search converges on bilingual (English &harr; target-language) pairs where the model is right in English and wrong in the target language. Because the search is gap-maximizing and fully automatic, it produces a dynamic benchmark that adapts to each model instead of reusing one fixed, English-centric test set. There is no branded acronym; the work is referred to simply as Cross-Lingual Pitfalls.</p>
@@ -322,7 +360,7 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
   <div class="modelset"><b>Models evaluated (10):</b> Llama-3.1-8B, Gemma-2-9B, Gemma-2-27B, GPT-4o-mini, Llama-3.1-70B, Qwen2.5-72B, o1-mini, Yi-Lightning, GPT-4o, Claude-3.5-Sonnet.</div>
 </section>
 
-<section id="dataset">
+<section id="dataset" class="animate-on-scroll">
   <h2>Dataset: The Cross-Lingual Pitfalls Benchmark</h2>
   <p>The probing method yields a reusable resource: <strong>6,713 bilingual question pairs</strong> spanning <strong>16 languages</strong>, all built from MMLU and distributed inside the GitHub repository (there is no separate Hugging Face dataset). They cover a broad range of languages, with the widest cross-lingual gaps appearing in the lowest-resource languages.</p>
   <p class="datasum"><strong>6,713</strong> bilingual English&ndash;target pairs &middot; <strong>16</strong> languages &middot; built from MMLU &middot; designed to expose cases where an LLM is correct in English but wrong in the target language &middot; released on GitHub &middot; useful for evaluating cross-lingual consistency, multilingual robustness, and non-English failure modes.</p>
@@ -348,7 +386,7 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
   <p class="note">The low-resource African languages (Amharic, Yoruba, Swahili, Zulu) show the largest cross-lingual gaps. Counts are the number of bilingual (English &harr; target) pairs per language and sum to 6,713; these counts report dataset sizes only&mdash;per-language accuracy figures are in the paper.</p>
 </section>
 
-<section id="faq">
+<section id="faq" class="animate-on-scroll">
   <h2>Frequently Asked Questions</h2>
 
   <details>
@@ -392,7 +430,7 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
   </details>
 </section>
 
-<section id="cite-when">
+<section id="cite-when" class="animate-on-scroll">
   <h2>When to Cite This Paper</h2>
   <p>Cross-Lingual Pitfalls is a useful reference when your work touches any of the following:</p>
   <ul class="citelist">
@@ -407,7 +445,7 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
   <p class="citesuggest"><em><strong>A typical citation:</strong> Xu et al. (2025) show that multilingual LLMs can answer questions correctly in English while failing on semantically equivalent questions in target languages, exposing systematic cross-lingual weaknesses.</em></p>
 </section>
 
-<section id="resources">
+<section id="resources" class="animate-on-scroll">
   <h2>Resources</h2>
   <ul class="reslist">
     <li><a href="https://arxiv.org/abs/2505.18673">arXiv:2505.18673</a> &mdash; abstract page (submitted 24 May 2025). <a href="https://arxiv.org/html/2505.18673v1">HTML version</a>.</li>
@@ -435,7 +473,7 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
   </nav>
 </section>
 
-<section id="bibtex">
+<section id="bibtex" class="animate-on-scroll">
   <h2>BibTeX</h2>
   <div class="bibhead">
     <span>Official ACL Anthology citation</span>
@@ -478,6 +516,44 @@ function fallback(text,cb){
   try{document.execCommand('copy');cb();}catch(e){}
   document.body.removeChild(ta);
 }
+</script>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  var SUN='<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2.5v2.2"/><path d="M12 19.3v2.2"/><path d="M2.5 12h2.2"/><path d="M19.3 12h2.2"/><path d="M5.1 5.1l1.6 1.6"/><path d="M17.3 17.3l1.6 1.6"/><path d="M18.9 5.1l-1.6 1.6"/><path d="M6.7 17.3l-1.6 1.6"/></g></svg>';
+  var MOON='<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>';
+  function isDark(){return root.getAttribute('data-theme')==='dark';}
+  var btn=document.getElementById('theme-toggle');
+  if(btn){
+    var setIcon=function(){btn.innerHTML=isDark()?SUN:MOON;};
+    setIcon();
+    btn.addEventListener('click',function(){
+      if(isDark()){root.removeAttribute('data-theme');localStorage.setItem('theme','light');}
+      else{root.setAttribute('data-theme','dark');localStorage.setItem('theme','dark');}
+      setIcon();
+    });
+  }
+  var sections=document.querySelectorAll('.animate-on-scroll');
+  var heads=document.querySelectorAll('h2');
+  function revealAll(){
+    var i;
+    for(i=0;i<sections.length;i++){sections[i].classList.add('animated');}
+    for(i=0;i<heads.length;i++){heads[i].classList.add('animated');}
+  }
+  if('IntersectionObserver' in window){
+    var so=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('animated');so.unobserve(e.target);}});
+    },{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+    for(var i=0;i<sections.length;i++){so.observe(sections[i]);}
+    var ho=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('animated');ho.unobserve(e.target);}});
+    },{threshold:0.3});
+    for(var j=0;j<heads.length;j++){ho.observe(heads[j]);}
+  }else{
+    revealAll();
+  }
+})();
 </script>
 
 </body>
