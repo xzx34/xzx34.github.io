@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Why Multilingual LLMs Fail Across Languages — Cross-Lingual Pitfalls: Probing Cross-Lingual Weaknesses in Low-Resource Languages (ACL 2025)</title>
+<title>Cross-Lingual Pitfalls: Automatic Probing Cross-Lingual Weakness of Multilingual Large Language Models (ACL 2025) | Why Multilingual LLMs Fail Across Languages</title>
 <meta name="description" content="Cross-Lingual Pitfalls (ACL 2025): an automatic method and 16-language dataset exposing where multilingual LLMs fail outside English — over 50% accuracy drops, even for GPT-4o.">
 <meta name="robots" content="index,follow">
 <meta name="author" content="Zixiang Xu, Yanbo Wang, Yue Huang, Xiuying Chen, Jieyu Zhao, Meng Jiang, Xiangliang Zhang">
@@ -13,27 +13,27 @@
 
 <!-- Google Scholar / Highwire citation tags -->
 <meta name="citation_title" content="Cross-Lingual Pitfalls: Automatic Probing Cross-Lingual Weakness of Multilingual Large Language Models">
-<meta name="citation_author" content="Zixiang Xu">
-<meta name="citation_author" content="Yanbo Wang">
-<meta name="citation_author" content="Yue Huang">
-<meta name="citation_author" content="Xiuying Chen">
-<meta name="citation_author" content="Jieyu Zhao">
-<meta name="citation_author" content="Meng Jiang">
-<meta name="citation_author" content="Xiangliang Zhang">
-<meta name="citation_publication_date" content="2025">
+<meta name="citation_author" content="Xu, Zixiang">
+<meta name="citation_author" content="Wang, Yanbo">
+<meta name="citation_author" content="Huang, Yue">
+<meta name="citation_author" content="Chen, Xiuying">
+<meta name="citation_author" content="Zhao, Jieyu">
+<meta name="citation_author" content="Jiang, Meng">
+<meta name="citation_author" content="Zhang, Xiangliang">
+<meta name="citation_publication_date" content="2025/07">
 <meta name="citation_conference_title" content="Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)">
 <meta name="citation_publisher" content="Association for Computational Linguistics">
 <meta name="citation_firstpage" content="8254">
 <meta name="citation_lastpage" content="8284">
 <meta name="citation_doi" content="10.18653/v1/2025.acl-long.404">
 <meta name="citation_arxiv_id" content="2505.18673">
-<meta name="citation_pdf_url" content="https://arxiv.org/pdf/2505.18673">
+<meta name="citation_pdf_url" content="https://xzx34.github.io/cross-lingual-pitfalls/paper.pdf">
 <meta name="citation_abstract_html_url" content="https://aclanthology.org/2025.acl-long.404/">
 <meta name="citation_image" content="https://xzx34.github.io/images/CLP.png">
 
 <!-- Open Graph -->
 <meta property="og:type" content="article">
-<meta property="og:title" content="Cross-Lingual Pitfalls: Why Multilingual LLMs Fail Across Languages (ACL 2025)">
+<meta property="og:title" content="Cross-Lingual Pitfalls (ACL 2025): Why Multilingual LLMs Fail Across Languages">
 <meta property="og:description" content="Cross-Lingual Pitfalls (ACL 2025): an automatic method and 16-language dataset exposing where multilingual LLMs fail outside English — over 50% accuracy drops, even for GPT-4o.">
 <meta property="og:url" content="https://xzx34.github.io/cross-lingual-pitfalls/">
 <meta property="og:image" content="https://xzx34.github.io/images/CLP.png">
@@ -41,7 +41,7 @@
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Cross-Lingual Pitfalls: Why Multilingual LLMs Fail Across Languages (ACL 2025)">
+<meta name="twitter:title" content="Cross-Lingual Pitfalls (ACL 2025): Why Multilingual LLMs Fail Across Languages">
 <meta name="twitter:description" content="An automatic method and 16-language dataset exposing where multilingual LLMs fail outside English — over 50% accuracy drops, even for GPT-4o.">
 <meta name="twitter:image" content="https://xzx34.github.io/images/CLP.png">
 
@@ -49,11 +49,11 @@
 {
   "@context": "https://schema.org",
   "@type": "ScholarlyArticle",
-  "headline": "Cross-Lingual Pitfalls: Automatic Probing Cross-Lingual Weakness of Multilingual Large Language Models",
+  "headline": "Why Multilingual LLMs Fail Across Languages",
   "name": "Cross-Lingual Pitfalls: Automatic Probing Cross-Lingual Weakness of Multilingual Large Language Models",
   "url": "https://xzx34.github.io/cross-lingual-pitfalls/",
   "image": "https://xzx34.github.io/images/CLP.png",
-  "datePublished": "2025",
+  "datePublished": "2025-07",
   "inLanguage": "en",
   "description": "Cross-Lingual Pitfalls (ACL 2025): an automatic method and 16-language dataset exposing where multilingual LLMs fail outside English, with over 50% accuracy drops, even for GPT-4o.",
   "abstract": "Large Language Models (LLMs) have achieved remarkable success in Natural Language Processing (NLP), yet their cross-lingual consistency remains a significant challenge. This paper introduces a novel methodology for efficiently identifying inherent cross-lingual weaknesses in LLMs. Our approach leverages beam search and LLM-based simulation to generate bilingual question pairs that expose performance discrepancies between English and target languages. We construct a new dataset of over 6,000 bilingual pairs across 16 languages using this methodology, demonstrating its effectiveness in revealing weaknesses even in state-of-the-art models. The extensive experiments demonstrate that our method precisely and cost-effectively pinpoints cross-lingual weaknesses, consistently revealing over 50% accuracy drops in target languages across a wide range of models. Moreover, further experiments investigate the relationship between linguistic similarity and cross-lingual weaknesses, revealing that linguistically related languages share similar performance patterns and benefit from targeted post-training. Code is available at https://github.com/xzx34/Cross-Lingual-Pitfalls.",
@@ -90,53 +90,43 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Why do multilingual LLMs perform worse in non-English or low-resource languages than in English?",
+      "name": "What is Cross-Lingual Pitfalls?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Cross-Lingual Pitfalls is an ACL 2025 paper and method for automatically uncovering where multilingual LLMs fail outside English. It pairs beam search with LLM-based simulation to generate adversarial bilingual (English to target-language) question pairs that maximize the accuracy gap between English and a target language, and releases a 16-language dataset of 6,713 bilingual pairs built from MMLU. Models answer almost everything correctly in English, yet most lose over 50% of that accuracy in the target language."}
+    },
+    {
+      "@type": "Question",
+      "name": "Why do multilingual LLMs fail across languages?",
       "acceptedAnswer": {"@type": "Answer", "text": "Most LLMs are trained on heavily English-dominated data, so their knowledge and reasoning are strongest in English and thinner in other languages. Cross-Lingual Pitfalls makes this concrete: models reach nearly 100% accuracy in English but most lose over 50% of that accuracy on average once the same question is asked in a target language, and the drop is largest for low-resource languages. The gap reflects cross-lingual inconsistency, where the same underlying knowledge is not reliably accessible across languages."}
     },
     {
       "@type": "Question",
-      "name": "How can you automatically find the cross-lingual weaknesses of a multilingual LLM?",
+      "name": "How does this paper automatically find cross-lingual weaknesses?",
       "acceptedAnswer": {"@type": "Answer", "text": "The paper introduces an automatic probing method that combines beam search with LLM-based simulation. Starting from MMLU questions, it searches for bilingual (English to target-language) question pairs that maximize the gap between English and target-language accuracy, using a simulated model to score candidates. This adversarial, gap-maximizing search surfaces weaknesses automatically, without hand-writing a fixed test set."}
     },
     {
       "@type": "Question",
-      "name": "How big is the English-vs-target-language accuracy gap in state-of-the-art LLMs?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Across the models studied, accuracy is near 100% in English but drops by over 50% on average in the target language. For English to Chinese specifically, the average drop is nearly 60%. These are aggregate figures; the per-language and per-model breakdowns are reported in the paper."}
-    },
-    {
-      "@type": "Question",
-      "name": "Do even frontier models like GPT-4o and Claude-3.5-Sonnet have cross-lingual weaknesses?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Yes. The evaluation covers ten models, including GPT-4o, Claude-3.5-Sonnet, o1-mini, and Yi-Lightning. Even the strongest models are not immune: GPT-4o still loses nearly 30% accuracy when questions move from English to Chinese. Frontier capability narrows the cross-lingual gap but does not eliminate it."}
-    },
-    {
-      "@type": "Question",
-      "name": "Which languages were tested, and which show the largest drops?",
-      "acceptedAnswer": {"@type": "Answer", "text": "The dataset covers 16 languages: Chinese, Japanese, Korean, French, Spanish, Italian, Ukrainian, German, Bengali, Hindi, Arabic, and Hebrew, plus the low-resource African languages Amharic, Yoruba, Swahili, and Zulu. The sharpest accuracy drops appear in those low-resource African languages, where even state-of-the-art models degrade steeply relative to English."}
-    },
-    {
-      "@type": "Question",
-      "name": "Does linguistic similarity predict where an LLM fails across languages?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Yes. Failures are structured by linguistic similarity: linguistically related languages share similar failure patterns. This also makes mitigation efficient, because targeted post-training on one language transfers to its relatives, letting practitioners improve a whole language family at once rather than one language at a time."}
-    },
-    {
-      "@type": "Question",
-      "name": "Can fine-tuning or post-training fix cross-lingual weaknesses, and does the fix transfer to related languages?",
-      "acceptedAnswer": {"@type": "Answer", "text": "The fine-tuning experiments show real potential for targeted improvement. Because related languages fail in similar ways, post-training aimed at one language transfers to its linguistic relatives, so a focused fine-tuning effort can raise performance across a family of related languages."}
-    },
-    {
-      "@type": "Question",
-      "name": "How is this different from static multilingual benchmarks like MGSM or Global-MMLU?",
+      "name": "How is this different from MGSM or Global-MMLU?",
       "acceptedAnswer": {"@type": "Answer", "text": "Static, translated benchmarks such as MGSM, Global-MMLU, Belebele, or XNLI apply one fixed test set to every model. Cross-Lingual Pitfalls instead generates adversarial bilingual pairs tailored to expose each model's weaknesses, maximizing the English-vs-target gap. It is a dynamic, automatic probe that complements static benchmarks and can be re-run on each new model rather than going stale."}
     },
     {
       "@type": "Question",
-      "name": "What is the dataset, how big is it, and where can I get it?",
+      "name": "Do GPT-4o and Claude still fail outside English?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. The evaluation covers ten models, including GPT-4o, Claude-3.5-Sonnet, o1-mini, and Yi-Lightning. Even the strongest models are not immune: GPT-4o still loses nearly 30% accuracy when questions move from English to Chinese. Frontier capability narrows the cross-lingual gap but does not eliminate it."}
+    },
+    {
+      "@type": "Question",
+      "name": "What languages are covered?",
+      "acceptedAnswer": {"@type": "Answer", "text": "The dataset covers 16 languages: Chinese, Japanese, Korean, French, Spanish, Italian, Ukrainian, German, Bengali, Hindi, Arabic, and Hebrew, plus the low-resource African languages Amharic, Yoruba, Swahili, and Zulu. The sharpest accuracy drops appear in those low-resource African languages, where even state-of-the-art models degrade steeply relative to English."}
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I download the dataset?",
       "acceptedAnswer": {"@type": "Answer", "text": "It is a set of 6,713 bilingual (English to target-language) question pairs across 16 languages, built from MMLU. The dataset is distributed inside the project's GitHub repository under an MIT license; there is no separate Hugging Face dataset."}
     },
     {
       "@type": "Question",
-      "name": "How expensive is it to run this probing method?",
-      "acceptedAnswer": {"@type": "Answer", "text": "It is cheap. Identifying a bilingual pair that exposes a weakness costs less than $0.05 for most languages, which is what makes the method practical as a continuous, scalable diagnostic rather than a one-time evaluation."}
+      "name": "When should I cite this paper?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Cite Cross-Lingual Pitfalls when your work touches cross-lingual inconsistency in multilingual LLMs, automatic or adversarial probing of model failures, English-centric blind spots in evaluation, low-resource language evaluation, or dynamic benchmarks beyond static translated test sets. See the When to Cite This Paper section for a ready-to-use citation sentence."}
     }
   ]
 }
@@ -164,21 +154,21 @@ a{color:var(--accent);text-decoration:none}
 a:hover{color:var(--accent-dark);text-decoration:underline}
 h1{font-size:2rem;line-height:1.25;margin:.1em 0 .35em;letter-spacing:-.01em}
 .subtitle{font-size:1.18rem;font-weight:500;color:var(--muted);line-height:1.5;margin:0 0 1em}
-h2{font-size:1.4rem;line-height:1.3;margin:2.3em 0 .7em;padding-left:.6rem;border-left:4px solid var(--accent)}
+h2{font-size:1.4rem;line-height:1.3;margin:2.6em 0 .75em;padding-left:.65rem;border-left:3px solid var(--accent)}
 h3{font-size:1.06rem;margin:1.3em 0 .25em}
 p{margin:.7em 0}
-.venue{display:inline-block;font-weight:600;color:var(--accent-dark);background:#eaf1ff;border:1px solid #cfe0ff;padding:2px 11px;border-radius:6px;font-size:.92rem}
-.authors{margin:1em 0 .35em;line-height:1.95}
+.venue{display:inline-block;font-weight:600;color:var(--accent-dark);background:#eaf1ff;border:1px solid #cfe0ff;padding:3px 13px;border-radius:999px;font-size:.9rem;letter-spacing:.01em}
+.authors{margin:1.15em 0 .4em;line-height:1.85}
 .au{white-space:nowrap;margin-right:.15em}
 sup{font-size:.7em;line-height:0}
 .legend{color:var(--muted);font-size:.92rem;margin:.2em 0 .4em;line-height:1.7}
 .btns{display:flex;flex-wrap:wrap;gap:10px;margin:1.2em 0 .2em}
-.btn{display:inline-flex;align-items:center;gap:.45em;border:1px solid var(--accent);color:var(--accent);background:#fff;padding:.5em .95em;border-radius:999px;font-size:.95rem;font-weight:600;line-height:1}
-.btn:hover{background:var(--accent);color:#fff;text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:.45em;border:1px solid var(--accent);color:var(--accent);background:#fff;padding:.55em 1.05em;border-radius:999px;font-size:.95rem;font-weight:600;line-height:1;transition:background .15s ease,color .15s ease,box-shadow .15s ease,transform .15s ease}
+.btn:hover{background:var(--accent);color:#fff;text-decoration:none;box-shadow:0 4px 12px rgba(0,86,214,.22);transform:translateY(-1px)}
 .btn .ic{width:1.05em;height:1.05em;flex:0 0 auto}
-figure{margin:1.7em 0 0}
-figure img{display:block;width:100%;height:auto;border:1px solid var(--border);border-radius:8px;background:#fff}
-figcaption{color:var(--muted);font-size:.9rem;margin-top:.55em;text-align:center}
+figure{margin:2.4em auto .4em;max-width:720px}
+figure img{display:block;width:100%;height:auto;border:1px solid var(--border);border-radius:12px;background:#fff;padding:10px;box-shadow:0 6px 22px rgba(20,40,80,.10)}
+figcaption{color:var(--muted);font-size:.9rem;margin:.8em auto 0;text-align:center;max-width:640px}
 .block{background:var(--soft);border:1px solid var(--border);border-radius:8px;padding:18px 20px}
 .abstract p{margin:0}
 .citeas{color:var(--muted);font-size:.88rem;margin-top:.85em}
@@ -190,14 +180,18 @@ figcaption{color:var(--muted);font-size:.9rem;margin-top:.55em;text-align:center
 strong.k{color:var(--accent-dark)}
 .modelset{margin:.5em 0;padding:.7em 14px;background:var(--soft);border:1px solid var(--border);border-radius:8px;font-size:.95rem}
 .modelset b{color:var(--accent-dark)}
-.tablewrap{overflow-x:auto;margin:.8em 0}
-table{border-collapse:collapse;width:100%;font-size:.96rem}
-th,td{border:1px solid var(--border);padding:7px 11px;text-align:left}
-thead th{background:var(--accent);color:#fff;font-weight:600}
-.n{text-align:right;font-variant-numeric:tabular-nums}
-.grouphead td{background:#eaf1ff;font-weight:600;color:var(--accent-dark)}
-.totrow td{font-weight:700;background:var(--soft)}
 .note{color:var(--muted);font-size:.88rem;margin-top:.3em}
+.datasum{margin:.9em 0;padding:.85em 1.05em;background:var(--soft);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:8px;font-size:.95rem;line-height:1.65;color:var(--text)}
+.datasum strong{color:var(--accent-dark)}
+.langgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:1.1em 0 .55em}
+.langgrid .cell{display:flex;align-items:baseline;justify-content:space-between;gap:.6em;background:var(--soft);border:1px solid var(--border);border-radius:8px;padding:.55em .8em;font-size:.95rem}
+.langgrid .cell .lang{font-weight:600}
+.langgrid .cell .cnt{color:var(--accent-dark);font-weight:700;font-variant-numeric:tabular-nums}
+.gridcap{color:var(--muted);font-size:.9rem;text-align:center;margin:.2em 0 .4em}
+.gridcap strong{color:var(--accent-dark);font-variant-numeric:tabular-nums}
+.citelist{margin:.7em 0;padding-left:1.2em}
+.citelist li{margin:.32em 0}
+.citesuggest{margin:1.1em 0 .2em;padding:.9em 1.1em;background:var(--soft);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:8px;font-size:.97rem;line-height:1.6}
 details{border:1px solid var(--border);border-radius:8px;background:var(--soft);margin:.55em 0;padding:0 16px}
 details[open]{background:#fff}
 summary{cursor:pointer;font-weight:600;padding:.85em 0;list-style:none;outline-offset:3px}
@@ -218,6 +212,7 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
   h1{font-size:1.6rem}
   h2{font-size:1.25rem}
   .wrap{padding:24px 16px 48px}
+  .langgrid{grid-template-columns:repeat(2,1fr)}
 }
 </style>
 </head>
@@ -225,8 +220,8 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
 <div class="wrap">
 
 <header>
-  <h1>Cross-Lingual Pitfalls: Why Multilingual LLMs Fail Across Languages</h1>
-  <p class="subtitle">An automatic method that probes the hidden cross-lingual weaknesses of multilingual large language models across 16 languages, revealing where even GPT-4o silently fails outside English.</p>
+  <h1>Cross-Lingual Pitfalls: Automatic Probing Cross-Lingual Weakness of Multilingual Large Language Models</h1>
+  <p class="subtitle">Why Multilingual LLMs Fail Across Languages: an automatic probe that surfaces over 50% accuracy drops across 16 languages, even for GPT-4o.</p>
 
   <span class="venue">ACL 2025 (Long Paper)</span>
 
@@ -266,15 +261,15 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
   </nav>
 
   <figure>
-    <img src="../images/CLP.png" alt="Cross-Lingual Pitfalls: overview figure of automatically probing where multilingual LLMs fail across languages." width="820">
+    <img src="../images/CLP.png" alt="Cross-Lingual Pitfalls: overview figure of automatically probing where multilingual LLMs fail across languages." width="1131" height="489" decoding="async">
     <figcaption>Cross-Lingual Pitfalls automatically generates bilingual question pairs that surface where multilingual LLMs are right in English yet wrong in other languages.</figcaption>
   </figure>
 </header>
 
 <section id="overview">
   <h2>Overview (TL;DR)</h2>
-  <p class="lead">Xu et al. (2025) show that multilingual LLMs harbor systematic, automatically discoverable cross-lingual weaknesses&mdash;even frontier models answer a question correctly in English yet fail it in other languages, with accuracy dropping over 50% on average across 16 languages.</p>
-  <p>In practice this is a silent failure mode: a model can look near-perfect on English benchmarks while quietly collapsing once the same question is posed in Hindi, Arabic, or Swahili. <strong>Cross-Lingual Pitfalls</strong> turns the search for these gaps into an automatic procedure. Instead of relying on a fixed, translated test set, it actively generates bilingual (English &harr; target-language) question pairs designed to maximize the accuracy gap, exposing weaknesses that static, English-centric evaluations tend to miss. The result is a reusable, 16-language dataset of 6,713 bilingual pairs (built from MMLU) and a cheap, scalable diagnostic that works even on state-of-the-art models such as GPT-4o and Claude-3.5-Sonnet.</p>
+  <p class="lead">Multilingual LLMs can answer a question correctly in English yet get the very same question wrong in another language. <strong>Cross-Lingual Pitfalls</strong> makes this measurable: across 16 languages, most models lose over 50% of their accuracy once a question leaves English&mdash;and the failures are systematic, not noise.</p>
+  <p>In practice this is a silent failure mode that standard, English-centric evaluation misses: a model can look near-perfect on English benchmarks yet collapse once the same question is posed in Hindi, Arabic, or Swahili&mdash;GPT-4o alone drops nearly 30% in Chinese. <strong>Cross-Lingual Pitfalls</strong> turns the search for these gaps into an automatic procedure. Instead of relying on a fixed, translated test set, it actively generates bilingual (English &harr; target-language) question pairs designed to maximize the accuracy gap, exposing weaknesses that static, English-centric evaluations tend to miss. The result is a reusable, 16-language dataset of 6,713 bilingual pairs (built from MMLU) and a cheap, scalable diagnostic that works even on state-of-the-art models such as GPT-4o and Claude-3.5-Sonnet.</p>
   <p>In the authors' words, the work makes three contributions:</p>
   <ol class="contrib">
     <li>"We present an efficient, precise methodology for identifying LLM cross-lingual weaknesses."</li>
@@ -288,7 +283,6 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
   <div class="block abstract">
     <p>Large Language Models (LLMs) have achieved remarkable success in Natural Language Processing (NLP), yet their cross-lingual consistency remains a significant challenge. This paper introduces a novel methodology for efficiently identifying inherent cross-lingual weaknesses in LLMs. Our approach leverages beam search and LLM-based simulation to generate bilingual question pairs that expose performance discrepancies between English and target languages. We construct a new dataset of over 6,000 bilingual pairs across 16 languages using this methodology, demonstrating its effectiveness in revealing weaknesses even in state-of-the-art models. The extensive experiments demonstrate that our method precisely and cost-effectively pinpoints cross-lingual weaknesses, consistently revealing over 50% accuracy drops in target languages across a wide range of models. Moreover, further experiments investigate the relationship between linguistic similarity and cross-lingual weaknesses, revealing that linguistically related languages share similar performance patterns and benefit from targeted post-training. Code is available at https://github.com/xzx34/Cross-Lingual-Pitfalls.</p>
   </div>
-  <p class="citeas"><strong>Cite as:</strong> Cross-Lingual Pitfalls: Automatic Probing Cross-Lingual Weakness of Multilingual Large Language Models (ACL 2025).</p>
 </section>
 
 <section id="findings">
@@ -322,96 +316,95 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
 
 <section id="method">
   <h2>How It Works (Method)</h2>
-  <p>Xu et al. (2025) propose an automatic probing method&mdash;beam search plus LLM-based simulation&mdash;that generates adversarial bilingual question pairs to surface cross-lingual weaknesses, going beyond static translated benchmarks such as MGSM or Global-MMLU.</p>
+  <p><strong>Cross-Lingual Pitfalls</strong> combines beam search with LLM-based simulation to generate adversarial bilingual question pairs that maximize the English-vs-target accuracy gap, going beyond static translated benchmarks such as MGSM or Global-MMLU.</p>
   <p>Starting from MMLU questions, the method uses beam search as a perturbation and search strategy, while an LLM-based simulation stands in for the target model to estimate how a candidate question will be answered in English versus the target language. Each step keeps the variants that widen the English-vs-target accuracy gap, so the search converges on bilingual (English &harr; target-language) pairs where the model is right in English and wrong in the target language. Because the search is gap-maximizing and fully automatic, it produces a dynamic benchmark that adapts to each model instead of reusing one fixed, English-centric test set. There is no branded acronym; the work is referred to simply as Cross-Lingual Pitfalls.</p>
   <div class="modelset"><b>Models used to generate pairs (5):</b> Llama-3.1-8B, Gemma-2-9B, Gemma-2-27B, GPT-4o-mini, Qwen2.5-72B.</div>
   <div class="modelset"><b>Models evaluated (10):</b> Llama-3.1-8B, Gemma-2-9B, Gemma-2-27B, GPT-4o-mini, Llama-3.1-70B, Qwen2.5-72B, o1-mini, Yi-Lightning, GPT-4o, Claude-3.5-Sonnet.</div>
 </section>
 
 <section id="dataset">
-  <h2>Dataset</h2>
+  <h2>Dataset: The Cross-Lingual Pitfalls Benchmark</h2>
   <p>The probing method yields a reusable resource: <strong>6,713 bilingual question pairs</strong> spanning <strong>16 languages</strong>, all built from MMLU and distributed inside the GitHub repository (there is no separate Hugging Face dataset). They cover a broad range of languages, with the widest cross-lingual gaps appearing in the lowest-resource languages.</p>
-  <div class="tablewrap">
-    <table>
-      <thead>
-        <tr><th scope="col">Language</th><th scope="col" class="n">Bilingual pairs</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Chinese</td><td class="n">342</td></tr>
-        <tr><td>Japanese</td><td class="n">314</td></tr>
-        <tr><td>Korean</td><td class="n">456</td></tr>
-        <tr><td>French</td><td class="n">312</td></tr>
-        <tr><td>Spanish</td><td class="n">242</td></tr>
-        <tr><td>Italian</td><td class="n">295</td></tr>
-        <tr><td>Ukrainian</td><td class="n">323</td></tr>
-        <tr><td>German</td><td class="n">322</td></tr>
-        <tr><td>Bengali</td><td class="n">431</td></tr>
-        <tr><td>Hindi</td><td class="n">327</td></tr>
-        <tr><td>Arabic</td><td class="n">424</td></tr>
-        <tr><td>Hebrew</td><td class="n">319</td></tr>
-        <tr><td>Amharic</td><td class="n">665</td></tr>
-        <tr><td>Yoruba</td><td class="n">813</td></tr>
-        <tr><td>Swahili</td><td class="n">417</td></tr>
-        <tr><td>Zulu</td><td class="n">711</td></tr>
-        <tr class="totrow"><td>Total (16 languages)</td><td class="n">6,713</td></tr>
-      </tbody>
-    </table>
+  <p class="datasum"><strong>6,713</strong> bilingual English&ndash;target pairs &middot; <strong>16</strong> languages &middot; built from MMLU &middot; designed to expose cases where an LLM is correct in English but wrong in the target language &middot; released on GitHub &middot; useful for evaluating cross-lingual consistency, multilingual robustness, and non-English failure modes.</p>
+  <div class="langgrid">
+    <div class="cell"><span class="lang">Chinese</span><span class="cnt">342</span></div>
+    <div class="cell"><span class="lang">Japanese</span><span class="cnt">314</span></div>
+    <div class="cell"><span class="lang">Korean</span><span class="cnt">456</span></div>
+    <div class="cell"><span class="lang">French</span><span class="cnt">312</span></div>
+    <div class="cell"><span class="lang">Spanish</span><span class="cnt">242</span></div>
+    <div class="cell"><span class="lang">Italian</span><span class="cnt">295</span></div>
+    <div class="cell"><span class="lang">Ukrainian</span><span class="cnt">323</span></div>
+    <div class="cell"><span class="lang">German</span><span class="cnt">322</span></div>
+    <div class="cell"><span class="lang">Bengali</span><span class="cnt">431</span></div>
+    <div class="cell"><span class="lang">Hindi</span><span class="cnt">327</span></div>
+    <div class="cell"><span class="lang">Arabic</span><span class="cnt">424</span></div>
+    <div class="cell"><span class="lang">Hebrew</span><span class="cnt">319</span></div>
+    <div class="cell"><span class="lang">Amharic</span><span class="cnt">665</span></div>
+    <div class="cell"><span class="lang">Yoruba</span><span class="cnt">813</span></div>
+    <div class="cell"><span class="lang">Swahili</span><span class="cnt">417</span></div>
+    <div class="cell"><span class="lang">Zulu</span><span class="cnt">711</span></div>
   </div>
-  <p class="note">The low-resource African languages (Amharic, Yoruba, Swahili, Zulu) show the largest cross-lingual gaps. Counts are the number of bilingual (English &harr; target) pairs per language and sum to 6,713; the table reports dataset sizes only&mdash;per-language accuracy figures are in the paper.</p>
+  <p class="gridcap">Total across 16 languages: <strong>6,713</strong> bilingual (English &harr; target) pairs.</p>
+  <p class="note">The low-resource African languages (Amharic, Yoruba, Swahili, Zulu) show the largest cross-lingual gaps. Counts are the number of bilingual (English &harr; target) pairs per language and sum to 6,713; these counts report dataset sizes only&mdash;per-language accuracy figures are in the paper.</p>
 </section>
 
 <section id="faq">
   <h2>Frequently Asked Questions</h2>
 
   <details>
-    <summary>Why do multilingual LLMs perform worse in non-English / low-resource languages than in English?</summary>
+    <summary>What is Cross-Lingual Pitfalls?</summary>
+    <div class="ans"><p>Cross-Lingual Pitfalls is an ACL 2025 paper and method for automatically uncovering where multilingual LLMs fail outside English. It pairs beam search with LLM-based simulation to generate adversarial bilingual (English &harr; target-language) question pairs that maximize the accuracy gap between English and a target language, and releases a 16-language dataset of 6,713 bilingual pairs built from MMLU. Models answer almost everything correctly in English, yet most lose over 50% of that accuracy in the target language.</p></div>
+  </details>
+
+  <details>
+    <summary>Why do multilingual LLMs fail across languages?</summary>
     <div class="ans"><p>Most LLMs are trained on heavily English-dominated data, so their knowledge and reasoning are strongest in English and thinner in other languages. Cross-Lingual Pitfalls makes this concrete: models reach nearly 100% accuracy in English but most lose over 50% of that accuracy on average once the same question is asked in a target language, and the drop is largest for low-resource languages. The gap reflects cross-lingual inconsistency, where the same underlying knowledge is not reliably accessible across languages.</p></div>
   </details>
 
   <details>
-    <summary>How can you automatically find the cross-lingual weaknesses of a multilingual LLM?</summary>
+    <summary>How does this paper automatically find cross-lingual weaknesses?</summary>
     <div class="ans"><p>The paper introduces an automatic probing method that combines beam search with LLM-based simulation. Starting from MMLU questions, it searches for bilingual (English &harr; target-language) question pairs that maximize the gap between English and target-language accuracy, using a simulated model to score candidates. This adversarial, gap-maximizing search surfaces weaknesses automatically, without hand-writing a fixed test set.</p></div>
   </details>
 
   <details>
-    <summary>How big is the English-vs-target-language accuracy gap in state-of-the-art LLMs?</summary>
-    <div class="ans"><p>Across the models studied, accuracy is near 100% in English but drops by over 50% on average in the target language. For English&rarr;Chinese specifically, the average drop is nearly 60%. These are aggregate figures; the per-language and per-model breakdowns are reported in the paper.</p></div>
-  </details>
-
-  <details>
-    <summary>Do even frontier models like GPT-4o and Claude-3.5-Sonnet have cross-lingual weaknesses?</summary>
-    <div class="ans"><p>Yes. The evaluation covers ten models, including GPT-4o, Claude-3.5-Sonnet, o1-mini, and Yi-Lightning. Even the strongest models are not immune: GPT-4o still loses nearly 30% accuracy when questions move from English to Chinese. Frontier capability narrows the cross-lingual gap but does not eliminate it.</p></div>
-  </details>
-
-  <details>
-    <summary>Which languages were tested, and which show the largest drops?</summary>
-    <div class="ans"><p>The dataset covers 16 languages: Chinese, Japanese, Korean, French, Spanish, Italian, Ukrainian, German, Bengali, Hindi, Arabic, and Hebrew, plus the low-resource African languages Amharic, Yoruba, Swahili, and Zulu. The sharpest accuracy drops appear in those low-resource African languages, where even state-of-the-art models degrade steeply relative to English.</p></div>
-  </details>
-
-  <details>
-    <summary>Does linguistic similarity predict where an LLM fails across languages?</summary>
-    <div class="ans"><p>Yes. Failures are structured by linguistic similarity: linguistically related languages share similar failure patterns. This also makes mitigation efficient, because targeted post-training on one language transfers to its relatives, letting practitioners improve a whole language family at once rather than one language at a time.</p></div>
-  </details>
-
-  <details>
-    <summary>Can fine-tuning / post-training fix cross-lingual weaknesses, and does the fix transfer to related languages?</summary>
-    <div class="ans"><p>The fine-tuning experiments show real potential for targeted improvement. Because related languages fail in similar ways, post-training aimed at one language transfers to its linguistic relatives, so a focused fine-tuning effort can raise performance across a family of related languages.</p></div>
-  </details>
-
-  <details>
-    <summary>How is this different from static multilingual benchmarks like MGSM or Global-MMLU?</summary>
+    <summary>How is this different from MGSM or Global-MMLU?</summary>
     <div class="ans"><p>Static, translated benchmarks such as MGSM, Global-MMLU, Belebele, or XNLI apply one fixed test set to every model. Cross-Lingual Pitfalls instead generates adversarial bilingual pairs tailored to expose each model's weaknesses, maximizing the English-vs-target gap. It is a dynamic, automatic probe that complements static benchmarks and can be re-run on each new model rather than going stale.</p></div>
   </details>
 
   <details>
-    <summary>What is the dataset, how big is it, and where can I get it?</summary>
+    <summary>Do GPT-4o and Claude still fail outside English?</summary>
+    <div class="ans"><p>Yes. The evaluation covers ten models, including GPT-4o, Claude-3.5-Sonnet, o1-mini, and Yi-Lightning. Even the strongest models are not immune: GPT-4o still loses nearly 30% accuracy when questions move from English to Chinese. Frontier capability narrows the cross-lingual gap but does not eliminate it.</p></div>
+  </details>
+
+  <details>
+    <summary>What languages are covered?</summary>
+    <div class="ans"><p>The dataset covers 16 languages: Chinese, Japanese, Korean, French, Spanish, Italian, Ukrainian, German, Bengali, Hindi, Arabic, and Hebrew, plus the low-resource African languages Amharic, Yoruba, Swahili, and Zulu. The sharpest accuracy drops appear in those low-resource African languages, where even state-of-the-art models degrade steeply relative to English.</p></div>
+  </details>
+
+  <details>
+    <summary>Where can I download the dataset?</summary>
     <div class="ans"><p>It is a set of 6,713 bilingual (English &harr; target-language) question pairs across 16 languages, built from MMLU. The dataset is distributed inside the project's <a href="https://github.com/xzx34/Cross-Lingual-Pitfalls">GitHub repository</a> under an MIT license; there is no separate Hugging Face dataset.</p></div>
   </details>
 
   <details>
-    <summary>How expensive is it to run this probing method?</summary>
-    <div class="ans"><p>It is cheap. Identifying a bilingual pair that exposes a weakness costs less than $0.05 for most languages, which is what makes the method practical as a continuous, scalable diagnostic rather than a one-time evaluation.</p></div>
+    <summary>When should I cite this paper?</summary>
+    <div class="ans"><p>Cite Cross-Lingual Pitfalls when your work touches cross-lingual inconsistency in multilingual LLMs, automatic or adversarial probing of model failures, English-centric blind spots in evaluation, low-resource language evaluation, or dynamic benchmarks beyond static translated test sets. See the <a href="#cite-when">When to Cite This Paper</a> section below for a ready-to-use citation sentence.</p></div>
   </details>
+</section>
+
+<section id="cite-when">
+  <h2>When to Cite This Paper</h2>
+  <p>Cross-Lingual Pitfalls is a useful reference when your work touches any of the following:</p>
+  <ul class="citelist">
+    <li>cross-lingual inconsistency in multilingual LLMs;</li>
+    <li>automatic or adversarial probing of multilingual model failures;</li>
+    <li>English-centric blind spots in LLM evaluation;</li>
+    <li>low-resource language evaluation;</li>
+    <li>dynamic benchmarks beyond static, translated test sets;</li>
+    <li>language-family transfer in post-training or fine-tuning;</li>
+    <li>cases where a model is correct in English but fails on a semantically equivalent non-English question.</li>
+  </ul>
+  <p class="citesuggest"><em><strong>A typical citation:</strong> Xu et al. (2025) show that multilingual LLMs can answer questions correctly in English while failing on semantically equivalent questions in target languages, exposing systematic cross-lingual weaknesses.</em></p>
 </section>
 
 <section id="resources">
