@@ -94,7 +94,7 @@ Yanbo Wang, **Zixiang Xu**, Yue Huang, Xiangqi Wang, Zirui Song, Lang Gao, Chenx
 </div></div>
 
 
-- Temporal-IRL: Modeling Port Congestion and Berth Scheduling with Inverse Reinforcement Learning, Yikuan Hu\*, **Zixiang Xu\***, Wei Zhang\*, Xinyu Yang\*, Guo Li\*, Nikolay Aristov, Mingjie Tang, Elenna R Dugundji(\*: Equal contribution). TRB 2024.
+- [Temporal-IRL: Modeling Port Congestion and Berth Scheduling with Inverse Reinforcement Learning](https://arxiv.org/abs/2506.19843), Yikuan Hu\*, **Zixiang Xu\***, Wei Zhang\*, Xinyu Yang\*, Guo Li\*, Nikolay Aristov, Mingjie Tang, Elenna R Dugundji(\*: Equal contribution). TRB 2024.
 
 - [GenUDC: High Quality 3D Mesh Generation With Unsigned Dual Contouring Representation](https://arxiv.org/abs/2410.17802), Ruowei Wang, Jiaqi Li, Dan Zeng, Xueqi Ma, **Xu Zixiang**, Jianwei Zhang, Qijun Zhao. ACM MM 2024.
 
