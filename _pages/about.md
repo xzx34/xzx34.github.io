@@ -82,7 +82,7 @@ Yanbo Wang, **Zixiang Xu**, Yue Huang, Xiangqi Wang, Zirui Song, Lang Gao, Chenx
 
 </div></div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">COLM 2025</div><img src='images/socialmaze.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images/socialmaze.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [SocialMaze: A Benchmark for Evaluating Social Reasoning in Large Language Models](/socialmaze/)  
