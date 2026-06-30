@@ -82,14 +82,14 @@ Yanbo Wang, **Zixiang Xu**, Yue Huang, Xiangqi Wang, Zirui Song, Lang Gao, Chenx
 
 </div></div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images/socialmaze.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">COLM 2025</div><img src='images/socialmaze.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[SocialMaze: A Benchmark for Evaluating Social Reasoning in Large Language Models](https://github.com/xzx34/SocialMaze)  
+[SocialMaze: A Benchmark for Evaluating Social Reasoning in Large Language Models](/socialmaze/)  
 
 **Zixiang Xu**, Yanbo Wang, Yue Huang, Jiayi Ye, Haomin Zhuang, Zirui Song, Lang Gao, Chenxi Wang, Zhaorun Chen, Yujun Zhou, Sixian Li, Wang Pan, Yue Zhao, Jieyu Zhao, Xiangliang Zhang, Xiuying Chen  
 
-<div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2505.23713">Paper</a></div>
+<div class="pub-links"><a class="pub-btn" href="/socialmaze/">Project Page</a><a class="pub-btn" href="https://arxiv.org/abs/2505.23713">Paper</a></div>
 
 </div></div>
 
