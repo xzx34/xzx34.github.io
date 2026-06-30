@@ -58,7 +58,7 @@ Previously, he received his B.S. in Computer Science from [Sichuan University](h
 
 Yanbo Wang\*, **Zixiang Xu\***, Yue Huang\*, Chujie Gao, Siyuan Wu, Jiayi Ye, Xiuying Chen, Pin-Yu Chen, Xiangliang Zhang (\*: Equal Contribution).
 
-<div class="pub-links"><a class="pub-btn" href="https://openreview.net/forum?id=WABbFRIpjc">Paper</a></div>
+<div class="pub-links"><a class="pub-btn" href="https://openreview.net/forum?id=WABbFRIpjc">Paper</a><a class="pub-btn" href="https://github.com/wyf23187/Adaptive_Distractions">Code</a></div>
 
 </div></div>
 
@@ -69,7 +69,7 @@ Yanbo Wang\*, **Zixiang Xu\***, Yue Huang\*, Chujie Gao, Siyuan Wu, Jiayi Ye, Xi
 
 Yanbo Wang, **Zixiang Xu**, Yue Huang, Xiangqi Wang, Zirui Song, Lang Gao, Chenxi Wang, Xiangru Tang, Yue Zhao, Arman Cohan, Xiangliang Zhang, Xiuying Chen
 
-<div class="pub-links"><a class="pub-btn" href="https://openreview.net/forum?id=0pbUfmwNTy">Paper</a></div>
+<div class="pub-links"><a class="pub-btn" href="https://openreview.net/forum?id=0pbUfmwNTy">Paper</a><a class="pub-btn" href="https://github.com/wyf23187/DyFlow">Code</a></div>
 
 </div></div>
 
@@ -94,25 +94,9 @@ Yanbo Wang, **Zixiang Xu**, Yue Huang, Xiangqi Wang, Zirui Song, Lang Gao, Chenx
 </div></div>
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TRB 2024</div><img src='images/IRL.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
+- Temporal-IRL: Modeling Port Congestion and Berth Scheduling with Inverse Reinforcement Learning, Yikuan Hu\*, **Zixiang Xu\***, Wei Zhang\*, Xinyu Yang\*, Guo Li\*, Nikolay Aristov, Mingjie Tang, Elenna R Dugundji(\*: Equal contribution). TRB 2024.
 
-[Temporal-IRL: Modeling Port Congestion and Berth Scheduling with Inverse Reinforcement Learning]()
-
-Yikuan Hu\*, **Zixiang Xu\***, Wei Zhang\*, Xinyu Yang\*, Guo Li\*, Nikolay Aristov, Mingjie Tang, Elenna R Dugundji(\*: Equal contribution)
-
-</div></div>
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACM MM 2024</div><img src='images/GenUDC.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[GenUDC: High Quality 3D Mesh Generation With Unsigned Dual Contouring Representation](https://arxiv.org/abs/2410.17802)
-
-Ruowei Wang, Jiaqi Li, Dan Zeng, Xueqi Ma, **Xu Zixiang**, Jianwei Zhang, Qijun Zhao
-
-<div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2410.17802">Paper</a></div>
-
-</div></div>
+- [GenUDC: High Quality 3D Mesh Generation With Unsigned Dual Contouring Representation](https://arxiv.org/abs/2410.17802), Ruowei Wang, Jiaqi Li, Dan Zeng, Xueqi Ma, **Xu Zixiang**, Jianwei Zhang, Qijun Zhao. ACM MM 2024.
 
 - [MTFusion: Reconstructing Any 3D Object from Single Image Using Multi-word Textual Inversion](https://link.springer.com/chapter/10.1007/978-981-97-8508-7_12), Yu Liu, Ruowei Wang, Jiaqi Li, **Zixiang Xu**, Qijun Zhao.  PRCV 2024 (oral).
 
