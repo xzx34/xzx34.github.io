@@ -73,6 +73,17 @@ Yanbo Wang, **Zixiang Xu**, Yue Huang, Xiangqi Wang, Zirui Song, Lang Gao, Chenx
 
 </div></div>
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Preprint</div><img src='images/unfair-judge.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias](/unfair-judge/)
+
+**Zixiang Xu**, Sixian Li, Huaxing Liu, Xiang Wang, Shuai Li, Zirui Song, Xiuying Chen
+
+<div class="pub-links"><a class="pub-btn" href="/unfair-judge/">Project Page</a></div>
+
+</div></div>
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images/GTA.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 

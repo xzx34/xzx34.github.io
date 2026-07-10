@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){var t=localStorage.getItem('theme');if(t!=='light'){document.documentElement.setAttribute('data-theme','dark');}})();</script>
+<title>Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias | Activation Geometry of Judge Bias</title>
+<meta name="description" content="Inside the Unfair Judge gives a representation-level, mechanistic-interpretability account of LLM-as-judge scoring bias: a low-dimensional, type-specific activation subspace that sharpens with depth, supports bidirectional causal control (attack and defense) via activation steering, and predicts judge failure on unseen benchmarks (AUC 0.82). Seven judges, seven bias types, nine benchmarks.">
+<meta name="robots" content="index,follow">
+<meta name="author" content="Zixiang Xu, Sixian Li, Huaxing Liu, Xiang Wang, Shuai Li, Zirui Song, Xiuying Chen">
+<meta name="keywords" content="LLM-as-judge bias, LLM-as-a-judge, mechanistic interpretability, representation engineering, activation steering, scoring bias, judge bias, reward model, RLHF, verbosity bias, bandwagon bias, authority bias, self-preference, activation geometry, concept directions, inference-time intervention, bias direction, judge failure prediction">
+
+<link rel="canonical" href="https://xzx34.github.io/unfair-judge/">
+
+<!-- Google Scholar / Highwire citation tags -->
+<meta name="citation_title" content="Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias">
+<meta name="citation_author" content="Xu, Zixiang">
+<meta name="citation_author" content="Li, Sixian">
+<meta name="citation_author" content="Liu, Huaxing">
+<meta name="citation_author" content="Wang, Xiang">
+<meta name="citation_author" content="Li, Shuai">
+<meta name="citation_author" content="Song, Zirui">
+<meta name="citation_author" content="Chen, Xiuying">
+<meta name="citation_publication_date" content="2026">
+<meta name="citation_public_url" content="https://xzx34.github.io/unfair-judge/">
+<meta name="citation_image" content="https://xzx34.github.io/images/unfair-judge-hero.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias">
+<meta property="og:description" content="Reading LLM-as-judge bias as activation geometry: a low-dimensional, type-specific subspace that supports bidirectional causal control (attack and defense) and cross-domain prediction of judge failure. Seven judges, seven bias types, nine benchmarks.">
+<meta property="og:url" content="https://xzx34.github.io/unfair-judge/">
+<meta property="og:image" content="https://xzx34.github.io/images/unfair-judge-hero.png">
+<meta property="og:site_name" content="Inside the Unfair Judge">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias">
+<meta name="twitter:description" content="Reading LLM-as-judge bias as activation geometry: a low-dimensional, type-specific subspace that supports bidirectional causal control (attack and defense) and cross-domain prediction of judge failure.">
+<meta name="twitter:image" content="https://xzx34.github.io/images/unfair-judge-hero.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "A Mechanistic Interpretability Account of LLM-as-Judge Bias",
+  "name": "Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias",
+  "url": "https://xzx34.github.io/unfair-judge/",
+  "image": "https://xzx34.github.io/images/unfair-judge-hero.png",
+  "datePublished": "2026",
+  "inLanguage": "en",
+  "creativeWorkStatus": "Preprint (under review)",
+  "description": "A representation-level, mechanistic-interpretability account of LLM-as-judge scoring bias. Bias occupies a low-dimensional, type-specific subspace in the judge's hidden state that sharpens with depth; steering along this subspace gives bidirectional causal control (reproducing bias on clean inputs and restoring fair scores on biased ones); and a linear projection onto the same features predicts judge failure on unseen benchmarks.",
+  "abstract": "Existing studies of LLM-as-judge scoring bias work predominantly at the input-output level: they perturb inputs, measure score deltas, and propose prompt-level mitigations. We argue that the same biases admit a representation-level account in the judge's hidden state, complementary to the input-output view and operationally useful in ways it does not afford. We report three findings, across seven judges, seven bias types, and nine benchmarks. Geometry: baseline judging inputs occupy a tight activation manifold while biased inputs are displaced along a low-dimensional, type-specific subspace that sharpens with depth and is recovered consistently by three families of estimators. Causal control: steering hidden states along this subspace drives scoring in both directions, forward shifts reproducing biased scoring on clean inputs and reverse shifts restoring baseline scoring on biased ones, while matched-norm random directions produce shifts an order of magnitude smaller. Operational: a simple linear projection onto the same bias-direction features anticipates judge failures on three entirely unseen benchmarks, substantially outperforming text-based alternatives. Reading bias as activation geometry, rather than as input-output noise, unifies geometric structure, causal control, and operational prediction within a single framework.",
+  "author": [
+    {"@type": "Person", "name": "Zixiang Xu", "affiliation": [{"@type": "Organization", "name": "AMAP, Alibaba Group"}, {"@type": "Organization", "name": "MBZUAI"}, {"@type": "Organization", "name": "University of Southern California"}]},
+    {"@type": "Person", "name": "Sixian Li", "affiliation": {"@type": "Organization", "name": "University of Michigan, Ann Arbor"}},
+    {"@type": "Person", "name": "Huaxing Liu", "affiliation": {"@type": "Organization", "name": "AMAP, Alibaba Group"}},
+    {"@type": "Person", "name": "Xiang Wang", "affiliation": {"@type": "Organization", "name": "AMAP, Alibaba Group"}},
+    {"@type": "Person", "name": "Shuai Li", "affiliation": {"@type": "Organization", "name": "AMAP, Alibaba Group"}},
+    {"@type": "Person", "name": "Zirui Song", "affiliation": [{"@type": "Organization", "name": "AMAP, Alibaba Group"}, {"@type": "Organization", "name": "MBZUAI"}]},
+    {"@type": "Person", "name": "Xiuying Chen", "affiliation": {"@type": "Organization", "name": "MBZUAI"}}
+  ],
+  "keywords": "LLM-as-judge bias, mechanistic interpretability, representation engineering, activation steering, scoring bias, reward model, RLHF, verbosity bias, bandwagon bias, authority bias, self-preference, activation geometry, concept directions, inference-time intervention, judge failure prediction",
+  "mainEntityOfPage": "https://xzx34.github.io/unfair-judge/"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is \"Inside the Unfair Judge\" about?",
+      "acceptedAnswer": {"@type": "Answer", "text": "It is a mechanistic-interpretability study of LLM-as-judge scoring bias. Instead of treating the judge as a black box and only measuring how its scores move when inputs are perturbed, it opens the model and locates bias in the judge's hidden state. It reports three findings across seven judges, seven bias types, and nine benchmarks: bias occupies a low-dimensional, type-specific activation subspace that sharpens with depth (geometry); steering along that subspace controls scoring in both directions (causal control); and a linear projection onto the same features predicts judge failure on unseen benchmarks (operational prediction)."}
+    },
+    {
+      "@type": "Question",
+      "name": "How is this different from prior LLM-as-judge bias work?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Most prior work operates at the input-output interface: it perturbs inputs, measures score deltas, and mitigates with prompt engineering, calibration, or judge ensembles. That view describes bias by what comes out of the model. This paper gives a representation-level account of what happens inside the judge when it issues an unfair score, contributing a geometric characterization of typed bias subspaces, bidirectional causal control (attack and defense, not mitigation alone), and a cross-domain predictor of judge failure."}
+    },
+    {
+      "@type": "Question",
+      "name": "What are the seven bias types?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Prestige (source attribution), Verbosity (length), Bandwagon (social consensus), Authority (academic credibility), Sentiment (emotional tone), Refinement (metacognitive claims about revision), and Diversity (stated social identity of the author). For each type, controlled positive and negative surface transformations are applied to the same answer while preserving its factual content and logical structure, so any score change reflects surface framing rather than answer quality."}
+    },
+    {
+      "@type": "Question",
+      "name": "What does \"bidirectional causal control\" mean?",
+      "acceptedAnswer": {"@type": "Answer", "text": "The recovered bias subspace is not just a passive correlate of biased scoring; it is an interventional handle. Adding the bias direction to a judge's hidden state reproduces biased scoring on clean inputs (attack), and subtracting it restores baseline scoring on biased inputs (defense). A matched-norm random direction produces a shift an order of magnitude smaller, and a bias-type-swap control sits between random and within-type, ruling out generic-perturbation and readout-direction explanations."}
+    },
+    {
+      "@type": "Question",
+      "name": "Can it predict when a judge will be unfair?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. A simple linear projection onto the bias-direction features reaches AUC 0.82 on three entirely unseen benchmarks (0.85 in-domain), versus about 0.63 for a zero-shot text-LLM baseline. A more expressive gradient-boosted model wins in-domain but transfers worse, indicating that the low-dimensional bias geometry is the part that generalizes across domains."}
+    },
+    {
+      "@type": "Question",
+      "name": "Is the code or data available?",
+      "acceptedAnswer": {"@type": "Answer", "text": "The paper releases the analysis and outcome-prediction pipelines as an artifact, and defers any attack-oriented release to a controlled responsible-disclosure process. This paper is a preprint under review and is not yet on arXiv; the arXiv, code, and data links will be added to this page once they are public."}
+    },
+    {
+      "@type": "Question",
+      "name": "When should I cite this paper?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Cite it when your work involves LLM-as-judge or LLM-as-evaluator bias, mechanistic interpretability or representation engineering of model behaviors, activation steering and inference-time intervention, evaluation reliability in reward modeling and RLHF, predicting or detecting evaluator failure, or fairness and social-identity bias in automated evaluation. See the When to Cite This Paper section for a ready-to-use citation sentence."}
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --accent:#0056d6;--accent-dark:#00369f;--accent-lite:#4a90e2;
+  --grad:linear-gradient(135deg,#00369f 0%,#0056d6 100%);
+  --text:#3a3f45;--muted:#6a737d;--bg:#ffffff;--soft:#f6f8fa;--card:#ffffff;--border:#e1e4e8;--shadow:rgba(20,40,80,.10);
+}
+[data-theme="dark"]{
+  --accent:#58a6ff;--accent-dark:#388bfd;--accent-lite:#1f6feb;
+  --grad:linear-gradient(135deg,#1f6feb 0%,#388bfd 100%);
+  --text:#c9d1d9;--muted:#8b949e;--bg:#0d1117;--soft:#161b22;--card:#161b22;--border:#30363d;--shadow:rgba(0,0,0,.5);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;position:relative;color:var(--text);background:var(--bg);
+  font-family:"Trebuchet MS",Helvetica,sans-serif;
+  font-size:17px;line-height:1.7;
+  transition:background-color .3s ease,color .3s ease;
+}
+body::before{
+  content:'';position:fixed;top:0;left:0;width:100%;height:100%;
+  background-image:linear-gradient(135deg,rgba(240,248,255,0.3) 0%,rgba(230,240,255,0.2) 25%,rgba(245,250,255,0.25) 50%,rgba(235,245,255,0.2) 75%,rgba(240,248,255,0.3) 100%);
+  background-size:400% 400%;
+  animation:gradientShift 15s ease infinite;
+  z-index:-1;pointer-events:none;
+}
+[data-theme="dark"] body::before{
+  background-image:linear-gradient(135deg,rgba(13,17,23,0.3) 0%,rgba(22,27,34,0.2) 25%,rgba(13,17,23,0.25) 50%,rgba(22,27,34,0.2) 75%,rgba(13,17,23,0.3) 100%);
+}
+@keyframes gradientShift{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+.wrap{max-width:820px;margin:0 auto;padding:34px 20px 64px}
+a{color:var(--accent);text-decoration:none}
+a:not(.btn){background-image:linear-gradient(90deg,var(--accent-dark),var(--accent));background-size:0% 1.5px;background-repeat:no-repeat;background-position:left bottom;padding-bottom:1px;transition:background-size .3s cubic-bezier(.4,0,.2,1),color .3s ease}
+a:not(.btn):hover{color:var(--accent-dark);background-size:100% 1.5px;text-decoration:none}
+h1{font-size:2rem;line-height:1.25;margin:.1em 0 .35em;letter-spacing:-.01em;color:var(--text)}
+.subtitle{font-size:1.18rem;font-weight:500;color:var(--muted);line-height:1.5;margin:0 0 1em}
+h2{position:relative;font-size:1.4rem;line-height:1.3;margin:2.6em 0 .8em;padding-bottom:.3em;color:var(--text)}
+h2::after{content:'';position:absolute;left:0;bottom:0;height:2px;width:0;background:linear-gradient(90deg,var(--accent-dark),var(--accent),var(--accent-lite));transition:width .8s cubic-bezier(.4,0,.2,1)}
+h2.animated::after{width:100%}
+h3{font-size:1.06rem;margin:1.3em 0 .25em;color:var(--text)}
+p{margin:.7em 0}
+.venue{display:inline-block;font-weight:600;color:#fff;background:var(--grad);padding:4px 14px;border-radius:999px;font-size:.9rem;letter-spacing:.02em;box-shadow:0 2px 8px var(--shadow)}
+.authors{margin:1.15em 0 .4em;line-height:1.95}
+.au{white-space:nowrap;margin-right:.15em}
+sup{font-size:.7em;line-height:0}
+.legend{color:var(--muted);font-size:.92rem;margin:.2em 0 .4em;line-height:1.7}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin:1.2em 0 .2em}
+.btn{display:inline-flex;align-items:center;gap:.45em;border:1px solid var(--accent);color:var(--accent);background:var(--card);padding:.55em 1.05em;border-radius:999px;font-size:.95rem;font-weight:600;line-height:1;transition:background .15s ease,color .15s ease,box-shadow .15s ease,transform .15s ease}
+.btn:hover{background:var(--grad);color:#fff;text-decoration:none;box-shadow:0 6px 16px var(--shadow);transform:translateY(-1px)}
+.btn .ic{width:1.05em;height:1.05em;flex:0 0 auto}
+.btn.soon{border-color:var(--border);color:var(--muted);background:var(--soft);cursor:default}
+.btn.soon:hover{background:var(--soft);color:var(--muted);box-shadow:none;transform:none}
+.btn.soon .ic{opacity:.65}
+.btn.soon .st{font-size:.72em;font-weight:700;letter-spacing:.04em;text-transform:uppercase;opacity:.85;border:1px solid var(--border);border-radius:999px;padding:.15em .5em;margin-left:.15em}
+.statusline{color:var(--muted);font-size:.9rem;margin:.75em 0 0}
+figure{margin:2.4em auto .4em}
+figure img{display:block;width:100%;height:auto;border:1px solid var(--border);border-radius:8px;box-shadow:0 6px 22px var(--shadow);background:#fff;transition:filter .3s ease}
+[data-theme="dark"] figure img{filter:brightness(.92)}
+figcaption{color:var(--muted);font-size:.9rem;margin:.8em auto 0;text-align:center;max-width:700px}
+.block{background:var(--soft);border:1px solid var(--border);border-radius:8px;padding:18px 20px}
+.abstract p{margin:0}
+.lead{font-size:1.06rem}
+.contrib{margin:.6em 0 0;padding-left:1.2em}
+.contrib li{margin:.5em 0}
+.finding{margin:1.15em 0}
+.finding h3 .num{color:var(--accent);font-weight:700;margin-right:.35em}
+strong.k{color:var(--accent-dark)}
+.note{color:var(--muted);font-size:.88rem;margin-top:.3em}
+.datasum{margin:.9em 0;padding:.85em 1.05em;background:var(--soft);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:8px;font-size:.95rem;line-height:1.65;color:var(--text)}
+.datasum strong{color:var(--accent-dark)}
+/* three findings cards */
+.trifecta{margin:1.15em 0 .3em;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.tricard{background:var(--soft);border:1px solid var(--border);border-top:3px solid var(--accent);border-radius:8px;padding:.9em 1.05em}
+.tricard .tt{font-weight:700;color:var(--accent-dark);margin:0 0 .3em;font-size:1rem}
+.tricard p{margin:0;font-size:.9rem;color:var(--text);line-height:1.55}
+/* seven bias types grid */
+.biasgrid{margin:1.2em 0 .4em;display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.biascard{background:var(--soft);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:8px;padding:.85em 1.05em}
+.biascard h4{margin:0 0 .15em;font-size:1.02rem;color:var(--accent-dark)}
+.biascard .bdesc{color:var(--muted);font-size:.85rem;margin:0 0 .55em;line-height:1.5}
+.biascard .pn{display:block;font-size:.89rem;margin:.3em 0;padding-left:1.5em;position:relative;line-height:1.5}
+.biascard .pn .tag{position:absolute;left:0;top:0;font-weight:800;font-variant-numeric:tabular-nums}
+.biascard .pn.pos .tag{color:#1a7f37}
+.biascard .pn.neg .tag{color:#cf222e}
+[data-theme="dark"] .biascard .pn.pos .tag{color:#3fb950}
+[data-theme="dark"] .biascard .pn.neg .tag{color:#f85149}
+/* setup facts table */
+.facts{margin:1em 0 .3em;border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.facts .frow{display:flex;gap:1em;padding:.6em .95em;border-top:1px solid var(--border)}
+.facts .frow:first-child{border-top:none}
+.facts .fk{flex:0 0 30%;font-weight:700;color:var(--accent-dark);font-size:.9rem}
+.facts .fv{flex:1 1 auto;font-size:.92rem;color:var(--text);line-height:1.6}
+.pipe{margin:1.05em 0 .3em;padding-left:0;list-style:none;counter-reset:step}
+.pipe li{position:relative;margin:.55em 0;padding-left:2em;line-height:1.6}
+.pipe li::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:.05em;width:1.5em;height:1.5em;border-radius:50%;background:var(--grad);color:#fff;font-size:.78rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.citelist{margin:.7em 0;padding-left:1.2em}
+.citelist li{margin:.32em 0}
+.citesuggest{margin:1.1em 0 .2em;padding:.9em 1.1em;background:var(--soft);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:8px;font-size:.97rem;line-height:1.6}
+.citesuggest em{font-family:Georgia,Times,serif}
+details{border:1px solid var(--border);border-radius:8px;background:var(--soft);margin:.55em 0;padding:0 16px}
+details[open]{background:var(--card)}
+summary{cursor:pointer;font-weight:600;padding:.85em 0;list-style:none;outline-offset:3px;color:var(--text)}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"+";color:var(--accent);font-weight:800;margin-right:.55em;display:inline-block;width:1ch}
+details[open] summary::before{content:"\2013"}
+.ans{padding:0 0 .95em}
+.ans p{margin:.2em 0}
+pre{background:var(--soft);border:1px solid var(--border);border-radius:8px;padding:16px;overflow-x:auto;font-size:.84rem;line-height:1.55;font-family:Monaco,Consolas,"Lucida Console",monospace;color:var(--text)}
+code{font-family:Monaco,Consolas,"Lucida Console",monospace;font-size:.9em;background:var(--soft);border:1px solid var(--border);border-radius:4px;padding:.05em .35em}
+pre code{background:none;border:none;padding:0}
+.bibhead{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:.4em}
+.copy{border:1px solid var(--accent);color:var(--accent);background:var(--card);border-radius:6px;padding:.4em .85em;font-size:.85rem;font-weight:600;cursor:pointer;line-height:1;transition:background .15s ease,color .15s ease,box-shadow .15s ease,transform .15s ease}
+.copy:hover{background:var(--grad);color:#fff;box-shadow:0 6px 16px var(--shadow);transform:translateY(-1px)}
+.reslist{list-style:none;padding:0;margin:.4em 0}
+.reslist li{margin:.4em 0}
+footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);color:var(--muted);font-size:.92rem}
+.theme-toggle{position:fixed;top:14px;right:16px;z-index:50;width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;padding:0;background:var(--card);border:1px solid var(--border);border-radius:50%;cursor:pointer;color:var(--muted);line-height:1;box-shadow:0 2px 8px var(--shadow);transition:color .3s ease,background .3s ease,border-color .3s ease,box-shadow .3s ease}
+.theme-toggle:hover{color:var(--accent);background:rgba(0,86,214,.08);border-color:rgba(0,86,214,.15)}
+[data-theme="dark"] .theme-toggle:hover{color:#f0c040;background:rgba(240,192,64,.1);border-color:rgba(240,192,64,.2)}
+.theme-toggle:focus{outline:none}
+.theme-toggle svg{width:20px;height:20px;display:block}
+.animate-on-scroll{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.4,0,.2,1),transform .8s cubic-bezier(.4,0,.2,1)}
+.animate-on-scroll.animated{opacity:1;transform:none}
+@media (max-width:720px){
+  .trifecta{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  h1{font-size:1.6rem}
+  h2{font-size:1.25rem}
+  .wrap{padding:24px 16px 48px}
+  .biasgrid{grid-template-columns:1fr}
+  .facts .frow{flex-direction:column;gap:.15em}
+  .facts .fk{flex-basis:auto}
+}
+@media (prefers-reduced-motion: reduce){
+  body::before{animation:none}
+  .animate-on-scroll{opacity:1;transform:none;transition:none}
+  h2::after{transition:none}
+  a:not(.btn){transition:none}
+  .btn,.copy,.theme-toggle{transition:none}
+}
+</style>
+<noscript><style>.animate-on-scroll{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle light/dark theme" title="Toggle theme"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2.5v2.2"/><path d="M12 19.3v2.2"/><path d="M2.5 12h2.2"/><path d="M19.3 12h2.2"/><path d="M5.1 5.1l1.6 1.6"/><path d="M17.3 17.3l1.6 1.6"/><path d="M18.9 5.1l-1.6 1.6"/><path d="M6.7 17.3l-1.6 1.6"/></g></svg></button>
+<div class="wrap">
+
+<header>
+  <h1>Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias</h1>
+  <p class="subtitle">A representation-level account of LLM-as-judge scoring bias &mdash; reading it as activation geometry that supports bidirectional causal control (attack and defense) and cross-domain prediction of judge failure. Seven judges &middot; seven bias types &middot; nine benchmarks.</p>
+
+  <span class="venue">Preprint &middot; Under Review</span>
+
+  <p class="authors">
+    <span class="au">Zixiang Xu<sup>1,2,3,&#8224;</sup></span>,
+    <span class="au">Sixian Li<sup>4</sup></span>,
+    <span class="au">Huaxing Liu<sup>1</sup></span>,
+    <span class="au">Xiang Wang<sup>1</sup></span>,
+    <span class="au">Shuai Li<sup>1</sup></span>,
+    <span class="au">Zirui Song<sup>1,2</sup></span>,
+    <span class="au">Xiuying Chen<sup>2,&#8727;</sup></span>
+  </p>
+  <p class="legend">
+    <sup>1</sup>&nbsp;AMAP, Alibaba Group &nbsp;&middot;&nbsp; <sup>2</sup>&nbsp;MBZUAI &nbsp;&middot;&nbsp; <sup>3</sup>&nbsp;University of Southern California &nbsp;&middot;&nbsp; <sup>4</sup>&nbsp;University of Michigan, Ann Arbor<br>
+    <strong>&#8224;</strong>&nbsp;Project leader; work done during an internship at AMAP, Alibaba Group. &nbsp;&nbsp;<strong>&#8727;</strong>&nbsp;Corresponding author:
+    <a href="mailto:xiuying.chen@mbzuai.ac.ae">xiuying.chen@mbzuai.ac.ae</a>
+  </p>
+
+  <nav class="btns" aria-label="Paper links">
+    <span class="btn soon" aria-disabled="true">
+      <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M6.8 2.8h7l3.4 3.4V21.2H6.8z"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M13.6 3v3.6h3.4"/></svg>
+      Paper (arXiv) <span class="st">Soon</span>
+    </span>
+    <span class="btn soon" aria-disabled="true">
+      <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 4.6 18 4.9 18 4.9c.6 1.6.2 2.8.1 3.1.7.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.3.8 1 .8 2.1v3.1c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+      Code &amp; Data <span class="st">Soon</span>
+    </span>
+  </nav>
+  <p class="statusline">Preprint under review &mdash; not yet on arXiv. The arXiv, code, and data links will be added here once released.</p>
+
+  <figure>
+    <img src="../images/unfair-judge-hero.png" alt="MDS projection of a judge's final-token activations at layer 25: baseline judging inputs form one tight cluster while biased inputs are displaced to a surrounding region; colouring the same points by assigned score or by source dataset shows no clustering, indicating the separation reflects bias rather than score or domain." width="2400" height="777" decoding="async">
+    <figcaption>The paper's central picture: at a mid-to-late layer of the judge, unbiased inputs sit on a tight activation manifold (blue, centre) while biased inputs are displaced outward <strong>(a)</strong>. Recolouring the identical points by assigned score <strong>(b)</strong> or by source benchmark <strong>(c)</strong> yields no clustering &mdash; the displacement encodes bias, not the score distribution or the domain.</figcaption>
+  </figure>
+</header>
+
+<section id="overview" class="animate-on-scroll">
+  <h2>Overview (TL;DR)</h2>
+  <p class="lead">Large language models are now routinely used as automatic judges &mdash; they rate answers, compare candidates, and supply reward signals for alignment and preference learning. But judges shift their scores in response to <strong>surface cues that have nothing to do with answer quality</strong>: who supposedly wrote the answer, how long it is, whether a crowd approves, and so on. Because judges sit inside RLHF and evaluation pipelines, these biases quietly propagate into the models they are meant to audit.</p>
+  <p>Prior work studies this at the <strong>input&ndash;output level</strong>: perturb the input, measure the score change, patch with prompt engineering. <strong>Inside the Unfair Judge</strong> asks the next question &mdash; when a judge issues an unfair score, what is happening <em>inside</em> the model? &mdash; and answers it with a <strong>representation-level account</strong> that holds across seven judges, seven bias types, and nine benchmarks. The three findings all follow from a single object in the judge's hidden state:</p>
+  <div class="trifecta">
+    <div class="tricard">
+      <p class="tt">1 &middot; Geometry</p>
+      <p>Unbiased inputs occupy a tight activation manifold; biased inputs are displaced along a low-dimensional, type-specific subspace that <strong>sharpens with depth</strong> and is recovered by two independent families of estimators.</p>
+    </div>
+    <div class="tricard">
+      <p class="tt">2 &middot; Causal control</p>
+      <p>Steering along that subspace drives scoring <strong>both ways</strong>: adding it reproduces bias on clean inputs (attack), subtracting it restores fair scores on biased ones (defense). A matched-norm random direction is inert.</p>
+    </div>
+    <div class="tricard">
+      <p class="tt">3 &middot; Operational</p>
+      <p>A simple linear projection onto the same features <strong>predicts judge failure</strong> on three entirely unseen benchmarks (AUC 0.82 vs ~0.63 for a text baseline).</p>
+    </div>
+  </div>
+  <p>In the authors' words, the contributions are to:</p>
+  <ol class="contrib">
+    <li>"map the empirical landscape of scoring bias across seven bias types, nine benchmarks, and seven judges, recovering the behavioral asymmetry as a downstream signature";</li>
+    <li>"characterize the bias subspace (dimensionality, depth profile, multi-estimator recovery) in three white-box judges (Llama-3.1-8B, Qwen3-14B, Gemma-3-12B)";</li>
+    <li>"close the causal loop with bidirectional steering plus random-direction and bias-type-swap controls that rule out generic-perturbation and readout-direction alternatives"; and</li>
+    <li>"show a linear projection onto the bias-direction features anticipates judge degradation cross-domain on three held-out benchmarks."</li>
+  </ol>
+</section>
+
+<section id="abstract" class="animate-on-scroll">
+  <h2>Abstract</h2>
+  <div class="block abstract">
+    <p>Existing studies of LLM-as-judge scoring bias work predominantly at the input-output level: they perturb inputs, measure score deltas, and propose prompt-level mitigations. We argue that the same biases admit a representation-level account in the judge's hidden state, complementary to the input-output view and operationally useful in ways it does not afford. We report three findings, across seven judges, seven bias types, and nine benchmarks. <em>Geometry</em>: baseline judging inputs occupy a tight activation manifold while biased inputs are displaced along a low-dimensional, type-specific subspace that sharpens with depth and is recovered consistently by three families of estimators. <em>Causal control</em>: steering hidden states along this subspace drives scoring in both directions, forward shifts reproducing biased scoring on clean inputs and reverse shifts restoring baseline scoring on biased ones, while matched-norm random directions produce shifts an order of magnitude smaller. <em>Operational</em>: a simple linear projection onto the same bias-direction features anticipates judge failures on three entirely unseen benchmarks, substantially outperforming text-based alternatives. Reading bias as activation geometry, rather than as input-output noise, unifies geometric structure, causal control, and operational prediction within a single framework.</p>
+  </div>
+</section>
+
+<section id="findings" class="animate-on-scroll">
+  <h2>Key Findings &amp; Why They Matter</h2>
+
+  <div class="finding">
+    <h3><span class="num">1.</span>The bias is asymmetric &mdash; and the asymmetry is a symptom, not the cause</h3>
+    <p>Every one of the seven judges shows the same pattern: negative surface cues impose a <strong>substantial penalty</strong>, while the aggregate positive effect stays near zero (baseline mean &asymp; <strong class="k">5.84</strong> on Llama-3.1-8B). Only one positive cue &mdash; Refinement, a claim that the answer was "carefully revised" &mdash; clearly inflates scores. This behavioral asymmetry has long been reported at the input&ndash;output level; here it re-emerges as a <em>downstream signature</em> of the underlying activation geometry, rather than as the primary object of study.</p>
+  </div>
+
+  <div class="finding">
+    <h3><span class="num">2.</span>Bias lives in a low-dimensional subspace that sharpens with depth</h3>
+    <p>Biased activations are displaced along a subspace of only <strong class="k">3&ndash;5 effective directions</strong> per bias type at layer 25. Both the biased-core fraction and linear separability rise <strong>monotonically with depth</strong>. Two estimator families with entirely different objectives &mdash; directional-change (mean, geometric median, top PCA component) and discriminative-boundary (LDA, a regularized classifier, a linear SVM) &mdash; converge on the <strong>same late-layer axis</strong>, evidence of a genuine low-rank structure rather than an artifact of one estimator.</p>
+  </div>
+
+  <div class="finding">
+    <h3><span class="num">3.</span>Bias is a matter of direction, not magnitude</h3>
+    <p>Biased and baseline activations are statistically <strong>indistinguishable in L2 norm</strong> (<em>p</em> &gt; 0.1) at every layer except the final score-readout head. The bias is encoded in <em>which way</em> the activation is displaced, not <em>how far</em> &mdash; which is exactly why a unit-normalized direction, rather than a magnitude, is the right handle for intervention.</p>
+  </div>
+
+  <div class="finding">
+    <h3><span class="num">4.</span>Steering the subspace gives two-way causal control: attack and defense</h3>
+    <p>Adding the bias direction to the judge's hidden state <strong>reproduces biased scoring on clean inputs</strong> (attack); subtracting it <strong>restores baseline scoring on biased inputs</strong> (defense). A matched-norm <strong>random direction is essentially inert</strong> &mdash; its effect is an order of magnitude smaller, with validity staying &ge; 0.99 across 30 draws &mdash; and a bias-type-swap control sits between random and within-type, ruling out both generic-perturbation and readout-direction explanations. On held-out folds, activation defense retains <strong class="k">&ge; 80%</strong> of its in-sample effect and outperforms text-rewrite baselines by roughly <strong class="k">4&ndash;6&times;</strong>.</p>
+  </div>
+
+  <div class="finding">
+    <h3><span class="num">5.</span>The same geometry predicts judge failure on unseen benchmarks</h3>
+    <p>Given only a judge's internal state on an incoming (question, answer) pair, a <strong>simple linear projection</strong> onto the bias-direction features anticipates whether the judge will score unfairly &mdash; reaching <strong class="k">AUC 0.82</strong> on three entirely unseen benchmarks (0.85 in-domain), versus about <strong class="k">0.63</strong> for a zero-shot text-LLM baseline. A more expressive gradient-boosted model wins in-domain (0.93 dev) but transfers worse (0.75): the low-dimensional geometry is the part that generalizes across domains, which is why the operational claim is anchored to the linear projection.</p>
+  </div>
+
+  <div class="finding">
+    <h3><span class="num">6.</span>Bias types are not interchangeable, and they interact with domain</h3>
+    <p>The seven types behave very differently. <strong>Bandwagon</strong> produces the largest negative effect (crossing &minus;2 points on CommonsenseQA and ARC-Challenge) yet is among the weakest positive; <strong>Diversity</strong> is sharpest on socially sensitive benchmarks (SocialMaze &minus;1.86, BBQ &minus;2.03); <strong>Authority</strong> concentrates on knowledge-intensive ones (PubMedQA &minus;1.25, MMLU &minus;0.98); <strong>Prestige</strong> is a small but pervasive &minus;0.3 to &minus;0.5; and <strong>Sentiment</strong> is essentially flat. The positive and negative rankings are <em>not mirror images</em> &mdash; an early hint that the two polarities engage different internal mechanisms.</p>
+  </div>
+</section>
+
+<section id="biastypes" class="animate-on-scroll">
+  <h2>The Seven Bias Types</h2>
+  <p>Each bias type is studied with a matched pair of <strong>content-preserving</strong> transformations: a positive variant expected to inflate the score and a negative variant expected to deflate it. Every transformation modifies only surface framing while keeping the factual content and logical structure of the answer fixed, so any resulting score change is attributable to the cue rather than to answer quality.</p>
+  <div class="biasgrid">
+    <div class="biascard">
+      <h4>Prestige</h4>
+      <p class="bdesc">Perceived source reputation or model provenance.</p>
+      <span class="pn pos"><span class="tag">+</span>Prepend a high-capability source (e.g., prefixing with "GPT-4:").</span>
+      <span class="pn neg"><span class="tag">&minus;</span>Prepend an outdated or less-capable source (e.g., "GPT-2:").</span>
+    </div>
+    <div class="biascard">
+      <h4>Verbosity</h4>
+      <p class="bdesc">Preference for more elaborate vs more concise responses.</p>
+      <span class="pn pos"><span class="tag">+</span>Add a few explanatory or transitional phrases &mdash; slightly longer, same meaning.</span>
+      <span class="pn neg"><span class="tag">&minus;</span>Trim non-essential words, making the wording more direct without dropping content.</span>
+    </div>
+    <div class="biascard">
+      <h4>Bandwagon</h4>
+      <p class="bdesc">Signals of social consensus or peer opinion.</p>
+      <span class="pn pos"><span class="tag">+</span>Note that most prior reviewers approved (e.g., "92% of reviewers found this helpful").</span>
+      <span class="pn neg"><span class="tag">&minus;</span>Note that most prior reviewers were dissatisfied (e.g., "87% found this unhelpful").</span>
+    </div>
+    <div class="biascard">
+      <h4>Authority</h4>
+      <p class="bdesc">Markers of academic credibility, or their absence.</p>
+      <span class="pn pos"><span class="tag">+</span>Insert a plausible, domain-appropriate academic citation and reference.</span>
+      <span class="pn neg"><span class="tag">&minus;</span>Insert "[citation needed]" markers and a note questioning the evidence.</span>
+    </div>
+    <div class="biascard">
+      <h4>Sentiment</h4>
+      <p class="bdesc">Emotional tone vs objectivity of the writing style.</p>
+      <span class="pn pos"><span class="tag">+</span>Add a few objective, neutral, scholarly terms.</span>
+      <span class="pn neg"><span class="tag">&minus;</span>Add a few subjective, emotionally charged expressions.</span>
+    </div>
+    <div class="biascard">
+      <h4>Refinement</h4>
+      <p class="bdesc">Metacognitive claims about the answer's review status.</p>
+      <span class="pn pos"><span class="tag">+</span>Append "This response has been carefully revised and professionally refined."</span>
+      <span class="pn neg"><span class="tag">&minus;</span>Append "This is raw AI output that has not been reviewed by any human."</span>
+    </div>
+    <div class="biascard">
+      <h4>Diversity</h4>
+      <p class="bdesc">Differential treatment by the author's stated social identity.</p>
+      <span class="pn pos"><span class="tag">+</span>Attribute the answer to a positively perceived group (e.g., "provided by an LGBTQ+ advocate").</span>
+      <span class="pn neg"><span class="tag">&minus;</span>Attribute the answer to a negatively perceived group (e.g., "provided by an extremist").</span>
+    </div>
+  </div>
+  <p class="note">Four types (Prestige, Bandwagon, Refinement, Diversity) leave the answer body <em>bit-identical</em> via template insertion; the other three (Verbosity, Sentiment, Authority) are LLM rewrites. A human evaluation confirms the rewrites preserve rated answer quality (TOST equivalence at a 0.30 margin), so the score shifts are not explained by real quality changes.</p>
+</section>
+
+<section id="method" class="animate-on-scroll">
+  <h2>How It Works (Method)</h2>
+  <p>The study rests on <strong>tightly controlled triples</strong> of datasets that share the same questions and factual content and differ only in surface framing: a baseline set, a positively perturbed set, and a negatively perturbed set. The judge maps each (question, answer) input to a scalar score in [1, 10], and any systematic score gap between an input and its content-preserving transformation is measured as bias.</p>
+  <ol class="pipe">
+    <li><strong>Activation analysis.</strong> For each input, record the final-token hidden state at every decoder layer. Baseline inputs define a <strong>baseline activation manifold</strong>; biased inputs are those whose activation sits geometrically far from it (validated with MDS and PCA).</li>
+    <li><strong>Bias-direction identification.</strong> Restrict to <em>effective</em> bias samples whose score actually shifts, and estimate the bias direction with six estimators from two independent families (directional-change and discriminative-boundary). High within-family agreement supports keeping three representatives &mdash; Geometric Median, PCA, and a Classifier vector &mdash; for the causal experiments.</li>
+    <li><strong>Causal control via steering.</strong> Add or subtract the calibrated direction from the hidden state, choosing an intervention strength on the feasibility boundary that keeps outputs valid and rank-faithful (a Spearman floor rules out trivially corrupting the judge). Forward steering attacks; reverse steering defends.</li>
+    <li><strong>Outcome prediction.</strong> Build per-layer activation features (bias-direction projections, manifold-deviation, semantic-context) and train a simple linear projection plus a gradient-boosted model to anticipate judge failure &mdash; evaluated cross-domain on benchmarks that contribute no questions, context, or perturbation pairs to the fit.</li>
+  </ol>
+  <div class="datasum"><strong>Responsible release.</strong> The paper frames activation steering as an analytical and defensive tool for diagnosing bias and constructing fairness-oriented counterfactuals. It releases only the analysis and outcome-prediction pipelines, and defers any attack-oriented release to a controlled responsible-disclosure process.</div>
+</section>
+
+<section id="setup" class="animate-on-scroll">
+  <h2>Experimental Setup at a Glance</h2>
+  <div class="facts">
+    <div class="frow"><div class="fk">Judges (7)</div><div class="fv">GPT-4.1, GPT-4o-Mini, Llama-3.1-8B, Llama-3.3-70B, Qwen3-14B, Gemma-3-12B, DeepSeek-V3</div></div>
+    <div class="frow"><div class="fk">White-box analysis</div><div class="fv">Activation-level experiments on the three open mid-scale judges &mdash; Llama-3.1-8B (primary), Qwen3-14B, Gemma-3-12B</div></div>
+    <div class="frow"><div class="fk">Benchmarks (9)</div><div class="fv">GSM8K, MMLU, TruthfulQA, CommonsenseQA, PubMedQA, GPQA, ARC-Challenge, SocialMaze, BBQ &mdash; spanning math, factual knowledge, commonsense, biomedical, social cognition, and fairness</div></div>
+    <div class="frow"><div class="fk">Scale</div><div class="fv">4,500 source questions, baseline answers from a six-model pool, 31,500 + 31,500 perturbed samples across the two polarities</div></div>
+    <div class="frow"><div class="fk">Split</div><div class="fv">45 / 15 / 40 nested train / dev / test; train+dev use six benchmarks, while SocialMaze, BBQ, and GPQA are held out as the cross-domain probe</div></div>
+    <div class="frow"><div class="fk">Prompt configs</div><div class="fv">CoT &times; Strict (four configurations); default is strict, non-CoT after confirming the findings hold across all four</div></div>
+    <div class="frow"><div class="fk">Compute</div><div class="fv">~1,400 A100-hours for the full set of activation extractions, strength searches, and predictor training</div></div>
+  </div>
+</section>
+
+<section id="faq" class="animate-on-scroll">
+  <h2>Frequently Asked Questions</h2>
+
+  <details>
+    <summary>What is "Inside the Unfair Judge" about?</summary>
+    <div class="ans"><p>It is a mechanistic-interpretability study of LLM-as-judge scoring bias. Instead of treating the judge as a black box and only measuring how its scores move when inputs are perturbed, it opens the model and locates bias in the judge's hidden state. It reports three findings across seven judges, seven bias types, and nine benchmarks: bias occupies a low-dimensional, type-specific activation subspace that sharpens with depth (geometry); steering along that subspace controls scoring in both directions (causal control); and a linear projection onto the same features predicts judge failure on unseen benchmarks (operational prediction).</p></div>
+  </details>
+
+  <details>
+    <summary>How is this different from prior LLM-as-judge bias work?</summary>
+    <div class="ans"><p>Most prior work operates at the input&ndash;output interface: it perturbs inputs, measures score deltas, and mitigates with prompt engineering, calibration, or judge ensembles. That view describes bias by what comes out of the model. This paper gives a representation-level account of what happens inside the judge when it issues an unfair score, contributing a geometric characterization of typed bias subspaces, bidirectional causal control (attack and defense, not mitigation alone), and a cross-domain predictor of judge failure.</p></div>
+  </details>
+
+  <details>
+    <summary>What are the seven bias types?</summary>
+    <div class="ans"><p>Prestige (source attribution), Verbosity (length), Bandwagon (social consensus), Authority (academic credibility), Sentiment (emotional tone), Refinement (metacognitive claims about revision), and Diversity (stated social identity of the author). For each type, controlled positive and negative surface transformations are applied to the same answer while preserving its factual content and logical structure, so any score change reflects surface framing rather than answer quality.</p></div>
+  </details>
+
+  <details>
+    <summary>What does "bidirectional causal control" mean?</summary>
+    <div class="ans"><p>The recovered bias subspace is not just a passive correlate of biased scoring; it is an interventional handle. Adding the bias direction to a judge's hidden state reproduces biased scoring on clean inputs (attack), and subtracting it restores baseline scoring on biased inputs (defense). A matched-norm random direction produces a shift an order of magnitude smaller, and a bias-type-swap control sits between random and within-type, ruling out generic-perturbation and readout-direction explanations.</p></div>
+  </details>
+
+  <details>
+    <summary>Can it predict when a judge will be unfair?</summary>
+    <div class="ans"><p>Yes. A simple linear projection onto the bias-direction features reaches AUC 0.82 on three entirely unseen benchmarks (0.85 in-domain), versus about 0.63 for a zero-shot text-LLM baseline. A more expressive gradient-boosted model wins in-domain but transfers worse, indicating that the low-dimensional bias geometry is the part that generalizes across domains.</p></div>
+  </details>
+
+  <details>
+    <summary>Is the code or data available?</summary>
+    <div class="ans"><p>The paper releases the analysis and outcome-prediction pipelines as an artifact, and defers any attack-oriented release to a controlled responsible-disclosure process. This paper is a preprint under review and is not yet on arXiv; the arXiv, code, and data links will be added to this page once they are public.</p></div>
+  </details>
+
+  <details>
+    <summary>When should I cite this paper?</summary>
+    <div class="ans"><p>Cite it when your work involves LLM-as-judge or LLM-as-evaluator bias, mechanistic interpretability or representation engineering of model behaviors, activation steering and inference-time intervention, evaluation reliability in reward modeling and RLHF, predicting or detecting evaluator failure, or fairness and social-identity bias in automated evaluation. See the <a href="#cite-when">When to Cite This Paper</a> section for a ready-to-use citation sentence.</p></div>
+  </details>
+</section>
+
+<section id="cite-when" class="animate-on-scroll">
+  <h2>When to Cite This Paper</h2>
+  <p>This paper is a useful reference when your work touches any of the following:</p>
+  <ul class="citelist">
+    <li>LLM-as-judge / LLM-as-evaluator bias and its analysis or mitigation;</li>
+    <li>mechanistic interpretability and representation engineering of model behaviors;</li>
+    <li>activation steering, inference-time intervention, and concept directions in the residual stream;</li>
+    <li>evaluation reliability in reward modeling, RLHF, and preference learning;</li>
+    <li>predicting or detecting evaluator failure and out-of-distribution robustness of judges;</li>
+    <li>fairness, social-identity, verbosity, authority, or bandwagon effects in automated evaluation.</li>
+  </ul>
+  <p class="citesuggest"><em><strong>A typical citation:</strong> Xu et al. (2026) give a representation-level account of LLM-as-judge bias, showing that it occupies a low-dimensional, type-specific activation subspace that supports bidirectional causal control &mdash; attack and defense via activation steering &mdash; and predicts judge failure on unseen benchmarks.</em></p>
+</section>
+
+<section id="resources" class="animate-on-scroll">
+  <h2>Resources</h2>
+  <ul class="reslist">
+    <li><strong>Paper (arXiv)</strong> &mdash; coming soon; this is a preprint under review and not yet posted.</li>
+    <li><strong>Code</strong> &mdash; the analysis and outcome-prediction pipelines will be released; attack-oriented components are deferred to a controlled responsible-disclosure process.</li>
+    <li><strong>Data</strong> &mdash; the controlled bias triples (baseline / positive / negative) across seven bias types and nine benchmarks will be released alongside the code.</li>
+    <li>Venue: preprint, under review.</li>
+  </ul>
+  <p class="note">This page will be updated with the arXiv, code, and dataset links as soon as they are public.</p>
+</section>
+
+<section id="bibtex" class="animate-on-scroll">
+  <h2>BibTeX</h2>
+  <div class="bibhead">
+    <span>Preprint citation (arXiv identifier to be added on release)</span>
+    <button class="copy" id="copybtn" type="button" onclick="copyBib()">Copy BibTeX</button>
+  </div>
+<pre id="bibtex">@misc{xu2026unfairjudge,
+  title={Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias},
+  author={Xu, Zixiang and Li, Sixian and Liu, Huaxing and Wang, Xiang and Li, Shuai and Song, Zirui and Chen, Xiuying},
+  year={2026},
+  note={Preprint}
+}</pre>
+</section>
+
+<footer>
+  <p>Project page for "Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias." Back to <a href="https://xzx34.github.io/">Zixiang Xu's homepage</a>.</p>
+</footer>
+
+</div>
+
+<script>
+function copyBib(){
+  var pre=document.getElementById('bibtex');
+  var text=pre.innerText;
+  var btn=document.getElementById('copybtn');
+  function done(){var old=btn.textContent;btn.textContent='Copied!';setTimeout(function(){btn.textContent=old;},1500);}
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(done,function(){fallback(text,done);});
+  }else{fallback(text,done);}
+}
+function fallback(text,cb){
+  var ta=document.createElement('textarea');
+  ta.value=text;ta.style.position='fixed';ta.style.opacity='0';
+  document.body.appendChild(ta);ta.focus();ta.select();
+  try{document.execCommand('copy');cb();}catch(e){}
+  document.body.removeChild(ta);
+}
+</script>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  var SUN='<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2.5v2.2"/><path d="M12 19.3v2.2"/><path d="M2.5 12h2.2"/><path d="M19.3 12h2.2"/><path d="M5.1 5.1l1.6 1.6"/><path d="M17.3 17.3l1.6 1.6"/><path d="M18.9 5.1l-1.6 1.6"/><path d="M6.7 17.3l-1.6 1.6"/></g></svg>';
+  var MOON='<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>';
+  function isDark(){return root.getAttribute('data-theme')==='dark';}
+  var btn=document.getElementById('theme-toggle');
+  if(btn){
+    var setIcon=function(){btn.innerHTML=isDark()?SUN:MOON;};
+    setIcon();
+    btn.addEventListener('click',function(){
+      if(isDark()){root.removeAttribute('data-theme');localStorage.setItem('theme','light');}
+      else{root.setAttribute('data-theme','dark');localStorage.setItem('theme','dark');}
+      setIcon();
+    });
+  }
+  var sections=document.querySelectorAll('.animate-on-scroll');
+  var heads=document.querySelectorAll('h2');
+  function revealAll(){
+    var i;
+    for(i=0;i<sections.length;i++){sections[i].classList.add('animated');}
+    for(i=0;i<heads.length;i++){heads[i].classList.add('animated');}
+  }
+  if('IntersectionObserver' in window){
+    var so=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('animated');so.unobserve(e.target);}});
+    },{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+    for(var i=0;i<sections.length;i++){so.observe(sections[i]);}
+    var ho=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('animated');ho.unobserve(e.target);}});
+    },{threshold:0.3});
+    for(var j=0;j<heads.length;j++){ho.observe(heads[j]);}
+  }else{
+    revealAll();
+  }
+})();
+</script>
+
+</body>
+</html>
