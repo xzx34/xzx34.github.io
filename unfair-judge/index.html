@@ -98,11 +98,6 @@
     },
     {
       "@type": "Question",
-      "name": "Is the code or data available?",
-      "acceptedAnswer": {"@type": "Answer", "text": "This work is not being open-sourced, so the code and data are not publicly released. The paper is a preprint under review and is not yet on arXiv; the arXiv link will be added to this page once the preprint is posted."}
-    },
-    {
-      "@type": "Question",
       "name": "When should I cite this paper?",
       "acceptedAnswer": {"@type": "Answer", "text": "Cite it when your work involves LLM-as-judge or LLM-as-evaluator bias, mechanistic interpretability or representation engineering of model behaviors, activation steering and inference-time intervention, evaluation reliability in reward modeling and RLHF, predicting or detecting evaluator failure, or fairness and social-identity bias in automated evaluation. See the When to Cite This Paper section for a ready-to-use citation sentence."}
     }
@@ -425,7 +420,7 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
     <li><strong>Causal control via steering.</strong> Add or subtract the calibrated direction from the hidden state, choosing an intervention strength on the feasibility boundary that keeps outputs valid and rank-faithful (a Spearman floor rules out trivially corrupting the judge). Forward steering attacks; reverse steering defends.</li>
     <li><strong>Outcome prediction.</strong> Build per-layer activation features (bias-direction projections, manifold-deviation, semantic-context) and train a simple linear projection plus a gradient-boosted model to anticipate judge failure &mdash; evaluated cross-domain on benchmarks that contribute no questions, context, or perturbation pairs to the fit.</li>
   </ol>
-  <div class="datasum"><strong>Responsible framing.</strong> The paper frames activation steering as an analytical and defensive tool &mdash; for diagnosing bias and constructing fairness-oriented counterfactuals &mdash; and treats any attack-oriented capability under a responsible-disclosure posture.</div>
+  <div class="datasum">The paper frames activation steering as an analytical and defensive tool for diagnosing bias and constructing fairness-oriented counterfactuals.</div>
 </section>
 
 <section id="setup" class="animate-on-scroll">
@@ -470,11 +465,6 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
   </details>
 
   <details>
-    <summary>Is the code or data available?</summary>
-    <div class="ans"><p>This work is not being open-sourced, so the code and data are not publicly released. The paper is a preprint under review and is not yet on arXiv; the arXiv link will be added to this page once the preprint is posted.</p></div>
-  </details>
-
-  <details>
     <summary>When should I cite this paper?</summary>
     <div class="ans"><p>Cite it when your work involves LLM-as-judge or LLM-as-evaluator bias, mechanistic interpretability or representation engineering of model behaviors, activation steering and inference-time intervention, evaluation reliability in reward modeling and RLHF, predicting or detecting evaluator failure, or fairness and social-identity bias in automated evaluation. See the <a href="#cite-when">When to Cite This Paper</a> section for a ready-to-use citation sentence.</p></div>
   </details>
@@ -506,7 +496,7 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
 <section id="bibtex" class="animate-on-scroll">
   <h2>BibTeX</h2>
   <div class="bibhead">
-    <span>Preprint citation (arXiv identifier to be added on release)</span>
+    <span>Preprint citation (arXiv identifier to be added once the preprint is posted)</span>
     <button class="copy" id="copybtn" type="button" onclick="copyBib()">Copy BibTeX</button>
   </div>
 <pre id="bibtex">@misc{xu2026unfairjudge,
