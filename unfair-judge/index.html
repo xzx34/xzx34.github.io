@@ -99,7 +99,7 @@
     {
       "@type": "Question",
       "name": "Is the code or data available?",
-      "acceptedAnswer": {"@type": "Answer", "text": "The paper releases the analysis and outcome-prediction pipelines as an artifact, and defers any attack-oriented release to a controlled responsible-disclosure process. This paper is a preprint under review and is not yet on arXiv; the arXiv, code, and data links will be added to this page once they are public."}
+      "acceptedAnswer": {"@type": "Answer", "text": "This work is not being open-sourced, so the code and data are not publicly released. The paper is a preprint under review and is not yet on arXiv; the arXiv link will be added to this page once the preprint is posted."}
     },
     {
       "@type": "Question",
@@ -289,12 +289,8 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
       <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M6.8 2.8h7l3.4 3.4V21.2H6.8z"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M13.6 3v3.6h3.4"/></svg>
       Paper (arXiv) <span class="st">Soon</span>
     </span>
-    <span class="btn soon" aria-disabled="true">
-      <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 4.6 18 4.9 18 4.9c.6 1.6.2 2.8.1 3.1.7.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.3.8 1 .8 2.1v3.1c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
-      Code &amp; Data <span class="st">Soon</span>
-    </span>
   </nav>
-  <p class="statusline">Preprint under review &mdash; not yet on arXiv. The arXiv, code, and data links will be added here once released.</p>
+  <p class="statusline">Preprint under review &mdash; not yet on arXiv. The arXiv link will be added here once the preprint is posted.</p>
 
   <figure>
     <img src="../images/unfair-judge-hero.png" alt="MDS projection of a judge's final-token activations at layer 25: baseline judging inputs form one tight cluster while biased inputs are displaced to a surrounding region; colouring the same points by assigned score or by source dataset shows no clustering, indicating the separation reflects bias rather than score or domain." width="2400" height="777" decoding="async">
@@ -429,7 +425,7 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
     <li><strong>Causal control via steering.</strong> Add or subtract the calibrated direction from the hidden state, choosing an intervention strength on the feasibility boundary that keeps outputs valid and rank-faithful (a Spearman floor rules out trivially corrupting the judge). Forward steering attacks; reverse steering defends.</li>
     <li><strong>Outcome prediction.</strong> Build per-layer activation features (bias-direction projections, manifold-deviation, semantic-context) and train a simple linear projection plus a gradient-boosted model to anticipate judge failure &mdash; evaluated cross-domain on benchmarks that contribute no questions, context, or perturbation pairs to the fit.</li>
   </ol>
-  <div class="datasum"><strong>Responsible release.</strong> The paper frames activation steering as an analytical and defensive tool for diagnosing bias and constructing fairness-oriented counterfactuals. It releases only the analysis and outcome-prediction pipelines, and defers any attack-oriented release to a controlled responsible-disclosure process.</div>
+  <div class="datasum"><strong>Responsible framing.</strong> The paper frames activation steering as an analytical and defensive tool &mdash; for diagnosing bias and constructing fairness-oriented counterfactuals &mdash; and treats any attack-oriented capability under a responsible-disclosure posture.</div>
 </section>
 
 <section id="setup" class="animate-on-scroll">
@@ -475,7 +471,7 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
 
   <details>
     <summary>Is the code or data available?</summary>
-    <div class="ans"><p>The paper releases the analysis and outcome-prediction pipelines as an artifact, and defers any attack-oriented release to a controlled responsible-disclosure process. This paper is a preprint under review and is not yet on arXiv; the arXiv, code, and data links will be added to this page once they are public.</p></div>
+    <div class="ans"><p>This work is not being open-sourced, so the code and data are not publicly released. The paper is a preprint under review and is not yet on arXiv; the arXiv link will be added to this page once the preprint is posted.</p></div>
   </details>
 
   <details>
@@ -502,11 +498,9 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
   <h2>Resources</h2>
   <ul class="reslist">
     <li><strong>Paper (arXiv)</strong> &mdash; coming soon; this is a preprint under review and not yet posted.</li>
-    <li><strong>Code</strong> &mdash; the analysis and outcome-prediction pipelines will be released; attack-oriented components are deferred to a controlled responsible-disclosure process.</li>
-    <li><strong>Data</strong> &mdash; the controlled bias triples (baseline / positive / negative) across seven bias types and nine benchmarks will be released alongside the code.</li>
     <li>Venue: preprint, under review.</li>
   </ul>
-  <p class="note">This page will be updated with the arXiv, code, and dataset links as soon as they are public.</p>
+  <p class="note">This page will be updated with the arXiv link as soon as the preprint is posted.</p>
 </section>
 
 <section id="bibtex" class="animate-on-scroll">
