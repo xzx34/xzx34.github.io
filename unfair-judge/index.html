@@ -21,8 +21,11 @@
 <meta name="citation_author" content="Li, Shuai">
 <meta name="citation_author" content="Song, Zirui">
 <meta name="citation_author" content="Chen, Xiuying">
-<meta name="citation_publication_date" content="2026">
+<meta name="citation_publication_date" content="2026/07/13">
 <meta name="citation_public_url" content="https://xzx34.github.io/unfair-judge/">
+<meta name="citation_arxiv_id" content="2607.11871">
+<meta name="citation_pdf_url" content="https://arxiv.org/pdf/2607.11871">
+<meta name="citation_abstract_html_url" content="https://arxiv.org/abs/2607.11871">
 <meta name="citation_image" content="https://xzx34.github.io/images/unfair-judge-hero.png">
 
 <!-- Open Graph -->
@@ -32,6 +35,7 @@
 <meta property="og:url" content="https://xzx34.github.io/unfair-judge/">
 <meta property="og:image" content="https://xzx34.github.io/images/unfair-judge-hero.png">
 <meta property="og:site_name" content="Inside the Unfair Judge">
+<meta property="article:published_time" content="2026-07-13">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
@@ -47,7 +51,7 @@
   "name": "Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias",
   "url": "https://xzx34.github.io/unfair-judge/",
   "image": "https://xzx34.github.io/images/unfair-judge-hero.png",
-  "datePublished": "2026",
+  "datePublished": "2026-07-13",
   "inLanguage": "en",
   "creativeWorkStatus": "Preprint (under review)",
   "description": "A representation-level, mechanistic-interpretability account of LLM-as-judge scoring bias. Bias occupies a low-dimensional, type-specific subspace in the judge's hidden state that sharpens with depth; steering along this subspace gives bidirectional causal control (reproducing bias on clean inputs and restoring fair scores on biased ones); and a linear projection onto the same features predicts judge failure on unseen benchmarks.",
@@ -61,6 +65,8 @@
     {"@type": "Person", "name": "Zirui Song", "affiliation": [{"@type": "Organization", "name": "AMAP, Alibaba Group"}, {"@type": "Organization", "name": "MBZUAI"}]},
     {"@type": "Person", "name": "Xiuying Chen", "affiliation": {"@type": "Organization", "name": "MBZUAI"}}
   ],
+  "identifier": {"@type": "PropertyValue", "propertyID": "arXiv", "value": "2607.11871"},
+  "sameAs": "https://arxiv.org/abs/2607.11871",
   "keywords": "LLM-as-judge bias, mechanistic interpretability, representation engineering, activation steering, scoring bias, reward model, RLHF, verbosity bias, bandwagon bias, authority bias, self-preference, activation geometry, concept directions, inference-time intervention, judge failure prediction",
   "mainEntityOfPage": "https://xzx34.github.io/unfair-judge/"
 }
@@ -159,10 +165,6 @@ sup{font-size:.7em;line-height:0}
 .btn{display:inline-flex;align-items:center;gap:.45em;border:1px solid var(--accent);color:var(--accent);background:var(--card);padding:.55em 1.05em;border-radius:999px;font-size:.95rem;font-weight:600;line-height:1;transition:background .15s ease,color .15s ease,box-shadow .15s ease,transform .15s ease}
 .btn:hover{background:var(--grad);color:#fff;text-decoration:none;box-shadow:0 6px 16px var(--shadow);transform:translateY(-1px)}
 .btn .ic{width:1.05em;height:1.05em;flex:0 0 auto}
-.btn.soon{border-color:var(--border);color:var(--muted);background:var(--soft);cursor:default}
-.btn.soon:hover{background:var(--soft);color:var(--muted);box-shadow:none;transform:none}
-.btn.soon .ic{opacity:.65}
-.btn.soon .st{font-size:.72em;font-weight:700;letter-spacing:.04em;text-transform:uppercase;opacity:.85;border:1px solid var(--border);border-radius:999px;padding:.15em .5em;margin-left:.15em}
 .statusline{color:var(--muted);font-size:.9rem;margin:.75em 0 0}
 figure{margin:2.4em auto .4em}
 figure img{display:block;width:100%;height:auto;border:1px solid var(--border);border-radius:8px;box-shadow:0 6px 22px var(--shadow);background:#fff;transition:filter .3s ease}
@@ -262,7 +264,7 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
   <h1>Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias</h1>
   <p class="subtitle">A representation-level account of LLM-as-judge scoring bias &mdash; reading it as activation geometry that supports bidirectional causal control (attack and defense) and cross-domain prediction of judge failure. Seven judges &middot; seven bias types &middot; nine benchmarks.</p>
 
-  <span class="venue">Preprint &middot; Under Review</span>
+  <span class="venue">Preprint &middot; arXiv:2607.11871</span>
 
   <p class="authors">
     <span class="au">Zixiang Xu<sup>1,2,3,&#8224;</sup></span>,
@@ -280,12 +282,16 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
   </p>
 
   <nav class="btns" aria-label="Paper links">
-    <span class="btn soon" aria-disabled="true">
+    <a class="btn" href="https://arxiv.org/abs/2607.11871">
       <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M6.8 2.8h7l3.4 3.4V21.2H6.8z"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M13.6 3v3.6h3.4"/></svg>
-      Paper (arXiv) <span class="st">Soon</span>
-    </span>
+      arXiv
+    </a>
+    <a class="btn" href="https://arxiv.org/pdf/2607.11871">
+      <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M6.8 2.8h7l3.4 3.4V21.2H6.8z"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M9 12h6M9 15h6M9 18h4.5"/></svg>
+      PDF
+    </a>
   </nav>
-  <p class="statusline">Preprint under review &mdash; not yet on arXiv. The arXiv link will be added here once the preprint is posted.</p>
+  <p class="statusline">arXiv preprint submitted on 13 July 2026 &middot; currently under review.</p>
 
   <figure>
     <img src="../images/unfair-judge-hero.png" alt="MDS projection of a judge's final-token activations at layer 25: baseline judging inputs form one tight cluster while biased inputs are displaced to a surrounding region; colouring the same points by assigned score or by source dataset shows no clustering, indicating the separation reflects bias rather than score or domain." width="2400" height="777" decoding="async">
@@ -487,23 +493,26 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
 <section id="resources" class="animate-on-scroll">
   <h2>Resources</h2>
   <ul class="reslist">
-    <li><strong>Paper (arXiv)</strong> &mdash; coming soon; this is a preprint under review and not yet posted.</li>
+    <li><a href="https://arxiv.org/abs/2607.11871">arXiv:2607.11871</a> &mdash; abstract page (submitted 13 July 2026).</li>
+    <li><a href="https://arxiv.org/pdf/2607.11871">PDF</a> &mdash; full preprint.</li>
     <li>Venue: preprint, under review.</li>
   </ul>
-  <p class="note">This page will be updated with the arXiv link as soon as the preprint is posted.</p>
 </section>
 
 <section id="bibtex" class="animate-on-scroll">
   <h2>BibTeX</h2>
   <div class="bibhead">
-    <span>Preprint citation (arXiv identifier to be added once the preprint is posted)</span>
+    <span>arXiv preprint citation</span>
     <button class="copy" id="copybtn" type="button" onclick="copyBib()">Copy BibTeX</button>
   </div>
 <pre id="bibtex">@misc{xu2026unfairjudge,
   title={Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias},
   author={Xu, Zixiang and Li, Sixian and Liu, Huaxing and Wang, Xiang and Li, Shuai and Song, Zirui and Chen, Xiuying},
   year={2026},
-  note={Preprint}
+  eprint={2607.11871},
+  archivePrefix={arXiv},
+  primaryClass={cs.LG},
+  url={https://arxiv.org/abs/2607.11871}
 }</pre>
 </section>
 
