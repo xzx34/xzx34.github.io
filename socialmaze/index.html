@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>(function(){var t=localStorage.getItem('theme');if(t!=='light'){document.documentElement.setAttribute('data-theme','dark');}})();</script>
 <title>SocialMaze: A Benchmark for Evaluating and Enhancing Social Reasoning in Large Language Models in Complex Social Environments (Findings of EMNLP 2026)</title>
-<meta name="description" content="SocialMaze (Findings of EMNLP 2026) is a 70,000-instance benchmark that evaluates and enhances LLM social reasoning across six tasks and three descriptive design axes: deep reasoning, dynamic interaction, and information uncertainty.">
+<meta name="description" content="SocialMaze, accepted to Findings of EMNLP 2026 and previously presented as a Spotlight Talk at SocialSim @ COLM 2025, evaluates and enhances LLM social reasoning across six tasks and three descriptive design axes.">
 <meta name="robots" content="index,follow">
 <meta name="author" content="Zixiang Xu, Yanbo Wang, Yue Huang, Haomin Zhuang, Yujun Zhou, Jiayi Ye, Sixian Li, Zirui Song, Lang Gao, Chenxi Wang, Zhaorun Chen, Wang Pan, Yue Zhao, Jieyu Zhao, Xiangliang Zhang, Xiuying Chen">
 <meta name="keywords" content="social reasoning, social reasoning benchmark, LLM social reasoning, theory of mind, hidden role deduction, social deduction games, Werewolf, dynamic interaction, information uncertainty, chain-of-thought reasoning, LLM agents, fine-tuning, EMNLP 2026, Findings of EMNLP 2026, SocialMaze">
@@ -40,7 +40,7 @@
 <!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:title" content="SocialMaze (Findings of EMNLP 2026): Evaluating and Enhancing Social Reasoning in LLMs">
-<meta property="og:description" content="A 70,000-instance benchmark of six tasks that evaluates and enhances LLM social reasoning in complex, evolving social environments.">
+<meta property="og:description" content="A Findings of EMNLP 2026 paper and SocialSim @ COLM 2025 Spotlight on evaluating and enhancing LLM social reasoning in complex environments.">
 <meta property="og:url" content="https://xzx34.github.io/socialmaze/">
 <meta property="og:image" content="https://xzx34.github.io/images/socialmaze-hero.png">
 <meta property="og:site_name" content="SocialMaze (Findings of EMNLP 2026)">
@@ -48,7 +48,7 @@
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="SocialMaze (Findings of EMNLP 2026): Evaluating and Enhancing Social Reasoning in LLMs">
-<meta name="twitter:description" content="A 70,000-instance benchmark of six tasks that evaluates and enhances LLM social reasoning in complex, evolving social environments.">
+<meta name="twitter:description" content="A Findings of EMNLP 2026 paper and SocialSim @ COLM 2025 Spotlight on evaluating and enhancing LLM social reasoning in complex environments.">
 <meta name="twitter:image" content="https://xzx34.github.io/images/socialmaze-hero.png">
 
 <script type="application/ld+json">
@@ -82,6 +82,7 @@
     {"@type": "Person", "name": "Xiuying Chen", "affiliation": {"@type": "Organization", "name": "MBZUAI"}}
   ],
   "isPartOf": {"@type": "PublicationEvent", "name": "Findings of the Association for Computational Linguistics: EMNLP 2026"},
+  "award": "Spotlight Talk, SocialSim Workshop at COLM 2025",
   "identifier": [
     {"@type": "PropertyValue", "propertyID": "arXiv", "value": "2505.23713"}
   ],
@@ -103,7 +104,7 @@
     {
       "@type": "Question",
       "name": "What is SocialMaze?",
-      "acceptedAnswer": {"@type": "Answer", "text": "SocialMaze is a Findings of EMNLP 2026 benchmark for evaluating and enhancing social reasoning in large language models. It organizes six tasks across three settings along three descriptive design axes — deep reasoning, dynamic interaction, and information uncertainty. These axes describe intended sources of task difficulty rather than latent dimensions of model capability. The benchmark contains 70,000 instances, supported by automated checks and targeted human validation."}
+      "acceptedAnswer": {"@type": "Answer", "text": "SocialMaze is a Findings of EMNLP 2026 benchmark for evaluating and enhancing social reasoning in large language models, previously presented as a Spotlight Talk at SocialSim @ COLM 2025. It organizes six tasks across three settings along three descriptive design axes — deep reasoning, dynamic interaction, and information uncertainty. These axes describe intended sources of task difficulty rather than latent dimensions of model capability. The benchmark contains 70,000 instances, supported by automated checks and targeted human validation."}
     },
     {
       "@type": "Question",
@@ -189,7 +190,9 @@ h2::after{content:'';position:absolute;left:0;bottom:0;height:2px;width:0;backgr
 h2.animated::after{width:100%}
 h3{font-size:1.06rem;margin:1.3em 0 .25em;color:var(--text)}
 p{margin:.7em 0}
+.venues{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap}
 .venue{display:inline-block;font-weight:600;color:#fff;background:var(--grad);padding:4px 14px;border-radius:999px;font-size:.9rem;letter-spacing:.02em;box-shadow:0 2px 8px var(--shadow)}
+.venue.secondary{color:var(--accent-dark);background:var(--soft);border:1px solid var(--accent);box-shadow:none}
 .authors{margin:1.15em 0 .4em;line-height:1.95}
 .au{white-space:nowrap;margin-right:.15em}
 sup{font-size:.7em;line-height:0}
@@ -280,7 +283,10 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
   <h1>SocialMaze: A Benchmark for Evaluating and Enhancing Social Reasoning in Large Language Models in Complex Social Environments</h1>
   <p class="subtitle">Evaluating and enhancing social reasoning in LLMs across six tasks in complex, evolving social environments &mdash; organized along deep reasoning, dynamic interaction, and information uncertainty.</p>
 
-  <span class="venue">Findings of EMNLP 2026</span>
+  <div class="venues" aria-label="Publication venues">
+    <span class="venue">Findings of EMNLP 2026</span>
+    <span class="venue secondary">SocialSim @ COLM 2025 &middot; Spotlight</span>
+  </div>
 
   <p class="authors">
     <span class="au">Zixiang Xu<sup>1,2</sup></span>,
@@ -423,7 +429,7 @@ ds = load_dataset("MBZUAI/SocialMaze", split="hard")</code></pre>
 
   <details>
     <summary>What is SocialMaze?</summary>
-    <div class="ans"><p>SocialMaze is a Findings of EMNLP 2026 benchmark for evaluating and enhancing social reasoning in large language models. It organizes six tasks across three settings along three descriptive design axes &mdash; deep reasoning, dynamic interaction, and information uncertainty. These axes describe intended sources of task difficulty rather than latent dimensions of model capability. The benchmark contains 70,000 instances, supported by automated checks and targeted human validation.</p></div>
+    <div class="ans"><p>SocialMaze is a Findings of EMNLP 2026 benchmark for evaluating and enhancing social reasoning in large language models, previously presented as a <strong>Spotlight Talk at SocialSim @ COLM 2025</strong>. It organizes six tasks across three settings along three descriptive design axes &mdash; deep reasoning, dynamic interaction, and information uncertainty. These axes describe intended sources of task difficulty rather than latent dimensions of model capability. The benchmark contains 70,000 instances, supported by automated checks and targeted human validation.</p></div>
   </details>
 
   <details>
@@ -483,6 +489,7 @@ ds = load_dataset("MBZUAI/SocialMaze", split="hard")</code></pre>
     <li><a href="/socialmaze/paper.pdf">Accepted paper (PDF)</a> &mdash; the Findings of EMNLP 2026 version.</li>
     <li><a href="https://arxiv.org/abs/2505.23713">arXiv:2505.23713</a> &mdash; preprint abstract page.</li>
     <li><a href="https://2026.emnlp.org/">EMNLP 2026</a> &mdash; accepted to Findings; proceedings metadata is forthcoming.</li>
+    <li><a href="https://sites.google.com/view/social-sims-with-llms/home">SocialSim @ COLM 2025</a> &mdash; previously presented as a Spotlight Talk.</li>
     <li><a href="https://huggingface.co/datasets/MBZUAI/SocialMaze">Dataset on Hugging Face</a> &mdash; the Hidden Role Deduction task in QA format (200,000 instances, CC-BY-4.0), loadable with the <code>datasets</code> library.</li>
     <li><a href="https://github.com/xzx34/SocialMaze">Code on GitHub</a> &mdash; the full six-task benchmark and evaluation pipeline.</li>
   </ul>
@@ -525,7 +532,7 @@ ds = load_dataset("MBZUAI/SocialMaze", split="hard")</code></pre>
 </section>
 
 <footer>
-  <p>Project page for SocialMaze (Findings of EMNLP 2026). Back to <a href="https://xzx34.github.io/">Zixiang Xu's homepage</a>.</p>
+  <p>Project page for SocialMaze (Findings of EMNLP 2026; SocialSim @ COLM 2025 Spotlight). Back to <a href="https://xzx34.github.io/">Zixiang Xu's homepage</a>.</p>
 </footer>
 
 </div>
