@@ -4,33 +4,34 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>(function(){var t=localStorage.getItem('theme');if(t!=='light'){document.documentElement.setAttribute('data-theme','dark');}})();</script>
-<title>SocialMaze: A Benchmark for Evaluating Social Reasoning in Large Language Models (COLM 2025) | Evaluating Social Reasoning in LLMs</title>
-<meta name="description" content="SocialMaze (COLM 2025): a 70,000-instance benchmark of six tasks across social games, daily-life interactions, and digital platforms that evaluates LLM social reasoning under deep reasoning, dynamic interaction, and information uncertainty.">
+<title>SocialMaze: A Benchmark for Evaluating and Enhancing Social Reasoning in Large Language Models in Complex Social Environments (Findings of EMNLP 2026)</title>
+<meta name="description" content="SocialMaze (Findings of EMNLP 2026) is a 70,000-instance benchmark that evaluates and enhances LLM social reasoning across six tasks and three descriptive design axes: deep reasoning, dynamic interaction, and information uncertainty.">
 <meta name="robots" content="index,follow">
-<meta name="author" content="Zixiang Xu, Yanbo Wang, Yue Huang, Jiayi Ye, Haomin Zhuang, Zirui Song, Lang Gao, Chenxi Wang, Zhaorun Chen, Yujun Zhou, Sixian Li, Wang Pan, Yue Zhao, Jieyu Zhao, Xiangliang Zhang, Xiuying Chen">
-<meta name="keywords" content="social reasoning, social reasoning benchmark, LLM social reasoning, theory of mind, hidden role deduction, social deduction games, Werewolf, dynamic interaction, information uncertainty, chain-of-thought reasoning, LLM agents, fine-tuning, COLM 2025, SocialMaze">
+<meta name="author" content="Zixiang Xu, Yanbo Wang, Yue Huang, Haomin Zhuang, Yujun Zhou, Jiayi Ye, Sixian Li, Zirui Song, Lang Gao, Chenxi Wang, Zhaorun Chen, Wang Pan, Yue Zhao, Jieyu Zhao, Xiangliang Zhang, Xiuying Chen">
+<meta name="keywords" content="social reasoning, social reasoning benchmark, LLM social reasoning, theory of mind, hidden role deduction, social deduction games, Werewolf, dynamic interaction, information uncertainty, chain-of-thought reasoning, LLM agents, fine-tuning, EMNLP 2026, Findings of EMNLP 2026, SocialMaze">
 
 <link rel="canonical" href="https://xzx34.github.io/socialmaze/">
 
 <!-- Google Scholar / Highwire citation tags -->
-<meta name="citation_title" content="SocialMaze: A Benchmark for Evaluating Social Reasoning in Large Language Models">
+<meta name="citation_title" content="SocialMaze: A Benchmark for Evaluating and Enhancing Social Reasoning in Large Language Models in Complex Social Environments">
 <meta name="citation_author" content="Xu, Zixiang">
 <meta name="citation_author" content="Wang, Yanbo">
 <meta name="citation_author" content="Huang, Yue">
-<meta name="citation_author" content="Ye, Jiayi">
 <meta name="citation_author" content="Zhuang, Haomin">
+<meta name="citation_author" content="Zhou, Yujun">
+<meta name="citation_author" content="Ye, Jiayi">
+<meta name="citation_author" content="Li, Sixian">
 <meta name="citation_author" content="Song, Zirui">
 <meta name="citation_author" content="Gao, Lang">
 <meta name="citation_author" content="Wang, Chenxi">
 <meta name="citation_author" content="Chen, Zhaorun">
-<meta name="citation_author" content="Zhou, Yujun">
-<meta name="citation_author" content="Li, Sixian">
 <meta name="citation_author" content="Pan, Wang">
 <meta name="citation_author" content="Zhao, Yue">
 <meta name="citation_author" content="Zhao, Jieyu">
 <meta name="citation_author" content="Zhang, Xiangliang">
 <meta name="citation_author" content="Chen, Xiuying">
-<meta name="citation_publication_date" content="2025/05">
+<meta name="citation_publication_date" content="2026">
+<meta name="citation_conference_title" content="Findings of the Association for Computational Linguistics: EMNLP 2026">
 <meta name="citation_arxiv_id" content="2505.23713">
 <meta name="citation_pdf_url" content="https://xzx34.github.io/socialmaze/paper.pdf">
 <meta name="citation_abstract_html_url" content="https://arxiv.org/abs/2505.23713">
@@ -38,49 +39,49 @@
 
 <!-- Open Graph -->
 <meta property="og:type" content="article">
-<meta property="og:title" content="SocialMaze (COLM 2025): Evaluating Social Reasoning in Large Language Models">
-<meta property="og:description" content="A 70,000-instance benchmark of six tasks across social games, daily-life interactions, and digital platforms — testing LLM social reasoning under deep reasoning, dynamic interaction, and information uncertainty.">
+<meta property="og:title" content="SocialMaze (Findings of EMNLP 2026): Evaluating and Enhancing Social Reasoning in LLMs">
+<meta property="og:description" content="A 70,000-instance benchmark of six tasks that evaluates and enhances LLM social reasoning in complex, evolving social environments.">
 <meta property="og:url" content="https://xzx34.github.io/socialmaze/">
 <meta property="og:image" content="https://xzx34.github.io/images/socialmaze-hero.png">
-<meta property="og:site_name" content="SocialMaze (COLM 2025)">
+<meta property="og:site_name" content="SocialMaze (Findings of EMNLP 2026)">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="SocialMaze (COLM 2025): Evaluating Social Reasoning in Large Language Models">
-<meta name="twitter:description" content="A 70,000-instance benchmark of six tasks across social games, daily-life interactions, and digital platforms — testing LLM social reasoning under deep reasoning, dynamic interaction, and information uncertainty.">
+<meta name="twitter:title" content="SocialMaze (Findings of EMNLP 2026): Evaluating and Enhancing Social Reasoning in LLMs">
+<meta name="twitter:description" content="A 70,000-instance benchmark of six tasks that evaluates and enhances LLM social reasoning in complex, evolving social environments.">
 <meta name="twitter:image" content="https://xzx34.github.io/images/socialmaze-hero.png">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ScholarlyArticle",
-  "headline": "Evaluating Social Reasoning in Large Language Models",
-  "name": "SocialMaze: A Benchmark for Evaluating Social Reasoning in Large Language Models",
+  "headline": "Evaluating and Enhancing Social Reasoning in Large Language Models in Complex Social Environments",
+  "name": "SocialMaze: A Benchmark for Evaluating and Enhancing Social Reasoning in Large Language Models in Complex Social Environments",
   "url": "https://xzx34.github.io/socialmaze/",
   "image": "https://xzx34.github.io/images/socialmaze-hero.png",
-  "datePublished": "2025-05",
+  "datePublished": "2026",
   "inLanguage": "en",
-  "description": "SocialMaze is a benchmark for evaluating social reasoning in large language models, with six tasks across social reasoning games, daily-life interactions, and digital community platforms, designed around three core challenges: deep reasoning, dynamic interaction, and information uncertainty.",
-  "abstract": "Large language models (LLMs) are increasingly applied to socially grounded tasks, such as online community moderation, media content analysis, and social reasoning games. Success in these contexts depends on a model's social reasoning ability—the capacity to interpret social contexts, infer others' mental states, and assess the truthfulness of presented information. However, there is currently no systematic evaluation framework that comprehensively assesses the social reasoning capabilities of LLMs. Existing efforts often oversimplify real-world scenarios and consist of tasks that are too basic to challenge advanced models. To address this gap, we introduce SocialMaze, a new benchmark specifically designed to evaluate social reasoning. SocialMaze systematically incorporates three core challenges: deep reasoning, dynamic interaction, and information uncertainty. It provides six diverse tasks across three key settings: social reasoning games, daily-life interactions, and digital community platforms. Both automated and human validation are used to ensure data quality. Our evaluation reveals several key insights: models vary substantially in their ability to handle dynamic interactions and integrate temporally evolving information; models with strong chain-of-thought reasoning perform better on tasks requiring deeper inference beyond surface-level cues; and model reasoning degrades significantly under uncertainty. Furthermore, we show that targeted fine-tuning on curated reasoning examples can greatly improve model performance in complex social scenarios. The dataset is publicly available at: https://huggingface.co/datasets/MBZUAI/SocialMaze",
+  "description": "SocialMaze evaluates and enhances social reasoning in large language models through six tasks spanning social deduction games, daily-life interactions, and digital community platforms, organized along three descriptive design axes: deep reasoning, dynamic interaction, and information uncertainty.",
+  "abstract": "Large language models (LLMs) are increasingly deployed in socially grounded applications, where success requires interpreting context, inferring others' mental states, and reasoning about unreliable information. Yet existing benchmarks rarely evaluate these demands jointly in complex, evolving settings. We introduce SocialMaze, a benchmark that organizes six tasks across social deduction games, daily-life interactions, and digital community platforms along three descriptive design axes: deep reasoning, dynamic interaction, and information uncertainty. These axes characterize intended sources of task difficulty rather than latent, factor-analytic dimensions of model capability. Automated checks and human validation support data quality. Evaluations of twelve proprietary and open-weight LLMs show substantial variation in the use of evolving interaction histories; stronger chain-of-thought reasoners perform better on tasks requiring deeper inference, while uncertainty consistently degrades performance. Reasoning workflows help weaker short-chain-of-thought backbones but saturate on stronger reasoners. Finally, targeted fine-tuning on curated reasoning traces substantially improves structured social-reasoning tasks, whereas transfer to language-aggregation tasks remains statistically inconclusive.",
   "author": [
-    {"@type": "Person", "name": "Zixiang Xu", "affiliation": {"@type": "Organization", "name": "MBZUAI"}},
+    {"@type": "Person", "name": "Zixiang Xu", "affiliation": [{"@type": "Organization", "name": "MBZUAI"}, {"@type": "Organization", "name": "University of Southern California"}]},
     {"@type": "Person", "name": "Yanbo Wang", "affiliation": {"@type": "Organization", "name": "MBZUAI"}},
     {"@type": "Person", "name": "Yue Huang", "affiliation": {"@type": "Organization", "name": "University of Notre Dame"}},
-    {"@type": "Person", "name": "Jiayi Ye", "affiliation": {"@type": "Organization", "name": "MBZUAI"}},
     {"@type": "Person", "name": "Haomin Zhuang", "affiliation": {"@type": "Organization", "name": "University of Notre Dame"}},
+    {"@type": "Person", "name": "Yujun Zhou", "affiliation": {"@type": "Organization", "name": "University of Notre Dame"}},
+    {"@type": "Person", "name": "Jiayi Ye", "affiliation": {"@type": "Organization", "name": "MBZUAI"}},
+    {"@type": "Person", "name": "Sixian Li", "affiliation": {"@type": "Organization", "name": "University of Michigan, Ann Arbor"}},
     {"@type": "Person", "name": "Zirui Song", "affiliation": {"@type": "Organization", "name": "MBZUAI"}},
     {"@type": "Person", "name": "Lang Gao", "affiliation": {"@type": "Organization", "name": "MBZUAI"}},
     {"@type": "Person", "name": "Chenxi Wang", "affiliation": {"@type": "Organization", "name": "MBZUAI"}},
     {"@type": "Person", "name": "Zhaorun Chen", "affiliation": {"@type": "Organization", "name": "University of Chicago"}},
-    {"@type": "Person", "name": "Yujun Zhou", "affiliation": {"@type": "Organization", "name": "University of Notre Dame"}},
-    {"@type": "Person", "name": "Sixian Li", "affiliation": {"@type": "Organization", "name": "University of Michigan"}},
     {"@type": "Person", "name": "Wang Pan", "affiliation": {"@type": "Organization", "name": "Microsoft"}},
     {"@type": "Person", "name": "Yue Zhao", "affiliation": {"@type": "Organization", "name": "University of Southern California"}},
     {"@type": "Person", "name": "Jieyu Zhao", "affiliation": {"@type": "Organization", "name": "University of Southern California"}},
     {"@type": "Person", "name": "Xiangliang Zhang", "affiliation": {"@type": "Organization", "name": "University of Notre Dame"}},
     {"@type": "Person", "name": "Xiuying Chen", "affiliation": {"@type": "Organization", "name": "MBZUAI"}}
   ],
-  "isPartOf": {"@type": "PublicationEvent", "name": "SocialSim Workshop at COLM 2025"},
+  "isPartOf": {"@type": "PublicationEvent", "name": "Findings of the Association for Computational Linguistics: EMNLP 2026"},
   "identifier": [
     {"@type": "PropertyValue", "propertyID": "arXiv", "value": "2505.23713"}
   ],
@@ -102,7 +103,7 @@
     {
       "@type": "Question",
       "name": "What is SocialMaze?",
-      "acceptedAnswer": {"@type": "Answer", "text": "SocialMaze is a benchmark (COLM 2025, SocialSim workshop) for evaluating social reasoning in large language models. It defines three core challenges — deep reasoning, dynamic interaction, and information uncertainty — and instantiates them in six tasks across three settings: social reasoning games, daily-life interactions, and digital community platforms. The benchmark contains 70,000 instances, checked by both automated validation and human annotators."}
+      "acceptedAnswer": {"@type": "Answer", "text": "SocialMaze is a Findings of EMNLP 2026 benchmark for evaluating and enhancing social reasoning in large language models. It organizes six tasks across three settings along three descriptive design axes — deep reasoning, dynamic interaction, and information uncertainty. These axes describe intended sources of task difficulty rather than latent dimensions of model capability. The benchmark contains 70,000 instances, supported by automated checks and targeted human validation."}
     },
     {
       "@type": "Question",
@@ -117,12 +118,17 @@
     {
       "@type": "Question",
       "name": "What is the Hidden Role Deduction task?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Hidden Role Deduction is SocialMaze's flagship task: a six-player social-deduction game in which a model reads rounds of player statements and must identify both the true Criminal and its own assigned role. It is the only task that combines all three challenges — deep reasoning, dynamic interaction, and information uncertainty — and is released on Hugging Face in a convenient question-answering format."}
+      "acceptedAnswer": {"@type": "Answer", "text": "Hidden Role Deduction is SocialMaze's flagship task: a configurable social-deduction game in which a model reads rounds of player statements and must identify both the true Criminal and its own assigned role. The headline evaluation uses six players and three rounds, and the task is marked High on all three descriptive design axes. An expanded QA-format release is available on Hugging Face."}
     },
     {
       "@type": "Question",
       "name": "How well do current LLMs perform on SocialMaze?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Social reasoning is far from solved. In the six-player Hidden Role Deduction game, first-round Criminal-identification accuracy ranges from about 31% to 46% across models. Strong chain-of-thought models such as DeepSeek-R1 and Gemini-2.5-Pro improve markedly as more rounds of interaction accumulate — Gemini-2.5-Pro reaches 87.6% by the third round — while GPT-4o plateaus near 53%. Accuracy degrades further under deception and information uncertainty."}
+      "acceptedAnswer": {"@type": "Answer", "text": "Social reasoning is far from solved. In the six-player Hidden Role Deduction evaluation, first-round Criminal-identification accuracy ranges from 22.4% to 45.8% across twelve models. Strong chain-of-thought models such as DeepSeek-R1 and Gemini-2.5-Pro improve markedly as more rounds accumulate — Gemini-2.5-Pro reaches 87.6% by the third round — while GPT-4o plateaus near 53%. Accuracy degrades further under deception and information uncertainty."}
+    },
+    {
+      "@type": "Question",
+      "name": "How does SocialMaze enhance social reasoning?",
+      "acceptedAnswer": {"@type": "Answer", "text": "The accepted paper evaluates reasoning workflows and targeted fine-tuning on curated reasoning traces. Workflows improve a weaker short-chain-of-thought backbone by roughly 4.0 to 8.4 percentage points on Hidden Role Deduction but saturate on DeepSeek-R1. Supervised fine-tuning produces a 10.6-point Both-Correct gain on both Llama-3.1-8B and Phi-4; transfer is robust for Social Graph Analysis and statistically inconclusive for language-aggregation tasks."}
     },
     {
       "@type": "Question",
@@ -271,33 +277,31 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
 <div class="wrap">
 
 <header>
-  <h1>SocialMaze: A Benchmark for Evaluating Social Reasoning in Large Language Models</h1>
-  <p class="subtitle">Evaluating social reasoning in LLMs across six tasks &mdash; social games, daily-life interactions, and digital platforms &mdash; under deep reasoning, dynamic interaction, and information uncertainty.</p>
+  <h1>SocialMaze: A Benchmark for Evaluating and Enhancing Social Reasoning in Large Language Models in Complex Social Environments</h1>
+  <p class="subtitle">Evaluating and enhancing social reasoning in LLMs across six tasks in complex, evolving social environments &mdash; organized along deep reasoning, dynamic interaction, and information uncertainty.</p>
 
-  <span class="venue">SocialSim @ COLM 2025 &middot; Spotlight</span>
+  <span class="venue">Findings of EMNLP 2026</span>
 
   <p class="authors">
-    <span class="au">Zixiang Xu<sup>1</sup></span>,
+    <span class="au">Zixiang Xu<sup>1,2</sup></span>,
     <span class="au">Yanbo Wang<sup>1</sup></span>,
-    <span class="au">Yue Huang<sup>2</sup></span>,
+    <span class="au">Yue Huang<sup>3</sup></span>,
+    <span class="au">Haomin Zhuang<sup>3</sup></span>,
+    <span class="au">Yujun Zhou<sup>3</sup></span>,
     <span class="au">Jiayi Ye<sup>1</sup></span>,
-    <span class="au">Haomin Zhuang<sup>2</sup></span>,
+    <span class="au">Sixian Li<sup>4</sup></span>,
     <span class="au">Zirui Song<sup>1</sup></span>,
     <span class="au">Lang Gao<sup>1</sup></span>,
     <span class="au">Chenxi Wang<sup>1</sup></span>,
-    <span class="au">Zhaorun Chen<sup>3</sup></span>,
-    <span class="au">Yujun Zhou<sup>2</sup></span>,
-    <span class="au">Sixian Li<sup>4</sup></span>,
-    <span class="au">Wang Pan<sup>5</sup></span>,
-    <span class="au">Yue Zhao<sup>6</sup></span>,
-    <span class="au">Jieyu Zhao<sup>6</sup></span>,
-    <span class="au">Xiangliang Zhang<sup>2</sup></span>,
-    <span class="au">Xiuying Chen<sup>1,&#8224;</sup></span>
+    <span class="au">Zhaorun Chen<sup>5</sup></span>,
+    <span class="au">Wang Pan<sup>6</sup></span>,
+    <span class="au">Yue Zhao<sup>2</sup></span>,
+    <span class="au">Jieyu Zhao<sup>2</sup></span>,
+    <span class="au">Xiangliang Zhang<sup>3</sup></span>,
+    <span class="au">Xiuying Chen<sup>1</sup></span>
   </p>
   <p class="legend">
-    <sup>1</sup>&nbsp;MBZUAI &nbsp;&middot;&nbsp; <sup>2</sup>&nbsp;University of Notre Dame &nbsp;&middot;&nbsp; <sup>3</sup>&nbsp;University of Chicago &nbsp;&middot;&nbsp; <sup>4</sup>&nbsp;University of Michigan &nbsp;&middot;&nbsp; <sup>5</sup>&nbsp;Microsoft &nbsp;&middot;&nbsp; <sup>6</sup>&nbsp;University of Southern California<br>
-    <strong>&#8224;</strong>&nbsp;Corresponding author:
-    <a href="mailto:xiuying.chen@mbzuai.ac.ae">xiuying.chen@mbzuai.ac.ae</a>
+    <sup>1</sup>&nbsp;MBZUAI &nbsp;&middot;&nbsp; <sup>2</sup>&nbsp;University of Southern California &nbsp;&middot;&nbsp; <sup>3</sup>&nbsp;University of Notre Dame &nbsp;&middot;&nbsp; <sup>4</sup>&nbsp;University of Michigan, Ann Arbor &nbsp;&middot;&nbsp; <sup>5</sup>&nbsp;University of Chicago &nbsp;&middot;&nbsp; <sup>6</sup>&nbsp;Microsoft
   </p>
 
   <nav class="btns" aria-label="Paper links">
@@ -305,9 +309,9 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
       <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M6.8 2.8h7l3.4 3.4V21.2H6.8z"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M13.6 3v3.6h3.4"/></svg>
       arXiv
     </a>
-    <a class="btn" href="https://arxiv.org/pdf/2505.23713">
+    <a class="btn" href="/socialmaze/paper.pdf">
       <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M6.8 2.8h7l3.4 3.4V21.2H6.8z"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M9 12h6M9 15h6M9 18h4.5"/></svg>
-      PDF
+      Accepted PDF
     </a>
     <a class="btn" href="https://huggingface.co/datasets/MBZUAI/SocialMaze">
       <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5.6" rx="7" ry="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M5 5.6v12.8c0 1.44 3.13 2.6 7 2.6s7-1.16 7-2.6V5.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M5 12c0 1.44 3.13 2.6 7 2.6s7-1.16 7-2.6"/></svg>
@@ -320,27 +324,27 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
   </nav>
 
   <figure>
-    <img src="../images/socialmaze-hero.png" alt="SocialMaze overview: each social scenario is modeled as a layered social interaction graph over time, with six tasks across social reasoning games, daily-life interactions, and digital community platforms, posed as natural-language queries." width="2400" height="1274" decoding="async">
-    <figcaption>SocialMaze models each scenario as a layered social interaction graph over a timeline, then poses six tasks across social reasoning games, daily-life interactions, and digital community platforms &mdash; rendered as natural-language queries about a single actor or the whole graph.</figcaption>
+    <img src="../images/socialmaze-hero.png" alt="SocialMaze overview: each social scenario is modeled as a layered social interaction graph over time, with six tasks across social reasoning games, daily-life interactions, and digital community platforms, posed as vertex-, edge-, or graph-centric natural-language queries." width="2400" height="1274" decoding="async">
+    <figcaption>SocialMaze models each scenario as a layered social interaction graph over a timeline, then poses six tasks across social reasoning games, daily-life interactions, and digital community platforms &mdash; rendered as natural-language queries about an actor, a relationship, or the whole graph.</figcaption>
   </figure>
 </header>
 
 <section id="overview" class="animate-on-scroll">
   <h2>Overview (TL;DR)</h2>
-  <p class="lead">Large language models are increasingly deployed in socially grounded settings &mdash; moderating communities, analyzing media, playing social-deduction games &mdash; where success depends on <strong>social reasoning</strong>: reading social context, inferring others' mental states, and judging whether information is truthful. <strong>SocialMaze</strong> is a benchmark built to measure exactly this capability, and it finds that even frontier models still struggle.</p>
-  <p>SocialMaze isolates three core challenges of real social cognition &mdash; <strong>deep reasoning</strong>, <strong>dynamic interaction</strong>, and <strong>information uncertainty</strong> &mdash; and builds six tasks around them across three settings: social reasoning games, daily-life interactions, and digital community platforms. In total it contains <strong>70,000 instances</strong>, created through a mix of algorithmic generation, real-world data, and LLM generation, then filtered by automated checks and human validation. Its flagship task, <strong>Hidden Role Deduction</strong>, is a six-player social-deduction game that stresses all three challenges at once.</p>
-  <p>In the authors' words, the contributions are threefold:</p>
+  <p class="lead">Large language models are increasingly deployed in socially grounded settings &mdash; moderating communities, analyzing media, playing social-deduction games &mdash; where success depends on <strong>social reasoning</strong>: reading context, inferring others' mental states, and reasoning about unreliable information. <strong>SocialMaze</strong> evaluates this capability in complex, evolving environments and studies how targeted reasoning interventions can improve it.</p>
+  <p>SocialMaze organizes task construction along three <strong>descriptive design axes</strong> &mdash; <strong>deep reasoning</strong>, <strong>dynamic interaction</strong>, and <strong>information uncertainty</strong>. These axes describe intended sources of task difficulty rather than latent, factor-analytic dimensions of model capability. The benchmark contains <strong>70,000 instances</strong> across six tasks and three settings, created through a mix of algorithmic generation, authentic human data, and LLM-assisted discourse, with automated checks and targeted human validation.</p>
+  <p>The accepted paper makes three contributions:</p>
   <ol class="contrib">
-    <li>"We identify deep reasoning, interaction dynamics, and information uncertainty as three core dimensions for evaluating social reasoning in LLMs, capturing critical challenges found in real-world social cognition."</li>
-    <li>"Based on these dimensions, we construct SocialMaze, a benchmark dataset comprising six tasks across three real-world-inspired scenarios (social games, daily life interactions, and digital platforms), covering a wide range of reasoning types and difficulty levels."</li>
-    <li>"Our experiments provide rich insights into LLM social reasoning: we identify key limitations in current models and highlight promising directions for future research, showing that techniques such as targeted fine-tuning can substantially improve performance."</li>
+    <li>It defines deep reasoning, dynamic interaction, and information uncertainty as three descriptive axes for constructing controlled social-reasoning evaluations.</li>
+    <li>It instantiates those axes in six tasks across social deduction games, daily-life interactions, and digital community platforms.</li>
+    <li>It evaluates twelve proprietary and open-weight LLMs, showing where reasoning workflows help and where targeted fine-tuning transfers beyond the training task.</li>
   </ol>
 </section>
 
 <section id="abstract" class="animate-on-scroll">
   <h2>Abstract</h2>
   <div class="block abstract">
-    <p>Large language models (LLMs) are increasingly applied to socially grounded tasks, such as online community moderation, media content analysis, and social reasoning games. Success in these contexts depends on a model's social reasoning ability&mdash;the capacity to interpret social contexts, infer others' mental states, and assess the truthfulness of presented information. However, there is currently no systematic evaluation framework that comprehensively assesses the social reasoning capabilities of LLMs. Existing efforts often oversimplify real-world scenarios and consist of tasks that are too basic to challenge advanced models. To address this gap, we introduce SocialMaze, a new benchmark specifically designed to evaluate social reasoning. SocialMaze systematically incorporates three core challenges: deep reasoning, dynamic interaction, and information uncertainty. It provides six diverse tasks across three key settings: social reasoning games, daily-life interactions, and digital community platforms. Both automated and human validation are used to ensure data quality. Our evaluation reveals several key insights: models vary substantially in their ability to handle dynamic interactions and integrate temporally evolving information; models with strong chain-of-thought reasoning perform better on tasks requiring deeper inference beyond surface-level cues; and model reasoning degrades significantly under uncertainty. Furthermore, we show that targeted fine-tuning on curated reasoning examples can greatly improve model performance in complex social scenarios. The dataset is publicly available at: <a href="https://huggingface.co/datasets/MBZUAI/SocialMaze">https://huggingface.co/datasets/MBZUAI/SocialMaze</a></p>
+    <p>Large language models (LLMs) are increasingly deployed in socially grounded applications, where success requires interpreting context, inferring others' mental states, and reasoning about unreliable information. Yet existing benchmarks rarely evaluate these demands jointly in complex, evolving settings. We introduce <strong><em>SocialMaze</em></strong>, a benchmark that organizes six tasks across social deduction games, daily-life interactions, and digital community platforms along three descriptive design axes: deep reasoning, dynamic interaction, and information uncertainty. These axes characterize intended sources of task difficulty rather than latent, factor-analytic dimensions of model capability. Automated checks and human validation support data quality. Evaluations of twelve proprietary and open-weight LLMs show substantial variation in the use of evolving interaction histories; stronger chain-of-thought reasoners perform better on tasks requiring deeper inference, while uncertainty consistently degrades performance. Reasoning workflows help weaker short-chain-of-thought backbones but saturate on stronger reasoners. Finally, targeted fine-tuning on curated reasoning traces substantially improves structured social-reasoning tasks, whereas transfer to language-aggregation tasks remains statistically inconclusive.</p>
   </div>
 </section>
 
@@ -348,34 +352,34 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
   <h2>Key Findings &amp; Why They Matter</h2>
 
   <div class="finding">
-    <h3><span class="num">1.</span>Social reasoning is far from solved</h3>
-    <p>Even the strongest models start near chance on the hardest task. In the six-player <strong>Hidden Role Deduction</strong> game, first-round accuracy at identifying the Criminal ranges from <strong class="k">31.3%</strong> (Qwen-2.5-72B) to <strong class="k">45.8%</strong> (o3-mini). Because these tasks are designed to demand genuine inference rather than surface cues, a high score on conventional benchmarks does not predict competence here&mdash;social reasoning has to be measured directly.</p>
+    <h3><span class="num">1.</span>First-round performance remains limited</h3>
+    <p>In the six-player <strong>Hidden Role Deduction</strong> evaluation, first-round accuracy at identifying the Criminal ranges from <strong class="k">22.4%</strong> (DeepSeek-V3) to <strong class="k">45.8%</strong> (o3-mini) across twelve models. Later rounds reveal substantial variation in how effectively models use the evolving interaction history.</p>
   </div>
 
   <div class="finding">
     <h3><span class="num">2.</span>Long chain-of-thought helps where reasoning is deep&mdash;at a cost</h3>
-    <p>Models with long chain-of-thought reasoning achieve substantially higher accuracy on tasks that require <strong>deep reasoning</strong> (Social Graph Analysis and Hidden Role Deduction), producing <strong class="k">nearly 8&times;</strong> more output tokens on those tasks. On shallow tasks the advantage shrinks. Different models also have different strengths: DeepSeek-R1 and Gemini-2.5-Pro lead on deep-reasoning tasks, while GPT-4o excels at Review Decision Prediction, where reading nuanced reviewer attitudes matters most.</p>
+    <p>Models with long chain-of-thought reasoning achieve substantially higher accuracy on tasks that require <strong>deep reasoning</strong> (Social Graph Analysis and Hidden Role Deduction), producing <strong class="k">nearly 8&times;</strong> more output tokens on those tasks. On shallower tasks the advantage shrinks. Different model families have different strengths: reasoning-oriented models lead on structured deduction, while strong generalists such as DeepSeek-V3 and GPT-4o lead Review Decision Prediction.</p>
   </div>
 
   <div class="finding">
     <h3><span class="num">3.</span>Models differ sharply in using dynamic interaction</h3>
-    <p>As more rounds of player statements accumulate in Hidden Role Deduction, some models integrate the new evidence and others stall. Over three rounds, <strong class="k">Gemini-2.5-Pro</strong> climbs from 43.3% to <strong class="k">87.6%</strong> and DeepSeek-R1 from 44.3% to 80.4%, whereas <strong class="k">GPT-4o</strong> plateaus, moving only 39.5% &rarr; 53.3% &rarr; 53.5%. The capacity to track and integrate temporally evolving information&mdash;not raw scale&mdash;separates the strongest social reasoners.</p>
+    <p>As more rounds of player statements accumulate in Hidden Role Deduction, some models integrate the new evidence and others stall. Over three rounds, <strong class="k">Gemini-2.5-Pro</strong> climbs from 43.3% to <strong class="k">87.6%</strong> and DeepSeek-R1 from 44.3% to 80.4%, whereas <strong class="k">GPT-4o</strong> plateaus, moving only 39.5% &rarr; 53.3% &rarr; 53.5%. This contrast reveals sharp differences in how evaluators use temporally evolving information.</p>
   </div>
 
   <div class="finding">
     <h3><span class="num">4.</span>Reasoning degrades under uncertainty&mdash;and rebuttals can mislead</h3>
-    <p>Injecting unreliable actors&mdash;an intentionally deceptive Criminal, or self-deceived Rumormonger and Lunatic roles&mdash;sharply lowers accuracy, and short-CoT models are almost entirely unable to deduce their own role when their self-perception is distorted. The effect even shows up in peer review: in Review Decision Prediction, accuracy jumps once reviews appear but often <em>drops</em> after the rebuttal&mdash;e.g., Llama-3.3-70B goes <strong class="k">26.2% &rarr; 87.4% &rarr; 72.2%</strong>&mdash;because the model is "convinced" by an author's well-articulated defense that did not actually change the decision.</p>
+    <p>Injecting unreliable actors&mdash;an intentionally deceptive Criminal, or self-deceived Rumormonger and Lunatic roles&mdash;sharply lowers Criminal- and self-role accuracy. The effect also appears in peer review: in Review Decision Prediction, accuracy jumps once reviews appear, but <strong class="k">10 of 12</strong> evaluators decline after reading the rebuttal&mdash;e.g., Llama-3.3-70B moves <strong class="k">26.2% &rarr; 87.4% &rarr; 72.2%</strong>. GPT-4o and DeepSeek-V3 move upward, but those increases do not survive family-wise significance correction.</p>
   </div>
 
   <div class="finding">
-    <h3><span class="num">5.</span>Agents barely help; targeted fine-tuning does</h3>
-    <p>Reasoning agents and workflows (LLM-Debate, Self-refine, ADAS, AFlow, MaAS, DyFlow) yield only marginal gains over base models on Hidden Role Deduction&mdash;current workflow strategies are not enough for this complexity. Fine-tuning on curated reasoning traces is far more effective: with supervised fine-tuning, full-answer accuracy rises from <strong class="k">8.2% to 19.8%</strong> for Phi-4 and from <strong class="k">2.0% to 13.4%</strong> for Llama-3.1-8B, with consistent gains carrying over to the other tasks.</p>
+    <h3><span class="num">5.</span>Workflows help weaker backbones; fine-tuning improves structured reasoning</h3>
+    <p>On a weaker short-chain-of-thought backbone, six reasoning workflows improve Hidden Role Deduction Both-Correct accuracy by roughly <strong class="k">+4.0 to +8.4 points</strong>, with DyFlow producing the clearest gain. On DeepSeek-R1, however, all tested workflows stay within &plusmn;2 points of the base model, indicating saturation. Supervised fine-tuning on curated reasoning traces raises Both-Correct accuracy from <strong class="k">15.4% to 26.0%</strong> for Llama-3.1-8B and from <strong class="k">20.4% to 31.0%</strong> for Phi-4. Transfer is robust on Social Graph Analysis, borderline on Find the Spy, and statistically inconclusive on the three language-aggregation tasks.</p>
   </div>
 </section>
 
 <section id="structure" class="animate-on-scroll">
   <h2>Inside the Benchmark: Six Tasks, Three Settings</h2>
-  <p>SocialMaze organizes <strong>six tasks</strong> into <strong>three real-world settings</strong>, and positions each task to stress a different mix of the three core challenges&mdash;<strong>Deep Reasoning</strong>, <strong>Dynamic Interaction</strong>, and <strong>Information Uncertainty</strong>. Per-task instance counts below are from the paper's task overview.</p>
+  <p>SocialMaze organizes <strong>six tasks</strong> into <strong>three real-world-inspired settings</strong>, and positions each task along three descriptive design axes&mdash;<strong>Deep Reasoning</strong>, <strong>Dynamic Interaction</strong>, and <strong>Information Uncertainty</strong>. Per-task instance counts below are from the paper's task overview.</p>
   <div class="settings">
     <div class="setcard">
       <div class="seth"><span class="sname">Social Reasoning Games</span><span class="scnt">26,000 instances</span></div>
@@ -398,9 +402,9 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
 
 <section id="method" class="animate-on-scroll">
   <h2>How It Works (Method)</h2>
-  <p><strong>SocialMaze</strong> is built on a graph-based formalization of social scenarios. Participants and their evolving interactions are modeled as <strong>layered social interaction graphs</strong> over a timeline, and each task poses either a vertex-centric query (about one actor) or a graph-level query (about the whole scenario), rendered as natural-language input. This lets the benchmark dial, task by task, how much deep reasoning, dynamic interaction, and information uncertainty a model must handle.</p>
-  <p>The flagship task, <strong>Hidden Role Deduction</strong>, is a six-player social-deduction game: the model reads several rounds of player statements and must identify both the true Criminal and its own assigned role&mdash;the single task that combines all three challenges. Data is created through a mix of fully algorithmic generation, real-world content (Amazon, Google Play, and Taobao reviews for Rating Estimation; OpenReview submissions and decisions for Review Decision Prediction), and LLM generation. Every task is checked for solvability by human evaluators: for example, annotators could uniquely identify the Spy in <strong>91%</strong> of sampled Find-the-Spy instances and recover the true rating in <strong>83%</strong> of Rating-Estimation instances, confirming the questions are answerable from the information given.</p>
-  <div class="modelset"><b>Models evaluated include:</b> Llama-3.1-8B, Llama-3.3-70B, Qwen-2.5-72B, Phi-4, GPT-4o-mini, GPT-4o, o3-mini, QwQ-32B, DeepSeek-R1, o1, and Gemini-2.5-Pro.</div>
+  <p><strong>SocialMaze</strong> is built on a graph-based formalization of social scenarios. Participants and their evolving interactions are modeled as <strong>layered social interaction graphs</strong> over a timeline, and tasks pose vertex-centric queries (about one actor), edge-centric queries (about a relationship), or graph-level queries (about the whole scenario), rendered as natural-language input. This lets the benchmark vary intended task difficulty along the three design axes.</p>
+  <p>The flagship task, <strong>Hidden Role Deduction</strong>, asks a model to read several rounds of player statements and identify both the true Criminal and its own role; the headline evaluation uses six players and three rounds. Data combines algorithmic generation, authentic human sources (Amazon, Google Play, and Taobao reviews; OpenReview submissions and decisions), and LLM-assisted discourse. Algorithmic tasks use solvability and uniqueness checks, while targeted human validation supports the quality of sampled instances&mdash;for example, annotators could uniquely identify the Spy in <strong>91%</strong> of sampled Find-the-Spy instances and recover the true rating in <strong>83%</strong> of sampled LLM-generated Rating-Estimation instances.</p>
+  <div class="modelset"><b>Models evaluated (12):</b> Llama-3.1-8B, Llama-3.3-70B, Qwen-2.5-72B, Phi-4, QwQ-32B, DeepSeek-V3, DeepSeek-R1, GPT-4o-mini, GPT-4o, o3-mini, o1, and Gemini-2.5-Pro.</div>
 </section>
 
 <section id="dataset" class="animate-on-scroll">
@@ -411,7 +415,7 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
 
 # Hidden Role Deduction, QA format (splits: "easy", "hard")
 ds = load_dataset("MBZUAI/SocialMaze", split="hard")</code></pre>
-  <p class="note">The full SocialMaze benchmark&mdash;all six tasks, 70,000 instances&mdash;and the evaluation code are available in the project's <a href="https://github.com/xzx34/SocialMaze">GitHub repository</a>.</p>
+  <p class="note">This 200,000-instance Hugging Face release is an expanded QA-format release of Hidden Role Deduction. The paper's full SocialMaze benchmark&mdash;all six tasks, 70,000 instances&mdash;and the evaluation code are available separately in the project's <a href="https://github.com/xzx34/SocialMaze">GitHub repository</a>.</p>
 </section>
 
 <section id="faq" class="animate-on-scroll">
@@ -419,7 +423,7 @@ ds = load_dataset("MBZUAI/SocialMaze", split="hard")</code></pre>
 
   <details>
     <summary>What is SocialMaze?</summary>
-    <div class="ans"><p>SocialMaze is a benchmark (COLM 2025, SocialSim workshop) for evaluating social reasoning in large language models. It defines three core challenges &mdash; deep reasoning, dynamic interaction, and information uncertainty &mdash; and instantiates them in six tasks across three settings: social reasoning games, daily-life interactions, and digital community platforms. The benchmark contains 70,000 instances, checked by both automated validation and human annotators.</p></div>
+    <div class="ans"><p>SocialMaze is a Findings of EMNLP 2026 benchmark for evaluating and enhancing social reasoning in large language models. It organizes six tasks across three settings along three descriptive design axes &mdash; deep reasoning, dynamic interaction, and information uncertainty. These axes describe intended sources of task difficulty rather than latent dimensions of model capability. The benchmark contains 70,000 instances, supported by automated checks and targeted human validation.</p></div>
   </details>
 
   <details>
@@ -434,12 +438,17 @@ ds = load_dataset("MBZUAI/SocialMaze", split="hard")</code></pre>
 
   <details>
     <summary>What is the Hidden Role Deduction task?</summary>
-    <div class="ans"><p>Hidden Role Deduction is SocialMaze's flagship task: a six-player social-deduction game in which a model reads rounds of player statements and must identify both the true Criminal and its own assigned role. It is the only task that combines all three challenges &mdash; deep reasoning, dynamic interaction, and information uncertainty &mdash; and is released on Hugging Face in a convenient question-answering format.</p></div>
+    <div class="ans"><p>Hidden Role Deduction is SocialMaze's flagship task: a configurable social-deduction game in which a model reads rounds of player statements and must identify both the true Criminal and its own assigned role. The headline evaluation uses six players and three rounds, and the task is marked High on all three descriptive design axes. An expanded QA-format release is available on Hugging Face.</p></div>
   </details>
 
   <details>
     <summary>How well do current LLMs perform on SocialMaze?</summary>
-    <div class="ans"><p>Social reasoning is far from solved. In the six-player Hidden Role Deduction game, first-round Criminal-identification accuracy ranges from about 31% to 46% across models. Strong chain-of-thought models such as DeepSeek-R1 and Gemini-2.5-Pro improve markedly as more rounds of interaction accumulate &mdash; Gemini-2.5-Pro reaches 87.6% by the third round &mdash; while GPT-4o plateaus near 53%. Accuracy degrades further under deception and information uncertainty.</p></div>
+    <div class="ans"><p>Social reasoning is far from solved. In the six-player Hidden Role Deduction evaluation, first-round Criminal-identification accuracy ranges from 22.4% to 45.8% across twelve models. Strong chain-of-thought models such as DeepSeek-R1 and Gemini-2.5-Pro improve markedly as more rounds accumulate &mdash; Gemini-2.5-Pro reaches 87.6% by the third round &mdash; while GPT-4o plateaus near 53%. Accuracy degrades further under deception and information uncertainty.</p></div>
+  </details>
+
+  <details>
+    <summary>How does SocialMaze enhance social reasoning?</summary>
+    <div class="ans"><p>The accepted paper evaluates reasoning workflows and targeted fine-tuning on curated reasoning traces. Workflows improve a weaker short-chain-of-thought backbone by roughly 4.0 to 8.4 percentage points on Hidden Role Deduction but saturate on DeepSeek-R1. Supervised fine-tuning produces a 10.6-point Both-Correct gain on both Llama-3.1-8B and Phi-4; transfer is robust for Social Graph Analysis and statistically inconclusive for language-aggregation tasks.</p></div>
   </details>
 
   <details>
@@ -465,26 +474,26 @@ ds = load_dataset("MBZUAI/SocialMaze", split="hard")</code></pre>
     <li>LLM agents and workflows versus targeted fine-tuning for hard reasoning tasks;</li>
     <li>LLMs for community moderation, review-decision prediction, or user-profile inference.</li>
   </ul>
-  <p class="citesuggest"><em><strong>A typical citation:</strong> Xu et al. (2025) introduce SocialMaze, a benchmark of six tasks across social games, daily-life interactions, and digital platforms, and show that even frontier LLMs struggle with social reasoning that requires deep inference, dynamic interaction, and reasoning under uncertainty.</em></p>
+  <p class="citesuggest"><em><strong>A typical citation:</strong> Xu et al. (2026) introduce SocialMaze, a six-task benchmark for evaluating and enhancing social reasoning in complex social environments, and show that reasoning workflows help weaker backbones while targeted fine-tuning transfers most clearly to structured reasoning tasks.</em></p>
 </section>
 
 <section id="resources" class="animate-on-scroll">
   <h2>Resources</h2>
   <ul class="reslist">
-    <li><a href="https://arxiv.org/abs/2505.23713">arXiv:2505.23713</a> &mdash; abstract page (submitted 29 May 2025).</li>
-    <li><a href="https://arxiv.org/pdf/2505.23713">PDF</a> &mdash; full preprint.</li>
+    <li><a href="/socialmaze/paper.pdf">Accepted paper (PDF)</a> &mdash; the Findings of EMNLP 2026 version.</li>
+    <li><a href="https://arxiv.org/abs/2505.23713">arXiv:2505.23713</a> &mdash; preprint abstract page.</li>
+    <li><a href="https://2026.emnlp.org/">EMNLP 2026</a> &mdash; accepted to Findings; proceedings metadata is forthcoming.</li>
     <li><a href="https://huggingface.co/datasets/MBZUAI/SocialMaze">Dataset on Hugging Face</a> &mdash; the Hidden Role Deduction task in QA format (200,000 instances, CC-BY-4.0), loadable with the <code>datasets</code> library.</li>
     <li><a href="https://github.com/xzx34/SocialMaze">Code on GitHub</a> &mdash; the full six-task benchmark and evaluation pipeline.</li>
-    <li>Venue: SocialSim Workshop @ COLM 2025 (Spotlight).</li>
   </ul>
   <nav class="btns" aria-label="Paper links (repeated)">
     <a class="btn" href="https://arxiv.org/abs/2505.23713">
       <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M6.8 2.8h7l3.4 3.4V21.2H6.8z"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M13.6 3v3.6h3.4"/></svg>
       arXiv
     </a>
-    <a class="btn" href="https://arxiv.org/pdf/2505.23713">
+    <a class="btn" href="/socialmaze/paper.pdf">
       <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M6.8 2.8h7l3.4 3.4V21.2H6.8z"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M9 12h6M9 15h6M9 18h4.5"/></svg>
-      PDF
+      Accepted PDF
     </a>
     <a class="btn" href="https://huggingface.co/datasets/MBZUAI/SocialMaze">
       <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5.6" rx="7" ry="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M5 5.6v12.8c0 1.44 3.13 2.6 7 2.6s7-1.16 7-2.6V5.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M5 12c0 1.44 3.13 2.6 7 2.6s7-1.16 7-2.6"/></svg>
@@ -500,26 +509,30 @@ ds = load_dataset("MBZUAI/SocialMaze", split="hard")</code></pre>
 <section id="bibtex" class="animate-on-scroll">
   <h2>BibTeX</h2>
   <div class="bibhead">
-    <span>arXiv preprint citation</span>
+    <span>Findings of EMNLP 2026 citation (proceedings metadata forthcoming)</span>
     <button class="copy" id="copybtn" type="button" onclick="copyBib()">Copy BibTeX</button>
   </div>
-<pre id="bibtex">@article{xu2025socialmaze,
-  title={SocialMaze: A Benchmark for Evaluating Social Reasoning in Large Language Models},
-  author={Xu, Zixiang and Wang, Yanbo and Huang, Yue and Ye, Jiayi and Zhuang, Haomin and Song, Zirui and Gao, Lang and Wang, Chenxi and Chen, Zhaorun and Zhou, Yujun and Li, Sixian and Pan, Wang and Zhao, Yue and Zhao, Jieyu and Zhang, Xiangliang and Chen, Xiuying},
-  journal={arXiv preprint arXiv:2505.23713},
-  year={2025}
+<pre id="bibtex-code">@inproceedings{xu2026socialmaze,
+  title={{SocialMaze}: A Benchmark for Evaluating and Enhancing Social Reasoning in Large Language Models in Complex Social Environments},
+  author={Xu, Zixiang and Wang, Yanbo and Huang, Yue and Zhuang, Haomin and Zhou, Yujun and Ye, Jiayi and Li, Sixian and Song, Zirui and Gao, Lang and Wang, Chenxi and Chen, Zhaorun and Pan, Wang and Zhao, Yue and Zhao, Jieyu and Zhang, Xiangliang and Chen, Xiuying},
+  booktitle={Findings of the Association for Computational Linguistics: EMNLP 2026},
+  month={October},
+  year={2026},
+  address={Budapest, Hungary},
+  publisher={Association for Computational Linguistics},
+  note={To appear}
 }</pre>
 </section>
 
 <footer>
-  <p>Project page for SocialMaze (COLM 2025). Back to <a href="https://xzx34.github.io/">Zixiang Xu's homepage</a>.</p>
+  <p>Project page for SocialMaze (Findings of EMNLP 2026). Back to <a href="https://xzx34.github.io/">Zixiang Xu's homepage</a>.</p>
 </footer>
 
 </div>
 
 <script>
 function copyBib(){
-  var pre=document.getElementById('bibtex');
+  var pre=document.getElementById('bibtex-code');
   var text=pre.innerText;
   var btn=document.getElementById('copybtn');
   function done(){var old=btn.textContent;btn.textContent='Copied!';setTimeout(function(){btn.textContent=old;},1500);}

@@ -26,6 +26,7 @@ Previously, he received his B.S. in Computer Science from [Sichuan University](h
 </div>  
 
 # 🔥 News
+- *2026.08*: &nbsp;🎉🎉 SocialMaze has been accepted to Findings of EMNLP 2026! See you in Budapest!
 - *2025.09*: &nbsp;🎉🎉 DyFlow and Adaptive Distraction have been accepted by NeurIPS 2025!. (Poster)
 - *2025.09*: &nbsp;🎉🎉 SocialMaze has been accepted by SocialSim @ COLM 2025!. (Spotlight Talk)
 - *2025.05*: &nbsp;🎉🎉 Cross-Lingual Pitfalls has been accepted by ACL 2025!. 
@@ -93,14 +94,14 @@ Yanbo Wang, **Zixiang Xu**, Yue Huang, Xiangqi Wang, Zirui Song, Lang Gao, Chenx
 
 </div></div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images/socialmaze.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">EMNLP 2026 Findings</div><img src='images/socialmaze.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[SocialMaze: A Benchmark for Evaluating Social Reasoning in Large Language Models](/socialmaze/)  
+[SocialMaze: A Benchmark for Evaluating and Enhancing Social Reasoning in Large Language Models in Complex Social Environments](/socialmaze/)
 
-**Zixiang Xu**, Yanbo Wang, Yue Huang, Jiayi Ye, Haomin Zhuang, Zirui Song, Lang Gao, Chenxi Wang, Zhaorun Chen, Yujun Zhou, Sixian Li, Wang Pan, Yue Zhao, Jieyu Zhao, Xiangliang Zhang, Xiuying Chen  
+**Zixiang Xu**, Yanbo Wang, Yue Huang, Haomin Zhuang, Yujun Zhou, Jiayi Ye, Sixian Li, Zirui Song, Lang Gao, Chenxi Wang, Zhaorun Chen, Wang Pan, Yue Zhao, Jieyu Zhao, Xiangliang Zhang, Xiuying Chen
 
-<div class="pub-links"><a class="pub-btn" href="/socialmaze/">Project Page</a><a class="pub-btn" href="https://arxiv.org/abs/2505.23713">Paper</a></div>
+<div class="pub-links"><a class="pub-btn" href="/socialmaze/">Project Page</a><a class="pub-btn" href="/socialmaze/paper.pdf">Paper</a></div>
 
 </div></div>
 
