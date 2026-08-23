@@ -445,25 +445,26 @@ body {
     padding-bottom: .82em;
     align-items: baseline;
 
+    &:hover {
+        color: inherit;
+        background-color: transparent;
+        transform: none;
+    }
+
     time {
-        color: #6a737d;
-        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-        font-size: .7em;
-        font-weight: 600;
-        letter-spacing: .055em;
-        text-transform: uppercase;
+        color: inherit;
+        font-family: inherit;
+        font-size: .82em;
+        font-weight: 400;
+        letter-spacing: normal;
         font-variant-numeric: tabular-nums;
+        opacity: .64;
     }
 
     p {
         margin: 0;
-        color: #3f4750;
+        color: inherit;
         line-height: 1.6;
-    }
-
-    p > strong {
-        color: #00369f;
-        font-weight: 750;
     }
 }
 
@@ -969,14 +970,24 @@ body {
     }
 
     .honor-item p,
-    .news-item p,
     .service-item p {
         color: #b1bac4;
     }
 
-    .news-item p > strong,
     .service-item > strong {
         color: #58a6ff;
+    }
+
+    .news-item {
+        time,
+        p {
+            color: inherit;
+        }
+
+        &:hover {
+            color: inherit;
+            background-color: transparent;
+        }
     }
 
     /* Awards & honors hover */

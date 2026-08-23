@@ -21,7 +21,7 @@ redirect_from:
 
 I am a Ph.D. student in [Computer Science](https://www.cs.usc.edu/) at the [University of Southern California](https://www.usc.edu/), advised by [Prof. Yue Zhao](https://viterbi-web.usc.edu/~yzhao010/) in the [FORTIS Lab](https://viterbi-web.usc.edu/~yzhao010/lab.html). My research focuses on **Agent Systems**, **Trustworthy AI**, and **AI for Science & Society**.
 
-<p class="about-affiliations">Previously at <a class="about-affiliation" href="https://www.tencent.com/products/weixin-wechat/"><img class="about-logo" src="/images/organizations/wechat.svg" alt="" aria-hidden="true">Tencent WeChat AI</a>, <a class="about-affiliation" href="https://www.alibabagroup.com/"><span class="about-logo-crop about-logo-crop--alibaba" aria-hidden="true"><img src="/images/organizations/alibaba.png" alt=""></span>Alibaba</a>, <a class="about-affiliation" href="https://mbzuai.ac.ae/"><span class="about-logo-crop about-logo-crop--mbzuai" aria-hidden="true"><img src="/images/organizations/mbzuai.png" alt=""></span>MBZUAI</a>, <a class="about-affiliation" href="https://sites.nd.edu/xiangliang-zhang/people/"><img class="about-logo" src="/images/organizations/notre-dame.png" alt="" aria-hidden="true">Notre Dame</a>, <a class="about-affiliation" href="https://ctl.mit.edu/"><img class="about-logo about-logo--mit" src="/images/organizations/mit.svg" alt="" aria-hidden="true">MIT CTL</a>, and <a class="about-affiliation" href="https://www.microsoft.com/"><img class="about-logo" src="/images/organizations/microsoft.png" alt="" aria-hidden="true">Microsoft</a>.</p>
+<p class="about-affiliations">Previously at <a class="about-affiliation" href="https://www.tencent.com/products/weixin-wechat/"><img class="about-logo" src="/images/organizations/wechat.svg" alt="" aria-hidden="true">WeChat AI</a>, <a class="about-affiliation" href="https://www.alibabagroup.com/"><span class="about-logo-crop about-logo-crop--alibaba" aria-hidden="true"><img src="/images/organizations/alibaba.png" alt=""></span>Alibaba</a>, <a class="about-affiliation" href="https://mbzuai.ac.ae/"><span class="about-logo-crop about-logo-crop--mbzuai" aria-hidden="true"><img src="/images/organizations/mbzuai.png" alt=""></span>MBZUAI</a>, the <a class="about-affiliation" href="https://sites.nd.edu/xiangliang-zhang/people/"><img class="about-logo" src="/images/organizations/notre-dame.png" alt="" aria-hidden="true">MINE Lab at Notre Dame</a>, <a class="about-affiliation" href="https://ctl.mit.edu/"><img class="about-logo about-logo--mit" src="/images/organizations/mit.svg" alt="" aria-hidden="true">MIT CTL</a>, <a class="about-affiliation" href="https://www.microsoft.com/"><img class="about-logo" src="/images/organizations/microsoft.png" alt="" aria-hidden="true">Microsoft</a>, and <a class="about-affiliation" href="https://en.scu.edu.cn/"><img class="about-logo" src="/images/scu.png" alt="" aria-hidden="true">Sichuan University</a>.</p>
 
 </div>
 
@@ -32,15 +32,11 @@ I am a Ph.D. student in [Computer Science](https://www.cs.usc.edu/) at the [Univ
 <div class="news-list">
   <div class="news-item animate-on-scroll">
     <time datetime="2026-08">Aug 2026</time>
-    <p><strong>Thrilled</strong> to begin my Ph.D. journey at <a href="https://www.usc.edu/">USC</a> and join the <a href="https://viterbi-web.usc.edu/~yzhao010/lab.html">FORTIS Lab</a>, advised by <a href="https://viterbi-web.usc.edu/~yzhao010/">Prof. Yue Zhao</a>. Fight On!</p>
+    <p>I’m joining USC in Fall 2026 to start my CS Ph.D. study! Fight On!</p>
   </div>
   <div class="news-item animate-on-scroll">
     <time datetime="2026-06">Jun 2026</time>
-    <p><strong>Excited</strong> to join Tencent WeChat AI's Foundation Model Group as a Research Intern, working on post-training large foundation models.</p>
-  </div>
-  <div class="news-item animate-on-scroll">
-    <time datetime="2026-03">Mar 2026</time>
-    <p><strong>Excited</strong> to join Alibaba Group as a Research Intern, exploring the representation-level mechanisms behind LLM-as-a-judge bias.</p>
+    <p>I’m joining WeChat AI as a Research Intern!</p>
   </div>
 </div>
 
@@ -50,8 +46,9 @@ I am a Ph.D. student in [Computer Science](https://www.cs.usc.edu/) at the [Univ
 </div>
 
 <span class="anchor legacy-anchor" id="-publications"></span>
+<span class="anchor legacy-anchor" id="publications"></span>
 
-# Publications
+# Selected Work
 
 {% include publication-list.html selected_only=true %}
 
@@ -75,7 +72,7 @@ I am a Ph.D. student in [Computer Science](https://www.cs.usc.edu/) at the [Univ
 # Internships
 
 <div class="experience-list">
-  <div class="experience-item animate-on-scroll"><time>Jun. 2026 – Aug. 2026</time><div><strong>Tencent (WeChat AI)</strong><span>Research Intern · Foundation Model Group</span></div></div>
+  <div class="experience-item animate-on-scroll"><time>Jun. 2026 – Aug. 2026</time><div><strong>WeChat AI</strong><span>Research Intern · Foundation Model Group</span></div></div>
   <div class="experience-item animate-on-scroll"><time>Mar. 2026 – May 2026</time><div><strong>Alibaba Group</strong><span>Research Intern</span></div></div>
   <div class="experience-item animate-on-scroll"><time>Mar. 2025 – Aug. 2025</time><div><strong>MBZUAI</strong><span>Research Intern</span></div></div>
   <div class="experience-item animate-on-scroll"><time>Oct. 2024 – Aug. 2025</time><div><strong>MINE Lab, University of Notre Dame</strong><span>Research Intern</span></div></div>
