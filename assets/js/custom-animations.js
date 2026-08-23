@@ -2,6 +2,13 @@
    Custom Scroll Animations and Dynamic Effects
    ========================================================================== */
 
+var scrollAnimationsEnabled = 'IntersectionObserver' in window &&
+  !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+
+if (scrollAnimationsEnabled) {
+  document.documentElement.classList.add('scroll-animations');
+}
+
 $(document).ready(function(){
 
   // Scroll-triggered animations
@@ -9,16 +16,32 @@ $(document).ready(function(){
     // Keep publication rows on the same scroll animation system as the original paper cards
     $('.paper-box, .publication-item').addClass('animate-on-scroll');
 
+    if (!scrollAnimationsEnabled) {
+      $('.animate-on-scroll, .page__content h1').addClass('animated');
+      return;
+    }
+
     // Observer for scroll animations
     var observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
     };
 
+    function clearRevealDelayAfterEntrance(element, delay) {
+      window.setTimeout(function() {
+        element.style.transitionDelay = '';
+        element.removeAttribute('data-reveal-delay');
+      }, (delay + 0.85) * 1000);
+    }
+
     var observer = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
-          $(entry.target).addClass('animated');
+          var target = entry.target;
+          var revealDelay = parseFloat(target.getAttribute('data-reveal-delay')) || 0;
+          $(target).addClass('animated');
+          observer.unobserve(target);
+          clearRevealDelayAfterEntrance(target, revealDelay);
         }
       });
     }, observerOptions);
@@ -33,6 +56,7 @@ $(document).ready(function(){
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
           $(entry.target).addClass('animated');
+          headingObserver.unobserve(entry.target);
         }
       });
     }, { threshold: 0.3 });
@@ -44,21 +68,29 @@ $(document).ready(function(){
 
   // Stagger the updated publication and CV-style rows
   function staggerContentRows() {
+    function setRevealDelay(element, index) {
+      var delay = Math.min(index, 5) * 0.1;
+      element.style.transitionDelay = delay + 's';
+      element.setAttribute('data-reveal-delay', delay);
+    }
+
     $('.paper-box').each(function(index) {
-      $(this).css('transition-delay', (index * 0.12) + 's');
+      setRevealDelay(this, index);
     });
 
-    $('.publication-list, .compact-list, .experience-list').each(function() {
-      $(this).children('.publication-item, .compact-list__item, .experience-item').each(function(index) {
-        $(this).css('transition-delay', (index * 0.12) + 's');
+    $('.publication-list, .compact-list, .experience-list, .news-list, .service-list').each(function() {
+      $(this).children('.publication-item, .compact-list__item, .honor-item, .experience-item, .news-item, .service-item').each(function(index) {
+        setRevealDelay(this, index);
       });
     });
   }
 
   // Initialize after short delay
   setTimeout(function() {
+    if (scrollAnimationsEnabled) {
+      staggerContentRows();
+    }
     initScrollAnimations();
-    staggerContentRows();
   }, 100);
 
   // Badge hover float animation
@@ -70,11 +102,6 @@ $(document).ready(function(){
       $(this).css('animation', 'none');
     }
   );
-
-  // Smooth color transition for news items
-  $('#-news + ul li, #-news + * ul li').each(function(index) {
-    $(this).css('transition-delay', (index * 0.05) + 's');
-  });
 
   // Dark mode toggle
   function initThemeToggle() {
