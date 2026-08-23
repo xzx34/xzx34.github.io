@@ -621,11 +621,11 @@ body {
     border: 0 !important;
     object-fit: cover;
     object-position: center;
-    transform: translateY(-2%) scale(1.08);
+    transform: translateY(-7%) scale(1.08);
     transition: transform .5s cubic-bezier(0.4, 0, 0.2, 1) !important;
 
     &:hover {
-        transform: translateY(-2%) scale(1.12);
+        transform: translateY(-7%) scale(1.12);
         box-shadow: none !important;
     }
 }
