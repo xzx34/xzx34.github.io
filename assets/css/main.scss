@@ -585,13 +585,48 @@ body {
     }
 }
 
-/* Author avatar hover effect */
-.author__avatar img {
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+/* Author avatar composition and hover effect */
+.profile_box > .author__avatar {
+    display: block;
+    flex: 0 0 75px;
+    width: 75px;
+    height: auto;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: box-shadow .5s cubic-bezier(0.4, 0, 0.2, 1);
+
+    @include breakpoint($large) {
+        width: 100%;
+        max-width: 185px;
+        height: auto;
+        aspect-ratio: 2 / 3;
+        padding: 5px;
+        border: 1px solid #e1e4e8;
+        box-sizing: border-box;
+    }
 
     &:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, .15);
+    }
+}
+
+.author__avatar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    max-width: none;
+    padding: 0 !important;
+    border: 0 !important;
+    object-fit: cover;
+    object-position: center;
+    transform: translateY(-2%) scale(1.08);
+    transition: transform .5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+
+    &:hover {
+        transform: translateY(-2%) scale(1.12);
+        box-shadow: none !important;
     }
 }
 
@@ -759,7 +794,7 @@ body {
     }
 
     /* Sidebar & Author Profile */
-    .author__avatar img {
+    .profile_box > .author__avatar {
         border-color: #30363d !important;
     }
 
