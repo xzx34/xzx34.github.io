@@ -19,133 +19,71 @@ redirect_from:
 
 <div class="bio-section" markdown="1">
 
-Zixiang Xu（徐子翔）is an incoming PhD student in the [Department of Computer Science](https://www.cs.usc.edu/) at the [University of Southern California (USC)](https://www.usc.edu/), advised by [Prof. Yue Zhao](https://viterbi-web.usc.edu/~yzhao010/). His research interests include **Agent Systems**, **Trustworthy AI**, and **AI for Science & Society**.
+I am a Ph.D. student in [Computer Science](https://www.cs.usc.edu/) at the [University of Southern California](https://www.usc.edu/), advised by [Prof. Yue Zhao](https://viterbi-web.usc.edu/~yzhao010/). My research focuses on **Agent Systems**, **Trustworthy AI**, and **AI for Science & Society**.
 
-Previously, he received his B.S. in Computer Science from [Sichuan University](https://www.scu.edu.cn/), supervised by [Prof. Qijun Zhao](https://scholar.google.com/citations?user=c2fckoYAAAAJ&hl=en). He has conducted research at [MIT CTL](https://ctl.mit.edu/), [MBZUAI](https://mbzuai.ac.ae/), and the [University of Notre Dame](https://www.nd.edu/), supervised by [Prof. Elenna R. Dugundji](https://scholar.google.com/citations?user=zNOQUvkAAAAJ&hl=en), [Prof. Xiuying Chen](https://iriscxy.github.io/), and [Prof. Xiangliang Zhang](https://sites.nd.edu/xiangliang-zhang/), respectively. He was also a research intern at [Microsoft Research Asia](https://www.microsoft.com/) working on Vision-Language Models.
+Previously, I worked at Tencent WeChat AI, Alibaba, MBZUAI, Notre Dame, MIT CTL, and Microsoft.
 
-</div>  
+</div>
+
+<div class="affiliation-strip animate-on-scroll" aria-label="Past and present affiliations">
+  <div class="affiliation-strip__label">Past · Present</div>
+  <div class="affiliation-logos">
+    <a class="affiliation-logo" href="https://www.usc.edu/" aria-label="University of Southern California" title="University of Southern California"><img src="/images/organizations/usc.png" alt="University of Southern California logo"></a>
+    <a class="affiliation-logo" href="https://www.tencent.com/products/weixin-wechat/" aria-label="Tencent WeChat AI" title="Tencent WeChat AI"><img src="/images/organizations/tencent.png" alt="Tencent WeChat AI logo"><span>WeChat AI</span></a>
+    <a class="affiliation-logo" href="https://www.alibabagroup.com/" aria-label="Alibaba Group" title="Alibaba Group"><img src="/images/organizations/alibaba.png" alt="Alibaba Group logo"></a>
+    <a class="affiliation-logo" href="https://mbzuai.ac.ae/" aria-label="Mohamed bin Zayed University of Artificial Intelligence" title="MBZUAI"><img src="/images/organizations/mbzuai.png" alt="MBZUAI logo"></a>
+    <a class="affiliation-logo" href="https://sites.nd.edu/xiangliang-zhang/people/" aria-label="MINE Lab at the University of Notre Dame" title="MINE Lab, University of Notre Dame"><img src="/images/organizations/notre-dame.png" alt="University of Notre Dame logo"><span>MINE Lab</span></a>
+    <a class="affiliation-logo" href="https://ctl.mit.edu/" aria-label="MIT Center for Transportation and Logistics" title="MIT CTL"><img src="/images/organizations/mit-ctl.jpg" alt="MIT Center for Transportation and Logistics logo"></a>
+    <a class="affiliation-logo" href="https://www.microsoft.com/" aria-label="Microsoft" title="Microsoft"><img src="/images/organizations/microsoft.png" alt="Microsoft logo"><span>Microsoft</span></a>
+  </div>
+</div>
 
 # 🔥 News
-- *2026.08*: &nbsp;🎉🎉 SocialMaze has been accepted to Findings of EMNLP 2026! See you in Budapest!
-- *2025.09*: &nbsp;🎉🎉 DyFlow and Adaptive Distraction have been accepted by NeurIPS 2025!. (Poster)
-- *2025.09*: &nbsp;🎤 SocialMaze was accepted to [SocialSim @ COLM 2025](https://sites.google.com/view/social-sims-with-llms/home) as a Spotlight Talk!
-- *2025.05*: &nbsp;🎉🎉 Cross-Lingual Pitfalls has been accepted by ACL 2025!. 
-- *2025.03*: &nbsp;🎉🎉 One paper has been accepted by SynthData @ ICLR 2025!. (Workshop) 
-- *2024.10*: &nbsp;🎉🎉 Temporal-IRL has been accepted by TRB 2024!. (Poster)
-- *2024.07*: &nbsp;🎉🎉 GenUDC has been accepted by ACM MM 2024!. (Poster)
+<!-- Keep News focused on major career and academic-stage milestones; do not add routine paper acceptances. -->
+- *2026.08*: &nbsp;Started my Ph.D. in Computer Science at USC.
+- *2026.06*: &nbsp;Joined Tencent (WeChat AI) as a Research Intern in the Foundation Model Group.
+- *2026.03*: &nbsp;Joined Alibaba Group as a Research Intern.
 
 <div class="quote-card">
   <p class="quote-en">Every grand ambition starts with a humble beginning.</p>
   <p class="quote-zh">每一个远大的理想都有个微不足道的开始。</p>
 </div>
 
-# 📝 Publications 
+# 📝 Publications
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2025</div><img src='images/CLP.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
+{% include publication-list.html selected_only=true %}
 
-[Cross-Lingual Pitfalls: Automatic Probing Cross-Lingual Weakness of Multilingual Large Language Models](/cross-lingual-pitfalls/)
-
-**Zixiang Xu\***, Yanbo Wang\*, Yue Huang\*, Xiuying Chen, Jieyu Zhao, Meng Jiang, Xiangliang Zhang (\*: Equal Contribution).
-
-<div class="pub-links"><a class="pub-btn" href="/cross-lingual-pitfalls/">Project Page</a><a class="pub-btn" href="https://arxiv.org/abs/2505.18673">Paper</a></div>
-
-</div></div>
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025</div><img src='images/CDV.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[Adaptive Distraction: Probing LLM Contextual Robustness with Automated Tree Search](https://openreview.net/forum?id=WABbFRIpjc&referrer=%5Bthe%20profile%20of%20Jiayi%20Ye%5D(%2Fprofile%3Fid%3D~Jiayi_Ye2))
-
-Yanbo Wang\*, **Zixiang Xu\***, Yue Huang\*, Chujie Gao, Siyuan Wu, Jiayi Ye, Xiuying Chen, Pin-Yu Chen, Xiangliang Zhang (\*: Equal Contribution).
-
-<div class="pub-links"><a class="pub-btn" href="https://openreview.net/forum?id=WABbFRIpjc">Paper</a><a class="pub-btn" href="https://github.com/wyf23187/Adaptive_Distractions">Code</a></div>
-
-</div></div>
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025</div><img src='images/DyFlow.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[DyFlow: Dynamic Workflow Framework for Agentic Reasoning](https://openreview.net/forum?id=0pbUfmwNTy&referrer=%5Bthe%20profile%20of%20Yue%20Zhao%5D(%2Fprofile%3Fid%3D~Yue_Zhao13))
-
-Yanbo Wang, **Zixiang Xu**, Yue Huang, Xiangqi Wang, Zirui Song, Lang Gao, Chenxi Wang, Xiangru Tang, Yue Zhao, Arman Cohan, Xiangliang Zhang, Xiuying Chen
-
-<div class="pub-links"><a class="pub-btn" href="https://openreview.net/forum?id=0pbUfmwNTy">Paper</a><a class="pub-btn" href="https://github.com/wyf23187/DyFlow">Code</a></div>
-
-</div></div>
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv</div><img src='images/unfair-judge.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias](/unfair-judge/)
-
-**Zixiang Xu**, Sixian Li, Huaxing Liu, Xiang Wang, Shuai Li, Zirui Song, Xiuying Chen
-
-<div class="pub-links"><a class="pub-btn" href="/unfair-judge/">Project Page</a><a class="pub-btn" href="https://arxiv.org/abs/2607.11871">Paper</a></div>
-
-</div></div>
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images/GTA.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[GTA: Graph Theory Agent and Benchmark for Algorithmic Graph Reasoning with LLMs](https://github.com/xzx34/GTA)  
-
-**Zixiang Xu**, Yanbo Wang, Chenxi Wang, Lang Gao, Zirui Song, Yue Huang, Zhaorun Chen, Xiangliang Zhang, Xiuying Chen  
-
-</div></div>
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">EMNLP 2026 Findings</div><img src='images/socialmaze.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[SocialMaze: A Benchmark for Evaluating and Enhancing Social Reasoning in Large Language Models in Complex Social Environments](/socialmaze/)
-
-**Zixiang Xu**, Yanbo Wang, Yue Huang, Haomin Zhuang, Yujun Zhou, Jiayi Ye, Sixian Li, Zirui Song, Lang Gao, Chenxi Wang, Zhaorun Chen, Wang Pan, Yue Zhao, Jieyu Zhao, Xiangliang Zhang, Xiuying Chen
-
-*Findings of EMNLP 2026 · Previously a Spotlight Talk at [SocialSim @ COLM 2025](https://sites.google.com/view/social-sims-with-llms/home).*
-
-<div class="pub-links"><a class="pub-btn" href="/socialmaze/">Project Page</a><a class="pub-btn" href="/socialmaze/paper.pdf">Paper</a></div>
-
-</div></div>
-
-
-- [Temporal-IRL: Modeling Port Congestion and Berth Scheduling with Inverse Reinforcement Learning](https://arxiv.org/abs/2506.19843), Yikuan Hu\*, **Zixiang Xu\***, Wei Zhang\*, Xinyu Yang\*, Guo Li\*, Nikolay Aristov, Mingjie Tang, Elenna R Dugundji(\*: Equal contribution). TRB 2024.
-
-- [GenUDC: High Quality 3D Mesh Generation With Unsigned Dual Contouring Representation](https://arxiv.org/abs/2410.17802), Ruowei Wang, Jiaqi Li, Dan Zeng, Xueqi Ma, **Xu Zixiang**, Jianwei Zhang, Qijun Zhao. ACM MM 2024.
-
-- [MTFusion: Reconstructing Any 3D Object from Single Image Using Multi-word Textual Inversion](https://link.springer.com/chapter/10.1007/978-981-97-8508-7_12), Yu Liu, Ruowei Wang, Jiaqi Li, **Zixiang Xu**, Qijun Zhao.  PRCV 2024 (oral).
-
-- [Text-Based Face Retrieval: Methods and Challenges](https://dl.acm.org/doi/10.1007/978-981-99-8565-4_15), Yuchuan Deng, Qijun Zhao, Zhanpeng Hu, **Zixiang Xu**. CCBR 2023(Oral).
+<div class="all-publications-link">
+  <a class="pub-btn pub-btn--all" href="/publications/">All publications <span aria-hidden="true">→</span></a>
+</div>
 
 # 🎖 Honors and Awards
 
-### Major Awards
-- **CCF Elite Collegiate Award** *(2024)*
-- **Gold Medal, ACM-ICPC Asia Jinan Regional Contest** *(2022)*
-- **Silver Medal, National Olympiad in Informatics (NOI)** *(2020)*
-
-### Other Honors
-- **Bronze Medal, ACM-ICPC Asia-East Continent Final Contest** *(2022)*
-- **First Prize, National Olympiad in Informatics in Provinces (NOIP)** *(2021)* - *6th Place in Hubei Province*
-- **First Prize, CSP-S** *(2021)* - *2nd Place in Hubei Province*
-
-<!-- - **Silver Medal, National Olympiad in Informatics Winter Camp (NOI WC)** *(2021)*
-- **Bronze Medal, Asia-Pacific Informatics Olympiad (APIO)** *(2020)*
-- **Silver Medal, ICPC Nanjing Regional Contest** *(2022)*
-- **Bronze Medal, ICPC East Continent Final** *(2022)*
-- **Silver Medal, China Collegiate Programming Contest (CCPC)** *(2022)*
-- **Gold Medal, ACM Provincial Contest** *(2022)* - *3rd Place in Sichuan Province*
-- **Gold Medal, ACM Provincial Contest** *(2023)* - *2nd Place in Sichuan Province*
-- **First Prize, CSP-S** *(2019, 2020)* -->
+<div class="compact-list honors-list">
+  <div class="compact-list__item animate-on-scroll"><span><strong>USC Annenberg Fellowship</strong></span><time>2026</time></div>
+  <div class="compact-list__item animate-on-scroll"><span><strong>CCF Elite Collegiate Award</strong></span><time>2024</time></div>
+  <div class="compact-list__item animate-on-scroll"><span><strong>Gold Medal, The 2022 ICPC Asia Jinan Regional Contest</strong></span><time>2022</time></div>
+  <div class="compact-list__item animate-on-scroll"><span><strong>Silver Medal, National Olympiad in Informatics (NOI)</strong></span><time>2020</time></div>
+</div>
 
 # 💻 Internships
-- *2025.03 - 2025.09*, Research Intern, [MBZUAI](https://mbzuai.ac.ae/), supervised by [Prof. Xiuying Chen](https://iriscxy.github.io/).
-- *2024.09 - 2025.08*, Visiting Researcher (Remote), [University of Notre Dame](https://www.nd.edu/), supervised by [Prof. Xiangliang Zhang](https://sites.nd.edu/xiangliang-zhang/).
-- *2024.07 - 2024.08*, Research Intern, [MIT CTL](https://ctl.mit.edu/), supervised by [Prof. Elenna R. Dugundji](https://scholar.google.com/citations?user=zNOQUvkAAAAJ&hl=en).
-- *2024.02 - 2024.03*, Research Intern, [Microsoft Research Asia](https://www.microsoft.com/).
+
+<div class="experience-list">
+  <div class="experience-item animate-on-scroll"><time>Jun. 2026 – Aug. 2026</time><div><strong>Tencent (WeChat AI)</strong><span>Research Intern · Foundation Model Group</span></div></div>
+  <div class="experience-item animate-on-scroll"><time>Mar. 2026 – May 2026</time><div><strong>Alibaba Group</strong><span>Research Intern</span></div></div>
+  <div class="experience-item animate-on-scroll"><time>Mar. 2025 – Aug. 2025</time><div><strong>MBZUAI</strong><span>Research Intern</span></div></div>
+  <div class="experience-item animate-on-scroll"><time>Oct. 2024 – Aug. 2025</time><div><strong>MINE Lab, University of Notre Dame</strong><span>Research Intern</span></div></div>
+  <div class="experience-item animate-on-scroll"><time>Aug. 2024</time><div><strong>MIT Center for Transportation &amp; Logistics</strong><span>Summer Research Student</span></div></div>
+  <div class="experience-item animate-on-scroll"><time>Jan. 2024 – Mar. 2024</time><div><strong>Microsoft (Asia) Internet Engineering Institute</strong><span>Research Intern</span></div></div>
+</div>
 
 # 🔍 Service
 
-Reviewer: ACL EMNLP ARR NLPCC
+<div class="service-list animate-on-scroll">
+  <p><strong>Conferences:</strong> AAAI 2027; COLM 2026; ICLR 2026; NeurIPS 2026; NLPCC 2025.</p>
+  <p><strong>ACL Rolling Review:</strong> February and May 2025 cycles.</p>
+  <p><strong>Workshops:</strong> GroundLM and REALM at EMNLP 2026; Social Simulation with LLMs at COLM 2025.</p>
+</div>
 
 # 🎭 Miscellaneous
 
@@ -203,11 +141,7 @@ Beyond research and competitive programming, he is a passionate enthusiast of fi
 </div>
 </div>
 
-<!-- # 📖 Educations
-- *2022.09 - 2026.06 (Expected)*, B.S. Candidate in Computer Science(**Top Student Program**), <img src='images/scu.png' style='width: 1.2em;'> [Sichuan University](https://www.scu.edu.cn/)  -->
-
-
-<!-- 
+<!--
 # 💬 Invited Talks
 - *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 - *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/)

@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Zixiang Xu's Website"
-description              : "Zixiang Xu (徐子翔), incoming CS PhD student at the University of Southern California (USC). Research on LLM agent systems, trustworthy AI, and AI for science and society."
+description              : "Zixiang Xu (徐子翔), CS Ph.D. student at the University of Southern California. Research on agent systems, trustworthy AI, and AI for science and society."
 url                      : "https://xzx34.github.io"
 baseurl                  : ""
 repository               : "xzx34/xzx34.github.io"
@@ -25,12 +25,13 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "Zixiang Xu（徐子翔）"
   avatar           : "images/zp.jpg"
-  bio              : "Incoming CS Ph.D. Student"
+  bio              : "CS Ph.D. Student at USC"
   location         : "Los Angeles"
   employer         : "University of Southern California"
   pubmed           :
   googlescholar    : "https://scholar.google.com/citations?user=lPLP6H8AAAAJ&hl=zh-CN"
-  email            : "zixiang34xu@gmail.com"
+  email            : "zixiangx@usc.edu"
+  cv               : "/files/Zixiang_Xu_Full_CV.pdf"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -45,7 +46,7 @@ author:
   instagram        :
   impactstory      : # e.g., "https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "zixiang-xu-1a92b3321"
+  linkedin         : "zixiangx34"
   dblp             : # e.g., "https://dblp.org/pid/xx/xxxx.html"
   orcid            : # e.g., "https://orcid.org/xxxx"
   pinterest        :
@@ -139,7 +140,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-timezone: Asia/Shanghai # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: America/Los_Angeles # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins

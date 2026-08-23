@@ -6,8 +6,8 @@ $(document).ready(function(){
 
   // Scroll-triggered animations
   function initScrollAnimations() {
-    // Add animate-on-scroll class to paper boxes
-    $('.paper-box').addClass('animate-on-scroll');
+    // Keep publication rows on the same scroll animation system as the original paper cards
+    $('.paper-box, .publication-item').addClass('animate-on-scroll');
 
     // Observer for scroll animations
     var observerOptions = {
@@ -42,17 +42,23 @@ $(document).ready(function(){
     });
   }
 
-  // Stagger paper-box animations
-  function staggerPaperBoxes() {
+  // Stagger the updated publication and CV-style rows
+  function staggerContentRows() {
     $('.paper-box').each(function(index) {
       $(this).css('transition-delay', (index * 0.12) + 's');
+    });
+
+    $('.publication-list, .compact-list, .experience-list').each(function() {
+      $(this).children('.publication-item, .compact-list__item, .experience-item').each(function(index) {
+        $(this).css('transition-delay', (index * 0.12) + 's');
+      });
     });
   }
 
   // Initialize after short delay
   setTimeout(function() {
     initScrollAnimations();
-    staggerPaperBoxes();
+    staggerContentRows();
   }, 100);
 
   // Badge hover float animation

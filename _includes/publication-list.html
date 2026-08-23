@@ -1,0 +1,28 @@
+<div class="publication-list">
+{% for paper in site.data.publications %}
+  {% assign render_paper = true %}
+  {% if include.selected_only and paper.selected != true %}
+    {% assign render_paper = false %}
+  {% endif %}
+  {% if render_paper %}
+  <article class="publication-item animate-on-scroll">
+    <div class="publication-venue" aria-label="Publication venue">
+      {% for venue_line in paper.venue %}
+      <span>{{ venue_line }}</span>
+      {% endfor %}
+    </div>
+    <div class="publication-details">
+      <h2 class="publication-title">{{ paper.title }}</h2>
+      <p class="publication-authors">{{ paper.authors }}</p>
+      {% if paper.links %}
+      <div class="pub-links">
+        {% for link in paper.links %}
+        <a class="pub-btn" href="{{ link.url }}" aria-label="{{ link.label }} for {{ paper.title }}">{{ link.label }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </article>
+  {% endif %}
+{% endfor %}
+</div>

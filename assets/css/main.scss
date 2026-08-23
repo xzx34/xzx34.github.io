@@ -210,6 +210,235 @@ body {
     animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s both;
 }
 
+/* Past and present affiliations */
+.affiliation-strip {
+    margin: 1.1em 0 1.75em;
+}
+
+.affiliation-strip__label {
+    margin-bottom: .65em;
+    color: #6a737d;
+    font-size: .72em;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.affiliation-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .55em;
+}
+
+.page__content a.affiliation-logo {
+    display: flex;
+    flex: 1 1 88px;
+    min-width: 82px;
+    max-width: 128px;
+    height: 66px;
+    padding: .55em .65em;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: .18em;
+    overflow: hidden;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, .96) !important;
+    background-image: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .045);
+    transition: transform .3s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow .3s ease,
+                border-color .3s ease;
+
+    &:hover {
+        border-color: rgba(0, 86, 214, .35);
+        background-size: 0 0;
+        box-shadow: 0 7px 18px rgba(0, 54, 159, .13);
+        transform: translateY(-3px);
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        max-width: 105px;
+        height: 39px;
+        margin: 0;
+        object-fit: contain;
+    }
+
+    span {
+        color: #4f5862;
+        font-size: .58em;
+        font-weight: 700;
+        letter-spacing: .03em;
+        line-height: 1;
+        white-space: nowrap;
+    }
+}
+
+/* Compact publication rows */
+.publication-list {
+    margin-top: .25em;
+}
+
+.publication-item {
+    display: grid;
+    grid-template-columns: minmax(104px, 22%) minmax(0, 1fr);
+    gap: 1.35em;
+    margin: 0 -.8em;
+    padding: 1.35em .8em;
+    align-items: start;
+    border-bottom: 1px solid #efefef;
+    border-radius: 8px;
+    transition: background-color .4s cubic-bezier(0.4, 0, 0.2, 1),
+                transform .4s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow .4s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity .8s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+        background-color: rgba(0, 54, 159, .02);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, .10);
+        transform: translateY(-4px);
+    }
+}
+
+.publication-venue {
+    padding-top: .08em;
+    color: #00369f;
+    font-size: .82em;
+    font-weight: 750;
+    letter-spacing: .015em;
+    line-height: 1.3;
+    text-align: left;
+
+    span {
+        display: block;
+
+        & + span {
+            margin-top: .25em;
+            color: #5f6b78;
+            font-size: .88em;
+            font-weight: 600;
+        }
+    }
+}
+
+.page__content .publication-title {
+    margin: 0 0 .34em;
+    color: inherit;
+    font-size: 1.03em;
+    font-weight: 700;
+    line-height: 1.38;
+}
+
+.publication-authors {
+    margin: 0;
+    color: #4f5862;
+    font-size: .9em;
+    line-height: 1.55;
+}
+
+.equal-contribution {
+    color: #6a737d;
+    font-size: .92em;
+    white-space: nowrap;
+}
+
+.all-publications-link {
+    margin: 1.15em 0 2em;
+    text-align: right;
+}
+
+.page__content a.pub-btn--all {
+    padding: .35em 1em;
+}
+
+/* Web-first CV sections */
+.compact-list,
+.experience-list,
+.service-list {
+    margin: .35em 0 1.5em;
+}
+
+.compact-list__item,
+.experience-item {
+    display: grid;
+    gap: 1em;
+    padding: .72em .35em;
+    border-bottom: 1px solid #eef0f2;
+    transition: color .3s ease, transform .3s ease, background-color .3s ease;
+
+    &:hover {
+        color: #00369f;
+        background-color: rgba(0, 54, 159, .018);
+        transform: translateX(5px);
+    }
+}
+
+.compact-list__item {
+    grid-template-columns: minmax(0, 1fr) auto;
+
+    time {
+        color: #6a737d;
+        font-size: .88em;
+        font-variant-numeric: tabular-nums;
+    }
+}
+
+.experience-item {
+    grid-template-columns: 156px minmax(0, 1fr);
+
+    time {
+        color: #6a737d;
+        font-size: .82em;
+        font-variant-numeric: tabular-nums;
+    }
+
+    strong,
+    span {
+        display: block;
+    }
+
+    span {
+        margin-top: .16em;
+        color: #5f6b78;
+        font-size: .88em;
+    }
+}
+
+.service-list p {
+    margin: .45em 0;
+}
+
+@media (max-width: 600px) {
+    .publication-item {
+        grid-template-columns: 1fr;
+        gap: .55em;
+        margin: 0 -.4em;
+        padding: 1.15em .4em;
+    }
+
+    .publication-venue {
+        display: flex;
+        flex-wrap: wrap;
+        gap: .25em .55em;
+
+        span + span {
+            margin-top: 0;
+        }
+    }
+
+    .experience-item {
+        grid-template-columns: 1fr;
+        gap: .22em;
+    }
+
+    .page__content a.affiliation-logo {
+        flex-basis: 84px;
+    }
+}
+
 /* Sidebar author name — smaller to fit on one line */
 .sidebar .author__name {
     font-size: 1em;
@@ -584,6 +813,64 @@ body {
     /* Bio section */
     .bio-section {
         color: #c9d1d9;
+    }
+
+    .affiliation-strip__label {
+        color: #8b949e;
+    }
+
+    .page__content a.affiliation-logo {
+        border-color: #30363d;
+        background: rgba(255, 255, 255, .96) !important;
+        background-image: none !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, .22);
+
+        &:hover {
+            border-color: #388bfd;
+            box-shadow: 0 7px 18px rgba(0, 0, 0, .38);
+        }
+    }
+
+    .publication-item {
+        border-bottom-color: #30363d;
+
+        &:hover {
+            background-color: rgba(56, 139, 253, .04);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .35);
+        }
+    }
+
+    .publication-venue {
+        color: #58a6ff;
+
+        span + span {
+            color: #8b949e;
+        }
+    }
+
+    .page__content .publication-title {
+        color: #c9d1d9;
+    }
+
+    .page__content .publication-authors {
+        color: #b1bac4;
+    }
+
+    .equal-contribution,
+    .compact-list__item time,
+    .experience-item time,
+    .experience-item span {
+        color: #8b949e;
+    }
+
+    .compact-list__item,
+    .experience-item {
+        border-bottom-color: #30363d;
+
+        &:hover {
+            color: #58a6ff;
+            background-color: rgba(56, 139, 253, .035);
+        }
     }
 
     /* Awards & honors hover */

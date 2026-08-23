@@ -1,0 +1,162 @@
+- title: "SocialMaze: A Benchmark for Evaluating and Enhancing Social Reasoning in Large Language Models in Complex Social Environments"
+  selected: true
+  venue:
+    - "Findings of EMNLP 2026"
+    - "SocialSim @ COLM 2025 · Spotlight"
+  authors: "<strong>Zixiang Xu</strong>, Yanbo Wang, Yue Huang, Haomin Zhuang, Yujun Zhou, Jiayi Ye, et al."
+  links:
+    - label: "Project Page"
+      url: "/socialmaze/"
+    - label: "Paper"
+      url: "/socialmaze/paper.pdf"
+    - label: "arXiv"
+      url: "https://arxiv.org/abs/2505.23713"
+    - label: "Code"
+      url: "https://github.com/xzx34/SocialMaze"
+    - label: "Data"
+      url: "https://huggingface.co/datasets/MBZUAI/SocialMaze"
+
+- title: "Cross-Lingual Pitfalls: Automatic Probing Cross-Lingual Weakness of Multilingual Large Language Models"
+  selected: true
+  venue:
+    - "ACL 2025"
+  authors: "<strong>Zixiang Xu*</strong>, Yanbo Wang*, Yue Huang*, Xiuying Chen, Jieyu Zhao, Meng Jiang, Xiangliang Zhang <span class='equal-contribution'>(* Equal contribution)</span>"
+  links:
+    - label: "Project Page"
+      url: "/cross-lingual-pitfalls/"
+    - label: "Paper"
+      url: "https://arxiv.org/abs/2505.18673"
+    - label: "Code"
+      url: "https://github.com/xzx34/Cross-Lingual-Pitfalls"
+
+- title: "Adaptive Distraction: Probing LLM Contextual Robustness with Automated Tree Search"
+  selected: true
+  venue:
+    - "NeurIPS 2025"
+  authors: "Yanbo Wang*, <strong>Zixiang Xu*</strong>, Yue Huang*, Chujie Gao, Siyuan Wu, Jiayi Ye, et al. <span class='equal-contribution'>(* Equal contribution)</span>"
+  links:
+    - label: "Paper"
+      url: "https://arxiv.org/abs/2502.01609"
+    - label: "Code"
+      url: "https://github.com/wyf23187/LLM_CDV"
+
+- title: "DyFlow: Dynamic Workflow Framework for Agentic Reasoning"
+  selected: true
+  venue:
+    - "NeurIPS 2025"
+  authors: "Yanbo Wang, <strong>Zixiang Xu</strong>, Yue Huang, Xiangqi Wang, Zirui Song, Lang Gao, Chenxi Wang, et al."
+  links:
+    - label: "Paper"
+      url: "https://arxiv.org/abs/2509.26062"
+    - label: "Code"
+      url: "https://github.com/wyf23187/DyFlow"
+
+- title: "Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias"
+  selected: true
+  venue:
+    - "Preprint"
+    - "Under review"
+  authors: "<strong>Zixiang Xu</strong>, Sixian Li, Huaxing Liu, Xiang Wang, Shuai Li, Zirui Song, Xiuying Chen"
+  links:
+    - label: "Project Page"
+      url: "/unfair-judge/"
+    - label: "Paper"
+      url: "https://arxiv.org/abs/2607.11871"
+
+- title: "GTA: Graph Theory Agent and Benchmark for Algorithmic Graph Reasoning with LLMs"
+  selected: true
+  venue:
+    - "Preprint 2026"
+  authors: "<strong>Zixiang Xu</strong>, Yanbo Wang, Chenxi Wang, Lang Gao, Zirui Song, Yue Huang, Zhaorun Chen, Xiangliang Zhang, Xiuying Chen"
+  links:
+    - label: "Paper"
+      url: "https://openreview.net/forum?id=bcGClKY3gQ"
+    - label: "Code"
+      url: "https://github.com/xzx34/GTA"
+
+- title: "Do LLMs “Feel”? Emotion Circuits Discovery and Control"
+  venue:
+    - "ICML 2026"
+  authors: "Chenxi Wang, Yixuan Zhang, et al., <strong>Zixiang Xu</strong>, et al."
+  links:
+    - label: "Paper"
+      url: "https://arxiv.org/abs/2510.11328"
+    - label: "Code"
+      url: "https://github.com/Aurora-cx/EmotionCircuits-LLM"
+
+- title: "Audio Jailbreak: An Open Comprehensive Benchmark for Jailbreaking Large Audio-Language Models"
+  venue:
+    - "ACL 2026"
+  authors: "Zirui Song, Qian Jiang, et al., <strong>Zixiang Xu</strong>, et al."
+  links:
+    - label: "Paper"
+      url: "https://arxiv.org/abs/2505.15406"
+    - label: "Code"
+      url: "https://github.com/mbzuai-nlp/AudioJailbreak"
+
+- title: "ManipLVM-R1: Reinforcement Learning for Reasoning in Embodied Manipulation with Large Vision-Language Models"
+  venue:
+    - "AAAI 2026"
+  authors: "Zirui Song, Guangxian Ouyang, et al., <strong>Zixiang Xu</strong>, et al."
+  links:
+    - label: "Paper"
+      url: "https://arxiv.org/abs/2505.16517"
+
+- title: "Temporal-IRL: Modeling Port Congestion and Berth Scheduling with Inverse Reinforcement Learning"
+  venue:
+    - "TRB 2025"
+    - "Oral"
+  authors: "Yikuan Hu*, <strong>Zixiang Xu*</strong>, Wei Zhang*, et al. <span class='equal-contribution'>(* Equal contribution)</span>"
+  links:
+    - label: "Paper"
+      url: "https://arxiv.org/abs/2506.19843"
+
+- title: "Under the Shadow of Babel: How Language Shapes Reasoning in LLMs"
+  venue:
+    - "Findings of EMNLP 2025"
+  authors: "Chenxi Wang, Yixuan Zhang, Lang Gao, <strong>Zixiang Xu</strong>, et al."
+  links:
+    - label: "Paper"
+      url: "https://arxiv.org/abs/2506.16151"
+
+- title: "GenUDC: High-Quality 3D Mesh Generation with Unsigned Dual Contouring Representation"
+  venue:
+    - "ACM MM 2024"
+  authors: "Ruowei Wang, Jiaqi Li, et al., <strong>Zixiang Xu</strong>, et al."
+  links:
+    - label: "Paper"
+      url: "https://dl.acm.org/doi/abs/10.1145/3664647.3681241"
+
+- title: "Beyond Survival: Evaluating LLMs in Social Deduction Games with Human-Aligned Strategies"
+  venue:
+    - "arXiv 2025"
+  authors: "Zirui Song, Yuan Huang, Junchang Liu, et al., <strong>Zixiang Xu</strong>, et al."
+  links:
+    - label: "Paper"
+      url: "https://arxiv.org/abs/2510.11389"
+
+- title: "Evaluate Bias without Manual Test Sets: A Concept Representation Perspective for LLMs"
+  venue:
+    - "arXiv 2025"
+  authors: "Lang Gao, Kaiyang Wan, Wei Liu, et al., <strong>Zixiang Xu</strong>, et al."
+  links:
+    - label: "Paper"
+      url: "https://arxiv.org/abs/2505.15524"
+
+- title: "MTFusion: Reconstructing Any 3D Object from Single Image Using Multi-word Textual Inversion"
+  venue:
+    - "PRCV 2024"
+    - "Oral"
+  authors: "Yu Liu, Ruowei Wang, Jiaqi Li, <strong>Zixiang Xu</strong>, Qijun Zhao"
+  links:
+    - label: "Paper"
+      url: "https://link.springer.com/chapter/10.1007/978-981-97-8508-7_12"
+
+- title: "Text-Based Face Retrieval: Methods and Challenges"
+  venue:
+    - "CCBR 2023"
+    - "Oral"
+  authors: "Yuchuan Deng, Qijun Zhao, Zhanpeng Hu, <strong>Zixiang Xu</strong>"
+  links:
+    - label: "Paper"
+      url: "https://link.springer.com/chapter/10.1007/978-981-99-8565-4_15"
