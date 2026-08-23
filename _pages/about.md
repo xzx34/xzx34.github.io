@@ -95,7 +95,7 @@ I am a Ph.D. student in [Computer Science](https://www.cs.usc.edu/) at the [Univ
 
 # Miscellaneous
 
-Beyond research and competitive programming, he is a passionate enthusiast of films, games, and visual novels. He is especially fond of the works of **Tanaka Romeo** (田中ロミオ), particularly **CROSS†CHANNEL** and **Rewrite**. As time passes, this list has grown shorter: what remains below are the works that have left the deepest and most vivid traces in his memory.
+Beyond research and competitive programming, I am a passionate enthusiast of films, games, and visual novels. I am especially fond of the works of **Tanaka Romeo** (田中ロミオ), particularly **CROSS†CHANNEL** and **Rewrite**. As time passes, this list has grown shorter: what remains below are the works that have left the deepest and most vivid traces in my memory.
 
 <div class="favorites-section">
 <div class="favorites-toggle" id="favorites-toggle">
