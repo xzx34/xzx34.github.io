@@ -291,6 +291,10 @@ body {
     }
 }
 
+.publication-item--preprint {
+    grid-template-columns: minmax(0, 1fr);
+}
+
 .publication-venue {
     padding-top: .02em;
     color: #00369f;

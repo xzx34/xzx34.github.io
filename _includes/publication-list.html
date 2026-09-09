@@ -4,13 +4,21 @@
   {% if include.selected_only and paper.selected != true %}
     {% assign render_paper = false %}
   {% endif %}
+  {% if include.group == 'preprints' and paper.preprint != true %}
+    {% assign render_paper = false %}
+  {% endif %}
+  {% if include.group == 'published' and paper.preprint == true %}
+    {% assign render_paper = false %}
+  {% endif %}
   {% if render_paper %}
-  <article class="publication-item animate-on-scroll">
+  <article class="publication-item{% if include.group == 'preprints' %} publication-item--preprint{% endif %} animate-on-scroll">
+    {% unless include.group == 'preprints' %}
     <div class="publication-venue" aria-label="Publication venue">
       {% for venue_line in paper.venue %}
       <span>{{ venue_line }}</span>
       {% endfor %}
     </div>
+    {% endunless %}
     <div class="publication-details">
       <h2 class="publication-title">{{ paper.title }}</h2>
       <p class="publication-authors">{{ paper.authors }}</p>

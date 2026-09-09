@@ -51,12 +51,16 @@ I study how to understand and improve AI, and how it shapes science and society.
   <p class="quote-zh">每一个远大的理想都有个微不足道的开始。</p>
 </div>
 
+# Latest Preprints
+
+{% include publication-list.html selected_only=true group="preprints" %}
+
 <span class="anchor legacy-anchor" id="-publications"></span>
 <span class="anchor legacy-anchor" id="publications"></span>
 
 # Selected Work
 
-{% include publication-list.html selected_only=true %}
+{% include publication-list.html selected_only=true group="published" %}
 
 <div class="all-publications-link">
   <a class="pub-btn pub-btn--all" href="/publications/">All publications <span aria-hidden="true">→</span></a>

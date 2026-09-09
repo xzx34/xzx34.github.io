@@ -1,7 +1,8 @@
 - title: "AlgoWorlds: Benchmarking Tool Use for Global Optimization in Algorithmic Worlds"
   selected: true
+  preprint: true
   venue:
-    - "arXiv 2026"
+    - "Preprint 2026"
   authors: "<strong>Zixiang Xu</strong>, Jiaan Wang, Fandong Meng"
   links:
     - label: "Project Page"
@@ -66,9 +67,9 @@
 
 - title: "Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias"
   selected: true
+  preprint: true
   venue:
-    - "Preprint"
-    - "Under review"
+    - "Preprint 2026"
   authors: "<strong>Zixiang Xu</strong>, Sixian Li, Huaxing Liu, Xiang Wang, Shuai Li, Zirui Song, Xiuying Chen"
   links:
     - label: "Project Page"
@@ -78,6 +79,7 @@
 
 - title: "GTA: Graph Theory Agent and Benchmark for Algorithmic Graph Reasoning with LLMs"
   selected: true
+  preprint: true
   venue:
     - "Preprint 2026"
   authors: "<strong>Zixiang Xu</strong>, Yanbo Wang, Chenxi Wang, Lang Gao, Zirui Song, Yue Huang, Zhaorun Chen, Xiangliang Zhang, Xiuying Chen"
@@ -141,16 +143,18 @@
       url: "https://dl.acm.org/doi/abs/10.1145/3664647.3681241"
 
 - title: "Beyond Survival: Evaluating LLMs in Social Deduction Games with Human-Aligned Strategies"
+  preprint: true
   venue:
-    - "arXiv 2025"
+    - "Preprint 2025"
   authors: "Zirui Song, Yuan Huang, Junchang Liu, et al., <strong>Zixiang Xu</strong>, et al."
   links:
     - label: "Paper"
       url: "https://arxiv.org/abs/2510.11389"
 
 - title: "Evaluate Bias without Manual Test Sets: A Concept Representation Perspective for LLMs"
+  preprint: true
   venue:
-    - "arXiv 2025"
+    - "Preprint 2025"
   authors: "Lang Gao, Kaiyang Wan, Wei Liu, et al., <strong>Zixiang Xu</strong>, et al."
   links:
     - label: "Paper"
