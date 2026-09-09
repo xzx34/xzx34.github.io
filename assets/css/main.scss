@@ -291,10 +291,6 @@ body {
     }
 }
 
-.publication-item--preprint {
-    grid-template-columns: minmax(0, 1fr);
-}
-
 .publication-venue {
     padding-top: .02em;
     color: #00369f;
@@ -350,6 +346,46 @@ body {
 .page__content a.pub-btn--all {
     padding: .35em 1em;
 }
+
+/* Preprints use a readable text-list rhythm, without the venue-row divider. */
+#latest-preprints {
+    scroll-margin-top: 5rem;
+}
+
+#latest-preprints::before {
+    display: none;
+}
+
+.publication-item--preprint {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 54rem;
+    padding-top: 1.15em;
+    padding-bottom: 1.15em;
+    border-bottom: 0;
+}
+
+.page__content .publication-item--preprint .publication-title {
+    margin: 0 0 .35em;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.page__content .publication-item--preprint .publication-authors {
+    margin: 0;
+    font-size: .94rem;
+    line-height: 1.55;
+}
+
+.page__content .publication-item--preprint .pub-links {
+    margin: .65em 0 0;
+}
+
+@media (max-width: 600px) {
+    .page__content .publication-item--preprint .publication-title {
+        font-size: 1.08rem;
+    }
+}
+/* End preprint text-list styles. */
 
 /* Web-first CV sections */
 .compact-list,
