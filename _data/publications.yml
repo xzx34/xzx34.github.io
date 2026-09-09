@@ -1,3 +1,16 @@
+- title: "AlgoWorlds: Benchmarking Tool Use for Global Optimization in Algorithmic Worlds"
+  selected: true
+  venue:
+    - "arXiv 2026"
+  authors: "<strong>Zixiang Xu</strong>, Jiaan Wang, Fandong Meng"
+  links:
+    - label: "Project Page"
+      url: "https://xzx34.github.io/AlgoWorlds/"
+    - label: "arXiv"
+      url: "https://arxiv.org/abs/2608.29397"
+    - label: "Code & Data"
+      url: "https://github.com/xzx34/AlgoWorlds"
+
 - title: "SocialMaze: A Benchmark for Evaluating and Enhancing Social Reasoning in Large Language Models in Complex Social Environments"
   selected: true
   venue:
