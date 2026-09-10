@@ -85,7 +85,9 @@
   authors: "<strong>Zixiang Xu</strong>, Yanbo Wang, Chenxi Wang, Lang Gao, Zirui Song, Yue Huang, Zhaorun Chen, Xiangliang Zhang, Xiuying Chen"
   links:
     - label: "Paper"
-      url: "https://openreview.net/forum?id=bcGClKY3gQ"
+      url: "/gta/paper.pdf"
+    - label: "Project"
+      url: "/gta/"
     - label: "Code"
       url: "https://github.com/xzx34/GTA"
 
