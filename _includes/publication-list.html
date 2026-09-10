@@ -25,7 +25,11 @@
       {% if paper.links %}
       <div class="pub-links">
         {% for link in paper.links %}
+        {% if link.url and link.url != '' %}
         <a class="pub-btn" href="{{ link.url }}" aria-label="{{ link.label | escape }} for {{ paper.title | escape }}">{{ link.label | escape }}</a>
+        {% else %}
+        <span class="pub-btn pub-btn--pending" role="link" aria-disabled="true" title="{{ link.label | escape }} link forthcoming" aria-label="{{ link.label | escape }} for {{ paper.title | escape }} — forthcoming">{{ link.label | escape }}</span>
+        {% endif %}
         {% endfor %}
       </div>
       {% endif %}

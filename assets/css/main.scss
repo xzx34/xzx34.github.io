@@ -1192,7 +1192,8 @@ body {
     flex-wrap: wrap;
     gap: .5em;
 }
-.page__content a.pub-btn {
+.page__content a.pub-btn,
+.page__content span.pub-btn {
     display: inline-flex;
     align-items: center;
     gap: .3em;
@@ -1213,7 +1214,8 @@ body {
     box-shadow: 0 4px 12px rgba(0, 54, 159, 0.25);
     text-decoration: none;
 }
-[data-theme="dark"] .page__content a.pub-btn {
+[data-theme="dark"] .page__content a.pub-btn,
+[data-theme="dark"] .page__content span.pub-btn {
     border-color: #388bfd;
     color: #58a6ff;
 }
@@ -1221,4 +1223,13 @@ body {
     color: #fff;
     background: linear-gradient(135deg, #1f6feb 0%, #388bfd 100%) !important;
     box-shadow: 0 4px 12px rgba(31, 111, 235, 0.35);
+}
+.page__content span.pub-btn--pending {
+    color: #6a737d;
+    border-color: #c9d1d9;
+    cursor: default;
+}
+[data-theme="dark"] .page__content span.pub-btn--pending {
+    color: #9aa5b1;
+    border-color: #484f58;
 }
