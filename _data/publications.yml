@@ -1,3 +1,4 @@
+# Resource buttons: Project Page -> Paper -> Code & Data, then supplementary links.
 - title: "AlgoWorlds: Benchmarking Tool Use for Global Optimization in Algorithmic Worlds"
   selected: true
   preprint: true
@@ -7,7 +8,7 @@
   links:
     - label: "Project Page"
       url: "https://xzx34.github.io/AlgoWorlds/"
-    - label: "arXiv"
+    - label: "Paper"
       url: "https://arxiv.org/abs/2608.29397"
     - label: "Code & Data"
       url: "https://github.com/xzx34/AlgoWorlds"
@@ -23,10 +24,10 @@
       url: "/socialmaze/"
     - label: "Paper"
       url: "/socialmaze/paper.pdf"
+    - label: "Code & Data"
+      url: "https://github.com/xzx34/SocialMaze"
     - label: "arXiv"
       url: "https://arxiv.org/abs/2505.23713"
-    - label: "Code"
-      url: "https://github.com/xzx34/SocialMaze"
     - label: "Data"
       url: "https://huggingface.co/datasets/MBZUAI/SocialMaze"
 
@@ -40,7 +41,7 @@
       url: "/cross-lingual-pitfalls/"
     - label: "Paper"
       url: "https://arxiv.org/abs/2505.18673"
-    - label: "Code"
+    - label: "Code & Data"
       url: "https://github.com/xzx34/Cross-Lingual-Pitfalls"
 
 - title: "Adaptive Distraction: Probing LLM Contextual Robustness with Automated Tree Search"
@@ -51,7 +52,7 @@
   links:
     - label: "Paper"
       url: "https://arxiv.org/abs/2502.01609"
-    - label: "Code"
+    - label: "Code & Data"
       url: "https://github.com/wyf23187/LLM_CDV"
 
 - title: "DyFlow: Dynamic Workflow Framework for Agentic Reasoning"
@@ -62,7 +63,7 @@
   links:
     - label: "Paper"
       url: "https://arxiv.org/abs/2509.26062"
-    - label: "Code"
+    - label: "Code & Data"
       url: "https://github.com/wyf23187/DyFlow"
 
 - title: "Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias"
@@ -84,11 +85,11 @@
     - "Preprint 2026"
   authors: "<strong>Zixiang Xu</strong>, Yanbo Wang, Chenxi Wang, Lang Gao, Zirui Song, Yue Huang, Zhaorun Chen, Xiangliang Zhang, Xiuying Chen"
   links:
+    - label: "Project Page"
+      url: "/gta/"
     - label: "Paper"
       url: "/gta/paper.pdf"
-    - label: "Project"
-      url: "/gta/"
-    - label: "Code"
+    - label: "Code & Data"
       url: "https://github.com/xzx34/GTA"
 
 - title: "Do LLMs “Feel”? Emotion Circuits Discovery and Control"
@@ -98,7 +99,7 @@
   links:
     - label: "Paper"
       url: "https://arxiv.org/abs/2510.11328"
-    - label: "Code"
+    - label: "Code & Data"
       url: "https://github.com/Aurora-cx/EmotionCircuits-LLM"
 
 - title: "Audio Jailbreak: An Open Comprehensive Benchmark for Jailbreaking Large Audio-Language Models"
@@ -108,7 +109,7 @@
   links:
     - label: "Paper"
       url: "https://arxiv.org/abs/2505.15406"
-    - label: "Code"
+    - label: "Code & Data"
       url: "https://github.com/mbzuai-nlp/AudioJailbreak"
 
 - title: "ManipLVM-R1: Reinforcement Learning for Reasoning in Embodied Manipulation with Large Vision-Language Models"
