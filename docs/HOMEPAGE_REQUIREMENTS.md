@@ -1,6 +1,6 @@
 # 主页维护要求
 
-最后整理：2026-09-09
+最后整理：2026-09-10
 
 ## 1. 本文档的用途与更新方式
 
@@ -196,6 +196,12 @@ SocialMaze 同时保留 **Findings of EMNLP 2026** 和 **SocialSim @ COLM 2025 �
 | 当前仓库内的研究项目页 | `gta/`、`socialmaze/`、`cross-lingual-pitfalls/`、`unfair-judge/` |
 
 ## 11. 待同步事项与变更记录
+
+### 2026-09-10：GTA 代码公开
+
+- 用户确认 GTA 已开源；已通过未登录的 GitHub 公共 API 核实 [xzx34/GTA](https://github.com/xzx34/GTA) 为公开仓库，项目标题与 landing page 一致。
+- GTA 项目页的 **Code & Data** 从待上线占位改为正式仓库链接，并移除摘要下及 Resources 中“代码尚未公开”的旧说明。首页和完整论文页已使用同一链接，无需重复添加。
+- 本次只更新代码发布状态，不改变研究内容、样式、按钮顺序或 Paper 占位；仍需在论文的 arXiv / 正式记录公开并核实后更新 Paper。
 
 ### 2026-09-09：建立维护规范并实施 Paper 政策
 
