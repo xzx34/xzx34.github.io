@@ -218,4 +218,4 @@ SocialMaze 同时保留 **Findings of EMNLP 2026** 和 **SocialSim @ COLM 2025 �
   - **GTA**：尚无已确认的公开 arXiv 编号或正式记录，主页、完整论文页与项目页均使用非跳转 Paper 占位入口；上线后需同步三个位置。
 - 已移除四个项目页的论文 PDF 按钮、正文直链、`citation_pdf_url` 及 GTA 的 PDF encoding 元数据；保留有效的摘要页、作者、引用等元数据。相同目的地的重复按钮已合并。
 - 已有 PDF 文件和 CV PDF 入口保持不动。独立 AlgoWorlds 仓库不迁移；其主页 Paper 已使用 arXiv 摘要页。
-- 验证与发布状态：源文件修改完成，正在执行检查及原有 GitHub Pages 发布；部署核验完成后更新本条。
+- 验证与发布状态：已通过源码/共享模板检查与内容回归检查；GitHub Pages 对实现提交 `53dd09c` 的 [构建及部署](https://github.com/xzx34/xzx34.github.io/actions/runs/34435276547) 已成功。已核对线上主页 3+4 篇、完整论文页 17 篇、四个项目页的实际入口与源码一致，确认占位按钮的明暗样式已编译，维护文档/检查脚本未进入公开网站。本地缺少完整 Jekyll bundle，因此完整构建结果以该 GitHub Pages 流程为准。
