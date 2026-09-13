@@ -1,6 +1,6 @@
 # 主页维护要求
 
-最后整理：2026-09-10
+最后整理：2026-09-13
 
 ## 1. 本文档的用途与更新方式
 
@@ -34,8 +34,8 @@
 
 ### 3.2 两个方向的含义
 
-- **LLM Evaluation and Post-Training.** 强调通过 benchmark 和自动化探索方法发现模型的能力边界，并将这些发现转化为 post-training 的有效提升方向。不能收窄成仅研究 robustness、能力在何种条件下成立，或如何破坏稳定性。
-- **AI, Science, and Society.** 强调随着 AI 能力增强，人类如何理解、检验和利用 AI 的产物，开展科学探索、创造知识和改变现实世界。提及可解释性，但它只是普通组成部分，不应成为这个方向的主标题或中心。
+- **Frontier Model Evaluation and Post-Training.** 通过高难度评测、交互环境和自动化方法探索前沿 AI 系统的能力边界、系统性地暴露模型失败，并将这些失败转化为可扩展的监督、训练数据和反馈，促成新的可泛化能力。不能收窄成仅研究 robustness、能力在何种条件下成立，或如何破坏稳定性。
+- **AI, Science, and Society.** 研究 AI 如何参与科学发现和复杂智力工作，以及人类如何可靠地检验并利用 AI 产生的知识。关注有效性、假设、不确定性、可审计性和可解释性；可解释性只是普通组成部分，不是主标题或中心。更广泛的追求是：当 AI 的能力和推理超越人类认知范围时，人类如何保有有意义的自主性，决定信任什么、追求什么，并将这些能力转化为服务人类目标的知识与行动。
 
 ### 3.3 已批准的完整文案
 
@@ -45,9 +45,9 @@
 >
 > I study how to understand and improve AI, and how it shapes science and society.
 >
-> **LLM Evaluation and Post-Training.** I view evaluation as a way to discover what models can do and what they should learn next. I develop benchmarks and automated probing methods to explore the frontiers of model capabilities, seeking challenges that reveal both their current limits and opportunities for growth. Through post-training, I aim to translate these insights into new and more generalizable capabilities.
+> **Frontier Model Evaluation and Post-Training.** My research focuses on discovering the capability boundaries of frontier AI systems and turning those boundaries into learning opportunities. I build challenging evaluations and interactive environments that systematically elicit model failures, and develop automated methods to identify what increasingly capable models still cannot reliably do. My broader goal is to convert these failures into scalable supervision, training data, and feedback that enable models to acquire new, generalizable capabilities.
 >
-> **AI, Science, and Society.** I am interested in how increasingly capable AI can expand what humans are able to understand and accomplish. This requires more than producing useful outputs: it requires making sense of AI-generated ideas and results through interpretability and other approaches, examining their validity, and building upon them to create knowledge and guide action. I explore these questions through AI for scientific discovery and real-world problem solving, with the broader aim of extending our ability to investigate, understand, and change the world.
+> **AI, Science, and Society.** I study how increasingly capable AI systems can participate in scientific discovery and other forms of complex intellectual work, and how humans can reliably verify and build upon the knowledge they produce. As AI-generated ideas and results grow in complexity, producing useful outputs is no longer enough: we need methods for evaluating their validity, exposing their assumptions and uncertainties, and making them auditable and interpretable even when their full reasoning exceeds human understanding. More broadly, I am interested in how humans can retain meaningful agency in a world where AI increasingly operates beyond our cognitive reach—deciding what to trust, what to pursue, and how to translate increasingly superhuman capabilities into knowledge and action that serve human goals.
 
 ### 3.4 Previously at
 
@@ -196,6 +196,11 @@ SocialMaze 同时保留 **Findings of EMNLP 2026** 和 **SocialSim @ COLM 2025 �
 | 当前仓库内的研究项目页 | `gta/`、`socialmaze/`、`cross-lingual-pitfalls/`、`unfair-judge/` |
 
 ## 11. 待同步事项与变更记录
+
+### 2026-09-13：更新研究方向文案
+
+- 按用户提供的完整原文替换首页两个研究方向，第一项更名为 **Frontier Model Evaluation and Post-Training.**，第二项仍为 **AI, Science, and Society.**；当前定稿见 3.3。
+- 身份介绍、简短引入、Previously at、其他栏目、页面样式与动画保持不变；不自动改写侧栏或其他平台简介。
 
 ### 2026-09-10：GTA 代码公开
 
