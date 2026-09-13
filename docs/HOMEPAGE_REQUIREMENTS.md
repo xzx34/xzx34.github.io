@@ -197,6 +197,16 @@ SocialMaze 同时保留 **Findings of EMNLP 2026** 和 **SocialSim @ COLM 2025 �
 
 ## 11. 待同步事项与变更记录
 
+### 2026-09-13：站点地图同域名单变量对照（尚未解决）
+
+- 用户批准新增 `/sitemap-main.xml`，仅改变提交地址，不同时改变 XML 内容、托管或主页。原 `/sitemap.xml` 仍由 `jekyll-sitemap` 生成；原插件、依赖、发布流程和 robots.txt 保持不变。
+- 对照模板基于 [jekyll-sitemap v1.4.0](https://github.com/jekyll/jekyll-sitemap/blob/v1.4.0/lib/sitemap.xml)，禁用 HTML 布局并排除自身。静态文件使用同一数据源、扩展名筛选及顺序，保留现有 URL 和日期规则；不要在本次测试中顺带清理 PDF、验证文件、favicon 或修改日期含义。
+- 提交前必须通过模板回归和 GitHub Pages 构建，并用 `ruby docs/check-sitemap.rb ORIGINAL_XML ALTERNATE_XML 12` 核对同次部署的两份解压后 XML 逐字节一致、当前 12 个 URL 无重复或遗漏。两地址须直接返回 200 和正确 XML 类型，无重定向；检查不通过不得提交。
+- 新地址只提交一次。只有 Google 显示 Success 且解析出预期 URL 数量，才将 robots.txt 的声明切换到新地址，并保留旧地址和提交记录。“提交成功”、日期更新、实时检测通过均不等于故障恢复。
+- 若仍失败或尚未处理，保持“未解决”结论并整理平台反馈草稿；不重复批量换地址、不擅自发送反馈、迁移托管、购买域名或新增账号授权。
+- 当前证据：XML 已通过官方格式、编码和压缩校验；IPv4/IPv6 及 HTTP/1.1/HTTP/2 测试正常。Google 抓取统计（9 月 11 日更新）显示过去 90 天 170 次请求、主机健康无异常；42 条可见 404 样本均是旧图标地址。Google 保存的 robots.txt 允许抓取并含正确声明；索引报告（9 月 3 日更新）显示主页及 Cross-Lingual Pitfalls 已收录。具体 sitemap 失败根因仍未证实，不把外部同类报告当作平台根因的确认。
+- 实施状态：已新增对照模板及一致性检查脚本，独立模板回归通过；构建、部署、线上逐字节验证及新地址单次提交待完成。完整实验记录及模板来源许可见 `docs/SITEMAP_DIAGNOSTICS.md`。该条记录的是本次诊断实验，不是永久新增 sitemap 的通用要求。
+
 ### 2026-09-13：更新研究方向文案
 
 - 按用户提供的完整原文替换首页两个研究方向，第一项更名为 **Frontier Model Evaluation and Post-Training.**，第二项仍为 **AI, Science, and Society.**；当前定稿见 3.3。
