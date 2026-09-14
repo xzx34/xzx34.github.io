@@ -29,7 +29,7 @@
 - 已正式入学：使用 USC Computer Science Ph.D. student，不使用 Incoming，也不擅自改为 Ph.D. candidate。
 - 开头保留 Computer Science、University of Southern California、Prof. Yue Zhao、FORTIS Lab 及其链接。
 - 主页使用 **Prof. Yue Zhao**。其他平台短简介中的 **Dr. Yue Zhao** 不自动替换主页用词。
-- 用一句简短引入衔接两个研究方向；每个方向采用“加粗概念 + 一段说明”，不拆成子方向 bullet list，也不逐篇串讲论文成果。
+- 身份介绍后直接进入两个研究方向，不加独立引入句；每个方向采用“加粗概念 + 一段说明”，不拆成子方向 bullet list，也不逐篇串讲论文成果。
 - 研究介绍应表达抽象的研究理念和长期追求，避免空泛冗长的哲学铺垫。
 
 ### 3.2 两个方向的含义
@@ -42,8 +42,6 @@
 以下是当前定稿；除非用户要求修改，不再次改写：
 
 > I am a Ph.D. student in [Computer Science](https://www.cs.usc.edu/) at the [University of Southern California](https://www.usc.edu/), advised by [Prof. Yue Zhao](https://viterbi-web.usc.edu/~yzhao010/) in the [FORTIS Lab](https://viterbi-web.usc.edu/~yzhao010/lab.html).
->
-> I study how to understand and improve AI, and how it shapes science and society.
 >
 > **Frontier Model Evaluation and Post-Training.** My research focuses on discovering the capability boundaries of frontier AI systems and turning those boundaries into learning opportunities. I build challenging evaluations and interactive environments that systematically elicit model failures, and develop automated methods to identify what increasingly capable models still cannot reliably do. My broader goal is to convert these failures into scalable supervision, training data, and feedback that enable models to acquire new, generalizable capabilities.
 >
@@ -196,6 +194,10 @@ SocialMaze 同时保留 **Findings of EMNLP 2026** 和 **SocialSim @ COLM 2025 �
 | 当前仓库内的研究项目页 | `gta/`、`socialmaze/`、`cross-lingual-pitfalls/`、`unfair-judge/` |
 
 ## 11. 待同步事项与变更记录
+
+### 2026-09-13：移除研究方向引入句
+
+- 按用户要求移除两个研究方向前的独立引入句，身份介绍后直接展示两个研究方向；两段研究正文及其他内容保持不变。
 
 ### 2026-09-13：站点地图同域名单变量对照（尚未解决）
 

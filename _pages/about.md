@@ -21,8 +21,6 @@ redirect_from:
 
 I am a Ph.D. student in [Computer Science](https://www.cs.usc.edu/) at the [University of Southern California](https://www.usc.edu/), advised by [Prof. Yue Zhao](https://viterbi-web.usc.edu/~yzhao010/) in the [FORTIS Lab](https://viterbi-web.usc.edu/~yzhao010/lab.html).
 
-I study how to understand and improve AI, and how it shapes science and society.
-
 **Frontier Model Evaluation and Post-Training.** My research focuses on discovering the capability boundaries of frontier AI systems and turning those boundaries into learning opportunities. I build challenging evaluations and interactive environments that systematically elicit model failures, and develop automated methods to identify what increasingly capable models still cannot reliably do. My broader goal is to convert these failures into scalable supervision, training data, and feedback that enable models to acquire new, generalizable capabilities.
 
 **AI, Science, and Society.** I study how increasingly capable AI systems can participate in scientific discovery and other forms of complex intellectual work, and how humans can reliably verify and build upon the knowledge they produce. As AI-generated ideas and results grow in complexity, producing useful outputs is no longer enough: we need methods for evaluating their validity, exposing their assumptions and uncertainties, and making them auditable and interpretable even when their full reasoning exceeds human understanding. More broadly, I am interested in how humans can retain meaningful agency in a world where AI increasingly operates beyond our cognitive reach—deciding what to trust, what to pursue, and how to translate increasingly superhuman capabilities into knowledge and action that serve human goals.
