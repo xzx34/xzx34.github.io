@@ -215,6 +215,15 @@ SocialMaze 同时保留 **Findings of EMNLP 2026** 和 **SocialSim @ COLM 2025 �
 - CV 源文件新增 PDF 文档元数据后重新构建；正文和两页版式保持不变，网站副本与源输出必须保持字节一致。
 - Bing 对七个装饰性机构 logo 的空 alt 告警按已知低优先级误报保留。此次不重新提交 sitemap、不配置 IndexNow，也不改动 AlgoWorlds 独立仓库。
 
+### 2026-09-20：SocialMaze 开源范围与权威数据入口
+
+- SocialMaze 的权威、持续维护的数据入口为 [`xzx34/SocialMaze`](https://huggingface.co/datasets/xzx34/SocialMaze)。当前公开版本为 corrected expanded HRD v2.0.0：`easy` 与 `hard` 各 100,000 条，采用 CC BY 4.0。
+- [`MBZUAI/SocialMaze`](https://huggingface.co/datasets/MBZUAI/SocialMaze) 是无法继续维护的 2025 旧镜像，含旧生成器数据。全站只允许在明确的 legacy/outdated 警告中提及，不能再作为默认 Dataset 按钮、示例代码、FAQ 答案或结构化数据入口。
+- GitHub 的准确公开范围是：维护版 HRD 生成、求解、评测代码与 corrected expanded data 已开放；其余五项任务仅有归档脚本和合成/算法样例。不得宣称 GitHub 已公开完整六任务 70,000 条数据、完整 workflow 或 SFT/DPO 复现代码。
+- 论文中“六项任务、70,000 instances”仍是研究事实，landing page 应保留；但必须与 200,000 条 HRD-only 扩展数据的公开范围明确区分。
+- SocialMaze landing page 的 Dataset JSON-LD 使用 `xzx34/SocialMaze`、版本 `2.0.0` 和 CC BY 4.0；SocialSim 链接使用稳定的 OpenReview workshop 页面。
+- `socialmaze/paper.pdf` 可同步为最新 arXiv v2 文件以修复历史直链的版本差异，但 Paper 按钮继续指向 arXiv 摘要页；不得新增 PDF 下载按钮或 `citation_pdf_url`。
+
 ### 2026-09-20：Google 索引复核与 AlgoWorlds Dataset 许可证
 
 - Search Console 于 2026-09-20 再次抓取 `/unfair-judge/`，抓取成功但仍为“已抓取 - 尚未编入索引”；引荐站点地图显示“临时处理错误”。同日实际网址测试显示“网址可编入 Google 索引”。当前页面返回正常、允许索引、自引用 canonical、站内链接及 arXiv 回链均存在，尚无可从页面代码侧复现或消除的索引阻塞。不要通过反复提交、虚构更新时间或无意义改写页面来冒充修复；Google 是否最终收录仍是外部状态。

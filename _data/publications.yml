@@ -29,7 +29,7 @@
     - label: "Code & Data"
       url: "https://github.com/xzx34/SocialMaze"
     - label: "Data"
-      url: "https://huggingface.co/datasets/MBZUAI/SocialMaze"
+      url: "https://huggingface.co/datasets/xzx34/SocialMaze"
 
 - title: "Cross-Lingual Pitfalls: Automatic Probing Cross-Lingual Weakness of Multilingual Large Language Models"
   selected: true

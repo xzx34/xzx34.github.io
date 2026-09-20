@@ -87,7 +87,7 @@
   ],
   "sameAs": [
     "https://arxiv.org/abs/2505.23713",
-    "https://huggingface.co/datasets/MBZUAI/SocialMaze",
+    "https://huggingface.co/datasets/xzx34/SocialMaze",
     "https://github.com/xzx34/SocialMaze"
   ],
   "codeRepository": "https://github.com/xzx34/SocialMaze",
@@ -133,7 +133,7 @@
     {
       "@type": "Question",
       "name": "Where can I download the SocialMaze dataset?",
-      "acceptedAnswer": {"@type": "Answer", "text": "The Hidden Role Deduction task is available on the Hugging Face Hub as MBZUAI/SocialMaze in a question-answering format: 200,000 instances (100,000 easy and 100,000 hard) released under a CC-BY-4.0 license. Code for the full benchmark is on GitHub at github.com/xzx34/SocialMaze."}
+      "acceptedAnswer": {"@type": "Answer", "text": "The maintained Hidden Role Deduction release is available as xzx34/SocialMaze: 200,000 corrected, uniquely solvable instances (100,000 easy and 100,000 hard) under CC BY 4.0. The GitHub repository provides maintained HRD code and data tooling plus archived scripts and demonstration samples for the other five tasks. MBZUAI/SocialMaze is an outdated 2025 mirror and is not recommended for new experiments."}
     },
     {
       "@type": "Question",
@@ -141,6 +141,27 @@
       "acceptedAnswer": {"@type": "Answer", "text": "Cite SocialMaze when your work involves evaluating social reasoning or theory of mind in LLMs, social-deduction games, multi-turn or dynamic social interaction, robustness of reasoning under deception or information uncertainty, or LLM agents and fine-tuning for complex social tasks. See the When to Cite This Paper section for a ready-to-use citation sentence."}
     }
   ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "SocialMaze Corrected Expanded Hidden Role Deduction",
+  "description": "Version 2.0.0 contains 200,000 corrected Hidden Role Deduction instances: 100,000 six-player easy examples and 100,000 ten-player hard examples, exhaustively validated for unique solvability and exact Player 1 role balance.",
+  "url": "https://huggingface.co/datasets/xzx34/SocialMaze",
+  "version": "2.0.0",
+  "dateModified": "2026-09-20",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isBasedOn": "https://arxiv.org/abs/2505.23713",
+  "codeRepository": "https://github.com/xzx34/SocialMaze",
+  "keywords": ["social reasoning", "hidden role deduction", "large language models", "benchmark"],
+  "distribution": {
+    "@type": "DataDownload",
+    "contentUrl": "https://huggingface.co/datasets/xzx34/SocialMaze",
+    "encodingFormat": "application/vnd.apache.parquet"
+  }
 }
 </script>
 
@@ -318,7 +339,7 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
       <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 4.6 18 4.9 18 4.9c.6 1.6.2 2.8.1 3.1.7.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.3.8 1 .8 2.1v3.1c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
       Code &amp; Data
     </a>
-    <a class="btn" href="https://huggingface.co/datasets/MBZUAI/SocialMaze">
+    <a class="btn" href="https://huggingface.co/datasets/xzx34/SocialMaze">
       <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5.6" rx="7" ry="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M5 5.6v12.8c0 1.44 3.13 2.6 7 2.6s7-1.16 7-2.6V5.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M5 12c0 1.44 3.13 2.6 7 2.6s7-1.16 7-2.6"/></svg>
       Data
     </a>
@@ -410,13 +431,13 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
 
 <section id="dataset" class="animate-on-scroll">
   <h2>Dataset: SocialMaze on Hugging Face</h2>
-  <p>The benchmark's most representative task, <strong>Hidden Role Deduction</strong>, is released on the Hugging Face Hub as <a href="https://huggingface.co/datasets/MBZUAI/SocialMaze"><code>MBZUAI/SocialMaze</code></a> in a convenient question-answering format.</p>
-  <p class="datasum"><strong>200,000</strong> instances &middot; <strong>100,000 easy</strong> + <strong>100,000 hard</strong> &middot; <strong>CC-BY-4.0</strong> license &middot; each instance provides a system prompt (game rules), a user prompt (all player statements across rounds plus the two questions), the ground-truth answer (true Criminal and Player 1's role), and an algorithmically generated step-by-step reasoning chain.</p>
+  <p>The benchmark's most representative task, <strong>Hidden Role Deduction</strong>, is released on the Hugging Face Hub as <a href="https://huggingface.co/datasets/xzx34/SocialMaze"><code>xzx34/SocialMaze</code></a> in a convenient question-answering format.</p>
+  <p class="datasum"><strong>200,000 corrected, uniquely solvable</strong> instances &middot; <strong>100,000 easy</strong> + <strong>100,000 hard</strong> &middot; exact 1:1:1:1 Player 1 role balance in each split &middot; <strong>CC BY 4.0</strong> license &middot; stable IDs, validation reports and SHA-256 checksums.</p>
   <pre><code>from datasets import load_dataset
 
 # Hidden Role Deduction, QA format (splits: "easy", "hard")
-ds = load_dataset("MBZUAI/SocialMaze", split="hard")</code></pre>
-  <p class="note">This 200,000-instance Hugging Face release is an expanded QA-format release of Hidden Role Deduction. The paper's full SocialMaze benchmark&mdash;all six tasks, 70,000 instances&mdash;and the evaluation code are available separately in the project's <a href="https://github.com/xzx34/SocialMaze">GitHub repository</a>.</p>
+ds = load_dataset("xzx34/SocialMaze", split="hard")</code></pre>
+  <p class="note">This 200,000-instance dataset is a corrected expanded <strong>HRD-only</strong> release, not a complete mirror of the paper's six-task, 70,000-instance evaluation collection. The <a href="https://github.com/xzx34/SocialMaze">GitHub repository</a> provides the maintained HRD implementation and corrected data tooling; the other five tasks have archived scripts and demonstration samples. <a href="https://huggingface.co/datasets/MBZUAI/SocialMaze"><code>MBZUAI/SocialMaze</code></a> is an outdated 2025 mirror retained only for legacy reference and should not be used for new experiments.</p>
 </section>
 
 <section id="faq" class="animate-on-scroll">
@@ -454,7 +475,7 @@ ds = load_dataset("MBZUAI/SocialMaze", split="hard")</code></pre>
 
   <details>
     <summary>Where can I download the SocialMaze dataset?</summary>
-    <div class="ans"><p>The Hidden Role Deduction task is available on the <a href="https://huggingface.co/datasets/MBZUAI/SocialMaze">Hugging Face Hub</a> as <code>MBZUAI/SocialMaze</code> in a question-answering format: 200,000 instances (100,000 easy and 100,000 hard) released under a CC-BY-4.0 license. Code for the full benchmark is on <a href="https://github.com/xzx34/SocialMaze">GitHub</a> at github.com/xzx34/SocialMaze.</p></div>
+    <div class="ans"><p>The maintained Hidden Role Deduction release is available on the <a href="https://huggingface.co/datasets/xzx34/SocialMaze">Hugging Face Hub</a> as <code>xzx34/SocialMaze</code>: 200,000 corrected, uniquely solvable instances (100,000 easy and 100,000 hard) under CC BY 4.0. The <a href="https://github.com/xzx34/SocialMaze">GitHub repository</a> provides maintained HRD code and data tooling plus archived scripts and demonstration samples for the other five tasks. <code>MBZUAI/SocialMaze</code> is an outdated 2025 mirror and is not recommended for new experiments.</p></div>
   </details>
 
   <details>
@@ -483,9 +504,9 @@ ds = load_dataset("MBZUAI/SocialMaze", split="hard")</code></pre>
   <ul class="reslist">
     <li><a href="https://arxiv.org/abs/2505.23713">arXiv:2505.23713</a> &mdash; preprint abstract page.</li>
     <li><a href="https://2026.emnlp.org/">EMNLP 2026</a> &mdash; accepted to Findings; proceedings metadata is forthcoming.</li>
-    <li><a href="https://sites.google.com/view/social-sims-with-llms/home">SocialSim @ COLM 2025</a> &mdash; previously presented as a Spotlight Talk.</li>
-    <li><a href="https://huggingface.co/datasets/MBZUAI/SocialMaze">Dataset on Hugging Face</a> &mdash; the Hidden Role Deduction task in QA format (200,000 instances, CC-BY-4.0), loadable with the <code>datasets</code> library.</li>
-    <li><a href="https://github.com/xzx34/SocialMaze">Code on GitHub</a> &mdash; the full six-task benchmark and evaluation pipeline.</li>
+    <li><a href="https://openreview.net/group?id=colmweb.org%2FCOLM%2F2025%2FWorkshop%2FSocial_Sim">SocialSim @ COLM 2025</a> &mdash; previously presented as a Spotlight Talk.</li>
+    <li><a href="https://huggingface.co/datasets/xzx34/SocialMaze">Dataset on Hugging Face</a> &mdash; corrected expanded HRD v2.0.0 (200,000 instances, CC BY 4.0), loadable with the <code>datasets</code> library.</li>
+    <li><a href="https://github.com/xzx34/SocialMaze">Code on GitHub</a> &mdash; maintained HRD code and corrected data tooling, with archived scripts and demonstration samples for the other five tasks.</li>
   </ul>
   <nav class="btns" aria-label="Paper links (repeated)">
     <a class="btn" href="https://arxiv.org/abs/2505.23713">
@@ -496,7 +517,7 @@ ds = load_dataset("MBZUAI/SocialMaze", split="hard")</code></pre>
       <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 4.6 18 4.9 18 4.9c.6 1.6.2 2.8.1 3.1.7.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.3.8 1 .8 2.1v3.1c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
       Code &amp; Data
     </a>
-    <a class="btn" href="https://huggingface.co/datasets/MBZUAI/SocialMaze">
+    <a class="btn" href="https://huggingface.co/datasets/xzx34/SocialMaze">
       <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5.6" rx="7" ry="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M5 5.6v12.8c0 1.44 3.13 2.6 7 2.6s7-1.16 7-2.6V5.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M5 12c0 1.44 3.13 2.6 7 2.6s7-1.16 7-2.6"/></svg>
       Data
     </a>
