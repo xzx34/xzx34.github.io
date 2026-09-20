@@ -1,6 +1,6 @@
 # 主页维护要求
 
-最后整理：2026-09-13
+最后整理：2026-09-20
 
 ## 1. 本文档的用途与更新方式
 
@@ -194,6 +194,11 @@ SocialMaze 同时保留 **Findings of EMNLP 2026** 和 **SocialSim @ COLM 2025 �
 | 当前仓库内的研究项目页 | `gta/`、`socialmaze/`、`cross-lingual-pitfalls/`、`unfair-judge/` |
 
 ## 11. 待同步事项与变更记录
+
+### 2026-09-20：Google 索引复核与 AlgoWorlds Dataset 许可证
+
+- Search Console 于 2026-09-20 再次抓取 `/unfair-judge/`，抓取成功但仍为“已抓取 - 尚未编入索引”；引荐站点地图显示“临时处理错误”。同日实际网址测试显示“网址可编入 Google 索引”。当前页面返回正常、允许索引、自引用 canonical、站内链接及 arXiv 回链均存在，尚无可从页面代码侧复现或消除的索引阻塞。不要通过反复提交、虚构更新时间或无意义改写页面来冒充修复；Google 是否最终收录仍是外部状态。
+- AlgoWorlds 的公开 benchmark 数据采用 CC BY 4.0，代码与文档采用 Apache-2.0。其 landing page 的 `Dataset` JSON-LD 已声明并上线数据许可证 `https://creativecommons.org/licenses/by/4.0/`，不要把代码许可证误填给 Dataset。该字段用于消除 Search Console 的非严重 `license` 缺失警告，不等同于保证页面收录或富媒体展示；Google 的报告仍需在重新抓取和验证后更新。
 
 ### 2026-09-13：移除研究方向引入句
 
