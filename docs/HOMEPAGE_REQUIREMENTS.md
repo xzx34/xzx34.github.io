@@ -206,6 +206,12 @@ SocialMaze 同时保留 **Findings of EMNLP 2026** 和 **SocialSim @ COLM 2025 �
 
 ## 11. 待同步事项与变更记录
 
+### 2026-09-20：SocialMaze 权威版本与 GTA 论文—软件引用闭环
+
+- SocialMaze 的唯一权威数据入口继续为 [`xzx34/SocialMaze`](https://huggingface.co/datasets/xzx34/SocialMaze)。主页 landing page、GitHub README 与 Hugging Face 数据卡使用同一份 Findings of EMNLP 2026 BibTeX，并补充 arXiv `2505.23713`、`cs.CL` 和摘要页；arXiv comments 也必须指向该数据集。`MBZUAI/SocialMaze` 只能出现在明确的 legacy 警告中。
+- GTA 仓库必须通过 README、`CITATION.cff`、`pyproject.toml` 和 GitHub release 直接关联 [arXiv:2609.12265](https://arxiv.org/abs/2609.12265)；GitHub 的 preferred citation 指向论文。GTA landing page 同时声明 arXiv ID 与 `10.48550/arXiv.2609.12265`，Paper 按钮仍使用 arXiv 摘要页。
+- GTA `v1.0.1` 是仅含引用、身份和发布元数据的补丁版本，不改变 CLI、benchmark 数据、算法或结果；不为此创建 Zenodo 软件 DOI。
+
 ### 2026-09-20：Bing SEO/GEO、学术身份与 GTA arXiv
 
 - 首页和 Publications 页使用独立搜索标题与摘要；共享 SEO 模板已去除重复 OG/Twitter 标签并修复无效的嵌套 `<head>`。首页新增隐藏 H1，七个可见栏目标题改为语义化 H2，同时维持原视觉和动画选择器。
