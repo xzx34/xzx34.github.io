@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>(function(){var t;try{t=localStorage.getItem('theme');}catch(e){}if(t!=='light'){document.documentElement.setAttribute('data-theme','dark');}})();</script>
-<title>GTA: Graph Theory Agent and Benchmark for Algorithmic Graph Reasoning with LLMs</title>
-<meta name="description" content="GT Bench probes language-based algorithmic graph reasoning across 24 problems and four equivalent graph encodings. GTA improves a frozen LLM through adaptive representation selection and algorithmic decomposition.">
+<title>GTA: Graph Theory Agent for Algorithmic Reasoning with LLMs</title>
+<meta name="description" content="GTA introduces GT Bench, covering 24 graph problems and four representations, plus an agent that improves algorithmic graph reasoning without retraining.">
 <meta name="robots" content="index,follow">
 <meta name="author" content="Zixiang Xu, Yanbo Wang, Chenxi Wang, Lang Gao, Zirui Song, Yue Huang, Zhaorun Chen, Xiangliang Zhang, Xiuying Chen">
 <link rel="canonical" href="https://xzx34.github.io/gta/">
@@ -20,14 +20,17 @@
 <meta name="citation_author" content="Chen, Zhaorun">
 <meta name="citation_author" content="Zhang, Xiangliang">
 <meta name="citation_author" content="Chen, Xiuying">
-<meta name="citation_publication_date" content="2026">
+<meta name="citation_publication_date" content="2026/09/10">
+<meta name="citation_public_url" content="https://xzx34.github.io/gta/">
+<meta name="citation_arxiv_id" content="2609.12265">
+<meta name="citation_abstract_html_url" content="https://arxiv.org/abs/2609.12265">
 <meta property="og:type" content="article">
-<meta property="og:title" content="GTA: Graph Theory Agent and Benchmark for Algorithmic Graph Reasoning with LLMs">
-<meta property="og:description" content="Same graph, different representations. A benchmark for diagnosing graph reasoning and an agent for improving it without retraining the executor.">
+<meta property="og:title" content="GTA: Graph Theory Agent for Algorithmic Reasoning with LLMs">
+<meta property="og:description" content="GTA introduces GT Bench, covering 24 graph problems and four representations, plus an agent that improves algorithmic graph reasoning without retraining.">
 <meta property="og:url" content="https://xzx34.github.io/gta/">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GTA: Graph Theory Agent and Benchmark for Algorithmic Graph Reasoning with LLMs">
-<meta name="twitter:description" content="24 graph problems, four equivalent encodings, and adaptive reasoning around a frozen LLM.">
+<meta name="twitter:title" content="GTA: Graph Theory Agent for Algorithmic Reasoning with LLMs">
+<meta name="twitter:description" content="GTA introduces GT Bench, covering 24 graph problems and four representations, plus an agent that improves algorithmic graph reasoning without retraining.">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -35,10 +38,12 @@
   "name": "GTA: Graph Theory Agent and Benchmark for Algorithmic Graph Reasoning with LLMs",
   "headline": "GTA: Graph Theory Agent and Benchmark for Algorithmic Graph Reasoning with LLMs",
   "url": "https://xzx34.github.io/gta/",
+  "mainEntityOfPage": "https://xzx34.github.io/gta/",
+  "datePublished": "2026-09-10",
   "inLanguage": "en",
   "description": "GT Bench evaluates language-based algorithmic reasoning across 24 graph problems, 44 task-structure settings, and four equivalent graph encodings. GTA combines learned representation selection and algorithmic decomposition around a frozen executor LLM.",
   "author": [
-    {"@type": "Person", "name": "Zixiang Xu", "affiliation": {"@type": "Organization", "name": "University of Southern California"}},
+    {"@id": "https://xzx34.github.io/#person", "@type": "Person", "name": "Zixiang Xu", "url": "https://xzx34.github.io/", "sameAs": "https://orcid.org/0009-0008-6672-004X", "affiliation": {"@type": "Organization", "name": "University of Southern California"}},
     {"@type": "Person", "name": "Yanbo Wang", "affiliation": {"@type": "Organization", "name": "University of California, Los Angeles"}},
     {"@type": "Person", "name": "Chenxi Wang", "affiliation": {"@type": "Organization", "name": "Mohamed bin Zayed University of Artificial Intelligence"}},
     {"@type": "Person", "name": "Lang Gao", "affiliation": {"@type": "Organization", "name": "Mohamed bin Zayed University of Artificial Intelligence"}},
@@ -47,7 +52,10 @@
     {"@type": "Person", "name": "Zhaorun Chen", "affiliation": {"@type": "Organization", "name": "University of Chicago"}},
     {"@type": "Person", "name": "Xiangliang Zhang", "affiliation": {"@type": "Organization", "name": "University of Notre Dame"}},
     {"@type": "Person", "name": "Xiuying Chen", "affiliation": {"@type": "Organization", "name": "Mohamed bin Zayed University of Artificial Intelligence"}}
-  ]
+  ],
+  "identifier": {"@type": "PropertyValue", "propertyID": "arXiv", "value": "2609.12265"},
+  "sameAs": "https://arxiv.org/abs/2609.12265",
+  "codeRepository": "https://github.com/xzx34/GTA"
 }
 </script>
 <style>
@@ -175,9 +183,8 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
     <sup>4</sup> University of Notre Dame &nbsp;&middot;&nbsp; <sup>5</sup> University of Chicago<br>
     <strong>*</strong> Corresponding author: <a href="mailto:xiuying.chen@mbzuai.ac.ae">xiuying.chen@mbzuai.ac.ae</a>
   </p>
-  <!-- Release checklist: set Paper to the arXiv abstract or official record after its public release. -->
   <nav class="btns" aria-label="Paper links">
-    <span class="btn pending" role="link" aria-disabled="true" title="Paper link forthcoming"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M6.8 2.8h7l3.4 3.4V21.2H6.8zM13.6 3v3.6h3.4M9 12h6M9 15h6M9 18h4.5"/></svg>Paper &middot; forthcoming</span>
+    <a class="btn" href="https://arxiv.org/abs/2609.12265"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M6.8 2.8h7l3.4 3.4V21.2H6.8zM13.6 3v3.6h3.4M9 12h6M9 15h6M9 18h4.5"/></svg>Paper</a>
     <a class="btn" href="https://github.com/xzx34/GTA"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.77-.24.77-.54v-2.1c-3.14.68-3.8-1.33-3.8-1.33-.5-1.3-1.24-1.64-1.24-1.64-1.02-.7.08-.69.08-.69 1.12.08 1.71 1.15 1.71 1.15 1 1.7 2.62 1.21 3.26.93.1-.72.39-1.21.71-1.49-2.5-.28-5.14-1.25-5.14-5.58 0-1.23.44-2.23 1.15-3.02-.12-.28-.5-1.42.11-2.97 0 0 .94-.3 3.08 1.15A10.7 10.7 0 0 1 12 6.12c.95 0 1.9.13 2.8.38 2.13-1.45 3.06-1.15 3.06-1.15.62 1.55.23 2.69.12 2.97.72.79 1.15 1.79 1.15 3.02 0 4.34-2.64 5.3-5.15 5.58.4.35.76 1.03.76 2.08v3.09c0 .3.2.65.78.54A11.2 11.2 0 0 0 12 .8z"/></svg>Code &amp; Data</a>
   </nav>
   <figure>
@@ -266,7 +273,7 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
 </section>
 <section id="resources" class="animate-on-scroll">
   <h2>Resources</h2>
-  <p>The paper link will be added when the arXiv record is available.</p>
+  <p><a href="https://arxiv.org/abs/2609.12265">arXiv:2609.12265</a> &mdash; preprint abstract page.</p>
   <p><a href="https://github.com/xzx34/GTA">Code &amp; Data</a> are available on GitHub.</p>
 </section>
 <section id="citation" class="animate-on-scroll">
@@ -279,8 +286,10 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
             Gao, Lang and Song, Zirui and Huang, Yue and
             Chen, Zhaorun and Zhang, Xiangliang and Chen, Xiuying},
   year = {2026},
-  note = {Preprint},
-  url = {https://xzx34.github.io/gta/}
+  eprint = {2609.12265},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.AI},
+  url = {https://arxiv.org/abs/2609.12265}
 }</code></pre>
   <p class="sr-only" id="copy-status" role="status" aria-live="polite"></p>
 </section>

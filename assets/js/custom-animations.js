@@ -17,7 +17,7 @@ $(document).ready(function(){
     $('.paper-box, .publication-item').addClass('animate-on-scroll');
 
     if (!scrollAnimationsEnabled) {
-      $('.animate-on-scroll, .page__content h1').addClass('animated');
+      $('.animate-on-scroll, .page__content .section-heading').addClass('animated');
       return;
     }
 
@@ -61,7 +61,7 @@ $(document).ready(function(){
       });
     }, { threshold: 0.3 });
 
-    $('.page__content h1').each(function() {
+    $('.page__content .section-heading').each(function() {
       headingObserver.observe(this);
     });
   }

@@ -1,6 +1,8 @@
 ---
 permalink: /
 title: ""
+seo_title: "Zixiang Xu | CS Ph.D. Student at USC"
+description: "Zixiang Xu is a Computer Science Ph.D. student at USC working on frontier model evaluation, post-training, and the role of AI in science and society."
 excerpt: ""
 author_profile: true
 redirect_from: 
@@ -17,6 +19,8 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
+<h1 class="visually-hidden">Zixiang Xu — Computer Science Ph.D. Student at USC</h1>
+
 <div class="bio-section" markdown="1">
 
 I am a Ph.D. student in [Computer Science](https://www.cs.usc.edu/) at the [University of Southern California](https://www.usc.edu/), advised by [Prof. Yue Zhao](https://viterbi-web.usc.edu/~yzhao010/) in the [FORTIS Lab](https://viterbi-web.usc.edu/~yzhao010/lab.html).
@@ -31,7 +35,8 @@ I am a Ph.D. student in [Computer Science](https://www.cs.usc.edu/) at the [Univ
 
 <span class="anchor legacy-anchor" id="-news"></span>
 
-# News
+## News
+{: .section-heading}
 <!-- Keep News focused on major career and academic-stage milestones; do not add routine paper acceptances. -->
 <div class="news-list">
   <div class="news-item animate-on-scroll">
@@ -49,14 +54,16 @@ I am a Ph.D. student in [Computer Science](https://www.cs.usc.edu/) at the [Univ
   <p class="quote-zh">每一个远大的理想都有个微不足道的开始。</p>
 </div>
 
-# Latest Preprints
+## Latest Preprints
+{: .section-heading}
 
 {% include publication-list.html selected_only=true group="preprints" %}
 
 <span class="anchor legacy-anchor" id="-publications"></span>
 <span class="anchor legacy-anchor" id="publications"></span>
 
-# Selected Work
+## Selected Work
+{: .section-heading}
 
 {% include publication-list.html selected_only=true group="published" %}
 
@@ -66,7 +73,8 @@ I am a Ph.D. student in [Computer Science](https://www.cs.usc.edu/) at the [Univ
 
 <span class="anchor legacy-anchor" id="-honors-and-awards"></span>
 
-# Honors and Awards
+## Honors and Awards
+{: .section-heading}
 
 <div class="compact-list honors-list">
   <div class="honor-item animate-on-scroll"><time>2026</time><div><strong>USC Annenberg Fellowship</strong><p>A competitive fellowship top-off awarded to selected Ph.D. students in the USC Viterbi School of Engineering.</p></div></div>
@@ -77,7 +85,8 @@ I am a Ph.D. student in [Computer Science](https://www.cs.usc.edu/) at the [Univ
 
 <span class="anchor legacy-anchor" id="-internships"></span>
 
-# Internships
+## Internships
+{: .section-heading}
 
 <div class="experience-list">
   <div class="experience-item animate-on-scroll"><time>Jun. 2026 – Aug. 2026</time><div><strong>WeChat AI</strong><span>Research Intern · Foundation Model Group</span></div></div>
@@ -91,7 +100,8 @@ I am a Ph.D. student in [Computer Science](https://www.cs.usc.edu/) at the [Univ
 <span class="anchor legacy-anchor" id="-service"></span>
 <span class="anchor legacy-anchor" id="service"></span>
 
-# Reviewing Service
+## Reviewing Service
+{: .section-heading}
 
 <div class="service-list">
   <div class="service-item animate-on-scroll"><strong>Conference Reviewer</strong><p>AAAI 2027; COLM 2026; ICLR 2026; NeurIPS 2026; NLPCC 2025.</p></div>
@@ -101,7 +111,8 @@ I am a Ph.D. student in [Computer Science](https://www.cs.usc.edu/) at the [Univ
 
 <span class="anchor legacy-anchor" id="-miscellaneous"></span>
 
-# Miscellaneous
+## Miscellaneous
+{: .section-heading}
 
 Beyond research and competitive programming, I am a passionate enthusiast of films, games, and visual novels. I am especially fond of the works of **Tanaka Romeo** (田中ロミオ), particularly **CROSS†CHANNEL** and **Rewrite**. As time passes, this list has grown shorter: what remains below are the works that have left the deepest and most vivid traces in my memory.
 

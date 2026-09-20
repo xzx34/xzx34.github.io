@@ -21,6 +21,12 @@ google_site_verification :  # get google_site_verification from https://search.g
 bing_site_verification   :  # get bing_site_verification from https://www.bing.com/webmasters/about
 baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.baidu.com/login/index?u=/site/index
 
+# Machine-readable academic identity. Keep these separate from the visible
+# sidebar so metadata updates do not change the approved contact-link order.
+academic_identity:
+  orcid                  : "https://orcid.org/0009-0008-6672-004X"
+  openalex               : "https://openalex.org/A5148855372"
+
 # Site Author
 author:
   name             : "Zixiang Xu（徐子翔）"

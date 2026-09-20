@@ -88,7 +88,7 @@
     - label: "Project Page"
       url: "/gta/"
     - label: "Paper"
-      url: null # Enable once a public arXiv or official publication record is available.
+      url: "https://arxiv.org/abs/2609.12265"
     - label: "Code & Data"
       url: "https://github.com/xzx34/GTA"
 

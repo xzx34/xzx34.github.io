@@ -176,6 +176,17 @@ SocialMaze 同时保留 **Findings of EMNLP 2026** 和 **SocialSim @ COLM 2025 �
 - 发布前做与改动相称的检查：页面/模板能正常生成，论文无遗漏重复，链接目标正确，窄屏布局、暗色和动画规则不被破坏。
 - 发布后确认 GitHub Pages 构建/部署成功，并核对真实线上页面和入口；未发布的改动不能宣称已上线。
 
+### 9.1 SEO、GEO 与学术实体元数据
+
+- 共享 SEO 模板使用页面级 `seo_title` 和 `description`，每页只生成一个 `<title>`、meta description、canonical、Open Graph 和 Twitter 元数据；不要在自定义 head 中重复生成同类标签。
+- 首页保持恰好一个仅供辅助技术读取的 H1；可见栏目标题使用 H2 和 `.section-heading`，但须保留原有字号、下划线动画、滚动偏移、旧锚点、暗色模式和窄屏表现。
+- 项目 landing page 的浏览器标题和搜索摘要可以为可检索性做精简；页面可见论文标题、`citation_title` 和 JSON-LD `name` 必须保留正式论文全名。
+- 机器可读的学术身份在 `_config.yml` 的 `academic_identity` 中维护。当前稳定标识为 ORCID `0009-0008-6672-004X` 和 OpenAlex `A5148855372`；它们不自动加入可见侧栏。
+- 首页 `ProfilePage → Person` 使用稳定 `https://xzx34.github.io/#person`，项目页中 Zixiang Xu 的作者实体引用相同 `@id` 并关联 ORCID。DBLP 与 Semantic Scholar 在独立作者页面稳定前不加入 `sameAs`。
+- Previous affiliations 的七个行内 logo 是装饰性图片，继续保留 `alt=""` 和 `aria-hidden="true"`。这是正确的无障碍实现；不要为了消除 Bing 的低级告警而重复朗读相邻机构名称。
+- 站点更新频率较低，当前不配置 IndexNow；使用 sitemap 和必要时的单页重新索引请求，不为低频更新增加持久密钥或部署工作流。
+- CV PDF 需保留 Title、Author、Subject 和 Keywords 文档元数据；修改后从源文件重建、渲染核对两页，并确保源输出与网站副本字节一致。
+
 ## 10. 主要维护位置
 
 | 内容 | 仓库位置 |
@@ -194,6 +205,15 @@ SocialMaze 同时保留 **Findings of EMNLP 2026** 和 **SocialSim @ COLM 2025 �
 | 当前仓库内的研究项目页 | `gta/`、`socialmaze/`、`cross-lingual-pitfalls/`、`unfair-judge/` |
 
 ## 11. 待同步事项与变更记录
+
+### 2026-09-20：Bing SEO/GEO、学术身份与 GTA arXiv
+
+- 首页和 Publications 页使用独立搜索标题与摘要；共享 SEO 模板已去除重复 OG/Twitter 标签并修复无效的嵌套 `<head>`。首页新增隐藏 H1，七个可见栏目标题改为语义化 H2，同时维持原视觉和动画选择器。
+- GTA、Inside the Unfair Judge、SocialMaze、Cross-Lingual Pitfalls 的浏览器标题、meta description、Open Graph 和 Twitter 文案已统一精简；正式论文标题和学术引用字段未改。
+- 首页 Person 实体已关联 FORTIS Lab、ORCID、OpenAlex 及已确认的公开学术/开发者档案，并将研究主题对齐当前方向；四个仓库内 landing page 的 Zixiang Xu 作者对象统一引用主页 `#person` 与 ORCID。
+- GTA 已核实上线 [arXiv:2609.12265](https://arxiv.org/abs/2609.12265)，主页数据、项目页按钮、Resources、BibTeX、Highwire 和 JSON-LD 同步切换到摘要页；资源顺序保持 **Project Page → Paper → Code & Data**，不新增 PDF 下载入口。
+- CV 源文件新增 PDF 文档元数据后重新构建；正文和两页版式保持不变，网站副本与源输出必须保持字节一致。
+- Bing 对七个装饰性机构 logo 的空 alt 告警按已知低优先级误报保留。此次不重新提交 sitemap、不配置 IndexNow，也不改动 AlgoWorlds 独立仓库。
 
 ### 2026-09-20：Google 索引复核与 AlgoWorlds Dataset 许可证
 
@@ -231,7 +251,7 @@ SocialMaze 同时保留 **Findings of EMNLP 2026** 和 **SocialSim @ COLM 2025 �
 - 已记录此前定稿的整体风格、研究介绍、经历、News、论文分组、按钮、侧栏及项目页要求。
 - 新确认：Paper 优先正式录用链接，其次 arXiv，否则占位；不提供论文 PDF 下载功能。
 - 用户确认开始实施后，已将主页、完整论文页与仓库内四个 landing page 的 Paper 入口迁移到新规则。
-- 当前 17 篇论文的 Paper 目标：10 个正式会议/出版社页面、6 个 arXiv 摘要页、1 个占位入口。此次改动不改变标题、作者、贡献标记、录用信息、论文排序或首页分组。
+- 当时 17 篇论文的 Paper 目标：10 个正式会议/出版社页面、6 个 arXiv 摘要页、1 个占位入口。GTA 后续上线 arXiv 后的当前状态见上方 2026-09-20 记录。此次改动不改变标题、作者、贡献标记、录用信息、论文排序或首页分组。
 - 本次新增的正式目标：
   - Cross-Lingual Pitfalls：[ACL Anthology](https://aclanthology.org/2025.acl-long.404/)。
   - Adaptive Distraction：[NeurIPS 2025 proceedings](https://proceedings.neurips.cc/paper_files/paper/2025/hash/f13d74c6666087aa6eea3d17820e6a23-Abstract-Conference.html)。
@@ -244,7 +264,7 @@ SocialMaze 同时保留 **Findings of EMNLP 2026** 和 **SocialSim @ COLM 2025 �
 - 仍需在以后资源发布时更新的项目：
   - **SocialMaze**：已核实 arXiv v2 标题与当前论文一致，并标注 Findings of EMNLP 2026 录用；尚未核实到正式 proceedings 记录，当前回退至 [arXiv 摘要页](https://arxiv.org/abs/2505.23713)。Findings 与 workshop Spotlight 均保留。
   - **Temporal-IRL**：本次未找到可核实的独立正式论文记录页，继续使用 [arXiv 摘要页](https://arxiv.org/abs/2506.19843)。不能将会议日程 PDF 当作 Paper 目标。
-  - **GTA**：尚无已确认的公开 arXiv 编号或正式记录，主页、完整论文页与项目页均使用非跳转 Paper 占位入口；上线后需同步三个位置。
+  - **GTA（当时状态）**：尚无已确认的公开 arXiv 编号或正式记录，主页、完整论文页与项目页均使用非跳转 Paper 占位入口；该待办已在 2026-09-20 随 arXiv:2609.12265 上线完成。
 - 已移除四个项目页的论文 PDF 按钮、正文直链、`citation_pdf_url` 及 GTA 的 PDF encoding 元数据；保留有效的摘要页、作者、引用等元数据。相同目的地的重复按钮已合并。
 - 已有 PDF 文件和 CV PDF 入口保持不动。独立 AlgoWorlds 仓库不迁移；其主页 Paper 已使用 arXiv 摘要页。
 - 验证与发布状态：已通过源码/共享模板检查与内容回归检查；GitHub Pages 对实现提交 `53dd09c` 的 [构建及部署](https://github.com/xzx34/xzx34.github.io/actions/runs/34435276547) 已成功。已核对线上主页 3+4 篇、完整论文页 17 篇、四个项目页的实际入口与源码一致，确认占位按钮的明暗样式已编译，维护文档/检查脚本未进入公开网站。本地缺少完整 Jekyll bundle，因此完整构建结果以该 GitHub Pages 流程为准。

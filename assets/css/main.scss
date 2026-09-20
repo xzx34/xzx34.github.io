@@ -112,7 +112,7 @@
 }
 
 $scroll_offset : 2em;
-h1:before, .anchor:before {
+h1:before, .section-heading:before, .anchor:before {
     content: '';
     display: block;
     position: relative;
@@ -567,7 +567,7 @@ body {
 }
 
 /* Section heading animations */
-.page__content h1 {
+.page__content .section-heading {
     position: relative;
     border-bottom: none;
 
@@ -583,11 +583,11 @@ body {
     }
 }
 
-:where(.scroll-animations) .page__content h1::after {
+:where(.scroll-animations) .page__content .section-heading::after {
     width: 0;
 }
 
-:where(.scroll-animations) .page__content h1.animated::after {
+:where(.scroll-animations) .page__content .section-heading.animated::after {
     width: 100%;
 }
 
@@ -607,7 +607,7 @@ body {
         transform: none;
     }
 
-    :where(.scroll-animations) .page__content h1::after {
+    :where(.scroll-animations) .page__content .section-heading::after {
         width: 100%;
     }
 }
@@ -880,7 +880,8 @@ body {
     .page__content {
         color: #c9d1d9;
 
-        h1 {
+        h1,
+        .section-heading {
             color: #c9d1d9;
             border-bottom-color: #30363d;
 

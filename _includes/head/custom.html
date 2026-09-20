@@ -26,31 +26,51 @@
   })();
 </script>
 
-<!-- Social card + structured data -->
-<meta property="og:image" content="{{ '/images/zp.jpg' | absolute_url }}">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="{{ site.title }}">
-<meta name="twitter:description" content="{{ site.description }}">
-<meta name="twitter:image" content="{{ '/images/zp.jpg' | absolute_url }}">
-{% if site.author.twitter %}<meta name="twitter:creator" content="@{{ site.author.twitter }}">{% endif %}
-
+<!-- Academic identity structured data (homepage only) -->
+{% if page.url == '/' %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
   "mainEntity": {
+    "@id": "https://xzx34.github.io/#person",
     "@type": "Person",
     "name": "Zixiang Xu",
     "alternateName": "徐子翔",
     "url": "https://xzx34.github.io/",
     "image": "https://xzx34.github.io/images/zp.jpg",
     "jobTitle": "Computer Science PhD Student",
+    "description": "Zixiang Xu is a Computer Science Ph.D. student at USC working on frontier model evaluation, post-training, and the role of AI in science and society.",
     "email": "mailto:zixiangx@usc.edu",
-    "affiliation": { "@type": "CollegeOrUniversity", "name": "University of Southern California" },
-    "knowsAbout": ["Agent Systems", "Trustworthy AI", "Large Language Models", "AI for Science and Society"],
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Southern California",
+      "url": "https://www.usc.edu/"
+    },
+    "memberOf": {
+      "@type": "ResearchOrganization",
+      "name": "FORTIS Lab",
+      "url": "https://viterbi-web.usc.edu/~yzhao010/lab.html"
+    },
+    "identifier": [
+      {"@type": "PropertyValue", "propertyID": "ORCID", "value": "0009-0008-6672-004X"},
+      {"@type": "PropertyValue", "propertyID": "OpenAlex", "value": "A5148855372"}
+    ],
+    "knowsAbout": [
+      "Frontier Model Evaluation",
+      "LLM Evaluation and Post-Training",
+      "Interactive AI Environments",
+      "AI for Scientific Discovery",
+      "Human-AI Collaboration",
+      "AI and Society"
+    ],
     "sameAs": [
+      "{{ site.academic_identity.orcid }}",
+      "{{ site.academic_identity.openalex }}",
       "https://scholar.google.com/citations?user=lPLP6H8AAAAJ",
+      "{{ site.author.openreview }}",
       "https://github.com/xzx34",
+      "{{ site.author.huggingface }}",
       "https://www.linkedin.com/in/zixiangx34/",
       "https://x.com/xzx_34",
       "https://aclanthology.org/people/zixiang-xu/"
@@ -58,5 +78,6 @@
   }
 }
 </script>
+{% endif %}
 
 <!-- end custom head snippets -->

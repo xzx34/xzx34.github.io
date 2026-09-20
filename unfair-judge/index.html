@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>(function(){var t=localStorage.getItem('theme');if(t!=='light'){document.documentElement.setAttribute('data-theme','dark');}})();</script>
-<title>Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias | Activation Geometry of Judge Bias</title>
-<meta name="description" content="Inside the Unfair Judge gives a representation-level, mechanistic-interpretability account of LLM-as-judge scoring bias: a low-dimensional, type-specific activation subspace that sharpens with depth, supports bidirectional causal control (attack and defense) via activation steering, and predicts judge failure on unseen benchmarks (AUC 0.82). Seven judges, seven bias types, nine benchmarks.">
+<title>Inside the Unfair Judge: How LLM-as-Judge Bias Works</title>
+<meta name="description" content="Inside the Unfair Judge identifies low-dimensional bias directions in LLM judges, enabling causal steering and predicting failures on unseen benchmarks.">
 <meta name="robots" content="index,follow">
 <meta name="author" content="Zixiang Xu, Sixian Li, Huaxing Liu, Xiang Wang, Shuai Li, Zirui Song, Xiuying Chen">
 <meta name="keywords" content="LLM-as-judge bias, LLM-as-a-judge, mechanistic interpretability, representation engineering, activation steering, scoring bias, judge bias, reward model, RLHF, verbosity bias, bandwagon bias, authority bias, self-preference, activation geometry, concept directions, inference-time intervention, bias direction, judge failure prediction">
@@ -29,8 +29,8 @@
 
 <!-- Open Graph -->
 <meta property="og:type" content="article">
-<meta property="og:title" content="Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias">
-<meta property="og:description" content="Reading LLM-as-judge bias as activation geometry: a low-dimensional, type-specific subspace that supports bidirectional causal control (attack and defense) and cross-domain prediction of judge failure. Seven judges, seven bias types, nine benchmarks.">
+<meta property="og:title" content="Inside the Unfair Judge: How LLM-as-Judge Bias Works">
+<meta property="og:description" content="Inside the Unfair Judge identifies low-dimensional bias directions in LLM judges, enabling causal steering and predicting failures on unseen benchmarks.">
 <meta property="og:url" content="https://xzx34.github.io/unfair-judge/">
 <meta property="og:image" content="https://xzx34.github.io/images/unfair-judge-hero.png">
 <meta property="og:site_name" content="Inside the Unfair Judge">
@@ -38,8 +38,8 @@
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias">
-<meta name="twitter:description" content="Reading LLM-as-judge bias as activation geometry: a low-dimensional, type-specific subspace that supports bidirectional causal control (attack and defense) and cross-domain prediction of judge failure.">
+<meta name="twitter:title" content="Inside the Unfair Judge: How LLM-as-Judge Bias Works">
+<meta name="twitter:description" content="Inside the Unfair Judge identifies low-dimensional bias directions in LLM judges, enabling causal steering and predicting failures on unseen benchmarks.">
 <meta name="twitter:image" content="https://xzx34.github.io/images/unfair-judge-hero.png">
 
 <script type="application/ld+json">
@@ -56,7 +56,7 @@
   "description": "A representation-level, mechanistic-interpretability account of LLM-as-judge scoring bias. Bias occupies a low-dimensional, type-specific subspace in the judge's hidden state that sharpens with depth; steering along this subspace gives bidirectional causal control (reproducing bias on clean inputs and restoring fair scores on biased ones); and a linear projection onto the same features predicts judge failure on unseen benchmarks.",
   "abstract": "Existing studies of LLM-as-judge scoring bias work predominantly at the input-output level: they perturb inputs, measure score deltas, and propose prompt-level mitigations. We argue that the same biases admit a representation-level account in the judge's hidden state, complementary to the input-output view and operationally useful in ways it does not afford. We report three findings, across seven judges, seven bias types, and nine benchmarks. Geometry: baseline judging inputs occupy a tight activation manifold while biased inputs are displaced along a low-dimensional, type-specific subspace that sharpens with depth and is recovered consistently by three families of estimators. Causal control: steering hidden states along this subspace drives scoring in both directions, forward shifts reproducing biased scoring on clean inputs and reverse shifts restoring baseline scoring on biased ones, while matched-norm random directions produce shifts an order of magnitude smaller. Operational: a simple linear projection onto the same bias-direction features anticipates judge failures on three entirely unseen benchmarks, substantially outperforming text-based alternatives. Reading bias as activation geometry, rather than as input-output noise, unifies geometric structure, causal control, and operational prediction within a single framework.",
   "author": [
-    {"@type": "Person", "name": "Zixiang Xu", "affiliation": [{"@type": "Organization", "name": "AMAP, Alibaba Group"}, {"@type": "Organization", "name": "MBZUAI"}, {"@type": "Organization", "name": "University of Southern California"}]},
+    {"@id": "https://xzx34.github.io/#person", "@type": "Person", "name": "Zixiang Xu", "url": "https://xzx34.github.io/", "sameAs": "https://orcid.org/0009-0008-6672-004X", "affiliation": [{"@type": "Organization", "name": "AMAP, Alibaba Group"}, {"@type": "Organization", "name": "MBZUAI"}, {"@type": "Organization", "name": "University of Southern California"}]},
     {"@type": "Person", "name": "Sixian Li", "affiliation": {"@type": "Organization", "name": "University of Michigan, Ann Arbor"}},
     {"@type": "Person", "name": "Huaxing Liu", "affiliation": {"@type": "Organization", "name": "AMAP, Alibaba Group"}},
     {"@type": "Person", "name": "Xiang Wang", "affiliation": {"@type": "Organization", "name": "AMAP, Alibaba Group"}},
