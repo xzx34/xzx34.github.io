@@ -187,6 +187,9 @@ SocialMaze 同时保留 **Findings of EMNLP 2026** 和 **SocialSim @ COLM 2025 �
 - Inside the Unfair Judge 的正式标题、可见 H1、`citation_title`、JSON-LD `name/headline` 与 BibTeX 必须保持一致；搜索标题单独使用 `Inside the Unfair Judge: Understanding LLM-as-a-Judge Bias`。正式摘要逐字保持 arXiv 版本，不为了搜索召回改写。
 - Inside the Unfair Judge 的搜索定位以宽泛的 `LLM-as-a-Judge bias` 父级问题为入口，并明确连接 behavioral bias、representation-level analysis、causal control、instance-level failure prediction 与 AI-feedback reliability。必须同时说明论文只实验七类受控 pointwise-scoring bias；position bias、pairwise ordering、self-preference、跨模型方向迁移、多 bias 组合和端到端 reward hacking 不是论文已经验证的结论。
 - Inside the Unfair Judge 不公开代码或数据。主页和 landing page 只保留 Project Page/Paper 范围内的现有入口，不新增 GitHub、Code、Code & Data、Hugging Face、PDF 下载或“即将开源”说明，也不修改现有 GitHub 仓库。
+- Cross-Lingual Pitfalls 的正式论文标题、可见 H1、`citation_title`、JSON-LD `name/headline`、BibTeX 和 ACL Anthology 记录保持一致；搜索标题单独使用 `Cross-Lingual Pitfalls: Discovering Multilingual LLM Failures`，正式 Abstract 不为 SEO 改写。Paper 的权威入口是 ACL Anthology，arXiv 为补充入口。
+- Cross-Lingual Pitfalls 的搜索定位是 search-based multilingual LLM evaluation / active cross-lingual failure discovery：主动寻找英文正确、目标语言错误的双语问题，连接 fixed multilingual benchmarks 与 cross-lingual consistency 文献。必须区分可重新运行的生成方法与固定发布的 6,713 对、16 目标语言数据集；在所选失败样本上的准确率降幅不得写成语言总体或用户总体的平均表现。
+- Cross-Lingual Pitfalls 的 GitHub README、About/topics 与 Hugging Face 数据卡须保持上述定位一致。Post-training 仅陈述论文实际测试的中文/法文数据、四个模型与所测迁移；不得将论文说成文化知识、code-switching、翻译质量、安全或 agent/tool-use benchmark。不得改动论文、arXiv、正式引用或数据文件来扩大搜索召回。
 - 机器可读的学术身份在 `_config.yml` 的 `academic_identity` 中维护。当前稳定标识为 ORCID `0009-0008-6672-004X` 和 OpenAlex `A5148855372`；它们不自动加入可见侧栏。
 - 首页 `ProfilePage → Person` 使用稳定 `https://xzx34.github.io/#person`，项目页中 Zixiang Xu 的作者实体引用相同 `@id` 并关联 ORCID。DBLP 与 Semantic Scholar 在独立作者页面稳定前不加入 `sameAs`。
 - Previous affiliations 的七个行内 logo 是装饰性图片，继续保留 `alt=""` 和 `aria-hidden="true"`。这是正确的无障碍实现；不要为了消除 Bing 的低级告警而重复朗读相邻机构名称。
@@ -211,6 +214,12 @@ SocialMaze 同时保留 **Findings of EMNLP 2026** 和 **SocialSim @ COLM 2025 �
 | 当前仓库内的研究项目页 | `gta/`、`socialmaze/`、`cross-lingual-pitfalls/`、`unfair-judge/` |
 
 ## 11. 待同步事项与变更记录
+
+### 2026-09-21：Cross-Lingual Pitfalls 搜索召回定位
+
+- 根据真实 AI 多语言评测检索轨迹，将此前缺失的 `Static Benchmark → Cross-Lingual Consistency → Active Failure Discovery` 分类桥梁放到页面、GitHub 与 Hugging Face 的前部。核心不是再发布一个静态翻译 benchmark，而是用搜索方法发现固定测试集平均分可能掩盖的条件性跨语言失败。
+- Landing page 的搜索标题、摘要、Overview、方法、FAQ、引用场景及 JSON-LD 采用这个定位；正式论文标题、摘要、作者、ACL BibTeX、主页论文条目与原有视觉风格不变。GitHub 和 Hugging Face 的内容同步说明实验边界和固定数据集属性。
+- 发布后仅对 `/cross-lingual-pitfalls/` 分别在 Google 和 Bing 请求一次重新索引；不重新提交 sitemap，不配置 IndexNow。搜索引擎重新处理和排名变化有延迟，不以发布当天 Top K 为验收标准。
 
 ### 2026-09-20：Inside the Unfair Judge 搜索召回定位
 
