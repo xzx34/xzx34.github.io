@@ -184,6 +184,9 @@ SocialMaze 同时保留 **Findings of EMNLP 2026** 和 **SocialSim @ COLM 2025 �
 - SocialMaze 的正式论文标题、可见 H1、`citation_title`、JSON-LD `name`、BibTeX 与 CFF 必须保持一致；搜索标题使用 `SocialMaze: LLM Social Reasoning Benchmark | EMNLP 2026`。正式摘要逐字保持论文版本，不为了搜索召回改写。
 - SocialMaze 对外页面统一使用核心定位：`SocialMaze is a six-task benchmark for evaluating LLM social reasoning across dynamic multi-turn interaction, deep inference, deception, and information uncertainty.` 它可以通过 Theory of Mind、social intelligence 和 social-agent benchmark 建立分类联系，但必须明确：SocialMaze 比狭义 ToM 更宽，且以可验证的社会推理正确性为重点，不得将其宣传为完整的 autonomous multi-agent benchmark。
 - SocialMaze 的 GitHub 与 Hugging Face 搜索文案必须同时满足可检索性和公开范围准确性：论文研究六项任务与 70,000 个实例；持续维护并完整发布的是 corrected expanded HRD-only 数据 200,000 条。不得为了扩大召回混淆这两个范围。
+- Inside the Unfair Judge 的正式标题、可见 H1、`citation_title`、JSON-LD `name/headline` 与 BibTeX 必须保持一致；搜索标题单独使用 `Inside the Unfair Judge: Understanding LLM-as-a-Judge Bias`。正式摘要逐字保持 arXiv 版本，不为了搜索召回改写。
+- Inside the Unfair Judge 的搜索定位以宽泛的 `LLM-as-a-Judge bias` 父级问题为入口，并明确连接 behavioral bias、representation-level analysis、causal control、instance-level failure prediction 与 AI-feedback reliability。必须同时说明论文只实验七类受控 pointwise-scoring bias；position bias、pairwise ordering、self-preference、跨模型方向迁移、多 bias 组合和端到端 reward hacking 不是论文已经验证的结论。
+- Inside the Unfair Judge 不公开代码或数据。主页和 landing page 只保留 Project Page/Paper 范围内的现有入口，不新增 GitHub、Code、Code & Data、Hugging Face、PDF 下载或“即将开源”说明，也不修改现有 GitHub 仓库。
 - 机器可读的学术身份在 `_config.yml` 的 `academic_identity` 中维护。当前稳定标识为 ORCID `0009-0008-6672-004X` 和 OpenAlex `A5148855372`；它们不自动加入可见侧栏。
 - 首页 `ProfilePage → Person` 使用稳定 `https://xzx34.github.io/#person`，项目页中 Zixiang Xu 的作者实体引用相同 `@id` 并关联 ORCID。DBLP 与 Semantic Scholar 在独立作者页面稳定前不加入 `sameAs`。
 - Previous affiliations 的七个行内 logo 是装饰性图片，继续保留 `alt=""` 和 `aria-hidden="true"`。这是正确的无障碍实现；不要为了消除 Bing 的低级告警而重复朗读相邻机构名称。
@@ -208,6 +211,12 @@ SocialMaze 同时保留 **Findings of EMNLP 2026** 和 **SocialSim @ COLM 2025 �
 | 当前仓库内的研究项目页 | `gta/`、`socialmaze/`、`cross-lingual-pitfalls/`、`unfair-judge/` |
 
 ## 11. 待同步事项与变更记录
+
+### 2026-09-20：Inside the Unfair Judge 搜索召回定位
+
+- 基于一次真实的 LLM-as-a-Judge bias 文献检索失败，确认主要问题是论文没有被稳定归入通用 behavioral judge-bias 文献图景，而不是缺少精确标题检索结果。搜索内容需要明确给出 `Behavioral Bias → Representational Signature → Causal Intervention → Failure Prediction` 的分类桥梁。
+- Landing page 使用宽泛父级搜索标题 `Inside the Unfair Judge: Understanding LLM-as-a-Judge Bias`；具体方法和贡献由 description、正式 H1、Overview、文献定位、post-training 关联、scope、FAQ、When to Cite 与结构化数据承载。正式标题、摘要、作者、BibTeX、论文 PDF 和 arXiv 均保持不变。
+- GitHub、Hugging Face、代码和数据发布不在本轮范围内；不得为了建立搜索表面新增相关按钮、链接或开源承诺。
 
 ### 2026-09-20：SocialMaze 搜索召回定位
 

@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>(function(){var t=localStorage.getItem('theme');if(t!=='light'){document.documentElement.setAttribute('data-theme','dark');}})();</script>
-<title>Inside the Unfair Judge: How LLM-as-Judge Bias Works</title>
-<meta name="description" content="Inside the Unfair Judge identifies low-dimensional bias directions in LLM judges, enabling causal steering and predicting failures on unseen benchmarks.">
+<title>Inside the Unfair Judge: Understanding LLM-as-a-Judge Bias</title>
+<meta name="description" content="Inside the Unfair Judge explains how LLM-as-a-judge bias is represented inside model evaluators, how it influences scoring, and how internal representations can support bias control and failure detection.">
 <meta name="robots" content="index,follow">
 <meta name="author" content="Zixiang Xu, Sixian Li, Huaxing Liu, Xiang Wang, Shuai Li, Zirui Song, Xiuying Chen">
-<meta name="keywords" content="LLM-as-judge bias, LLM-as-a-judge, mechanistic interpretability, representation engineering, activation steering, scoring bias, judge bias, reward model, RLHF, verbosity bias, bandwagon bias, authority bias, self-preference, activation geometry, concept directions, inference-time intervention, bias direction, judge failure prediction">
+<meta name="keywords" content="LLM-as-a-judge bias, LLM-as-judge bias, LLM evaluation, evaluator reliability, scoring bias, behavioral bias, mechanistic interpretability, hidden-state geometry, representation engineering, counterfactual evaluation, causal control, failure prediction, AI feedback, RLAIF, post-training, verbosity bias, bandwagon bias, authority bias">
 
 <link rel="canonical" href="https://xzx34.github.io/unfair-judge/">
 
@@ -24,13 +24,14 @@
 <meta name="citation_publication_date" content="2026/07/13">
 <meta name="citation_public_url" content="https://xzx34.github.io/unfair-judge/">
 <meta name="citation_arxiv_id" content="2607.11871">
+<meta name="citation_doi" content="10.48550/arXiv.2607.11871">
 <meta name="citation_abstract_html_url" content="https://arxiv.org/abs/2607.11871">
 <meta name="citation_image" content="https://xzx34.github.io/images/unfair-judge-hero.png">
 
 <!-- Open Graph -->
 <meta property="og:type" content="article">
-<meta property="og:title" content="Inside the Unfair Judge: How LLM-as-Judge Bias Works">
-<meta property="og:description" content="Inside the Unfair Judge identifies low-dimensional bias directions in LLM judges, enabling causal steering and predicting failures on unseen benchmarks.">
+<meta property="og:title" content="Inside the Unfair Judge: Understanding LLM-as-a-Judge Bias">
+<meta property="og:description" content="Inside the Unfair Judge explains how LLM-as-a-judge bias is represented inside model evaluators, how it influences scoring, and how internal representations can support bias control and failure detection.">
 <meta property="og:url" content="https://xzx34.github.io/unfair-judge/">
 <meta property="og:image" content="https://xzx34.github.io/images/unfair-judge-hero.png">
 <meta property="og:site_name" content="Inside the Unfair Judge">
@@ -38,22 +39,22 @@
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Inside the Unfair Judge: How LLM-as-Judge Bias Works">
-<meta name="twitter:description" content="Inside the Unfair Judge identifies low-dimensional bias directions in LLM judges, enabling causal steering and predicting failures on unseen benchmarks.">
+<meta name="twitter:title" content="Inside the Unfair Judge: Understanding LLM-as-a-Judge Bias">
+<meta name="twitter:description" content="Inside the Unfair Judge explains how LLM-as-a-judge bias is represented inside model evaluators, how it influences scoring, and how internal representations can support bias control and failure detection.">
 <meta name="twitter:image" content="https://xzx34.github.io/images/unfair-judge-hero.png">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ScholarlyArticle",
-  "headline": "A Mechanistic Interpretability Account of LLM-as-Judge Bias",
+  "headline": "Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias",
   "name": "Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias",
   "url": "https://xzx34.github.io/unfair-judge/",
   "image": "https://xzx34.github.io/images/unfair-judge-hero.png",
   "datePublished": "2026-07-13",
   "inLanguage": "en",
   "creativeWorkStatus": "Preprint (under review)",
-  "description": "A representation-level, mechanistic-interpretability account of LLM-as-judge scoring bias. Bias occupies a low-dimensional, type-specific subspace in the judge's hidden state that sharpens with depth; steering along this subspace gives bidirectional causal control (reproducing bias on clean inputs and restoring fair scores on biased ones); and a linear projection onto the same features predicts judge failure on unseen benchmarks.",
+  "description": "Inside the Unfair Judge explains how LLM-as-a-judge bias is represented inside model evaluators, how it influences scoring, and how internal representations can support bias control and failure detection.",
   "abstract": "Existing studies of LLM-as-judge scoring bias work predominantly at the input-output level: they perturb inputs, measure score deltas, and propose prompt-level mitigations. We argue that the same biases admit a representation-level account in the judge's hidden state, complementary to the input-output view and operationally useful in ways it does not afford. We report three findings, across seven judges, seven bias types, and nine benchmarks. Geometry: baseline judging inputs occupy a tight activation manifold while biased inputs are displaced along a low-dimensional, type-specific subspace that sharpens with depth and is recovered consistently by three families of estimators. Causal control: steering hidden states along this subspace drives scoring in both directions, forward shifts reproducing biased scoring on clean inputs and reverse shifts restoring baseline scoring on biased ones, while matched-norm random directions produce shifts an order of magnitude smaller. Operational: a simple linear projection onto the same bias-direction features anticipates judge failures on three entirely unseen benchmarks, substantially outperforming text-based alternatives. Reading bias as activation geometry, rather than as input-output noise, unifies geometric structure, causal control, and operational prediction within a single framework.",
   "author": [
     {"@id": "https://xzx34.github.io/#person", "@type": "Person", "name": "Zixiang Xu", "url": "https://xzx34.github.io/", "sameAs": "https://orcid.org/0009-0008-6672-004X", "affiliation": [{"@type": "Organization", "name": "AMAP, Alibaba Group"}, {"@type": "Organization", "name": "MBZUAI"}, {"@type": "Organization", "name": "University of Southern California"}]},
@@ -64,9 +65,26 @@
     {"@type": "Person", "name": "Zirui Song", "affiliation": [{"@type": "Organization", "name": "AMAP, Alibaba Group"}, {"@type": "Organization", "name": "MBZUAI"}]},
     {"@type": "Person", "name": "Xiuying Chen", "affiliation": {"@type": "Organization", "name": "MBZUAI"}}
   ],
-  "identifier": {"@type": "PropertyValue", "propertyID": "arXiv", "value": "2607.11871"},
+  "identifier": [
+    {"@type": "PropertyValue", "propertyID": "arXiv", "value": "2607.11871", "url": "https://arxiv.org/abs/2607.11871"},
+    {"@type": "PropertyValue", "propertyID": "DOI", "value": "10.48550/arXiv.2607.11871", "url": "https://doi.org/10.48550/arXiv.2607.11871"}
+  ],
   "sameAs": "https://arxiv.org/abs/2607.11871",
-  "keywords": "LLM-as-judge bias, mechanistic interpretability, representation engineering, activation steering, scoring bias, reward model, RLHF, verbosity bias, bandwagon bias, authority bias, self-preference, activation geometry, concept directions, inference-time intervention, judge failure prediction",
+  "about": [
+    {"@type": "Thing", "name": "LLM-as-a-Judge"},
+    {"@type": "Thing", "name": "LLM Evaluation"},
+    {"@type": "Thing", "name": "Scoring Bias"},
+    {"@type": "Thing", "name": "Mechanistic Interpretability"},
+    {"@type": "Thing", "name": "Hidden-State Geometry"},
+    {"@type": "Thing", "name": "Representation Engineering"},
+    {"@type": "Thing", "name": "Counterfactual Evaluation"},
+    {"@type": "Thing", "name": "Evaluator Reliability"},
+    {"@type": "Thing", "name": "Failure Prediction"},
+    {"@type": "Thing", "name": "AI Feedback"},
+    {"@type": "Thing", "name": "RLAIF"},
+    {"@type": "Thing", "name": "Post-Training"}
+  ],
+  "keywords": "LLM-as-a-judge bias, LLM-as-judge bias, LLM evaluation, evaluator reliability, scoring bias, behavioral bias, mechanistic interpretability, hidden-state geometry, representation engineering, counterfactual evaluation, causal control, failure prediction, AI feedback, RLAIF, post-training, verbosity bias, bandwagon bias, authority bias",
   "mainEntityOfPage": "https://xzx34.github.io/unfair-judge/"
 }
 </script>
@@ -78,33 +96,53 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is \"Inside the Unfair Judge\" about?",
-      "acceptedAnswer": {"@type": "Answer", "text": "It is a mechanistic-interpretability study of LLM-as-judge scoring bias. Instead of treating the judge as a black box and only measuring how its scores move when inputs are perturbed, it opens the model and locates bias in the judge's hidden state. It reports three findings across seven judges, seven bias types, and nine benchmarks: bias occupies a low-dimensional, type-specific activation subspace that sharpens with depth (geometry); steering along that subspace controls scoring in both directions (causal control); and a linear projection onto the same features predicts judge failure on unseen benchmarks (operational prediction)."}
+      "name": "What is LLM-as-a-judge bias?",
+      "acceptedAnswer": {"@type": "Answer", "text": "LLM-as-a-judge bias is a systematic change in an evaluator's score caused by information that should not change answer quality. Inside the Unfair Judge studies this problem across seven judges, seven controlled bias types, and nine benchmarks, then asks how those behavioral effects are represented inside the evaluator."}
     },
     {
       "@type": "Question",
-      "name": "How is this different from prior LLM-as-judge bias work?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Most prior work operates at the input-output interface: it perturbs inputs, measures score deltas, and mitigates with prompt engineering, calibration, or judge ensembles. That view describes bias by what comes out of the model. This paper gives a representation-level account of what happens inside the judge when it issues an unfair score, contributing a geometric characterization of typed bias subspaces, bidirectional causal control (attack and defense, not mitigation alone), and a cross-domain predictor of judge failure."}
+      "name": "Which judge biases does this paper study?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Prestige (source attribution), Verbosity (length), Bandwagon (social consensus), Authority (academic credibility), Sentiment (emotional tone), Refinement (claims about revision), and Diversity (the author's stated social identity). Each positive and negative transformation is designed to preserve the answer's factual content and logical structure, so score changes can be attributed to the cue rather than answer quality."}
     },
     {
       "@type": "Question",
-      "name": "What are the seven bias types?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Prestige (source attribution), Verbosity (length), Bandwagon (social consensus), Authority (academic credibility), Sentiment (emotional tone), Refinement (metacognitive claims about revision), and Diversity (stated social identity of the author). For each type, controlled positive and negative surface transformations are applied to the same answer while preserving its factual content and logical structure, so any score change reflects surface framing rather than answer quality."}
+      "name": "How does this differ from behavioral audits of judge bias?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Behavioral audits perturb inputs and measure score changes at the output. This paper retains that controlled behavioral measurement but adds a representation-level account: it identifies low-dimensional, type-specific directions in hidden states, tests their causal relevance through intervention, and uses related features for cross-domain failure prediction."}
     },
     {
       "@type": "Question",
-      "name": "What does \"bidirectional causal control\" mean?",
-      "acceptedAnswer": {"@type": "Answer", "text": "The recovered bias subspace is not just a passive correlate of biased scoring; it is an interventional handle. Adding the bias direction to a judge's hidden state reproduces biased scoring on clean inputs (attack), and subtracting it restores baseline scoring on biased inputs (defense). A matched-norm random direction produces a shift an order of magnitude smaller, and a bias-type-swap control sits between random and within-type, ruling out generic-perturbation and readout-direction explanations."}
+      "name": "How does this relate to position bias and self-preference?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Position bias, pairwise ordering effects, and self-preference are important parts of broader LLM-as-a-Judge bias research, but they are not evaluated in this paper. The experiments focus on seven controlled biases in pointwise scoring and do not claim coverage of every known evaluator bias."}
     },
     {
       "@type": "Question",
-      "name": "Can it predict when a judge will be unfair?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Yes. A simple linear projection onto the bias-direction features reaches AUC 0.82 on three entirely unseen benchmarks (0.85 in-domain), versus about 0.63 for a zero-shot text-LLM baseline. A more expressive gradient-boosted model wins in-domain but transfers worse, indicating that the low-dimensional bias geometry is the part that generalizes across domains."}
+      "name": "What does mechanistic interpretability reveal about an LLM judge?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Baseline judging inputs occupy a tight activation manifold, while biased inputs are displaced along low-dimensional, type-specific directions that sharpen with depth and are recovered by multiple estimator families. The result is a representation-level account of scoring bias, not a claim that a complete neural circuit has been identified."}
+    },
+    {
+      "@type": "Question",
+      "name": "Can the method causally control biased scoring?",
+      "acceptedAnswer": {"@type": "Answer", "text": "The recovered bias directions are interventional handles in the studied settings. Adding a direction can reproduce biased scoring on clean inputs, while subtracting it can move biased inputs back toward baseline scores. Matched-norm random and bias-type-swap controls show that the effect is not explained by arbitrary hidden-state perturbation."}
+    },
+    {
+      "@type": "Question",
+      "name": "Can hidden states predict individual evaluator failures?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Within the paper's setting, yes. A simple linear projection onto the bias-direction features reaches AUC 0.82 on three held-out benchmarks (0.85 in-domain), compared with about 0.63 for a zero-shot text-LLM baseline. This is instance-level prediction within the studied judges and biases, not a universal guarantee."}
+    },
+    {
+      "@type": "Question",
+      "name": "Why is judge bias relevant to AI feedback and post-training?",
+      "acceptedAnswer": {"@type": "Answer", "text": "LLM judges increasingly produce preference labels, reward signals, and automated feedback for RLAIF, rejection sampling, and other post-training pipelines. Bias in those evaluators can therefore affect both reported evaluation results and the supervision used to improve future models. This paper studies the reliability of the evaluator that generates such signals; it does not train a new reward model."}
+    },
+    {
+      "@type": "Question",
+      "name": "Does the paper directly study reward hacking?",
+      "acceptedAnswer": {"@type": "Answer", "text": "No. The paper does not run end-to-end policy optimization or show a model learning to exploit a judge. Reward hacking is a downstream motivation and open research direction, while the paper's demonstrated contributions are controlled bias measurement, representation-level analysis, causal intervention, and failure prediction."}
     },
     {
       "@type": "Question",
       "name": "When should I cite this paper?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Cite it when your work involves LLM-as-judge or LLM-as-evaluator bias, mechanistic interpretability or representation engineering of model behaviors, activation steering and inference-time intervention, evaluation reliability in reward modeling and RLHF, predicting or detecting evaluator failure, or fairness and social-identity bias in automated evaluation. See the When to Cite This Paper section for a ready-to-use citation sentence."}
+      "acceptedAnswer": {"@type": "Answer", "text": "Cite it in work on LLM-as-a-Judge or LLM evaluator bias, behavioral versus representation-level accounts of scoring bias, counterfactual or quality-preserving evaluation, mechanistic interpretability of evaluators, causal control of judge behavior, instance-level failure detection, and reliability of AI feedback used in post-training. See the When to Cite This Paper section for a ready-to-use citation sentence."}
     }
   ]
 }
@@ -261,7 +299,7 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
 
 <header>
   <h1>Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias</h1>
-  <p class="subtitle">A representation-level account of LLM-as-judge scoring bias &mdash; reading it as activation geometry that supports bidirectional causal control (attack and defense) and cross-domain prediction of judge failure. Seven judges &middot; seven bias types &middot; nine benchmarks.</p>
+  <p class="subtitle">Understanding LLM-as-a-judge scoring bias through its behavioral effects, internal representations, causal influence, and cross-domain failure prediction. Seven judges &middot; seven bias types &middot; nine benchmarks.</p>
 
   <span class="venue">Preprint &middot; arXiv:2607.11871</span>
 
@@ -295,9 +333,9 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
 </header>
 
 <section id="overview" class="animate-on-scroll">
-  <h2>Overview (TL;DR)</h2>
-  <p class="lead">Large language models are now routinely used as automatic judges &mdash; they rate answers, compare candidates, and supply reward signals for alignment and preference learning. But judges shift their scores in response to <strong>surface cues that have nothing to do with answer quality</strong>: who supposedly wrote the answer, how long it is, whether a crowd approves, and so on. Because judges sit inside RLHF and evaluation pipelines, these biases quietly propagate into the models they are meant to audit.</p>
-  <p>Prior work studies this at the <strong>input&ndash;output level</strong>: perturb the input, measure the score change, patch with prompt engineering. <strong>Inside the Unfair Judge</strong> asks the next question &mdash; when a judge issues an unfair score, what is happening <em>inside</em> the model? &mdash; and answers it with a <strong>representation-level account</strong> that holds across seven judges, seven bias types, and nine benchmarks. The three findings all follow from a single object in the judge's hidden state:</p>
+  <h2>Overview: Understanding LLM-as-a-Judge Bias</h2>
+  <p class="lead"><strong>Inside the Unfair Judge</strong> is a mechanistic interpretability study of LLM-as-a-judge bias. It moves beyond behavioral measurements of score changes by identifying how scoring biases are represented in judge hidden states, testing their causal role through bidirectional intervention, and using the same internal features to predict evaluator failures on unseen benchmarks. Across seven judges, seven bias types, and nine benchmarks, the paper connects behavioral bias, internal representation, causal control, and operational diagnosis.</p>
+  <p>Large language models are now routinely used as automatic judges &mdash; they rate answers, compare candidates, and supply reward signals for alignment and preference learning. Yet their scores can shift in response to <strong>surface cues that have nothing to do with answer quality</strong>: who supposedly wrote an answer, how long it is, whether a crowd approves, and so on. The paper asks what happens <em>inside</em> an evaluator when such a cue changes its judgment. Its three central findings follow from a common object in the judge's hidden state:</p>
   <div class="trifecta">
     <div class="tricard">
       <p class="tt">1 &middot; Geometry</p>
@@ -319,6 +357,13 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
     <li>"close the causal loop with bidirectional steering plus random-direction and bias-type-swap controls that rule out generic-perturbation and readout-direction alternatives"; and</li>
     <li>"show a linear projection onto the bias-direction features anticipates judge degradation cross-domain on three held-out benchmarks."</li>
   </ol>
+</section>
+
+<section id="positioning" class="animate-on-scroll">
+  <h2>Where This Work Fits in LLM-as-a-Judge Bias Research</h2>
+  <p>Most LLM-as-a-Judge bias research asks whether quality-irrelevant changes &mdash; such as position, response style, self-identification, authority, or social consensus &mdash; alter an evaluator's judgment. <strong>Inside the Unfair Judge</strong> complements this behavioral literature with a representation-level account: it asks where scoring bias appears inside the evaluator, whether the corresponding internal directions causally influence judgments, and whether those representations can support instance-level failure detection.</p>
+  <div class="datasum"><strong>Behavioral Bias</strong> &rarr; <strong>Representational Signature</strong> &rarr; <strong>Causal Intervention</strong> &rarr; <strong>Failure Prediction</strong></div>
+  <p>The paper does not evaluate every known judge bias. Its experiments study seven controlled pointwise-scoring biases &mdash; Prestige, Verbosity, Bandwagon, Authority, Sentiment, Refinement, and Diversity &mdash; using content-preserving interventions across nine benchmarks. Position bias, pairwise ordering effects, and self-preference are related parts of the broader literature, not evaluated claims of this paper.</p>
 </section>
 
 <section id="abstract" class="animate-on-scroll">
@@ -413,15 +458,20 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
 </section>
 
 <section id="method" class="animate-on-scroll">
-  <h2>How It Works (Method)</h2>
-  <p>The study rests on <strong>tightly controlled triples</strong> of datasets that share the same questions and factual content and differ only in surface framing: a baseline set, a positively perturbed set, and a negatively perturbed set. The judge maps each (question, answer) input to a scalar score in [1, 10], and any systematic score gap between an input and its content-preserving transformation is measured as bias.</p>
+  <h2>How We Analyze, Control, and Predict LLM Judge Bias</h2>
+  <p>The study uses <strong>quality-preserving interventions</strong> for counterfactual evaluation in a pointwise-scoring setting. Tightly controlled dataset triples share the same questions and factual content and differ only in surface framing: a baseline set, a positively perturbed set, and a negatively perturbed set. The judge maps each (question, answer) input to a scalar score in [1, 10], and any systematic score gap between an input and its content-preserving transformation is measured as bias.</p>
   <ol class="pipe">
     <li><strong>Activation analysis.</strong> For each input, record the final-token hidden state at every decoder layer. Baseline inputs define a <strong>baseline activation manifold</strong>; biased inputs are those whose activation sits geometrically far from it (validated with MDS and PCA).</li>
     <li><strong>Bias-direction identification.</strong> Restrict to <em>effective</em> bias samples whose score actually shifts, and estimate the bias direction with six estimators from two independent families (directional-change and discriminative-boundary). High within-family agreement supports keeping three representatives &mdash; Geometric Median, PCA, and a Classifier vector &mdash; for the causal experiments.</li>
     <li><strong>Causal control via steering.</strong> Add or subtract the calibrated direction from the hidden state, choosing an intervention strength on the feasibility boundary that keeps outputs valid and rank-faithful (a Spearman floor rules out trivially corrupting the judge). Forward steering attacks; reverse steering defends.</li>
-    <li><strong>Outcome prediction.</strong> Build per-layer activation features (bias-direction projections, manifold-deviation, semantic-context) and train a simple linear projection plus a gradient-boosted model to anticipate judge failure &mdash; evaluated cross-domain on benchmarks that contribute no questions, context, or perturbation pairs to the fit.</li>
+    <li><strong>Instance-level failure prediction.</strong> Build per-layer activation features (bias-direction projections, manifold-deviation, semantic-context) and train a simple linear projection plus a gradient-boosted model to anticipate judge failure &mdash; evaluated cross-domain on benchmarks that contribute no questions, context, or perturbation pairs to the fit.</li>
   </ol>
   <div class="datasum">The paper frames activation steering as an analytical and defensive tool for diagnosing bias and constructing fairness-oriented counterfactuals.</div>
+</section>
+
+<section id="post-training" class="animate-on-scroll">
+  <h2>Why LLM Judge Bias Matters for AI Feedback and Post-Training</h2>
+  <p>LLM judges increasingly supply preference labels, reward signals, and automated feedback for RLAIF, rejection sampling, and other post-training pipelines. A systematic scoring bias can therefore affect both reported evaluation results and the supervision used to improve future models. This paper does not run end-to-end policy optimization or directly demonstrate reward hacking; it provides representation-level tools for diagnosing and intervening on the evaluators that generate such signals.</p>
 </section>
 
 <section id="setup" class="animate-on-scroll">
@@ -437,37 +487,68 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
   </div>
 </section>
 
+<section id="scope" class="animate-on-scroll">
+  <h2>What the Paper Does&mdash;and Does Not&mdash;Establish</h2>
+  <ul class="citelist">
+    <li>It studies seven controlled biases in pointwise scoring; it does not claim to cover every known LLM evaluator bias.</li>
+    <li>It recovers and intervenes on bias directions within the studied white-box judges; it does not establish that one model's direction transfers directly to another model.</li>
+    <li>It studies each controlled bias type separately; it does not model the joint mechanism of several simultaneous biases.</li>
+    <li>It does not run end-to-end RLHF or RLAIF, train a new reward model, or demonstrate a policy learning to reward-hack a judge.</li>
+    <li>Its cross-domain failure-prediction result concerns three held-out benchmarks under the paper's judges, bias types, and experimental protocol; it is not a universal guarantee of evaluator reliability.</li>
+  </ul>
+</section>
+
 <section id="faq" class="animate-on-scroll">
   <h2>Frequently Asked Questions</h2>
 
   <details>
-    <summary>What is "Inside the Unfair Judge" about?</summary>
-    <div class="ans"><p>It is a mechanistic-interpretability study of LLM-as-judge scoring bias. Instead of treating the judge as a black box and only measuring how its scores move when inputs are perturbed, it opens the model and locates bias in the judge's hidden state. It reports three findings across seven judges, seven bias types, and nine benchmarks: bias occupies a low-dimensional, type-specific activation subspace that sharpens with depth (geometry); steering along that subspace controls scoring in both directions (causal control); and a linear projection onto the same features predicts judge failure on unseen benchmarks (operational prediction).</p></div>
+    <summary>What is LLM-as-a-judge bias?</summary>
+    <div class="ans"><p>LLM-as-a-judge bias is a systematic change in an evaluator's score caused by information that should not change answer quality. Inside the Unfair Judge studies this problem across seven judges, seven controlled bias types, and nine benchmarks, then asks how those behavioral effects are represented inside the evaluator.</p></div>
   </details>
 
   <details>
-    <summary>How is this different from prior LLM-as-judge bias work?</summary>
-    <div class="ans"><p>Most prior work operates at the input&ndash;output interface: it perturbs inputs, measures score deltas, and mitigates with prompt engineering, calibration, or judge ensembles. That view describes bias by what comes out of the model. This paper gives a representation-level account of what happens inside the judge when it issues an unfair score, contributing a geometric characterization of typed bias subspaces, bidirectional causal control (attack and defense, not mitigation alone), and a cross-domain predictor of judge failure.</p></div>
+    <summary>Which judge biases does this paper study?</summary>
+    <div class="ans"><p>Prestige (source attribution), Verbosity (length), Bandwagon (social consensus), Authority (academic credibility), Sentiment (emotional tone), Refinement (claims about revision), and Diversity (the author's stated social identity). Each positive and negative transformation is designed to preserve the answer's factual content and logical structure, so score changes can be attributed to the cue rather than answer quality.</p></div>
   </details>
 
   <details>
-    <summary>What are the seven bias types?</summary>
-    <div class="ans"><p>Prestige (source attribution), Verbosity (length), Bandwagon (social consensus), Authority (academic credibility), Sentiment (emotional tone), Refinement (metacognitive claims about revision), and Diversity (stated social identity of the author). For each type, controlled positive and negative surface transformations are applied to the same answer while preserving its factual content and logical structure, so any score change reflects surface framing rather than answer quality.</p></div>
+    <summary>How does this differ from behavioral audits of judge bias?</summary>
+    <div class="ans"><p>Behavioral audits perturb inputs and measure score changes at the output. This paper retains that controlled behavioral measurement but adds a representation-level account: it identifies low-dimensional, type-specific directions in hidden states, tests their causal relevance through intervention, and uses related features for cross-domain failure prediction.</p></div>
   </details>
 
   <details>
-    <summary>What does "bidirectional causal control" mean?</summary>
-    <div class="ans"><p>The recovered bias subspace is not just a passive correlate of biased scoring; it is an interventional handle. Adding the bias direction to a judge's hidden state reproduces biased scoring on clean inputs (attack), and subtracting it restores baseline scoring on biased inputs (defense). A matched-norm random direction produces a shift an order of magnitude smaller, and a bias-type-swap control sits between random and within-type, ruling out generic-perturbation and readout-direction explanations.</p></div>
+    <summary>How does this relate to position bias and self-preference?</summary>
+    <div class="ans"><p>Position bias, pairwise ordering effects, and self-preference are important parts of broader LLM-as-a-Judge bias research, but they are not evaluated in this paper. The experiments focus on seven controlled biases in pointwise scoring and do not claim coverage of every known evaluator bias.</p></div>
   </details>
 
   <details>
-    <summary>Can it predict when a judge will be unfair?</summary>
-    <div class="ans"><p>Yes. A simple linear projection onto the bias-direction features reaches AUC 0.82 on three entirely unseen benchmarks (0.85 in-domain), versus about 0.63 for a zero-shot text-LLM baseline. A more expressive gradient-boosted model wins in-domain but transfers worse, indicating that the low-dimensional bias geometry is the part that generalizes across domains.</p></div>
+    <summary>What does mechanistic interpretability reveal about an LLM judge?</summary>
+    <div class="ans"><p>Baseline judging inputs occupy a tight activation manifold, while biased inputs are displaced along low-dimensional, type-specific directions that sharpen with depth and are recovered by multiple estimator families. The result is a representation-level account of scoring bias, not a claim that a complete neural circuit has been identified.</p></div>
+  </details>
+
+  <details>
+    <summary>Can the method causally control biased scoring?</summary>
+    <div class="ans"><p>The recovered bias directions are interventional handles in the studied settings. Adding a direction can reproduce biased scoring on clean inputs, while subtracting it can move biased inputs back toward baseline scores. Matched-norm random and bias-type-swap controls show that the effect is not explained by arbitrary hidden-state perturbation.</p></div>
+  </details>
+
+  <details>
+    <summary>Can hidden states predict individual evaluator failures?</summary>
+    <div class="ans"><p>Within the paper's setting, yes. A simple linear projection onto the bias-direction features reaches AUC 0.82 on three held-out benchmarks (0.85 in-domain), compared with about 0.63 for a zero-shot text-LLM baseline. This is instance-level prediction within the studied judges and biases, not a universal guarantee.</p></div>
+  </details>
+
+  <details>
+    <summary>Why is judge bias relevant to AI feedback and post-training?</summary>
+    <div class="ans"><p>LLM judges increasingly produce preference labels, reward signals, and automated feedback for RLAIF, rejection sampling, and other post-training pipelines. Bias in those evaluators can therefore affect both reported evaluation results and the supervision used to improve future models. This paper studies the reliability of the evaluator that generates such signals; it does not train a new reward model.</p></div>
+  </details>
+
+  <details>
+    <summary>Does the paper directly study reward hacking?</summary>
+    <div class="ans"><p>No. The paper does not run end-to-end policy optimization or show a model learning to exploit a judge. Reward hacking is a downstream motivation and open research direction, while the paper's demonstrated contributions are controlled bias measurement, representation-level analysis, causal intervention, and failure prediction.</p></div>
   </details>
 
   <details>
     <summary>When should I cite this paper?</summary>
-    <div class="ans"><p>Cite it when your work involves LLM-as-judge or LLM-as-evaluator bias, mechanistic interpretability or representation engineering of model behaviors, activation steering and inference-time intervention, evaluation reliability in reward modeling and RLHF, predicting or detecting evaluator failure, or fairness and social-identity bias in automated evaluation. See the <a href="#cite-when">When to Cite This Paper</a> section for a ready-to-use citation sentence.</p></div>
+    <div class="ans"><p>Cite it in work on LLM-as-a-Judge or LLM evaluator bias, behavioral versus representation-level accounts of scoring bias, counterfactual or quality-preserving evaluation, mechanistic interpretability of evaluators, causal control of judge behavior, instance-level failure detection, and reliability of AI feedback used in post-training. See the <a href="#cite-when">When to Cite This Paper</a> section for a ready-to-use citation sentence.</p></div>
   </details>
 </section>
 
@@ -475,14 +556,15 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
   <h2>When to Cite This Paper</h2>
   <p>This paper is a useful reference when your work touches any of the following:</p>
   <ul class="citelist">
-    <li>LLM-as-judge / LLM-as-evaluator bias and its analysis or mitigation;</li>
-    <li>mechanistic interpretability and representation engineering of model behaviors;</li>
-    <li>activation steering, inference-time intervention, and concept directions in the residual stream;</li>
-    <li>evaluation reliability in reward modeling, RLHF, and preference learning;</li>
-    <li>predicting or detecting evaluator failure and out-of-distribution robustness of judges;</li>
+    <li>surveys, taxonomies, or related-work discussions of LLM-as-a-Judge and LLM evaluator bias;</li>
+    <li>behavioral bias measurement through counterfactual or quality-preserving evaluation;</li>
+    <li>mechanistic interpretability and representation-level analysis of model evaluators;</li>
+    <li>causal control, representation engineering, or inference-time intervention on judge behavior;</li>
+    <li>instance-level evaluator failure detection and cross-domain judge reliability;</li>
+    <li>reliability of AI feedback used in RLAIF, reward modeling, preference learning, or post-training;</li>
     <li>fairness, social-identity, verbosity, authority, or bandwagon effects in automated evaluation.</li>
   </ul>
-  <p class="citesuggest"><em><strong>A typical citation:</strong> Xu et al. (2026) give a representation-level account of LLM-as-judge bias, showing that it occupies a low-dimensional, type-specific activation subspace that supports bidirectional causal control &mdash; attack and defense via activation steering &mdash; and predicts judge failure on unseen benchmarks.</em></p>
+  <p class="citesuggest"><em><strong>A typical citation:</strong> Xu et al. (2026) extend LLM-as-a-Judge bias research from behavioral score changes to internal mechanisms, identifying low-dimensional bias representations that support causal control and cross-domain prediction of evaluator failure.</em></p>
 </section>
 
 <section id="resources" class="animate-on-scroll">
