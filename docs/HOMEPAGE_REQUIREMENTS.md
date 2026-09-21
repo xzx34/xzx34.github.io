@@ -181,6 +181,9 @@ SocialMaze 同时保留 **Findings of EMNLP 2026** 和 **SocialSim @ COLM 2025 �
 - 共享 SEO 模板使用页面级 `seo_title` 和 `description`，每页只生成一个 `<title>`、meta description、canonical、Open Graph 和 Twitter 元数据；不要在自定义 head 中重复生成同类标签。
 - 首页保持恰好一个仅供辅助技术读取的 H1；可见栏目标题使用 H2 和 `.section-heading`，但须保留原有字号、下划线动画、滚动偏移、旧锚点、暗色模式和窄屏表现。
 - 项目 landing page 的浏览器标题和搜索摘要可以为可检索性做精简；页面可见论文标题、`citation_title` 和 JSON-LD `name` 必须保留正式论文全名。
+- SocialMaze 的正式论文标题、可见 H1、`citation_title`、JSON-LD `name`、BibTeX 与 CFF 必须保持一致；搜索标题使用 `SocialMaze: LLM Social Reasoning Benchmark | EMNLP 2026`。正式摘要逐字保持论文版本，不为了搜索召回改写。
+- SocialMaze 对外页面统一使用核心定位：`SocialMaze is a six-task benchmark for evaluating LLM social reasoning across dynamic multi-turn interaction, deep inference, deception, and information uncertainty.` 它可以通过 Theory of Mind、social intelligence 和 social-agent benchmark 建立分类联系，但必须明确：SocialMaze 比狭义 ToM 更宽，且以可验证的社会推理正确性为重点，不得将其宣传为完整的 autonomous multi-agent benchmark。
+- SocialMaze 的 GitHub 与 Hugging Face 搜索文案必须同时满足可检索性和公开范围准确性：论文研究六项任务与 70,000 个实例；持续维护并完整发布的是 corrected expanded HRD-only 数据 200,000 条。不得为了扩大召回混淆这两个范围。
 - 机器可读的学术身份在 `_config.yml` 的 `academic_identity` 中维护。当前稳定标识为 ORCID `0009-0008-6672-004X` 和 OpenAlex `A5148855372`；它们不自动加入可见侧栏。
 - 首页 `ProfilePage → Person` 使用稳定 `https://xzx34.github.io/#person`，项目页中 Zixiang Xu 的作者实体引用相同 `@id` 并关联 ORCID。DBLP 与 Semantic Scholar 在独立作者页面稳定前不加入 `sameAs`。
 - Previous affiliations 的七个行内 logo 是装饰性图片，继续保留 `alt=""` 和 `aria-hidden="true"`。这是正确的无障碍实现；不要为了消除 Bing 的低级告警而重复朗读相邻机构名称。
@@ -205,6 +208,12 @@ SocialMaze 同时保留 **Findings of EMNLP 2026** 和 **SocialSim @ COLM 2025 �
 | 当前仓库内的研究项目页 | `gta/`、`socialmaze/`、`cross-lingual-pitfalls/`、`unfair-judge/` |
 
 ## 11. 待同步事项与变更记录
+
+### 2026-09-20：SocialMaze 搜索召回定位
+
+- 基于一次真实的 AI 文献检索历史，确认 SocialMaze 的主要问题是未进入通用 “LLM social reasoning benchmark” 候选集合，而不是检索后被判断为不相关。搜索文案需要把 SocialMaze 连接到 Theory of Mind、social intelligence、dynamic interaction、social deduction、deception 和 information uncertainty 等同行常用分类。
+- Landing page、GitHub README/About/topics、`pyproject.toml` 与 Hugging Face 数据卡采用统一核心定位和准确的分类桥梁。正式论文标题、正式摘要、作者、BibTeX、CFF、论文 PDF 与 arXiv 均保持不变。
+- Hugging Face 的本轮发布只允许更新 Dataset Card，不重新生成、删除或上传 parquet 数据；线上 `easy` 与 `hard` 仍须各为 100,000 条。
 
 ### 2026-09-20：SocialMaze 权威版本与 GTA 论文—软件引用闭环
 

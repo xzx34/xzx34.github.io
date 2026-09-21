@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>(function(){var t=localStorage.getItem('theme');if(t!=='light'){document.documentElement.setAttribute('data-theme','dark');}})();</script>
-<title>SocialMaze: Social Reasoning in LLMs | EMNLP 2026</title>
-<meta name="description" content="SocialMaze evaluates LLM social reasoning across six tasks in complex environments; accepted to Findings of EMNLP 2026 after a SocialSim @ COLM 2025 Spotlight.">
+<title>SocialMaze: LLM Social Reasoning Benchmark | EMNLP 2026</title>
+<meta name="description" content="SocialMaze is a six-task benchmark for LLM social reasoning across dynamic multi-turn interaction, social deduction, deception, and information uncertainty.">
 <meta name="robots" content="index,follow">
 <meta name="author" content="Zixiang Xu, Yanbo Wang, Yue Huang, Haomin Zhuang, Yujun Zhou, Jiayi Ye, Sixian Li, Zirui Song, Lang Gao, Chenxi Wang, Zhaorun Chen, Wang Pan, Yue Zhao, Jieyu Zhao, Xiangliang Zhang, Xiuying Chen">
-<meta name="keywords" content="social reasoning, social reasoning benchmark, LLM social reasoning, theory of mind, hidden role deduction, social deduction games, Werewolf, dynamic interaction, information uncertainty, chain-of-thought reasoning, LLM agents, fine-tuning, EMNLP 2026, Findings of EMNLP 2026, SocialMaze">
+<meta name="keywords" content="social reasoning, social intelligence, LLM evaluation, LLM social reasoning benchmark, theory of mind, hidden role deduction, social deduction, multi-turn reasoning, dynamic interaction, deception, information uncertainty, reasoning-trace fine-tuning, EMNLP 2026, SocialMaze">
 
 <link rel="canonical" href="https://xzx34.github.io/socialmaze/">
 
@@ -38,29 +38,29 @@
 
 <!-- Open Graph -->
 <meta property="og:type" content="article">
-<meta property="og:title" content="SocialMaze: Social Reasoning in LLMs | EMNLP 2026">
-<meta property="og:description" content="SocialMaze evaluates LLM social reasoning across six tasks in complex environments; accepted to Findings of EMNLP 2026 after a SocialSim @ COLM 2025 Spotlight.">
+<meta property="og:title" content="SocialMaze: LLM Social Reasoning Benchmark | EMNLP 2026">
+<meta property="og:description" content="SocialMaze is a six-task benchmark for LLM social reasoning across dynamic multi-turn interaction, social deduction, deception, and information uncertainty.">
 <meta property="og:url" content="https://xzx34.github.io/socialmaze/">
 <meta property="og:image" content="https://xzx34.github.io/images/socialmaze-hero.png">
 <meta property="og:site_name" content="SocialMaze (Findings of EMNLP 2026)">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="SocialMaze: Social Reasoning in LLMs | EMNLP 2026">
-<meta name="twitter:description" content="SocialMaze evaluates LLM social reasoning across six tasks in complex environments; accepted to Findings of EMNLP 2026 after a SocialSim @ COLM 2025 Spotlight.">
+<meta name="twitter:title" content="SocialMaze: LLM Social Reasoning Benchmark | EMNLP 2026">
+<meta name="twitter:description" content="SocialMaze is a six-task benchmark for LLM social reasoning across dynamic multi-turn interaction, social deduction, deception, and information uncertainty.">
 <meta name="twitter:image" content="https://xzx34.github.io/images/socialmaze-hero.png">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ScholarlyArticle",
-  "headline": "Evaluating and Enhancing Social Reasoning in Large Language Models in Complex Social Environments",
+  "headline": "SocialMaze: A Benchmark for Evaluating and Enhancing Social Reasoning in Large Language Models in Complex Social Environments",
   "name": "SocialMaze: A Benchmark for Evaluating and Enhancing Social Reasoning in Large Language Models in Complex Social Environments",
   "url": "https://xzx34.github.io/socialmaze/",
   "image": "https://xzx34.github.io/images/socialmaze-hero.png",
   "datePublished": "2026",
   "inLanguage": "en",
-  "description": "SocialMaze evaluates and enhances social reasoning in large language models through six tasks spanning social deduction games, daily-life interactions, and digital community platforms, organized along three descriptive design axes: deep reasoning, dynamic interaction, and information uncertainty.",
+  "description": "SocialMaze is a six-task benchmark for LLM social reasoning across dynamic multi-turn interaction, social deduction, deception, and information uncertainty.",
   "abstract": "Large language models (LLMs) are increasingly deployed in socially grounded applications, where success requires interpreting context, inferring others' mental states, and reasoning about unreliable information. Yet existing benchmarks rarely evaluate these demands jointly in complex, evolving settings. We introduce SocialMaze, a benchmark that organizes six tasks across social deduction games, daily-life interactions, and digital community platforms along three descriptive design axes: deep reasoning, dynamic interaction, and information uncertainty. These axes characterize intended sources of task difficulty rather than latent, factor-analytic dimensions of model capability. Automated checks and human validation support data quality. Evaluations of twelve proprietary and open-weight LLMs show substantial variation in the use of evolving interaction histories; stronger chain-of-thought reasoners perform better on tasks requiring deeper inference, while uncertainty consistently degrades performance. Reasoning workflows help weaker short-chain-of-thought backbones but saturate on stronger reasoners. Finally, targeted fine-tuning on curated reasoning traces substantially improves structured social-reasoning tasks, whereas transfer to language-aggregation tasks remains statistically inconclusive.",
   "author": [
     {"@id": "https://xzx34.github.io/#person", "@type": "Person", "name": "Zixiang Xu", "url": "https://xzx34.github.io/", "sameAs": "https://orcid.org/0009-0008-6672-004X", "affiliation": [{"@type": "Organization", "name": "MBZUAI"}, {"@type": "Organization", "name": "University of Southern California"}]},
@@ -91,7 +91,16 @@
     "https://github.com/xzx34/SocialMaze"
   ],
   "codeRepository": "https://github.com/xzx34/SocialMaze",
-  "keywords": "social reasoning, social reasoning benchmark, theory of mind, hidden role deduction, social deduction games, dynamic interaction, information uncertainty, chain-of-thought reasoning, LLM agents, fine-tuning"
+  "about": [
+    {"@type": "DefinedTerm", "name": "LLM social reasoning"},
+    {"@type": "DefinedTerm", "name": "social intelligence evaluation"},
+    {"@type": "DefinedTerm", "name": "Theory of Mind"},
+    {"@type": "DefinedTerm", "name": "dynamic multi-turn interaction"},
+    {"@type": "DefinedTerm", "name": "social deduction"},
+    {"@type": "DefinedTerm", "name": "deception and information uncertainty"},
+    {"@type": "DefinedTerm", "name": "reasoning-trace fine-tuning"}
+  ],
+  "keywords": "LLM social reasoning benchmark, social intelligence evaluation, theory of mind, hidden role deduction, social deduction, multi-turn reasoning, dynamic interaction, deception, information uncertainty, reasoning-trace fine-tuning"
 }
 </script>
 
@@ -107,8 +116,8 @@
     },
     {
       "@type": "Question",
-      "name": "What does SocialMaze test that other social-reasoning benchmarks don't?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Prior social-reasoning benchmarks often rely on static scenarios, present overly sanitized information without noise or deception, and use tasks too simple to challenge strong models. SocialMaze targets all three gaps at once: it has dynamic multi-round interaction, deliberately unreliable information (intentional deception and distorted self-perception), and tasks that demand deep, multi-step inference rather than surface-level cues."}
+      "name": "How does SocialMaze differ from Theory-of-Mind and social-agent benchmarks?",
+      "acceptedAnswer": {"@type": "Answer", "text": "SocialMaze is broader than a narrow Theory-of-Mind benchmark: it includes mental-state and hidden-role inference while also testing whether models integrate evolving interaction histories, detect deception, and reason over uncertain social information. It also differs from open-ended social-agent benchmarks that primarily measure goal completion or interaction quality. SocialMaze emphasizes verifiable reasoning correctness across six tasks in social games, daily-life interactions, and digital community platforms."}
     },
     {
       "@type": "Question",
@@ -138,7 +147,7 @@
     {
       "@type": "Question",
       "name": "When should I cite SocialMaze?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Cite SocialMaze when your work involves evaluating social reasoning or theory of mind in LLMs, social-deduction games, multi-turn or dynamic social interaction, robustness of reasoning under deception or information uncertainty, or LLM agents and fine-tuning for complex social tasks. See the When to Cite This Paper section for a ready-to-use citation sentence."}
+      "acceptedAnswer": {"@type": "Answer", "text": "Cite SocialMaze when your work involves evaluating social reasoning or social intelligence in LLMs, reasoning beyond isolated Theory-of-Mind questions, social-deduction games, evolving epistemic or interaction histories, robustness under deception or information uncertainty, or reasoning workflows and fine-tuning for complex social tasks. See the When to Cite This Paper section for a ready-to-use citation sentence."}
     }
   ]
 }
@@ -301,7 +310,7 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
 
 <header>
   <h1>SocialMaze: A Benchmark for Evaluating and Enhancing Social Reasoning in Large Language Models in Complex Social Environments</h1>
-  <p class="subtitle">Evaluating and enhancing social reasoning in LLMs across six tasks in complex, evolving social environments &mdash; organized along deep reasoning, dynamic interaction, and information uncertainty.</p>
+  <p class="subtitle">Benchmarking LLM social reasoning across six tasks with deep inference, dynamic multi-turn interaction, deception, and information uncertainty.</p>
 
   <div class="venues" aria-label="Publication venues">
     <span class="venue">Findings of EMNLP 2026</span>
@@ -352,8 +361,8 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
 </header>
 
 <section id="overview" class="animate-on-scroll">
-  <h2>Overview (TL;DR)</h2>
-  <p class="lead">Large language models are increasingly deployed in socially grounded settings &mdash; moderating communities, analyzing media, playing social-deduction games &mdash; where success depends on <strong>social reasoning</strong>: reading context, inferring others' mental states, and reasoning about unreliable information. <strong>SocialMaze</strong> evaluates this capability in complex, evolving environments and studies how targeted reasoning interventions can improve it.</p>
+  <h2>Overview: An LLM Social Reasoning Benchmark</h2>
+  <p class="lead"><strong>SocialMaze</strong> is a six-task benchmark for evaluating <strong>social reasoning in large language models</strong> across complex, evolving environments. It tests whether models can integrate multi-turn interaction histories, infer hidden roles and mental states, and reason under deception and unreliable information.</p>
   <p>SocialMaze organizes task construction along three <strong>descriptive design axes</strong> &mdash; <strong>deep reasoning</strong>, <strong>dynamic interaction</strong>, and <strong>information uncertainty</strong>. These axes describe intended sources of task difficulty rather than latent, factor-analytic dimensions of model capability. The benchmark contains <strong>70,000 instances</strong> across six tasks and three settings, created through a mix of algorithmic generation, authentic human data, and LLM-assisted discourse, with automated checks and targeted human validation.</p>
   <p>The accepted paper makes three contributions:</p>
   <ol class="contrib">
@@ -361,6 +370,12 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
     <li>It instantiates those axes in six tasks across social deduction games, daily-life interactions, and digital community platforms.</li>
     <li>It evaluates twelve proprietary and open-weight LLMs, showing where reasoning workflows help and where targeted fine-tuning transfers beyond the training task.</li>
   </ol>
+</section>
+
+<section id="positioning" class="animate-on-scroll">
+  <h2>How SocialMaze Fits into Social Reasoning Evaluation</h2>
+  <p><strong>SocialMaze bridges traditional Theory-of-Mind evaluation and open-ended social-agent benchmarks</strong> by measuring verifiable social reasoning over evolving interaction histories and unreliable information. It includes mental-state and hidden-role inference, but treats these as part of a broader challenge: combining deep inference with dynamic, multi-turn interaction, deception, and information uncertainty.</p>
+  <p>Unlike evaluations centered on isolated belief questions, SocialMaze spans six tasks in social-deduction games, daily-life interactions, and digital community platforms. Unlike open-ended social-agent environments that primarily measure goal completion or interaction quality, SocialMaze emphasizes whether a model's social inferences are correct and how those inferences change as new evidence arrives.</p>
 </section>
 
 <section id="abstract" class="animate-on-scroll">
@@ -423,7 +438,7 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
 </section>
 
 <section id="method" class="animate-on-scroll">
-  <h2>How It Works (Method)</h2>
+  <h2>How SocialMaze Evaluates Dynamic Social Reasoning</h2>
   <p><strong>SocialMaze</strong> is built on a graph-based formalization of social scenarios. Participants and their evolving interactions are modeled as <strong>layered social interaction graphs</strong> over a timeline, and tasks pose vertex-centric queries (about one actor), edge-centric queries (about a relationship), or graph-level queries (about the whole scenario), rendered as natural-language input. This lets the benchmark vary intended task difficulty along the three design axes.</p>
   <p>The flagship task, <strong>Hidden Role Deduction</strong>, asks a model to read several rounds of player statements and identify both the true Criminal and its own role; the headline evaluation uses six players and three rounds. Data combines algorithmic generation, authentic human sources (Amazon, Google Play, and Taobao reviews; OpenReview submissions and decisions), and LLM-assisted discourse. Algorithmic tasks use solvability and uniqueness checks, while targeted human validation supports the quality of sampled instances&mdash;for example, annotators could uniquely identify the Spy in <strong>91%</strong> of sampled Find-the-Spy instances and recover the true rating in <strong>83%</strong> of sampled LLM-generated Rating-Estimation instances.</p>
   <div class="modelset"><b>Models evaluated (12):</b> Llama-3.1-8B, Llama-3.3-70B, Qwen-2.5-72B, Phi-4, QwQ-32B, DeepSeek-V3, DeepSeek-R1, GPT-4o-mini, GPT-4o, o3-mini, o1, and Gemini-2.5-Pro.</div>
@@ -449,8 +464,8 @@ ds = load_dataset("xzx34/SocialMaze", split="hard")</code></pre>
   </details>
 
   <details>
-    <summary>What does SocialMaze test that other social-reasoning benchmarks don't?</summary>
-    <div class="ans"><p>Prior social-reasoning benchmarks often rely on static scenarios, present overly sanitized information without noise or deception, and use tasks too simple to challenge strong models. SocialMaze targets all three gaps at once: it has dynamic multi-round interaction, deliberately unreliable information (intentional deception and distorted self-perception), and tasks that demand deep, multi-step inference rather than surface-level cues.</p></div>
+    <summary>How does SocialMaze differ from Theory-of-Mind and social-agent benchmarks?</summary>
+    <div class="ans"><p><strong>SocialMaze is broader than a narrow Theory-of-Mind benchmark</strong>: it includes mental-state and hidden-role inference while also testing whether models integrate evolving interaction histories, detect deception, and reason over uncertain social information. It also differs from open-ended social-agent benchmarks that primarily measure goal completion or interaction quality. SocialMaze emphasizes <strong>verifiable reasoning correctness</strong> across six tasks in social games, daily-life interactions, and digital community platforms.</p></div>
   </details>
 
   <details>
@@ -480,7 +495,7 @@ ds = load_dataset("xzx34/SocialMaze", split="hard")</code></pre>
 
   <details>
     <summary>When should I cite SocialMaze?</summary>
-    <div class="ans"><p>Cite SocialMaze when your work involves evaluating social reasoning or theory of mind in LLMs, social-deduction games, multi-turn or dynamic social interaction, robustness of reasoning under deception or information uncertainty, or LLM agents and fine-tuning for complex social tasks. See the <a href="#cite-when">When to Cite This Paper</a> section below for a ready-to-use citation sentence.</p></div>
+    <div class="ans"><p>Cite SocialMaze when your work involves evaluating social reasoning or social intelligence in LLMs, reasoning beyond isolated Theory-of-Mind questions, social-deduction games, evolving epistemic or interaction histories, robustness under deception or information uncertainty, or reasoning workflows and fine-tuning for complex social tasks. See the <a href="#cite-when">When to Cite This Paper</a> section below for a ready-to-use citation sentence.</p></div>
   </details>
 </section>
 
@@ -488,9 +503,9 @@ ds = load_dataset("xzx34/SocialMaze", split="hard")</code></pre>
   <h2>When to Cite This Paper</h2>
   <p>SocialMaze is a useful reference when your work touches any of the following:</p>
   <ul class="citelist">
-    <li>evaluating social reasoning or theory of mind in large language models;</li>
+    <li>evaluating social reasoning or social intelligence in large language models beyond isolated Theory-of-Mind questions;</li>
     <li>social-deduction games (e.g., hidden-role / Werewolf-style reasoning) with LLMs;</li>
-    <li>multi-turn, dynamic social interaction and temporally evolving information;</li>
+    <li>multi-turn social interaction and evolving epistemic or interaction histories;</li>
     <li>robustness of reasoning under deception, noise, or information uncertainty;</li>
     <li>chain-of-thought reasoning for complex, socially grounded inference;</li>
     <li>LLM agents and workflows versus targeted fine-tuning for hard reasoning tasks;</li>
