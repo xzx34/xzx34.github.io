@@ -12,6 +12,8 @@
       url: "/jevout/"
     - label: "Paper"
       url: null
+    - label: "Code & Data"
+      url: "https://github.com/xzx34/JevOut"
 
 - title: "AlgoWorlds: Benchmarking Tool Use for Global Optimization in Algorithmic Worlds"
   selected: true
