@@ -1,6 +1,18 @@
 # Resource buttons: Project Page -> Paper -> Code & Data, then supplementary links.
 # Paper: verified official record -> arXiv abstract -> null (non-navigating placeholder).
 # Never use a direct PDF URL. See docs/HOMEPAGE_REQUIREMENTS.md, section 6.
+- title: "JevOut: Natural Context Can Flip Decision Models"
+  selected: true
+  preprint: true
+  venue:
+    - "Preprint 2026"
+  authors: "<strong>Zixiang Xu</strong>"
+  links:
+    - label: "Project Page"
+      url: "/jevout/"
+    - label: "Paper"
+      url: null
+
 - title: "AlgoWorlds: Benchmarking Tool Use for Global Optimization in Algorithmic Worlds"
   selected: true
   preprint: true

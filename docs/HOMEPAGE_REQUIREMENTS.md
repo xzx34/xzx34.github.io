@@ -1,6 +1,6 @@
 # 主页维护要求
 
-最后整理：2026-09-20
+最后整理：2026-09-24
 
 ## 1. 本文档的用途与更新方式
 
@@ -92,9 +92,9 @@
 
 | 展示位置 | 当前相对顺序 |
 | --- | --- |
-| Latest Preprints：3 篇 | AlgoWorlds → Inside the Unfair Judge → GTA |
+| Latest Preprints：4 篇 | JevOut → AlgoWorlds → Inside the Unfair Judge → GTA |
 | Selected Work：4 篇 | SocialMaze → Cross-Lingual Pitfalls → Adaptive Distraction → DyFlow |
-| 完整论文页：17 篇 | 保持 `_data/publications.yml` 的完整序列 |
+| 完整论文页：18 篇 | 保持 `_data/publications.yml` 的完整序列 |
 | 仅完整论文页中的两篇 2025 预印本 | Beyond Survival；Evaluate Bias without Manual Test Sets |
 
 SocialMaze 同时保留 **Findings of EMNLP 2026** 和 **SocialSim @ COLM 2025 · Spotlight**，不能因正式录用删除 workshop Spotlight；其 landing page 中这两项左对齐。
@@ -211,9 +211,16 @@ SocialMaze 同时保留 **Findings of EMNLP 2026** 和 **SocialSim @ COLM 2025 �
 | 桌面/窄屏侧栏联系人 | `_includes/author-profile.html` |
 | 导航及旧锚点入口 | `_data/navigation.yml`、`_pages/about.md` |
 | 公共样式 | `assets/css/main.scss`、相关 `_sass/` 文件 |
-| 当前仓库内的研究项目页 | `gta/`、`socialmaze/`、`cross-lingual-pitfalls/`、`unfair-judge/` |
+| 当前仓库内的研究项目页 | `jevout/`、`gta/`、`socialmaze/`、`cross-lingual-pitfalls/`、`unfair-judge/` |
 
 ## 11. 待同步事项与变更记录
+
+### 2026-09-24：JevOut landing page
+
+- 正式标题为 `JevOut: Natural Context Can Flip Decision Models`；页面路径为 `/jevout/`，搜索标题为 `JevOut: Testing Decision Model Reliability Under Natural Context`。
+- Landing page 以论文主体、正式摘要和真实论文图表为事实源，围绕 decision-model reliability、natural context sensitivity、answer-preserving context、targeted redirection 与 probability-guided optimization 组织。不将其泛化为普通 prompt injection，不把各系统的 eligible-population TFR 写成全体输入的失败概率。
+- 页面使用论文现有 teaser、task/system results、optimization/feedback 和 cross-model transfer 图。论文 PDF 只作为内容材料，不复制到站点，不新增 PDF 下载入口。
+- 当前未核实到公开 arXiv、正式发表页或公开代码仓库；因此 landing page、首页和完整论文页只提供 Project Page 与非跳转 Paper 占位，不虚构 arXiv、DOI 或 Code & Data 链接。
 
 ### 2026-09-21：Cross-Lingual Pitfalls 搜索召回定位
 

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){var t;try{t=localStorage.getItem('theme');}catch(e){}if(t!=='light'){document.documentElement.setAttribute('data-theme','dark');}})();</script>
+<title>JevOut: Testing Decision Model Reliability Under Natural Context</title>
+<meta name="description" content="JevOut evaluates whether short, natural context can redirect Jev and other decision models from correct choices to high-confidence wrong decisions.">
+<meta name="robots" content="index,follow">
+<meta name="author" content="Zixiang Xu">
+<link rel="canonical" href="https://xzx34.github.io/jevout/">
+<link rel="icon" href="/images/favicon.ico">
+<meta name="citation_title" content="JevOut: Natural Context Can Flip Decision Models">
+<meta name="citation_author" content="Xu, Zixiang">
+<meta name="citation_publication_date" content="2026/09/24">
+<meta name="citation_public_url" content="https://xzx34.github.io/jevout/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JevOut: Testing Decision Model Reliability Under Natural Context">
+<meta property="og:description" content="JevOut evaluates whether short, natural context can redirect Jev and other decision models from correct choices to high-confidence wrong decisions.">
+<meta property="og:url" content="https://xzx34.github.io/jevout/">
+<meta property="og:image" content="https://xzx34.github.io/jevout/images/context-redirection.png">
+<meta property="og:image:alt" content="A short natural context addition redirects a decision model from the correct answer to a fixed wrong option.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="JevOut: Testing Decision Model Reliability Under Natural Context">
+<meta name="twitter:description" content="JevOut evaluates whether short, natural context can redirect Jev and other decision models from correct choices to high-confidence wrong decisions.">
+<meta name="twitter:image" content="https://xzx34.github.io/jevout/images/context-redirection.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "JevOut: Natural Context Can Flip Decision Models",
+  "headline": "JevOut: Natural Context Can Flip Decision Models",
+  "url": "https://xzx34.github.io/jevout/",
+  "mainEntityOfPage": "https://xzx34.github.io/jevout/",
+  "datePublished": "2026-09-24",
+  "inLanguage": "en",
+  "description": "JevOut studies whether short, natural, answer-preserving context can redirect dedicated decision models from correct choices to fixed wrong options, and uses option probabilities to discover, transfer, and learn these contexts.",
+  "author": {
+    "@id": "https://xzx34.github.io/#person",
+    "@type": "Person",
+    "name": "Zixiang Xu",
+    "url": "https://xzx34.github.io/",
+    "sameAs": "https://orcid.org/0009-0008-6672-004X",
+    "affiliation": {"@type": "Organization", "name": "University of Southern California"}
+  },
+  "about": [
+    "Decision model reliability",
+    "Language model evaluation",
+    "Natural context sensitivity",
+    "Answer-preserving context",
+    "Targeted model redirection",
+    "Probability-guided optimization",
+    "Tool routing reliability",
+    "Model-based decision making",
+    "Adversarial evaluation",
+    "Post-training data generation"
+  ],
+  "keywords": "decision model reliability, LLM evaluation, natural context sensitivity, answer-preserving context, targeted redirection, probability-guided optimization, tool routing, adversarial evaluation"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does JevOut evaluate?",
+      "acceptedAnswer": {"@type": "Answer", "text": "JevOut evaluates whether a short, natural addition to the surrounding context can redirect an initially correct finite-choice decision toward a wrong option fixed in advance, while the source, question, choices, and correct answer remain unchanged."}
+    },
+    {
+      "@type": "Question",
+      "name": "What is a decision model in this work?",
+      "acceptedAnswer": {"@type": "Answer", "text": "A decision model maps unstructured language to a probability distribution over a declared finite set of choices. Such an interface can route a request, select a tool or action, or choose among candidate outputs."}
+    },
+    {
+      "@type": "Question",
+      "name": "Is natural-context redirection the same as prompt injection?",
+      "acceptedAnswer": {"@type": "Answer", "text": "No. The evaluated additions do not replace the task, explicitly request a different answer, name the fixed target option, or alter the available choices. They add background or procedural detail that must fit naturally and preserve the original answer."}
+    },
+    {
+      "@type": "Question",
+      "name": "What is Targeted Flip Rate?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Targeted Flip Rate is the fraction of initially correct decisions for which at least one accepted context redirects the model to the wrong option fixed before optimization. A change to another wrong option does not count."}
+    },
+    {
+      "@type": "Question",
+      "name": "Which models and tasks are evaluated?",
+      "acceptedAnswer": {"@type": "Answer", "text": "The study evaluates Jev, OpenSourceJev, Von, and a plain Qwen scorer across seven datasets spanning knowledge, narrative and social reasoning, legal reasoning, multi-answer selection, and tool routing."}
+    },
+    {
+      "@type": "Question",
+      "name": "What do the results not establish?",
+      "acceptedAnswer": {"@type": "Answer", "text": "The results do not show that every natural context causes a failure, that all decision models behave identically, or that every real deployment is unsafe. They characterize targeted redirection under the paper's models, datasets, acceptance checks, fixed targets, and evaluation budgets."}
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  color-scheme:light;--accent:#0056d6;--accent-dark:#00369f;--accent-lite:#4a90e2;
+  --grad:linear-gradient(135deg,#00369f 0%,#0056d6 100%);
+  --text:#3a3f45;--muted:#6a737d;--bg:#fff;--soft:#f6f8fa;--card:#fff;--border:#e1e4e8;--shadow:rgba(20,40,80,.10);
+}
+[data-theme="dark"]{
+  color-scheme:dark;--accent:#58a6ff;--accent-dark:#79b8ff;--accent-lite:#1f6feb;
+  --grad:linear-gradient(135deg,#1f6feb 0%,#388bfd 100%);
+  --text:#c9d1d9;--muted:#9aa5b1;--bg:#0d1117;--soft:#161b22;--card:#161b22;--border:#30363d;--shadow:rgba(0,0,0,.5);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:24px}
+body{margin:0;position:relative;color:var(--text);background:var(--bg);font-family:"Trebuchet MS",Helvetica,sans-serif;font-size:17px;line-height:1.7;transition:background-color .3s ease,color .3s ease}
+body::before{content:'';position:fixed;inset:0;background:linear-gradient(135deg,rgba(240,248,255,.3),rgba(230,240,255,.2),rgba(245,250,255,.25),rgba(235,245,255,.2));background-size:400% 400%;animation:gradientShift 15s ease infinite;z-index:-1;pointer-events:none}
+[data-theme="dark"] body::before{background-image:linear-gradient(135deg,rgba(13,17,23,.3),rgba(22,27,34,.2),rgba(13,17,23,.25),rgba(22,27,34,.2))}
+@keyframes gradientShift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.wrap{max-width:820px;margin:0 auto;padding:34px 20px 64px}
+a{color:var(--accent);text-decoration:none}
+a:not(.btn){background-image:linear-gradient(90deg,var(--accent-dark),var(--accent));background-size:0% 1.5px;background-repeat:no-repeat;background-position:left bottom;padding-bottom:1px;transition:background-size .3s ease,color .3s ease}
+a:not(.btn):hover{color:var(--accent-dark);background-size:100% 1.5px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
+.skip-link{position:fixed;top:8px;left:12px;z-index:100;padding:8px 14px;background:var(--card);transform:translateY(-180%)}
+.skip-link:focus{transform:none}
+h1{font-size:2rem;line-height:1.25;margin:.1em 0 .35em;letter-spacing:-.01em;color:var(--text)}
+.subtitle{font-size:1.18rem;font-weight:500;color:var(--muted);line-height:1.5;margin:0 0 1em}
+h2{position:relative;font-size:1.4rem;line-height:1.3;margin:2.6em 0 .8em;padding-bottom:.3em;color:var(--text)}
+h2::after{content:'';position:absolute;left:0;bottom:0;height:2px;width:0;background:linear-gradient(90deg,var(--accent-dark),var(--accent),var(--accent-lite));transition:width .8s ease}
+h2.animated::after{width:100%}
+h3{font-size:1.06rem;margin:1.3em 0 .25em;line-height:1.5}
+p{margin:.7em 0}
+.venue{display:inline-block;font-weight:600;color:#fff;background:var(--grad);padding:4px 14px;border-radius:999px;font-size:.9rem;letter-spacing:.02em;box-shadow:0 2px 8px var(--shadow)}
+.authors{margin:1.15em 0 .4em;line-height:1.95}
+.legend{color:var(--muted);font-size:.92rem;margin:.2em 0 .4em;line-height:1.7;overflow-wrap:anywhere}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin:1.2em 0 .2em}
+.btn{display:inline-flex;align-items:center;gap:.45em;border:1px solid var(--accent);color:var(--accent);background:var(--card);padding:.65em 1.05em;border-radius:999px;font-size:.95rem;font-weight:600;line-height:1.15;transition:background .15s ease,color .15s ease,box-shadow .15s ease,transform .15s ease}
+a.btn:hover{background:var(--grad);color:#fff;box-shadow:0 6px 16px var(--shadow);transform:translateY(-1px)}
+.btn .ic{width:1.05em;height:1.05em;flex:0 0 auto}
+.btn.pending{color:var(--muted);border-color:var(--border);background:transparent;cursor:not-allowed}
+.statusline,.note{color:var(--muted);font-size:.9rem;margin:.75em 0 0}
+figure{margin:2.4em auto .4em}
+figure img{display:block;width:100%;height:auto;background:#fff;border:1px solid var(--border);border-radius:8px;box-shadow:0 6px 22px var(--shadow)}
+[data-theme="dark"] figure img{filter:brightness(.92)}
+figcaption{color:var(--muted);font-size:.9rem;margin:.8em auto 0;text-align:center;max-width:720px}
+.figure-link{display:block}
+.block{background:var(--soft);border:1px solid var(--border);border-radius:8px;padding:18px 20px}
+.abstract p{margin:0}
+.lead{font-size:1.06rem}
+.facts{margin:1.2em 0 .3em;border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.fact{display:grid;grid-template-columns:minmax(145px,29%) 1fr;gap:1em;padding:.65em 1em;border-top:1px solid var(--border)}
+.fact:first-child{border-top:none}
+.fact dt{font-weight:700;color:var(--accent-dark)}
+.fact dd{margin:0}
+.pipe{margin:1.2em 0;list-style:none;padding:0;counter-reset:step}
+.pipe li{position:relative;margin:0;padding:0 0 1.05em 2.7em;counter-increment:step}
+.pipe li:last-child{padding-bottom:0}
+.pipe li::before{content:counter(step);position:absolute;left:0;top:.1em;width:1.8em;height:1.8em;border:1px solid var(--accent);border-radius:50%;color:var(--accent);font-size:.9rem;font-weight:700;display:flex;align-items:center;justify-content:center;background:var(--bg);z-index:1}
+.pipe li:not(:last-child)::after{content:'';position:absolute;left:.8em;top:1.9em;bottom:0;border-left:1px solid var(--border)}
+.pipe strong{color:var(--accent-dark)}
+.finding{margin:1.15em 0}
+.num{color:var(--accent);font-weight:700;margin-right:.35em}
+.table-wrap{overflow-x:auto;margin:1.2em 0 .4em;border:1px solid var(--border);border-radius:8px}
+table{width:100%;border-collapse:collapse;font-size:.95rem;font-variant-numeric:tabular-nums}
+caption{text-align:left;padding:.8em 1em;font-weight:700;background:var(--soft)}
+th,td{padding:.65em .8em;border-top:1px solid var(--border);text-align:right;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+thead th{background:var(--soft);font-size:.9rem}
+.highlight-row{background:var(--soft);font-weight:700;color:var(--accent-dark)}
+.scope{padding-left:1.2em}
+.scope li{margin:.5em 0}
+details{border:1px solid var(--border);border-radius:8px;background:var(--soft);margin:.6em 0;padding:0 16px}
+details[open]{background:var(--card)}
+summary{cursor:pointer;font-weight:600;padding:.85em 0;color:var(--text)}
+summary::marker{color:var(--accent)}
+.ans{padding:0 0 .95em}
+.ans p{margin:.2em 0}
+pre{background:var(--soft);border:1px solid var(--border);border-radius:8px;padding:16px;overflow-x:auto;font-size:.9rem;line-height:1.55;color:var(--text)}
+pre code{font-family:Monaco,Consolas,"Lucida Console",monospace}
+.bibhead{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.copy{font:inherit;border:1px solid var(--accent);color:var(--accent);background:var(--card);border-radius:6px;padding:.45em .85em;font-size:.9rem;font-weight:600;cursor:pointer}
+.copy:hover{background:var(--grad);color:#fff}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);color:var(--muted);font-size:.92rem}
+.theme-toggle{position:fixed;top:14px;right:16px;z-index:50;width:40px;height:40px;display:flex;align-items:center;justify-content:center;padding:0;background:var(--card);border:1px solid var(--border);border-radius:50%;cursor:pointer;color:var(--muted);box-shadow:0 2px 8px var(--shadow)}
+.theme-toggle:hover{color:var(--accent);border-color:var(--accent)}
+.theme-toggle svg{width:20px;height:20px}
+.moon{display:block}.sun{display:none}
+[data-theme="dark"] .moon{display:none}[data-theme="dark"] .sun{display:block}
+.animate-on-scroll{transition:opacity .8s ease,transform .8s ease}
+.animate-on-scroll.waiting{opacity:0;transform:translateY(24px)}
+.animate-on-scroll.animated{opacity:1;transform:none}
+@media(max-width:960px){header h1{padding-right:32px}}
+@media(max-width:600px){body{font-size:16px}h1{font-size:1.6rem}h2{font-size:1.25rem}.wrap{padding:24px 16px 48px}.subtitle{font-size:1.05rem}.fact{grid-template-columns:1fr;gap:.15em}.block{padding:16px}.theme-toggle{right:10px;top:10px}.table-wrap table{font-size:.88rem}}
+@media(prefers-reduced-motion:reduce){body::before{animation:none}*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}.animate-on-scroll.waiting{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#overview">Skip to overview</a>
+<button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme" title="Toggle theme">
+  <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.1 5.1l1.6 1.6M17.3 17.3l1.6 1.6M18.9 5.1l-1.6 1.6M6.7 17.3l-1.6 1.6"/></g></svg>
+  <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+</button>
+<div class="wrap">
+<header>
+  <h1>JevOut: Natural Context Can Flip Decision Models</h1>
+  <p class="subtitle">Testing whether short, answer-preserving context can redirect Jev and other decision models to high-confidence wrong choices.</p>
+  <span class="venue">Preprint 2026</span>
+  <p class="authors"><a href="https://xzx34.github.io/">Zixiang Xu</a><sup>1</sup></p>
+  <p class="legend"><sup>1</sup> University of Southern California<br>Corresponding author: <a href="mailto:zixiangx@usc.edu">zixiangx@usc.edu</a></p>
+  <nav class="btns" aria-label="Paper links">
+    <span class="btn pending" role="link" aria-disabled="true" title="Paper link will be added after a public record is available"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M6.8 2.8h7l3.4 3.4V21.2H6.8zM13.6 3v3.6h3.4M9 12h6M9 15h6M9 18h4.5"/></svg>Paper</span>
+  </nav>
+  <p class="statusline">The public paper link will be added when a verified record becomes available.</p>
+  <figure>
+    <a class="figure-link" href="images/context-redirection.png" aria-label="View the natural-context redirection example at full resolution"><img src="images/context-redirection.png" alt="A climate-ethics multiple-choice example where a short intergenerational context addition leaves the question and correct answer unchanged but moves Jev from the correct option at probability 0.97 to a fixed wrong option at probability 0.54." width="2000" height="1180" decoding="async"></a>
+    <figcaption>A short, natural addition can redirect an otherwise correct decision. The question, options, and gold answer remain fixed while the model's probability distribution shifts toward a wrong option chosen before optimization.</figcaption>
+  </figure>
+</header>
+<main>
+<section id="overview" class="animate-on-scroll">
+  <h2>Overview: Testing Decision Model Reliability</h2>
+  <p class="lead">Dedicated decision models turn language directly into bounded choices: route this request, select that tool, or trigger this action. <strong>JevOut asks whether those choices remain dependable when ordinary surrounding context changes but the decision problem does not.</strong></p>
+  <p>For each decision that a model initially answers correctly, the study fixes one wrong target option and constructs short additions that fit naturally with the original input. The source, question, choices, and correct answer remain unchanged. The model's full option distribution then provides a graded signal for finding contexts that cross its decision boundary.</p>
+  <dl class="facts">
+    <div class="fact"><dt>4 decision systems</dt><dd>Jev, OpenSourceJev, Von, and a plain Qwen scorer expose different decision interfaces and scoring constructions.</dd></div>
+    <div class="fact"><dt>7 datasets</dt><dd>Knowledge, narrative and social reasoning, legal reasoning, multi-answer selection, and tool routing.</dd></div>
+    <div class="fact"><dt>61.4%&ndash;73.2% TFR</dt><dd>Targeted flip rates within 64 accepted target evaluations, measured separately on each system's initially correct decisions.</dd></div>
+    <div class="fact"><dt>31 added words</dt><dd>Median length of the selected successful Jev contexts; 81.1% use at most two additions.</dd></div>
+  </dl>
+</section>
+<section id="abstract" class="animate-on-scroll">
+  <h2>Abstract</h2>
+  <div class="block abstract"><p>Dedicated decision models such as Jev map unstructured language to probability distributions over finite choices, allowing their outputs to directly route requests, select tools, and trigger actions. Yet real-world inputs rarely arrive in isolation: they come with background details and surrounding context. We find that short additions that fit naturally into this context can nevertheless redirect an otherwise correct decision, even when the correct answer remains unchanged. To study this behavior, we fix a wrong target option for each initially correct item and use the model's option probabilities to refine fluent context additions while preserving the source, question, choices, and gold answer. Within 64 accepted target evaluations, the optimizer identifies contexts that redirect Jev on 312 of 508 initially correct decisions (61.4%); in 229 cases, Jev assigns at least 0.7 probability to the fixed wrong option. Across seven datasets, three additional decision systems show targeted flip rates of 64.9%&ndash;73.2% on decisions they initially answer correctly. Taken together, these results expose a pronounced fragility in current decision models: short, ordinary-looking context can shift a correct choice to a high-confidence wrong one. Because these models turn language directly into downstream choices, this sensitivity raises concerns about treating their probability outputs as reliable decision interfaces.</p></div>
+  <p class="note">Abstract reproduced from the manuscript, with generated result macros expanded.</p>
+</section>
+<section id="positioning" class="animate-on-scroll">
+  <h2>Where JevOut Fits</h2>
+  <p>JevOut connects <strong>context sensitivity</strong>, <strong>adversarial evaluation</strong>, and <strong>decision-model reliability</strong>. Prompt-format, option-order, and evidence-placement studies show that language models can change under alternate presentations. Natural adversarial question answering shows that fluent context can mislead a model. LLM-as-a-judge research shows that controlled input features can alter evaluator choices.</p>
+  <p>This work isolates a complementary setting: it keeps the original source, question, option identities, option order, and gold answer fixed, then changes only the surrounding context. It also studies finite-choice decision interfaces whose full probability distributions make movement toward a target observable before the selected option changes. The focus is not arbitrary disagreement, but <strong>directed redirection toward a wrong option fixed in advance</strong>.</p>
+</section>
+<section id="method" class="animate-on-scroll">
+  <h2>How Natural-Context Redirection Is Evaluated</h2>
+  <ol class="pipe">
+    <li><strong>Start from a correct decision.</strong> Each target system is evaluated on the original input; only decisions it initially answers correctly enter that system's eligible population.</li>
+    <li><strong>Fix the wrong target first.</strong> Before constructing any context, the study selects the most probable incorrect option. That target remains fixed throughout optimization.</li>
+    <li><strong>Generate answer-preserving context.</strong> A proposer adds background or procedural details. Mechanical checks enforce placement, nonduplication, and the absence of explicit answer-selection phrases; a separate checker evaluates coherence and answer preservation without seeing the target.</li>
+    <li><strong>Use probability feedback.</strong> The optimizer measures the log-probability margin between the fixed target and its strongest competitor, then allocates further proposals toward promising accepted contexts while retaining restarts.</li>
+    <li><strong>Count only targeted flips.</strong> Success requires the model to select the precommitted wrong option within the accepted-evaluation budget. Switching to any other wrong option does not count.</li>
+  </ol>
+</section>
+<section id="results" class="animate-on-scroll">
+  <h2>Natural Context Redirects Decisions Across Models and Tasks</h2>
+  <p>Within 64 accepted target evaluations, optimization finds targeted flips for a majority of each system's initially correct decisions. The one-shot controls establish that target-aware context matters even without iteration; probability-guided optimization reveals many more redirections.</p>
+  <div class="table-wrap" role="region" aria-label="Targeted flip rates by decision system, scroll horizontally on narrow screens" tabindex="0">
+    <table>
+      <caption>Targeted Flip Rate (%) and successful decision counts</caption>
+      <thead><tr><th scope="col">Target</th><th scope="col">Eligible n</th><th scope="col">Neutral</th><th scope="col">Target-aware</th><th scope="col">Optimized</th><th scope="col">p &ge; 0.7</th></tr></thead>
+      <tbody>
+        <tr class="highlight-row"><th scope="row">Jev</th><td>508</td><td>2.2 (11)</td><td>16.9 (86)</td><td>61.4 (312)</td><td>45.1 (229)</td></tr>
+        <tr><th scope="row">OpenSourceJev</th><td>328</td><td>6.4 (21)</td><td>16.2 (53)</td><td>72.6 (238)</td><td>64.3 (211)</td></tr>
+        <tr><th scope="row">Von</th><td>328</td><td>7.6 (25)</td><td>21.6 (71)</td><td>73.2 (240)</td><td>54.0 (177)</td></tr>
+        <tr><th scope="row">Plain Qwen</th><td>285</td><td>8.4 (24)</td><td>18.6 (53)</td><td>64.9 (185)</td><td>60.4 (172)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">Each target retains its own initially correct population. Neutral and target-aware controls use one sentence; optimization allows at most 64 accepted target evaluations. The final column additionally requires target probability of at least 0.7.</p>
+  <figure>
+    <a class="figure-link" href="images/task-system-results.png" aria-label="View task-level targeted flip rates at full resolution"><img src="images/task-system-results.png" alt="Heat map of targeted flip rates for Jev, OpenSourceJev, Von, and plain Qwen across MMLU-Pro, SuperGPQA, MuSR, ToMBench, LAR-ECHR, SATA, and BFCL V4. Every model-dataset combination contains successful redirections." width="1500" height="698" loading="lazy" decoding="async"></a>
+    <figcaption>Targeted redirection appears across all seven datasets and all four systems. Each cell reports TFR within that system's own initially correct population, so cell values should not be read as clean task accuracy.</figcaption>
+  </figure>
+</section>
+<section id="feedback" class="animate-on-scroll">
+  <h2>Probability Feedback Reveals More Failures</h2>
+  <p>Option probabilities expose movement toward the fixed target before the selected decision flips. As the accepted-call budget grows from 16 to 64, the optimizer continues to uncover additional redirections. On the same 140 Jev decisions, probability-only allocation reaches 63.6% TFR, compared with 56.4% for label-only allocation&mdash;a paired difference of <strong>7.1 percentage points</strong> with a 95% interval from 2.1 to 12.9.</p>
+  <figure>
+    <a class="figure-link" href="images/optimization-feedback.png" aria-label="View budget and probability-feedback results at full resolution"><img src="images/optimization-feedback.png" alt="Two line charts show targeted flip rates rising with 16, 32, 48, and 64 accepted evaluations for four decision systems, and a matched comparison where probability-only feedback reaches 63.6 percent versus 56.4 percent for label-only feedback." width="1500" height="675" loading="lazy" decoding="async"></a>
+    <figcaption>More accepted evaluations reveal additional flips. The matched comparison supports probability-based parent allocation; it does not isolate a separate benefit from displaying numerical history to the proposer.</figcaption>
+  </figure>
+</section>
+<section id="transfer" class="animate-on-scroll">
+  <h2>Context Additions Transfer Across Models</h2>
+  <p>A context optimized for one system is frozen with its source-selected wrong option, then evaluated on another system without further refinement. Off-diagonal targeted transfer rates range from 21.1% to 47.8%. The largest values occur between OpenSourceJev and the plain Qwen scorer, which share the same underlying Qwen3-1.7B Q8 weights but expose different decision interfaces.</p>
+  <figure>
+    <a class="figure-link" href="images/cross-model-transfer.png" aria-label="View cross-model transfer results at full resolution"><img src="images/cross-model-transfer.png" alt="A four-by-four matrix of cross-model targeted transfer rates. Frozen contexts transfer between Jev, OpenSourceJev, Von, and plain Qwen, with the shared-backbone OpenSourceJev and plain Qwen pair reaching 44.2 and 47.8 percent." width="1500" height="573" loading="lazy" decoding="async"></a>
+    <figcaption>Frozen contexts redirect other decision systems without additional optimization. Each cell keeps the exact source-selected decision unit and wrong target; source failures remain in the matched denominator.</figcaption>
+  </figure>
+</section>
+<section id="learning" class="animate-on-scroll">
+  <h2>Failures Can Become Training Signal</h2>
+  <p>The optimization trajectories also provide supervision for generating contexts on unseen Jev decisions. Both training recipes keep the target decision model fixed. Under the common held-out protocol, transition-trained and context-trained proposers improve direct generation over the base proposer.</p>
+  <div class="table-wrap" role="region" aria-label="Held-out learned context generation results, scroll horizontally on narrow screens" tabindex="0">
+    <table>
+      <caption>Held-out Jev Targeted Flip Rate (%) and counts, n = 508</caption>
+      <thead><tr><th scope="col">Proposer</th><th scope="col">One generation</th><th scope="col">Best of four</th><th scope="col">Best of four, p &ge; 0.7</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Base</th><td>16.1 (82)</td><td>29.1 (148)</td><td>17.9 (91)</td></tr>
+        <tr><th scope="row">V1: transition-trained</th><td>18.7 (95)</td><td>32.9 (167)</td><td>22.0 (112)</td></tr>
+        <tr class="highlight-row"><th scope="row">V2: context-trained</th><td>21.9 (111)</td><td>34.3 (174)</td><td>21.3 (108)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">One generation emits a complete list of one to four additions. Best-of-four selects the accepted context with the highest target margin and therefore uses target evaluations for selection.</p>
+</section>
+<section id="scope" class="animate-on-scroll">
+  <h2>What the Study Does&mdash;and Does Not&mdash;Establish</h2>
+  <ul class="scope">
+    <li><strong>It measures answer-preserving redirection.</strong> The study changes surrounding context while holding the decision problem and gold answer fixed.</li>
+    <li><strong>It precommits to a target.</strong> TFR does not reward arbitrary errors or post hoc selection of whichever wrong answer appears.</li>
+    <li><strong>It evaluates four systems and seven datasets.</strong> The reported rates characterize these models, tasks, checks, and budgets; they are not a universal failure probability for all model inputs.</li>
+    <li><strong>It tests natural fit with automated constraints.</strong> Passing those checks does not prove that every generated addition is equally likely in every real deployment.</li>
+    <li><strong>It studies decision reliability, not downstream harm.</strong> The experiments show that context can redirect finite choices; they do not execute tools or actions after those choices.</li>
+  </ul>
+</section>
+<section id="faq" class="animate-on-scroll">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>What does JevOut evaluate?</summary><div class="ans"><p>JevOut evaluates whether a short, natural addition to the surrounding context can redirect an initially correct finite-choice decision toward a wrong option fixed in advance, while the source, question, choices, and correct answer remain unchanged.</p></div></details>
+  <details><summary>What is a decision model in this work?</summary><div class="ans"><p>A decision model maps unstructured language to a probability distribution over a declared finite set of choices. Such an interface can route a request, select a tool or action, or choose among candidate outputs.</p></div></details>
+  <details><summary>Is natural-context redirection the same as prompt injection?</summary><div class="ans"><p>No. The evaluated additions do not replace the task, explicitly request a different answer, name the fixed target option, or alter the available choices. They add background or procedural detail that must fit naturally and preserve the original answer.</p></div></details>
+  <details><summary>What is Targeted Flip Rate?</summary><div class="ans"><p>Targeted Flip Rate is the fraction of initially correct decisions for which at least one accepted context redirects the model to the wrong option fixed before optimization. A change to another wrong option does not count.</p></div></details>
+  <details><summary>Which models and tasks are evaluated?</summary><div class="ans"><p>The study evaluates Jev, OpenSourceJev, Von, and a plain Qwen scorer across seven datasets spanning knowledge, narrative and social reasoning, legal reasoning, multi-answer selection, and tool routing.</p></div></details>
+  <details><summary>What do the results not establish?</summary><div class="ans"><p>The results do not show that every natural context causes a failure, that all decision models behave identically, or that every real deployment is unsafe. They characterize targeted redirection under the paper's models, datasets, acceptance checks, fixed targets, and evaluation budgets.</p></div></details>
+</section>
+<section id="cite" class="animate-on-scroll">
+  <div class="bibhead"><h2>When to Cite JevOut</h2><button class="copy" id="copy-bib" type="button" aria-describedby="copy-status">Copy BibTeX</button></div>
+  <p>Cite JevOut when discussing the reliability of finite-choice decision models, natural or answer-preserving context sensitivity, probability-guided failure discovery, targeted model redirection, cross-model transfer of context effects, or turning evaluation trajectories into post-training signal.</p>
+  <pre><code id="bibtex">@misc{xu2026jevout,
+  title  = {JevOut: Natural Context Can Flip Decision Models},
+  author = {Xu, Zixiang},
+  year   = {2026},
+  note   = {Manuscript}
+}</code></pre>
+  <span class="sr-only" id="copy-status" role="status" aria-live="polite"></span>
+</section>
+</main>
+<footer>JevOut &middot; Zixiang Xu &middot; University of Southern California</footer>
+</div>
+<script>
+(function(){
+  var root=document.documentElement,toggle=document.getElementById('theme-toggle');
+  function syncLabel(){var dark=root.getAttribute('data-theme')==='dark';toggle.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme');}
+  syncLabel();
+  toggle.addEventListener('click',function(){var dark=root.getAttribute('data-theme')==='dark';if(dark){root.setAttribute('data-theme','light');try{localStorage.setItem('theme','light');}catch(e){}}else{root.setAttribute('data-theme','dark');try{localStorage.setItem('theme','dark');}catch(e){}}syncLabel();});
+  var sections=document.querySelectorAll('.animate-on-scroll');
+  if(!('IntersectionObserver' in window)){sections.forEach(function(el){el.classList.add('animated');});}
+  else{sections.forEach(function(el){el.classList.add('waiting');});var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.remove('waiting');entry.target.classList.add('animated');observer.unobserve(entry.target);}});},{threshold:.08,rootMargin:'0px 0px -24px 0px'});sections.forEach(function(el){observer.observe(el);});}
+  var copy=document.getElementById('copy-bib'),status=document.getElementById('copy-status');
+  copy.addEventListener('click',function(){var text=document.getElementById('bibtex').textContent;var done=function(){copy.textContent='Copied';status.textContent='BibTeX copied to clipboard';setTimeout(function(){copy.textContent='Copy BibTeX';},1600);};if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(done);}else{var area=document.createElement('textarea');area.value=text;area.setAttribute('readonly','');area.style.position='fixed';area.style.opacity='0';document.body.appendChild(area);area.select();document.execCommand('copy');document.body.removeChild(area);done();}});
+})();
+</script>
+</body>
+</html>
