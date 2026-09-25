@@ -220,7 +220,7 @@ SocialMaze 同时保留 **Findings of EMNLP 2026** 和 **SocialSim @ COLM 2025 �
 - 正式标题为 `JevOut: Natural Context Can Flip Decision Models`；页面路径为 `/jevout/`，搜索标题为 `JevOut: Testing Decision Model Reliability Under Natural Context`。
 - Landing page 以论文主体、正式摘要和真实论文图表为事实源，围绕 decision-model reliability、natural context sensitivity、answer-preserving context、targeted redirection 与 probability-guided optimization 组织。不将其泛化为普通 prompt injection，不把各系统的 eligible-population TFR 写成全体输入的失败概率。
 - 页面使用论文现有 teaser、task/system results、optimization/feedback 和 cross-model transfer 图。论文 PDF 只作为内容材料，不复制到站点，不新增 PDF 下载入口。
-- 当前未核实到公开 arXiv 或正式发表页；因此 landing page、首页和完整论文页保留非跳转 Paper 占位，不虚构 arXiv 或 DOI。已核实的公开代码仓库为 [`xzx34/JevOut`](https://github.com/xzx34/JevOut)，三个入口均使用 `Code & Data` 按钮，JSON-LD 使用同一 `codeRepository`。
+- 已核实论文于 2026-09-24 上线 [arXiv:2609.30243](https://arxiv.org/abs/2609.30243)，主分类为 `cs.CL`，arXiv DOI 为 `10.48550/arXiv.2609.30243`。Landing page、首页与完整论文页的 Paper 均指向 arXiv 摘要页，不指向 PDF。公开代码仓库为 [`xzx34/JevOut`](https://github.com/xzx34/JevOut)，三个入口均使用 `Code & Data` 按钮，JSON-LD 使用同一 `codeRepository`。
 
 ### 2026-09-21：Cross-Lingual Pitfalls 搜索召回定位
 

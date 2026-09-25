@@ -11,7 +11,7 @@
     - label: "Project Page"
       url: "/jevout/"
     - label: "Paper"
-      url: null
+      url: "https://arxiv.org/abs/2609.30243"
     - label: "Code & Data"
       url: "https://github.com/xzx34/JevOut"
 

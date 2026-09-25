@@ -14,6 +14,9 @@
 <meta name="citation_author" content="Xu, Zixiang">
 <meta name="citation_publication_date" content="2026/09/24">
 <meta name="citation_public_url" content="https://xzx34.github.io/jevout/">
+<meta name="citation_arxiv_id" content="2609.30243">
+<meta name="citation_doi" content="10.48550/arXiv.2609.30243">
+<meta name="citation_abstract_html_url" content="https://arxiv.org/abs/2609.30243">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JevOut: Testing Decision Model Reliability Under Natural Context">
 <meta property="og:description" content="JevOut evaluates whether short, natural context can redirect Jev and other decision models from correct choices to high-confidence wrong decisions.">
@@ -56,6 +59,11 @@
     "Post-training data generation"
   ],
   "keywords": "decision model reliability, LLM evaluation, natural context sensitivity, answer-preserving context, targeted redirection, probability-guided optimization, tool routing, adversarial evaluation",
+  "identifier": [
+    {"@type": "PropertyValue", "propertyID": "arXiv", "value": "2609.30243"},
+    {"@type": "PropertyValue", "propertyID": "DOI", "value": "10.48550/arXiv.2609.30243"}
+  ],
+  "sameAs": "https://arxiv.org/abs/2609.30243",
   "codeRepository": "https://github.com/xzx34/JevOut"
 }
 </script>
@@ -207,10 +215,9 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
   <p class="authors"><a href="https://xzx34.github.io/">Zixiang Xu</a><sup>1</sup></p>
   <p class="legend"><sup>1</sup> University of Southern California<br>Corresponding author: <a href="mailto:zixiangx@usc.edu">zixiangx@usc.edu</a></p>
   <nav class="btns" aria-label="Paper links">
-    <span class="btn pending" role="link" aria-disabled="true" title="Paper link will be added after a public record is available"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M6.8 2.8h7l3.4 3.4V21.2H6.8zM13.6 3v3.6h3.4M9 12h6M9 15h6M9 18h4.5"/></svg>Paper</span>
+    <a class="btn" href="https://arxiv.org/abs/2609.30243"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M6.8 2.8h7l3.4 3.4V21.2H6.8zM13.6 3v3.6h3.4M9 12h6M9 15h6M9 18h4.5"/></svg>Paper</a>
     <a class="btn" href="https://github.com/xzx34/JevOut"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.77-.24.77-.54v-2.1c-3.14.68-3.8-1.33-3.8-1.33-.5-1.3-1.24-1.64-1.24-1.64-1.02-.7.08-.69.08-.69 1.12.08 1.71 1.15 1.71 1.15 1 1.7 2.62 1.21 3.26.93.1-.72.39-1.21.71-1.49-2.5-.28-5.14-1.25-5.14-5.58 0-1.23.44-2.23 1.15-3.02-.12-.28-.5-1.42.11-2.97 0 0 .94-.3 3.08 1.15A10.7 10.7 0 0 1 12 6.12c.95 0 1.9.13 2.8.38 2.13-1.45 3.06-1.15 3.06-1.15.62 1.55.23 2.69.12 2.97.72.79 1.15 1.79 1.15 3.02 0 4.34-2.64 5.3-5.15 5.58.4.35.76 1.03.76 2.08v3.09c0 .3.2.65.78.54A11.2 11.2 0 0 0 12 .8z"/></svg>Code &amp; Data</a>
   </nav>
-  <p class="statusline">The public paper link will be added when a verified record becomes available.</p>
   <figure>
     <a class="figure-link" href="images/context-redirection.png" aria-label="View the natural-context redirection example at full resolution"><img src="images/context-redirection.png" alt="A climate-ethics multiple-choice example where a short intergenerational context addition leaves the question and correct answer unchanged but moves Jev from the correct option at probability 0.97 to a fixed wrong option at probability 0.54." width="2000" height="1180" decoding="async"></a>
     <figcaption>A short, natural addition can redirect an otherwise correct decision. The question, options, and gold answer remain fixed while the model's probability distribution shifts toward a wrong option chosen before optimization.</figcaption>
@@ -324,10 +331,14 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
   <div class="bibhead"><h2>When to Cite JevOut</h2><button class="copy" id="copy-bib" type="button" aria-describedby="copy-status">Copy BibTeX</button></div>
   <p>Cite JevOut when discussing the reliability of finite-choice decision models, natural or answer-preserving context sensitivity, probability-guided failure discovery, targeted model redirection, cross-model transfer of context effects, or turning evaluation trajectories into post-training signal.</p>
   <pre><code id="bibtex">@misc{xu2026jevout,
-  title  = {JevOut: Natural Context Can Flip Decision Models},
-  author = {Xu, Zixiang},
-  year   = {2026},
-  note   = {Manuscript}
+  title         = {JevOut: Natural Context Can Flip Decision Models},
+  author        = {Xu, Zixiang},
+  year          = {2026},
+  eprint        = {2609.30243},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  doi           = {10.48550/arXiv.2609.30243},
+  url           = {https://arxiv.org/abs/2609.30243}
 }</code></pre>
   <span class="sr-only" id="copy-status" role="status" aria-live="polite"></span>
 </section>
