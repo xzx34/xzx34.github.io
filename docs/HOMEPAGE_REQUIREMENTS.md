@@ -218,6 +218,7 @@ SocialMaze 同时保留 **Findings of EMNLP 2026** 和 **SocialSim @ COLM 2025 �
 
 ### 2026-10-08：JevOut 新版作者与 Agenthon 录用
 
+- 用户随后要求对外简称 `Agenthon 2026`，不展开 workshop 的 finance 副标题。录用说明使用 `Accepted for a poster presentation at Agenthon 2026, held at NeurIPS 2026.`；BibTeX note、Highwire 会议字段和 JSON-LD 同步简称，保留 workshop 链接及 poster 身份，不修改正式论文标题或暗示 NeurIPS 主会录用。
 - 用户确认 JevOut 已获 Agenthon 2026: Verifiable AI for Quantitative Finance（NeurIPS 2026）poster 录用。项目页与完整论文页保留 `Agenthon @ NeurIPS 2026 · Poster`，不得写成 NeurIPS 主会论文。用户随后明确：仅 workshop 录用仍保留在 Latest Preprints，只有正式录用才移入 Selected Work；已将本轮误移的 JevOut 改回 `preprint: true`。完整论文页以 `Preprint 2026` 为主标签并保留 workshop poster 补充标识；News 继续只记录重要职业与学业经历。
 - 正式标题仍为 `JevOut: Natural Context Can Flip Decision Models`，不采用录用邮件中的早期标题 `Natural-Context Redirection in Decision Models`。搜索标题及稳定页面路径保持不变。
 - 最新材料是 `/Users/zixiang/research/jev/paper/arxiv_v2/main.pdf` 及同目录 LaTeX；旧 `paper/arxiv/` 仍为单作者旧稿。作者按新版顺序为 Zixiang Xu、Zirui Song、Chiyu Zhang、Xiuying Chen、Xi Liu、Xiyang Hu、Yue Zhao；单位映射与新版一致，通讯作者为 Yue Zhao（`yue.z@usc.edu`），`*` 仅表示通讯作者，不表示共同贡献。
