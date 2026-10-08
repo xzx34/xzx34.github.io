@@ -1,6 +1,6 @@
 # 主页维护要求
 
-最后整理：2026-09-24
+最后整理：2026-10-08
 
 ## 1. 本文档的用途与更新方式
 
@@ -92,8 +92,8 @@
 
 | 展示位置 | 当前相对顺序 |
 | --- | --- |
-| Latest Preprints：4 篇 | JevOut → AlgoWorlds → Inside the Unfair Judge → GTA |
-| Selected Work：4 篇 | SocialMaze → Cross-Lingual Pitfalls → Adaptive Distraction → DyFlow |
+| Latest Preprints：3 篇 | AlgoWorlds → Inside the Unfair Judge → GTA |
+| Selected Work：5 篇 | JevOut → SocialMaze → Cross-Lingual Pitfalls → Adaptive Distraction → DyFlow |
 | 完整论文页：18 篇 | 保持 `_data/publications.yml` 的完整序列 |
 | 仅完整论文页中的两篇 2025 预印本 | Beyond Survival；Evaluate Bias without Manual Test Sets |
 
@@ -214,6 +214,15 @@ SocialMaze 同时保留 **Findings of EMNLP 2026** 和 **SocialSim @ COLM 2025 �
 | 当前仓库内的研究项目页 | `jevout/`、`gta/`、`socialmaze/`、`cross-lingual-pitfalls/`、`unfair-judge/` |
 
 ## 11. 待同步事项与变更记录
+
+### 2026-10-08：JevOut 新版作者与 Agenthon 录用
+
+- 用户确认 JevOut 已获 Agenthon 2026: Verifiable AI for Quantitative Finance（NeurIPS 2026）poster 录用。项目页与论文列表使用 `Agenthon @ NeurIPS 2026 · Poster`，不得写成 NeurIPS 主会论文。首页将该条目从 Latest Preprints 移入 Selected Work；News 继续只记录重要职业与学业经历。
+- 正式标题仍为 `JevOut: Natural Context Can Flip Decision Models`，不采用录用邮件中的早期标题 `Natural-Context Redirection in Decision Models`。搜索标题及稳定页面路径保持不变。
+- 最新材料是 `/Users/zixiang/research/jev/paper/arxiv_v2/main.pdf` 及同目录 LaTeX；旧 `paper/arxiv/` 仍为单作者旧稿。作者按新版顺序为 Zixiang Xu、Zirui Song、Chiyu Zhang、Xiuying Chen、Xi Liu、Xiyang Hu、Yue Zhao；单位映射与新版一致，通讯作者为 Yue Zhao（`yue.z@usc.edu`），`*` 仅表示通讯作者，不表示共同贡献。
+- 可见作者、Highwire、JSON-LD、BibTeX 与首页/完整论文页作者同步；正式摘要与新版稿件逐字一致（展开结果宏）。保留 arXiv 引用类型与标识，BibTeX 用 note 注明 workshop poster，不虚构正式 proceedings 或新 DOI。
+- 同步新版的人工验证、初始置信度/短上下文结果、独立生成对照与重复性检验；论文图从新版真实图表生成。人工验证为 250 个成功样本中 229 个（91.6%）满足三名独立标注者的多数判定，不把该比例泛化为全体上下文或真实部署可靠性。
+- 本轮核对时 arXiv 公开记录仍为 v1；用户已提交更新但尚未公开。Paper 继续使用不带版本号的 `https://arxiv.org/abs/2609.30243`，待 arXiv 完成处理后自动显示最新版，不猜测 v2 的发布日期。无独立正式论文页面时继续回退到该摘要页；不复制或提供论文 PDF 下载。
 
 ### 2026-09-24：JevOut landing page
 

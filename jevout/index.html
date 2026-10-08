@@ -7,12 +7,26 @@
 <title>JevOut: Testing Decision Model Reliability Under Natural Context</title>
 <meta name="description" content="JevOut evaluates whether short, natural context can redirect Jev and other decision models from correct choices to high-confidence wrong decisions.">
 <meta name="robots" content="index,follow">
-<meta name="author" content="Zixiang Xu">
+<meta name="author" content="Zixiang Xu, Zirui Song, Chiyu Zhang, Xiuying Chen, Xi Liu, Xiyang Hu, Yue Zhao">
 <link rel="canonical" href="https://xzx34.github.io/jevout/">
 <link rel="icon" href="/images/favicon.ico">
 <meta name="citation_title" content="JevOut: Natural Context Can Flip Decision Models">
 <meta name="citation_author" content="Xu, Zixiang">
+<meta name="citation_author_institution" content="University of Southern California">
+<meta name="citation_author" content="Song, Zirui">
+<meta name="citation_author_institution" content="Mohamed bin Zayed University of Artificial Intelligence">
+<meta name="citation_author" content="Zhang, Chiyu">
+<meta name="citation_author_institution" content="Independent Researcher">
+<meta name="citation_author" content="Chen, Xiuying">
+<meta name="citation_author_institution" content="Mohamed bin Zayed University of Artificial Intelligence">
+<meta name="citation_author" content="Liu, Xi">
+<meta name="citation_author_institution" content="Independent Researcher">
+<meta name="citation_author" content="Hu, Xiyang">
+<meta name="citation_author_institution" content="Arizona State University">
+<meta name="citation_author" content="Zhao, Yue">
+<meta name="citation_author_institution" content="University of Southern California">
 <meta name="citation_publication_date" content="2026/09/24">
+<meta name="citation_conference_title" content="Agenthon 2026: Verifiable AI for Quantitative Finance at NeurIPS 2026">
 <meta name="citation_public_url" content="https://xzx34.github.io/jevout/">
 <meta name="citation_arxiv_id" content="2609.30243">
 <meta name="citation_doi" content="10.48550/arXiv.2609.30243">
@@ -36,9 +50,10 @@
   "url": "https://xzx34.github.io/jevout/",
   "mainEntityOfPage": "https://xzx34.github.io/jevout/",
   "datePublished": "2026-09-24",
+  "dateModified": "2026-10-08",
   "inLanguage": "en",
   "description": "JevOut studies whether short, natural, answer-preserving context can redirect dedicated decision models from correct choices to fixed wrong options, and uses option probabilities to discover, transfer, and learn these contexts.",
-  "author": {
+  "author": [{
     "@id": "https://xzx34.github.io/#person",
     "@type": "Person",
     "name": "Zixiang Xu",
@@ -46,6 +61,13 @@
     "sameAs": "https://orcid.org/0009-0008-6672-004X",
     "affiliation": {"@type": "Organization", "name": "University of Southern California"}
   },
+  {"@type": "Person", "name": "Zirui Song", "affiliation": {"@type": "Organization", "name": "Mohamed bin Zayed University of Artificial Intelligence"}},
+  {"@type": "Person", "name": "Chiyu Zhang", "affiliation": {"@type": "Organization", "name": "Independent Researcher"}},
+  {"@type": "Person", "name": "Xiuying Chen", "affiliation": {"@type": "Organization", "name": "Mohamed bin Zayed University of Artificial Intelligence"}},
+  {"@type": "Person", "name": "Xi Liu", "affiliation": {"@type": "Organization", "name": "Independent Researcher"}},
+  {"@type": "Person", "name": "Xiyang Hu", "affiliation": {"@type": "Organization", "name": "Arizona State University"}},
+  {"@type": "Person", "name": "Yue Zhao", "url": "https://viterbi-web.usc.edu/~yzhao010/", "affiliation": {"@type": "Organization", "name": "University of Southern California"}}],
+  "isPartOf": {"@type": "CreativeWork", "name": "Agenthon 2026: Verifiable AI for Quantitative Finance at NeurIPS 2026", "url": "https://www.agenthon.net/"},
   "about": [
     "Decision model reliability",
     "Language model evaluation",
@@ -138,6 +160,7 @@ h3{font-size:1.06rem;margin:1.3em 0 .25em;line-height:1.5}
 p{margin:.7em 0}
 .venue{display:inline-block;font-weight:600;color:#fff;background:var(--grad);padding:4px 14px;border-radius:999px;font-size:.9rem;letter-spacing:.02em;box-shadow:0 2px 8px var(--shadow)}
 .authors{margin:1.15em 0 .4em;line-height:1.95}
+.authors .author{display:inline-block;margin-right:.45em}
 .legend{color:var(--muted);font-size:.92rem;margin:.2em 0 .4em;line-height:1.7;overflow-wrap:anywhere}
 .btns{display:flex;flex-wrap:wrap;gap:10px;margin:1.2em 0 .2em}
 .btn{display:inline-flex;align-items:center;gap:.45em;border:1px solid var(--accent);color:var(--accent);background:var(--card);padding:.65em 1.05em;border-radius:999px;font-size:.95rem;font-weight:600;line-height:1.15;transition:background .15s ease,color .15s ease,box-shadow .15s ease,transform .15s ease}
@@ -146,6 +169,7 @@ a.btn:hover{background:var(--grad);color:#fff;box-shadow:0 6px 16px var(--shadow
 .btn.pending{color:var(--muted);border-color:var(--border);background:transparent;cursor:not-allowed}
 .statusline,.note{color:var(--muted);font-size:.9rem;margin:.75em 0 0}
 figure{margin:2.4em auto .4em}
+.figure-compact{max-width:560px}
 figure img{display:block;width:100%;height:auto;background:#fff;border:1px solid var(--border);border-radius:8px;box-shadow:0 6px 22px var(--shadow)}
 [data-theme="dark"] figure img{filter:brightness(.92)}
 figcaption{color:var(--muted);font-size:.9rem;margin:.8em auto 0;text-align:center;max-width:720px}
@@ -211,15 +235,24 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
 <header>
   <h1>JevOut: Natural Context Can Flip Decision Models</h1>
   <p class="subtitle">Testing whether short, answer-preserving context can redirect Jev and other decision models to high-confidence wrong choices.</p>
-  <span class="venue">Preprint 2026</span>
-  <p class="authors"><a href="https://xzx34.github.io/">Zixiang Xu</a><sup>1</sup></p>
-  <p class="legend"><sup>1</sup> University of Southern California<br>Corresponding author: <a href="mailto:zixiangx@usc.edu">zixiangx@usc.edu</a></p>
+  <span class="venue">Agenthon @ NeurIPS 2026 &middot; Poster</span>
+  <p class="statusline">Accepted for a poster presentation at <a href="https://www.agenthon.net/">Agenthon 2026: Verifiable AI for Quantitative Finance</a>, held at NeurIPS 2026.</p>
+  <p class="authors">
+    <span class="author"><a href="https://xzx34.github.io/">Zixiang Xu</a><sup>1</sup></span>
+    <span class="author">Zirui Song<sup>2</sup></span>
+    <span class="author">Chiyu Zhang<sup>3</sup></span>
+    <span class="author">Xiuying Chen<sup>2</sup></span>
+    <span class="author">Xi Liu<sup>3</sup></span>
+    <span class="author">Xiyang Hu<sup>4</sup></span>
+    <span class="author"><a href="https://viterbi-web.usc.edu/~yzhao010/">Yue Zhao</a><sup>1,*</sup></span>
+  </p>
+  <p class="legend"><sup>1</sup> University of Southern California<br><sup>2</sup> Mohamed bin Zayed University of Artificial Intelligence<br><sup>3</sup> Independent Researcher &nbsp; <sup>4</sup> Arizona State University<br><sup>*</sup> Corresponding author: Yue Zhao (<a href="mailto:yue.z@usc.edu">yue.z@usc.edu</a>)</p>
   <nav class="btns" aria-label="Paper links">
     <a class="btn" href="https://arxiv.org/abs/2609.30243"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M6.8 2.8h7l3.4 3.4V21.2H6.8zM13.6 3v3.6h3.4M9 12h6M9 15h6M9 18h4.5"/></svg>Paper</a>
     <a class="btn" href="https://github.com/xzx34/JevOut"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.77-.24.77-.54v-2.1c-3.14.68-3.8-1.33-3.8-1.33-.5-1.3-1.24-1.64-1.24-1.64-1.02-.7.08-.69.08-.69 1.12.08 1.71 1.15 1.71 1.15 1 1.7 2.62 1.21 3.26.93.1-.72.39-1.21.71-1.49-2.5-.28-5.14-1.25-5.14-5.58 0-1.23.44-2.23 1.15-3.02-.12-.28-.5-1.42.11-2.97 0 0 .94-.3 3.08 1.15A10.7 10.7 0 0 1 12 6.12c.95 0 1.9.13 2.8.38 2.13-1.45 3.06-1.15 3.06-1.15.62 1.55.23 2.69.12 2.97.72.79 1.15 1.79 1.15 3.02 0 4.34-2.64 5.3-5.15 5.58.4.35.76 1.03.76 2.08v3.09c0 .3.2.65.78.54A11.2 11.2 0 0 0 12 .8z"/></svg>Code &amp; Data</a>
   </nav>
   <figure>
-    <a class="figure-link" href="images/context-redirection.png" aria-label="View the natural-context redirection example at full resolution"><img src="images/context-redirection.png" alt="A climate-ethics multiple-choice example where a short intergenerational context addition leaves the question and correct answer unchanged but moves Jev from the correct option at probability 0.97 to a fixed wrong option at probability 0.54." width="2000" height="1180" decoding="async"></a>
+    <a class="figure-link" href="images/context-redirection.png" aria-label="View the natural-context redirection example at full resolution"><img src="images/context-redirection.png" alt="A climate-ethics multiple-choice example where a short intergenerational context addition leaves the question and correct answer unchanged but moves Jev from the correct option at probability 0.97 to a fixed wrong option at probability 0.54." width="2000" height="1052" decoding="async"></a>
     <figcaption>A short, natural addition can redirect an otherwise correct decision. The question, options, and gold answer remain fixed while the model's probability distribution shifts toward a wrong option chosen before optimization.</figcaption>
   </figure>
 </header>
@@ -233,12 +266,12 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
     <div class="fact"><dt>7 datasets</dt><dd>Knowledge, narrative and social reasoning, legal reasoning, multi-answer selection, and tool routing.</dd></div>
     <div class="fact"><dt>61.4%&ndash;73.2% TFR</dt><dd>Targeted flip rates within 64 accepted target evaluations, measured separately on each system's initially correct decisions.</dd></div>
     <div class="fact"><dt>31 added words</dt><dd>Median length of the selected successful Jev contexts; 81.1% use at most two additions.</dd></div>
+    <div class="fact"><dt>91.6% human-valid</dt><dd>229 of 250 sampled successful contexts satisfy all three validity criteria by majority judgment of three independent annotators.</dd></div>
   </dl>
 </section>
 <section id="abstract" class="animate-on-scroll">
   <h2>Abstract</h2>
-  <div class="block abstract"><p>Dedicated decision models such as Jev map unstructured language to probability distributions over finite choices, allowing their outputs to directly route requests, select tools, and trigger actions. Yet real-world inputs rarely arrive in isolation: they come with background details and surrounding context. We find that short additions that fit naturally into this context can nevertheless redirect an otherwise correct decision, even when the correct answer remains unchanged. To study this behavior, we fix a wrong target option for each initially correct item and use the model's option probabilities to refine fluent context additions while preserving the source, question, choices, and gold answer. Within 64 accepted target evaluations, the optimizer identifies contexts that redirect Jev on 312 of 508 initially correct decisions (61.4%); in 229 cases, Jev assigns at least 0.7 probability to the fixed wrong option. Across seven datasets, three additional decision systems show targeted flip rates of 64.9%&ndash;73.2% on decisions they initially answer correctly. Taken together, these results expose a pronounced fragility in current decision models: short, ordinary-looking context can shift a correct choice to a high-confidence wrong one. Because these models turn language directly into downstream choices, this sensitivity raises concerns about treating their probability outputs as reliable decision interfaces.</p></div>
-  <p class="note">Abstract reproduced from the manuscript, with generated result macros expanded.</p>
+  <div class="block abstract"><p>An ordinary-looking background detail can turn a correct model decision into a confident mistake. We demonstrate this fragility in four decision systems, including Jev, across seven datasets covering knowledge, reasoning, and tool routing. Within 64 accepted target evaluations per decision, we uncover short context additions that redirect 61.4%&ndash;73.2% of each system's initially correct decisions toward a wrong option fixed in advance. The additions supply background or procedural information rather than explicit answer-selection instructions, leaving the original question and choices intact. We construct them through probability-guided context optimization, which uses shifts in the option distribution to refine surrounding text under naturalness and answer-preservation constraints. Redirection affects initially confident decisions, often produces high-confidence wrong choices, and transfers across models. In blinded human evaluation, 91.6% of 250 sampled successful contexts are judged natural, answer-preserving, and free of decisive answer-changing evidence by a majority of three independent annotators. These findings expose a weakness in current decision models: context that looks entirely compatible with an input can redirect the choices that agents, routers, and evaluators rely on.</p></div>
 </section>
 <section id="positioning" class="animate-on-scroll">
   <h2>Where JevOut Fits</h2>
@@ -271,24 +304,38 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
     </table>
   </div>
   <p class="note">Each target retains its own initially correct population. Neutral and target-aware controls use one sentence; optimization allows at most 64 accepted target evaluations. The final column additionally requires target probability of at least 0.7.</p>
-  <figure>
-    <a class="figure-link" href="images/task-system-results.png" aria-label="View task-level targeted flip rates at full resolution"><img src="images/task-system-results.png" alt="Heat map of targeted flip rates for Jev, OpenSourceJev, Von, and plain Qwen across MMLU-Pro, SuperGPQA, MuSR, ToMBench, LAR-ECHR, SATA, and BFCL V4. Every model-dataset combination contains successful redirections." width="1500" height="698" loading="lazy" decoding="async"></a>
+  <figure class="figure-compact">
+    <a class="figure-link" href="images/task-system-results.png" aria-label="View task-level targeted flip rates at full resolution"><img src="images/task-system-results.png" alt="Heat map of targeted flip rates for Jev, OpenSourceJev, Von, and plain Qwen across MMLU-Pro, SuperGPQA, MuSR, ToMBench, LAR-ECHR, SATA, and BFCL V4. Every model-dataset combination contains successful redirections." width="2000" height="1945" loading="lazy" decoding="async"></a>
     <figcaption>Targeted redirection appears across all seven datasets and all four systems. Each cell reports TFR within that system's own initially correct population, so cell values should not be read as clean task accuracy.</figcaption>
+  </figure>
+</section>
+<section id="validation" class="animate-on-scroll">
+  <h2>Independent Validation of Context and Redirection</h2>
+  <p>Three independent annotators assessed 250 successful contexts sampled across the four systems, mixed with 100 accepted-but-unsuccessful controls. They were blinded to the fixed target, the model prediction, and whether the context produced a flip. By majority judgment, <strong>229 of 250 successes (91.6%)</strong> were natural, preserved the original gold answer, and introduced no decisive answer-changing evidence. The same joint validity rate was 93.0% for the unsuccessful controls.</p>
+  <p>In a separate repeatability audit of 100 sampled successful Jev cases, the preselected context reproduced its targeted flip in at least eight of ten fresh evaluations for <strong>97 cases</strong>. Requiring the original input also to remain correct in at least eight of ten evaluations retained 94 cases.</p>
+</section>
+<section id="confidence" class="animate-on-scroll">
+  <h2>Confident Decisions Can Flip Under Short Contexts</h2>
+  <p>Among 290 Jev decisions with initial correct-option probability at least 0.9, optimization redirects 132 (45.5%); 105 (36.2%) also reach probability at least 0.7 on the wrong target. A single added sentence suffices for 211 of all 508 initially correct Jev decisions (41.5%), and contexts of at most 32 added words redirect 208 (40.9%).</p>
+  <figure>
+    <a class="figure-link" href="images/confidence-context-length.png" aria-label="View initial-confidence and context-length results at full resolution"><img src="images/confidence-context-length.png" alt="Jev targeted flip rates by initial confidence, including 45.5 percent for decisions initially at least 0.9 confident, and cumulative redirection coverage under added-word caps, including 208 of 508 decisions at 32 words." width="2000" height="1064" loading="lazy" decoding="async"></a>
+    <figcaption>Confidence strata and word caps use the original 64-call Jev trajectories. Word caps are retrospective; coverage is measured over the initially correct population.</figcaption>
   </figure>
 </section>
 <section id="feedback" class="animate-on-scroll">
   <h2>Probability Feedback Reveals More Failures</h2>
+  <p>Repeated independent target-aware generation reaches <strong>48.0% TFR (244/508)</strong> on Jev under the same ceiling of 64 accepted target calls. Full context optimization reaches 61.4% (312/508), adding 13.4 percentage points. The control uses independent single additions; optimization can refine and compose additions, with realized call counts determined by acceptance and stopping.</p>
   <p>Option probabilities expose movement toward the fixed target before the selected decision flips. As the accepted-call budget grows from 16 to 64, the optimizer continues to uncover additional redirections. On the same 140 Jev decisions, probability-only allocation reaches 63.6% TFR, compared with 56.4% for label-only allocation&mdash;a paired difference of <strong>7.1 percentage points</strong> with a 95% interval from 2.1 to 12.9.</p>
   <figure>
-    <a class="figure-link" href="images/optimization-feedback.png" aria-label="View budget and probability-feedback results at full resolution"><img src="images/optimization-feedback.png" alt="Two line charts show targeted flip rates rising with 16, 32, 48, and 64 accepted evaluations for four decision systems, and a matched comparison where probability-only feedback reaches 63.6 percent versus 56.4 percent for label-only feedback." width="1500" height="675" loading="lazy" decoding="async"></a>
+    <a class="figure-link" href="images/optimization-feedback.png" aria-label="View budget and probability-feedback results at full resolution"><img src="images/optimization-feedback.png" alt="Budget curves show targeted flip rates rising with 16, 32, 48, and 64 accepted evaluations for four decision systems. A matched Jev comparison reports the gain from probability-only over label-only allocation, reaching 7.1 percentage points with a paired 95 percent interval from 2.1 to 12.9." width="2000" height="890" loading="lazy" decoding="async"></a>
     <figcaption>More accepted evaluations reveal additional flips. The matched comparison supports probability-based parent allocation; it does not isolate a separate benefit from displaying numerical history to the proposer.</figcaption>
   </figure>
 </section>
 <section id="transfer" class="animate-on-scroll">
   <h2>Context Additions Transfer Across Models</h2>
   <p>A context optimized for one system is frozen with its source-selected wrong option, then evaluated on another system without further refinement. Off-diagonal targeted transfer rates range from 21.1% to 47.8%. The largest values occur between OpenSourceJev and the plain Qwen scorer, which share the same underlying Qwen3-1.7B Q8 weights but expose different decision interfaces.</p>
-  <figure>
-    <a class="figure-link" href="images/cross-model-transfer.png" aria-label="View cross-model transfer results at full resolution"><img src="images/cross-model-transfer.png" alt="A four-by-four matrix of cross-model targeted transfer rates. Frozen contexts transfer between Jev, OpenSourceJev, Von, and plain Qwen, with the shared-backbone OpenSourceJev and plain Qwen pair reaching 44.2 and 47.8 percent." width="1500" height="573" loading="lazy" decoding="async"></a>
+  <figure class="figure-compact">
+    <a class="figure-link" href="images/cross-model-transfer.png" aria-label="View cross-model transfer results at full resolution"><img src="images/cross-model-transfer.png" alt="A four-by-four matrix of cross-model targeted transfer rates. Frozen contexts transfer between Jev, OpenSourceJev, Von, and plain Qwen, with the shared-backbone OpenSourceJev and plain Qwen pair reaching 44.2 and 47.8 percent." width="2000" height="1900" loading="lazy" decoding="async"></a>
     <figcaption>Frozen contexts redirect other decision systems without additional optimization. Each cell keeps the exact source-selected decision unit and wrong target; source failures remain in the matched denominator.</figcaption>
   </figure>
 </section>
@@ -314,7 +361,7 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
     <li><strong>It measures answer-preserving redirection.</strong> The study changes surrounding context while holding the decision problem and gold answer fixed.</li>
     <li><strong>It precommits to a target.</strong> TFR does not reward arbitrary errors or post hoc selection of whichever wrong answer appears.</li>
     <li><strong>It evaluates four systems and seven datasets.</strong> The reported rates characterize these models, tasks, checks, and budgets; they are not a universal failure probability for all model inputs.</li>
-    <li><strong>It tests natural fit with automated constraints.</strong> Passing those checks does not prove that every generated addition is equally likely in every real deployment.</li>
+    <li><strong>It combines automated constraints with sampled human validation.</strong> Independent annotators confirm joint validity for 91.6% of 250 sampled successful contexts. This sample does not establish validity for every generated addition or its likelihood in every real deployment.</li>
     <li><strong>It studies decision reliability, not downstream harm.</strong> The experiments show that context can redirect finite choices; they do not execute tools or actions after those choices.</li>
   </ul>
 </section>
@@ -332,18 +379,19 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
   <p>Cite JevOut when discussing the reliability of finite-choice decision models, natural or answer-preserving context sensitivity, probability-guided failure discovery, targeted model redirection, cross-model transfer of context effects, or turning evaluation trajectories into post-training signal.</p>
   <pre><code id="bibtex">@misc{xu2026jevout,
   title         = {JevOut: Natural Context Can Flip Decision Models},
-  author        = {Xu, Zixiang},
+  author        = {Xu, Zixiang and Song, Zirui and Zhang, Chiyu and Chen, Xiuying and Liu, Xi and Hu, Xiyang and Zhao, Yue},
   year          = {2026},
   eprint        = {2609.30243},
   archivePrefix = {arXiv},
   primaryClass  = {cs.CL},
   doi           = {10.48550/arXiv.2609.30243},
+  note          = {Accepted for a poster presentation at Agenthon 2026: Verifiable AI for Quantitative Finance at NeurIPS 2026},
   url           = {https://arxiv.org/abs/2609.30243}
 }</code></pre>
   <span class="sr-only" id="copy-status" role="status" aria-live="polite"></span>
 </section>
 </main>
-<footer>JevOut &middot; Zixiang Xu &middot; University of Southern California</footer>
+<footer>JevOut &middot; Agenthon @ NeurIPS 2026 &middot; Poster</footer>
 </div>
 <script>
 (function(){

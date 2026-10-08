@@ -3,10 +3,11 @@
 # Never use a direct PDF URL. See docs/HOMEPAGE_REQUIREMENTS.md, section 6.
 - title: "JevOut: Natural Context Can Flip Decision Models"
   selected: true
-  preprint: true
+  preprint: false
   venue:
-    - "Preprint 2026"
-  authors: "<strong>Zixiang Xu</strong>"
+    - "Agenthon @ NeurIPS 2026"
+    - "Poster"
+  authors: "<strong>Zixiang Xu</strong>, Zirui Song, Chiyu Zhang, Xiuying Chen, Xi Liu, Xiyang Hu, Yue Zhao"
   links:
     - label: "Project Page"
       url: "/jevout/"
