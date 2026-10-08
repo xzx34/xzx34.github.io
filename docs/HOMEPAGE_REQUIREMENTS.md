@@ -81,6 +81,7 @@
 - Selected Work 保留左侧醒目的大字号会议说明，以及已有特色字体和排版层级。
 - 两组各自保持已确认的相对顺序；“All publications” 按钮位于两组之后。
 - 分类使用显式 `preprint` 字段，首页是否展示由 `selected` 控制，不从会议文案推断分类。
+- 只有正式主会、Findings 或期刊录用才移入 Selected Work；仅 workshop 录用（包括 poster、spotlight）仍保留在 Latest Preprints。项目页及完整论文页可以保留 workshop 录用标识，不把它当作正式主会录用。
 - 复用共享论文模板；不传分组参数时完整论文页展示全部论文。
 - 完整论文页预印本会议栏统一为 `Preprint 年份`，例如 `Preprint 2026`，不混用 `arXiv 2026`、无年份 `Preprint` 或重复状态说明。
 - 保留导航及 Selected Work 的 `#publications`、`#-publications` 旧锚点；新栏目使用 `#latest-preprints`。
@@ -92,8 +93,8 @@
 
 | 展示位置 | 当前相对顺序 |
 | --- | --- |
-| Latest Preprints：3 篇 | AlgoWorlds → Inside the Unfair Judge → GTA |
-| Selected Work：5 篇 | JevOut → SocialMaze → Cross-Lingual Pitfalls → Adaptive Distraction → DyFlow |
+| Latest Preprints：4 篇 | JevOut → AlgoWorlds → Inside the Unfair Judge → GTA |
+| Selected Work：4 篇 | SocialMaze → Cross-Lingual Pitfalls → Adaptive Distraction → DyFlow |
 | 完整论文页：18 篇 | 保持 `_data/publications.yml` 的完整序列 |
 | 仅完整论文页中的两篇 2025 预印本 | Beyond Survival；Evaluate Bias without Manual Test Sets |
 
@@ -217,7 +218,7 @@ SocialMaze 同时保留 **Findings of EMNLP 2026** 和 **SocialSim @ COLM 2025 �
 
 ### 2026-10-08：JevOut 新版作者与 Agenthon 录用
 
-- 用户确认 JevOut 已获 Agenthon 2026: Verifiable AI for Quantitative Finance（NeurIPS 2026）poster 录用。项目页与论文列表使用 `Agenthon @ NeurIPS 2026 · Poster`，不得写成 NeurIPS 主会论文。首页将该条目从 Latest Preprints 移入 Selected Work；News 继续只记录重要职业与学业经历。
+- 用户确认 JevOut 已获 Agenthon 2026: Verifiable AI for Quantitative Finance（NeurIPS 2026）poster 录用。项目页与完整论文页保留 `Agenthon @ NeurIPS 2026 · Poster`，不得写成 NeurIPS 主会论文。用户随后明确：仅 workshop 录用仍保留在 Latest Preprints，只有正式录用才移入 Selected Work；已将本轮误移的 JevOut 改回 `preprint: true`。完整论文页以 `Preprint 2026` 为主标签并保留 workshop poster 补充标识；News 继续只记录重要职业与学业经历。
 - 正式标题仍为 `JevOut: Natural Context Can Flip Decision Models`，不采用录用邮件中的早期标题 `Natural-Context Redirection in Decision Models`。搜索标题及稳定页面路径保持不变。
 - 最新材料是 `/Users/zixiang/research/jev/paper/arxiv_v2/main.pdf` 及同目录 LaTeX；旧 `paper/arxiv/` 仍为单作者旧稿。作者按新版顺序为 Zixiang Xu、Zirui Song、Chiyu Zhang、Xiuying Chen、Xi Liu、Xiyang Hu、Yue Zhao；单位映射与新版一致，通讯作者为 Yue Zhao（`yue.z@usc.edu`），`*` 仅表示通讯作者，不表示共同贡献。
 - 可见作者、Highwire、JSON-LD、BibTeX 与首页/完整论文页作者同步；正式摘要与新版稿件逐字一致（展开结果宏）。保留 arXiv 引用类型与标识，BibTeX 用 note 注明 workshop poster，不虚构正式 proceedings 或新 DOI。

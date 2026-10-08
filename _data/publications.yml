@@ -3,10 +3,10 @@
 # Never use a direct PDF URL. See docs/HOMEPAGE_REQUIREMENTS.md, section 6.
 - title: "JevOut: Natural Context Can Flip Decision Models"
   selected: true
-  preprint: false
+  preprint: true
   venue:
-    - "Agenthon @ NeurIPS 2026"
-    - "Poster"
+    - "Preprint 2026"
+    - "Agenthon @ NeurIPS 2026 · Poster"
   authors: "<strong>Zixiang Xu</strong>, Zirui Song, Chiyu Zhang, Xiuying Chen, Xi Liu, Xiyang Hu, Yue Zhao"
   links:
     - label: "Project Page"
