@@ -1,6 +1,22 @@
 # Resource buttons: Project Page -> Paper -> Code & Data, then supplementary links.
 # Paper: verified official record -> arXiv abstract -> null (non-navigating placeholder).
 # Never use a direct PDF URL. See docs/HOMEPAGE_REQUIREMENTS.md, section 6.
+- title: "Grid-Bench: Can LLMs Predict How Discrete Worlds Change?"
+  selected: true
+  preprint: true
+  venue:
+    - "Preprint 2026"
+  authors: "<strong>Zixiang Xu</strong>, Zirui Song, Wanrong Zheng, Chiyu Zhang, Yue Huang, Yuyang Peng, et al."
+  links:
+    - label: "Project Page"
+      url: "https://grid-bench.github.io/"
+    - label: "Paper"
+      url: "https://arxiv.org/abs/2610.22312"
+    - label: "Code & Data"
+      url: "https://github.com/grid-bench/Grid-Bench"
+    - label: "Data"
+      url: "https://huggingface.co/datasets/xzx34/Grid-Bench"
+
 - title: "JevOut: Natural Context Can Flip Decision Models"
   selected: true
   preprint: true
@@ -113,7 +129,7 @@
   authors: "Chenxi Wang, Yixuan Zhang, et al., <strong>Zixiang Xu</strong>, et al."
   links:
     - label: "Paper"
-      url: "https://icml.cc/virtual/2026/poster/63098"
+      url: "https://proceedings.mlr.press/v306/wang26ky.html"
     - label: "Code & Data"
       url: "https://github.com/Aurora-cx/EmotionCircuits-LLM"
 

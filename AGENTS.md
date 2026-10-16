@@ -1,6 +1,6 @@
-# Homepage maintenance
+# Homepage and CV maintenance
 
-Before changing this repository, read `docs/HOMEPAGE_REQUIREMENTS.md` in full. It records the user's approved homepage and research landing-page requirements, approved copy, current content baseline, and changes that have not yet been implemented.
+Before changing this repository or maintaining the user's CV as part of this task, read `docs/HOMEPAGE_REQUIREMENTS.md` in full. It records the user's approved homepage, research landing-page, and CV requirements, approved copy, current content baseline, and changes that have not yet been implemented. Section 10.1 identifies the canonical CV sources and PDFs under `/Users/zixiang/Amadeus`, and distinguishes them from application snapshots and backups.
 
 - The user's latest explicit request takes precedence. When it changes a requirement, update the relevant section of the requirements document in the same task.
 - Keep long-term requirements separate from current counts, dates, implementation status, and proposed follow-up work.

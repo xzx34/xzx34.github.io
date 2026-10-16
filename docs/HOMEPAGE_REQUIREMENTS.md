@@ -1,16 +1,16 @@
-# 主页维护要求
+# 主页与 CV 维护要求
 
-最后整理：2026-10-08
+最后整理：2026-10-16
 
 ## 1. 本文档的用途与更新方式
 
-这是 Zixiang Xu 个人主页及相关研究项目 landing page 的长期维护规范。记录用户已经确认的要求，不把助手的建议、试验方案或一次性实现细节当作永久要求。
+这是 Zixiang Xu 个人主页、相关研究项目 landing page 及 CV 的长期维护规范。记录用户已经确认的要求，不把助手的建议、试验方案或一次性实现细节当作永久要求。
 
-- 每次修改主页前先读本文档及本次涉及的实际页面、数据和模板。
+- 每次修改主页或 CV 前先读本文档及本次涉及的实际页面、数据、源文件和模板；CV 的权威路径及维护方式见 10.1。
 - 用户新增或修改要求时，在同一轮更新对应章节；较新的明确要求覆盖旧要求。
 - 将“长期原则”“已批准文案”“当前内容快照”“待同步事项”分开维护。记录要求不等于已经实现或发布。
 - 用户只要求讨论或记录时，不顺带修改线上页面、发布内容、删除资源或操作其他账号。
-- 本文档只约束主页与研究项目页。小红书、LinkedIn、Twitter、GitHub 个人简介和 Hugging Face 简介不自动反向覆盖主页文案。
+- 本文档约束主页、研究项目页与 CV。小红书、LinkedIn、Twitter、GitHub 个人简介和 Hugging Face 简介不自动反向覆盖主页或 CV 文案。
 - 本文件位于 Jekyll 已排除的 `docs/` 中，用于仓库维护，不新增公开网站栏目或页面。
 
 ## 2. 整体风格与内容边界
@@ -29,6 +29,7 @@
 - 已正式入学：使用 USC Computer Science Ph.D. student，不使用 Incoming，也不擅自改为 Ph.D. candidate。
 - 开头保留 Computer Science、University of Southern California、Prof. Yue Zhao、FORTIS Lab 及其链接。
 - 主页使用 **Prof. Yue Zhao**。其他平台短简介中的 **Dr. Yue Zhao** 不自动替换主页用词。
+- 用户确认暂不向网站正文、经历、News 或身份元数据加入 Meta AI 合作经历，也不因此将 Internships 改名。标准 CV 中的 Meta AI `Research Collaboration` 保留；更新公开 CV 副本不表示将该经历加入主页正文。
 - 身份介绍后直接进入两个研究方向，不加独立引入句；每个方向采用“加粗概念 + 一段说明”，不拆成子方向 bullet list，也不逐篇串讲论文成果。
 - 研究介绍应表达抽象的研究理念和长期追求，避免空泛冗长的哲学铺垫。
 
@@ -93,9 +94,9 @@
 
 | 展示位置 | 当前相对顺序 |
 | --- | --- |
-| Latest Preprints：4 篇 | JevOut → AlgoWorlds → Inside the Unfair Judge → GTA |
+| Latest Preprints：5 篇 | Grid-Bench → JevOut → AlgoWorlds → Inside the Unfair Judge → GTA |
 | Selected Work：4 篇 | SocialMaze → Cross-Lingual Pitfalls → Adaptive Distraction → DyFlow |
-| 完整论文页：18 篇 | 保持 `_data/publications.yml` 的完整序列 |
+| 完整论文页：19 篇 | 保持 `_data/publications.yml` 的完整序列 |
 | 仅完整论文页中的两篇 2025 预印本 | Beyond Survival；Evaluate Bias without Manual Test Sets |
 
 SocialMaze 同时保留 **Findings of EMNLP 2026** 和 **SocialSim @ COLM 2025 · Spotlight**，不能因正式录用删除 workshop Spotlight；其 landing page 中这两项左对齐。
@@ -195,7 +196,7 @@ SocialMaze 同时保留 **Findings of EMNLP 2026** 和 **SocialSim @ COLM 2025 �
 - 首页 `ProfilePage → Person` 使用稳定 `https://xzx34.github.io/#person`，项目页中 Zixiang Xu 的作者实体引用相同 `@id` 并关联 ORCID。DBLP 与 Semantic Scholar 在独立作者页面稳定前不加入 `sameAs`。
 - Previous affiliations 的七个行内 logo 是装饰性图片，继续保留 `alt=""` 和 `aria-hidden="true"`。这是正确的无障碍实现；不要为了消除 Bing 的低级告警而重复朗读相邻机构名称。
 - 站点更新频率较低，当前不配置 IndexNow；使用 sitemap 和必要时的单页重新索引请求，不为低频更新增加持久密钥或部署工作流。
-- CV PDF 需保留 Title、Author、Subject 和 Keywords 文档元数据；修改后从源文件重建、渲染核对两页，并确保源输出与网站副本字节一致。
+- CV PDF 需保留 Title、Author、Subject 和 Keywords 文档元数据；修改后从源文件重建并渲染核对全部页面，单页版须保持一页。同步网站 CV 时，确保网站副本与对应的源输出字节一致；权威源文件与发布文件见 10.1。
 
 ## 10. 主要维护位置
 
@@ -214,7 +215,57 @@ SocialMaze 同时保留 **Findings of EMNLP 2026** 和 **SocialSim @ COLM 2025 �
 | 公共样式 | `assets/css/main.scss`、相关 `_sass/` 文件 |
 | 当前仓库内的研究项目页 | `jevout/`、`gta/`、`socialmaze/`、`cross-lingual-pitfalls/`、`unfair-judge/` |
 
+### 10.1 CV 的权威文件与维护规则
+
+CV 维护属于本任务的长期职责，工作目录为 `/Users/zixiang/Amadeus`。以下两份是日常使用及对外发送的标准 CV；申请目录中的同名文件不能替代它们。
+
+| 版本 | 可编辑源文件 | 对外使用的 PDF |
+| --- | --- | --- |
+| 完整版 | `/Users/zixiang/Amadeus/career/resume/Zixiang_Xu_Full_CV.tex` | `/Users/zixiang/Amadeus/output/pdf/Zixiang_Xu_Full_CV.pdf` |
+| 单页版 | `/Users/zixiang/Amadeus/career/resume/Zixiang_Xu_OnePage_CV.tex` | `/Users/zixiang/Amadeus/output/pdf/Zixiang_Xu_OnePage_CV.pdf` |
+
+长期维护规则：
+
+- 主要修改 `career/resume/` 中的源文件，再编译生成 `output/pdf/` 中的上述两份 PDF；不直接编辑生成的 PDF，也不以网站副本反向覆盖源文件。
+- `resume.cls`、`fonts/`、`Makefile` 及源文件引用的其他排版依赖保留在原目录。沿用现有编译流程；当前 Makefile 通过 Tectonic 构建两份标准 CV，输出至 `../../output/pdf`。
+- 两份 CV 共用 `career/resume/meta-experience.tex`。Meta AI 的身份使用 **Research Collaboration**，不能改写为实习或雇佣身份；更新该经历时维护共享文件，避免两份版本产生事实分歧。
+- 两份 CV 教育信息保留 USC CS Ph.D.、Prof. Yue Zhao、FORTIS Lab、预计 2030 年毕业，以及 Sichuan University 的 B.S. in Computer Science（2022–2026）；单页版可压缩本科条目。
+- CV 中的 Paper 链接沿用第 6 节的权威入口优先级；SocialMaze Data 必须指向维护版 `xzx34/SocialMaze`，不恢复 `MBZUAI/SocialMaze`。保留 CV 的紧凑 `Project` 标签与资源顺序。
+- 教育、经历、论文作者与状态、奖项等事实在两份版本之间保持一致；允许单页版合理压缩和选择内容，不要求逐字相同。用户最新确认的事实优先，不从旧申请快照恢复过时信息。
+- 更新后检查编译、链接、PDF 文档元数据及全部页面的视觉效果，单页版保持一页；采用现有排版，按实际任务调整内容。
+- 主页 `files/Zixiang_Xu_Full_CV.pdf` 是公开分发副本。任务包含网站 CV 更新时，使用已验证的标准完整版同步，并核对字节一致；记录维护职责本身不触发网站替换或发布。
+- 对外发送时从上述标准 PDF 中按用途选择；创建定制申请材料时另存快照。下表中的材料、匿名模板、备份和临时文件不自动随日常 CV 更新，也不自动删除或覆盖；Fellowship 专用源文件位于 `career/fellowships/`。
+
+历史材料与辅助目录（以下路径相对于 `/Users/zixiang/Amadeus`）：
+
+| 用途 | 位置与性质 |
+| --- | --- |
+| MongoDB 2027 | `output/pdf/mongodb_2027/`；CV、Research Summary、成绩单及合并申请 PDF 的申请快照 |
+| Bloomberg 2027 | `output/pdf/bloomberg_2027/`；CV 与 Research Proposal 的申请快照 |
+| Jane Street 2027 | `output/pdf/Zixiang_Xu_Jane_Street_2027_Application.pdf`；合并申请快照 |
+| NVIDIA 英语作业 | `output/pdf/nvidia_jr2023837/`；定制简历、求职信等材料 |
+| 早期签证 CV | `mail/USC/records/visa_application_2026/`；历史签证材料 |
+| Fellowship 源文件 | `career/fellowships/`；对应申请材料的源文件 |
+| 匿名模板 | `output/Academic_CV_Template.zip` 与 `career/resume/template/academic-cv-template/`；供他人使用，不是个人最新 CV |
+| 合并前备份 | `tmp/cv-unified-backup-HDVnlG/`；包括旧 With Meta / Without Meta 版本 |
+| 排版检查与临时产物 | `tmp/pdfs/`；历史截图及临时文件 |
+
 ## 11. 待同步事项与变更记录
+
+### 2026-10-16：CV 与网站交叉同步
+
+- 用户批准审计中提出的同步与修正，但明确不更新网站的 Meta AI 经历；网站的研究介绍、Previously at、Internships、News 和身份元数据保持原样，标准 CV 中的 Meta 合作条目保留。
+- Grid-Bench 已核实于 2026-10-15 上线 `arXiv:2610.22312`，接入 Latest Preprints 首位及完整论文页，沿用其独立项目页 `https://grid-bench.github.io/`。列表按既有长作者列表方式显示前六名及 et al.，不新建 landing page；完整版 CV 保留全部十九位作者。
+- Do LLMs “Feel”? 已核实有正式 PMLR 记录 `https://proceedings.mlr.press/v306/wang26ky.html`，网站与完整版 CV 的 Paper 统一指向该记录。
+- 两份 CV 修正 SocialMaze 数据地址，更新适用的已发表论文链接并补 Cross-Lingual Pitfalls 项目入口；完整版补 Temporal-IRL 和 Text-Based Face Retrieval 的 Paper。统一 GTA 的 Code & Data、审稿角色及预印本/Findings 表述，修正单页版双句号并补齐 PDF 元数据；补本科教育及 FORTIS Lab。
+- Temporal-IRL 的 arXiv 摘要页作者排序与 PDF 首页不同；网站和 CV 保留与 PDF 一致的作者顺序，不在本轮修改 arXiv 或他人管理的元数据。
+- 本轮修改前的两份 CV 源文件和 PDF 保存在 `/Users/zixiang/Amadeus/tmp/cv-site-sync-backup-20261016-QYH4uY/`。历史申请材料、模板、旧备份及其他未提交工作不变。
+- 已使用原 Makefile/Tectonic 重建，逐页检查完整版 3 页及单页版 1 页；保持正文字号，微调条目间距以容纳教育信息。PDF 元数据、19/9 篇论文、实际链接注释和无双句号检查通过，网站 CV 副本与标准完整版字节一致。现有论文模板检查通过（19 篇、5+4 分组、五个 landing page）；本地完整 Jekyll bundle 仍缺依赖，正式构建与线上状态以本轮 GitHub Pages 发布核验为准。
+
+### 2026-10-16：将 CV 纳入长期维护
+
+- 用户确认以 10 月 15 日更新的完整版和单页版作为日常标准 CV；已核对两份 PDF 存在，源文件均引用 `meta-experience.tex`，其中 Meta AI 使用 `Research Collaboration`。
+- 已记录权威源文件、标准 PDF、编译依赖与历史申请材料的边界，并更新根目录维护提示。本轮仅完善维护规范，未修改 CV 内容、重建 PDF、同步网站副本或部署网站。
 
 ### 2026-10-08：JevOut 新版作者与 Agenthon 录用
 
