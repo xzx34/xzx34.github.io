@@ -229,12 +229,14 @@ CV 维护属于本任务的长期职责，工作目录为 `/Users/zixiang/Amadeu
 - 主要修改 `career/resume/` 中的源文件，再编译生成 `output/pdf/` 中的上述两份 PDF；不直接编辑生成的 PDF，也不以网站副本反向覆盖源文件。
 - `resume.cls`、`fonts/`、`Makefile` 及源文件引用的其他排版依赖保留在原目录。沿用现有编译流程；当前 Makefile 通过 Tectonic 构建两份标准 CV，输出至 `../../output/pdf`。
 - 两份 CV 共用 `career/resume/meta-experience.tex`。Meta AI 的身份使用 **Research Collaboration**，不能改写为实习或雇佣身份；更新该经历时维护共享文件，避免两份版本产生事实分歧。
-- 两份 CV 教育信息保留 USC CS Ph.D.、Prof. Yue Zhao、FORTIS Lab、预计 2030 年毕业，以及 Sichuan University 的 B.S. in Computer Science（2022–2026）；单页版可压缩本科条目。
+- 两份 CV 的 Education 仅保留 USC CS Ph.D.、Prof. Yue Zhao、FORTIS Lab 和预计 2030 年毕业；按用户最新要求不展示 Sichuan University 本科条目。此要求仅针对 CV Education，不反向删除主页 Previously at 中的 Sichuan University。
+- 研究经历明确说明主导项目，并在项目名称上提供对应链接：Meta AI—Grid-Bench；WeChat AI—AlgoWorlds；Alibaba—Inside the Unfair Judge；MBZUAI—SocialMaze、GTA、DyFlow；MINE Lab / Notre Dame—Cross-Lingual Pitfalls、Adaptive Distraction；MIT CTL—Temporal-IRL。有项目页时优先链接项目页，否则使用已核实的正式论文页或 arXiv 摘要页。Microsoft 保留主导 LLM/VLM 评测的描述，不虚构项目名或链接；论文作者与共同贡献标记不因经历中的 Led 表述而改变。
 - CV 中的 Paper 链接沿用第 6 节的权威入口优先级；SocialMaze Data 必须指向维护版 `xzx34/SocialMaze`，不恢复 `MBZUAI/SocialMaze`。保留 CV 的紧凑 `Project` 标签与资源顺序。
 - 教育、经历、论文作者与状态、奖项等事实在两份版本之间保持一致；允许单页版合理压缩和选择内容，不要求逐字相同。用户最新确认的事实优先，不从旧申请快照恢复过时信息。
 - 更新后检查编译、链接、PDF 文档元数据及全部页面的视觉效果，单页版保持一页；采用现有排版，按实际任务调整内容。
 - 顶部保留原版：27 pt 左对齐姓名及下方横线，左栏为 `Contact Information`，中间按原顺序纵向排列 Email、GitHub、X、LinkedIn、Google Scholar、Homepage，右侧保留 Ph.D. Student / Computer Science / University of Southern California / Los Angeles, CA 身份块。用户已明确否定三列两行的紧凑联系页首；未经明确要求，不重新设计顶部、缩小姓名或改变联系信息布局。
 - 排版以阅读与空间分配为先，不以“保持页数、无溢出”代替视觉验收。个人标准 CV 使用 `cv-layout.tex` 维护栏目顶端对齐和通栏论文区；不为保留空白侧栏而挤压论文，也不单独缩小续页栏目名。论文条目、作者贡献说明及链接组应具有稳定间距和合理换行。
+- 尽量消除正文段落只有 1–2 个单词的尾行：优先准确地精简或补足内容，不为凑行添加空话。正式论文标题、作者与贡献标记不能为排版而改写，可通过合理断行和短语不拆分来控制尾行；避免强制两端对齐产生异常字间距。独立栏目标签、年份、机构名等不是需要凑字的正文尾行。
 - 修改个人 CV 的共享样式时，保持 `resume.cls`、匿名模板和历史申请快照不受影响；新增样式依赖必须加入 Makefile。验收应对比修改前后的正文、实际 PDF 链接和元数据，并检查全部页面、页脚、页边距及字体嵌入。
 - 主页 `files/Zixiang_Xu_Full_CV.pdf` 是公开分发副本。任务包含网站 CV 更新时，使用已验证的标准完整版同步，并核对字节一致；记录维护职责本身不触发网站替换或发布。
 - 对外发送时从上述标准 PDF 中按用途选择；创建定制申请材料时另存快照。下表中的材料、匿名模板、备份和临时文件不自动随日常 CV 更新，也不自动删除或覆盖；Fellowship 专用源文件位于 `career/fellowships/`。
@@ -254,6 +256,15 @@ CV 维护属于本任务的长期职责，工作目录为 `/Users/zixiang/Amadeu
 | 排版检查与临时产物 | `tmp/pdfs/`；历史截图及临时文件 |
 
 ## 11. 待同步事项与变更记录
+
+### 2026-10-16：CV 项目主导经历与短尾行调整
+
+- 两份 Education 移除 Sichuan University 本科条目；USC、导师、FORTIS Lab 与预计 2030 年毕业保留。姓名和 Contact Information 顶部的文字、字号及坐标与修改前一致。
+- 按用户确认的项目归属重写 Alibaba、MBZUAI、Notre Dame 和 MIT 描述，明确 Led，并各新增同一组 7 个项目/论文链接。Meta、WeChat 已有项目链接保留；Microsoft 明确主导 LLM/VLM 评测，未虚构独立项目或链接。
+- 精简完整版 Meta、Microsoft 和 Annenberg 说明，补足单页版 Earlier Research 描述，消除短尾行；部分长论文标题和作者行仅调整短语换行，正式论文内容、作者顺序、贡献标记、状态及资源入口不变。单页论文标题使用自然左对齐，避免为了断行拉伸词间距。
+- 已重建并渲染检查完整版 3 页、单页版 1 页；19/9 篇论文内容与顺序未改，原有 52/38 个 PDF 链接全部保留，现为 59/45 个。新增 7 个目标均直接返回 200 且标题匹配。PDF 元数据、页边界、原顶部及正文短尾行检查通过。
+- 网站正文、Meta 展示边界和主页论文数据不变；仅同步标准完整版 CV 下载副本。本地论文模板检查已尝试，但既有 Ruby bundle 缺少依赖（concurrent-ruby / liquid）；本轮 CV 资源和内容已单独验证，正式网站构建由 GitHub Pages 核验。
+- 修改前备份：`/Users/zixiang/Amadeus/tmp/cv-projects-backup-20261016-UV0bzX/`；最终渲染：`/Users/zixiang/Amadeus/tmp/pdfs/cv-projects-20261016-UV0bzX/`。历史申请快照、模板、`resume.cls`、`cv-layout.tex` 和 Makefile 未修改。
 
 ### 2026-10-16：按用户要求恢复 CV 原版顶部
 
