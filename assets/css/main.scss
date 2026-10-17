@@ -476,6 +476,13 @@ body {
         color: #5f6b78;
         font-size: .88em;
     }
+
+    p {
+        margin: .28em 0 0;
+        color: #5f6b78;
+        font-size: .86em;
+        line-height: 1.55;
+    }
 }
 
 .news-item {
@@ -1011,6 +1018,7 @@ body {
     }
 
     .honor-item p,
+    .experience-item p,
     .service-item p {
         color: #b1bac4;
     }

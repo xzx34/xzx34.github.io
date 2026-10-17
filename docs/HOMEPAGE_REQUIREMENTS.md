@@ -1,6 +1,6 @@
 # 主页与 CV 维护要求
 
-最后整理：2026-10-16
+最后整理：2026-10-17
 
 ## 1. 本文档的用途与更新方式
 
@@ -163,6 +163,8 @@ SocialMaze 同时保留 **Findings of EMNLP 2026** 和 **SocialSim @ COLM 2025 �
 - **Honors and Awards**：每项奖项提供简短、易理解的解释，以最新 CV 为依据；不能只列奖名，也不能编造获奖比例或含金量。
 - 当前主要奖项：USC Annenberg Fellowship（2026）、CCF Elite Collegiate Award（2024）、ICPC Asia Jinan Regional Gold Medal（2022）、NOI Silver Medal（2020）。
 - **Internships**：保留清晰的时间、团队和身份；WeChat AI 不加 Tencent 前缀，Notre Dame 经历明确为 MINE Lab。
+- Internships 每段经历用简短的 Led 描述说明主导工作，项目名称直接带链接：WeChat AI—AlgoWorlds；Alibaba—Inside the Unfair Judge；MBZUAI—SocialMaze、GTA、DyFlow；MINE Lab / Notre Dame—Cross-Lingual Pitfalls、Adaptive Distraction；MIT CTL—Temporal-IRL。Microsoft 写明主导 LLM/VLM 评测，不虚构项目名或链接。有项目页时链接项目页，否则使用已核实的正式论文页或 arXiv 摘要页；不新增独立按钮或 PDF 入口。
+- Meta AI 合作经历继续不出现在主页 Internships、Previously at、News 或身份元数据中。该边界不影响 CV 中已有的 Research Collaboration，也不删除 Grid-Bench 论文条目。
 - **Reviewing Service**：明确显示 Conference Reviewer、ACL Rolling Review Reviewer、Workshop Reviewer 等角色，不能只写 Conferences 再列会议名。
 - **Miscellaneous**：必须保留；使用第一人称，不用 he / his。保留电影、游戏、视觉小说，以及田中ロミオ、CROSS†CHANNEL、Rewrite 等已确认内容，不顺带重写收藏列表。
 
@@ -256,6 +258,12 @@ CV 维护属于本任务的长期职责，工作目录为 `/Users/zixiang/Amadeu
 | 排版检查与临时产物 | `tmp/pdfs/`；历史截图及临时文件 |
 
 ## 11. 待同步事项与变更记录
+
+### 2026-10-17：主页 Internships 同步项目主导经历
+
+- 仅为原有六段 Internships 添加简短主导工作说明及八个项目/论文链接；保留原有时间、机构、角色、排列顺序和栏目名称。Microsoft 不虚构项目链接，Meta AI 不加入主页。
+- 项目描述沿用已确认的 CV 项目归属；新增描述复用现有字号和灰色文本层级、蓝色行内链接，补充相应暗色样式。网格、窄屏规则、悬停与滚动动画不变。
+- 研究介绍、Previously at、News、论文列表、照片、联系人、CV 文件及其他栏目不变；不改 sitemap、不提交索引请求。
 
 ### 2026-10-16：CV 项目主导经历与短尾行调整
 
