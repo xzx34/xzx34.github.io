@@ -1,6 +1,6 @@
 # 主页与 CV 维护要求
 
-最后整理：2026-10-17
+最后整理：2026-10-22
 
 ## 1. 本文档的用途与更新方式
 
@@ -94,9 +94,9 @@
 
 | 展示位置 | 当前相对顺序 |
 | --- | --- |
-| Latest Preprints：5 篇 | Grid-Bench → JevOut → AlgoWorlds → Inside the Unfair Judge → GTA |
+| Latest Preprints：6 篇 | Grid-Bench → agent-risk → JevOut → AlgoWorlds → Inside the Unfair Judge → GTA |
 | Selected Work：4 篇 | SocialMaze → Cross-Lingual Pitfalls → Adaptive Distraction → DyFlow |
-| 完整论文页：19 篇 | 保持 `_data/publications.yml` 的完整序列 |
+| 完整论文页：20 篇 | 保持 `_data/publications.yml` 的完整序列 |
 | 仅完整论文页中的两篇 2025 预印本 | Beyond Survival；Evaluate Bias without Manual Test Sets |
 
 SocialMaze 同时保留 **Findings of EMNLP 2026** 和 **SocialSim @ COLM 2025 · Spotlight**，不能因正式录用删除 workshop Spotlight；其 landing page 中这两项左对齐。
@@ -258,6 +258,15 @@ CV 维护属于本任务的长期职责，工作目录为 `/Users/zixiang/Amadeu
 | 排版检查与临时产物 | `tmp/pdfs/`；历史截图及临时文件 |
 
 ## 11. 待同步事项与变更记录
+
+### 2026-10-22：补齐 agent-risk 论文条目
+
+- 逐项对照当前 Google Scholar 的 20 篇论文、主页数据和完整版 CV；原有两份完整列表均为 19 篇，仅缺 `agent-risk: Risk Assessment for Changes to AI Agents`，并非还遗漏多篇工作。
+- 已按 arXiv 摘要页及 PDF 首页核实作者顺序：Yue Zhao、Zixiang Xu、Angela Huyue Zhang、S. Alex Yang、Xiyang Hu；标记为 2026 预印本，不添加未经确认的录用或共同贡献说明。
+- 首页 Latest Preprints 与完整论文页新增该条目；Paper 指向 `https://arxiv.org/abs/2610.16280`，Code & Data 指向 `https://github.com/yzhao062/agent-risk`。无已核实的独立项目页，不虚构 Project Page。原有论文相对顺序、Selected Work、News 和其他栏目不变。
+- 完整版 CV 在 Grid-Bench、AlgoWorlds 之后补入 agent-risk，顺延论文编号至 20；JevOut 继续紧跟 DyFlow。单页 CV 是精选版，保留原有 9 篇及一页排版，不强行加入全部论文；历史申请快照不变。
+- 已通过原 Makefile/Tectonic 重建及三页视觉检查；保持原页首、字号、间距和页数。网站下载副本同步最新标准完整版，也因此包含 10 月 21 日已批准的 CV 排序和后训练经历文案，不将 Meta 合作经历加入网站正文。
+- 原 `bundle exec` 仍缺既有依赖；在临时目录使用 Liquid 4.0.4 运行原 `docs/check-paper-links.rb`，20 篇完整列表、6+4 分组和五个项目页的链接/模板检查通过。未修改 Gemfile、锁文件或发布流程；正式构建及线上核验待本轮发布完成。
 
 ### 2026-10-17：主页 Internships 同步项目主导经历
 

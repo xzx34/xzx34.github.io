@@ -17,6 +17,18 @@
     - label: "Data"
       url: "https://huggingface.co/datasets/xzx34/Grid-Bench"
 
+- title: "agent-risk: Risk Assessment for Changes to AI Agents"
+  selected: true
+  preprint: true
+  venue:
+    - "Preprint 2026"
+  authors: "Yue Zhao, <strong>Zixiang Xu</strong>, Angela Huyue Zhang, S. Alex Yang, Xiyang Hu"
+  links:
+    - label: "Paper"
+      url: "https://arxiv.org/abs/2610.16280"
+    - label: "Code & Data"
+      url: "https://github.com/yzhao062/agent-risk"
+
 - title: "JevOut: Natural Context Can Flip Decision Models"
   selected: true
   preprint: true
