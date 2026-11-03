@@ -260,7 +260,7 @@ CV 维护属于本任务的长期职责，工作目录为 `/Users/zixiang/Amadeu
 
 ## 11. 待同步事项与变更记录
 
-### 2026-11-02：正式出版信息同步（实施中）
+### 2026-11-02：正式出版信息同步
 
 - 用户批准更新 Beyond Survival、SocialMaze、两份标准 CV 与网站 CV 副本。Beyond Survival 只更新完整论文页的正式状态、作者核对与 Paper，不自动加入 Selected Work；首页分组、排序、News、研究正文和样式不变。Single-GPU Recipe 暂不纳入网站或 CV。
 - 已核实 Beyond Survival 正式记录为 `https://aclanthology.org/2026.emnlp-main.2208/`，EMNLP 2026，October，pages 50207–50243，DOI `10.18653/2026.emnlp-main.2208`；现有精简作者显示与正式作者顺序相符，保留原格式。
@@ -269,7 +269,7 @@ CV 维护属于本任务的长期职责，工作目录为 `/Users/zixiang/Amadeu
 - arXiv 的 journal reference／DOI 通过出版信息入口更新，不替换 PDF；未登录或平台尚未处理时明确记录待办，不声称已生效。
 - 本地验收：两份标准 CV 已重建并逐页检查，保持完整版 3 页 / 20 篇与单页版 1 页 / 9 篇；原顶部、元数据、其余正文不变，链接数量仍为 61 / 45。网站副本与标准完整版字节一致，并包含标准完整版 10 月 29 日已有的 WeLM 经历补充。
 - Paper 链接与模板检查通过（20 篇完整列表、6+4 首页分组、五个仓库内项目页）。原 bundle 缺依赖，使用临时 Liquid 4.0.4 执行原检查脚本；未改依赖或工作流。SocialMaze 268 项 pytest、CFF schema、三处 BibTeX 一致性及 wheel/sdist 构建通过。
-- HF 数据卡已发布为 `81447cf13b48fbe94ec063c4f21002d0b3c26db0`；仅 README 变更，其他 13 个文件与 arXiv 标签不变。GitHub/Pages 发布与线上验收结果待补充；arXiv 当前待登录。
+- HF 数据卡已发布为 `81447cf13b48fbe94ec063c4f21002d0b3c26db0`；仅 README 变更，其他 13 个文件与 arXiv 标签不变。主页提交 `5d73055` 的 [Pages 构建与部署](https://github.com/xzx34/xzx34.github.io/actions/runs/41564173164) 和 SocialMaze 提交 `fe01491` 的 [CI](https://github.com/xzx34/SocialMaze/actions/runs/41564172576) 均成功。线上主页、完整论文页、SocialMaze 和 CV 已验证返回 200，正式链接已生效，线上 CV 与标准完整版字节一致。SocialMaze v1.0.0 发布说明已切换正式 Paper，发布附件不变；arXiv 出版信息已通过 journal reference / DOI 入口提交：SocialMaze `8320425`、Beyond Survival `8320433`，后台显示 Submitted；公开记录尚待平台处理，不替换 PDF。
 
 
 ### 2026-10-22：补齐 agent-risk 论文条目
