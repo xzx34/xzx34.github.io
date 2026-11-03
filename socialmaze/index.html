@@ -30,10 +30,14 @@
 <meta name="citation_author" content="Zhao, Jieyu">
 <meta name="citation_author" content="Zhang, Xiangliang">
 <meta name="citation_author" content="Chen, Xiuying">
-<meta name="citation_publication_date" content="2026">
+<meta name="citation_publication_date" content="2026/10">
+<meta name="citation_doi" content="10.18653/2026.findings-emnlp.1213">
+<meta name="citation_firstpage" content="25621">
+<meta name="citation_lastpage" content="25716">
+<meta name="citation_publisher" content="Association for Computational Linguistics">
 <meta name="citation_conference_title" content="Findings of the Association for Computational Linguistics: EMNLP 2026">
 <meta name="citation_arxiv_id" content="2505.23713">
-<meta name="citation_abstract_html_url" content="https://arxiv.org/abs/2505.23713">
+<meta name="citation_abstract_html_url" content="https://aclanthology.org/2026.findings-emnlp.1213/">
 <meta name="citation_image" content="https://xzx34.github.io/images/socialmaze-hero.png">
 
 <!-- Open Graph -->
@@ -58,7 +62,9 @@
   "name": "SocialMaze: A Benchmark for Evaluating and Enhancing Social Reasoning in Large Language Models in Complex Social Environments",
   "url": "https://xzx34.github.io/socialmaze/",
   "image": "https://xzx34.github.io/images/socialmaze-hero.png",
-  "datePublished": "2026",
+  "datePublished": "2026-10",
+  "pagination": "25621–25716",
+  "publisher": {"@type": "Organization", "name": "Association for Computational Linguistics"},
   "inLanguage": "en",
   "description": "SocialMaze is a six-task benchmark for LLM social reasoning across dynamic multi-turn interaction, social deduction, deception, and information uncertainty.",
   "abstract": "Large language models (LLMs) are increasingly deployed in socially grounded applications, where success requires interpreting context, inferring others' mental states, and reasoning about unreliable information. Yet existing benchmarks rarely evaluate these demands jointly in complex, evolving settings. We introduce SocialMaze, a benchmark that organizes six tasks across social deduction games, daily-life interactions, and digital community platforms along three descriptive design axes: deep reasoning, dynamic interaction, and information uncertainty. These axes characterize intended sources of task difficulty rather than latent, factor-analytic dimensions of model capability. Automated checks and human validation support data quality. Evaluations of twelve proprietary and open-weight LLMs show substantial variation in the use of evolving interaction histories; stronger chain-of-thought reasoners perform better on tasks requiring deeper inference, while uncertainty consistently degrades performance. Reasoning workflows help weaker short-chain-of-thought backbones but saturate on stronger reasoners. Finally, targeted fine-tuning on curated reasoning traces substantially improves structured social-reasoning tasks, whereas transfer to language-aggregation tasks remains statistically inconclusive.",
@@ -80,12 +86,15 @@
     {"@type": "Person", "name": "Xiangliang Zhang", "affiliation": {"@type": "Organization", "name": "University of Notre Dame"}},
     {"@type": "Person", "name": "Xiuying Chen", "affiliation": {"@type": "Organization", "name": "MBZUAI"}}
   ],
-  "isPartOf": {"@type": "PublicationEvent", "name": "Findings of the Association for Computational Linguistics: EMNLP 2026"},
+  "isPartOf": {"@type": "Book", "name": "Findings of the Association for Computational Linguistics: EMNLP 2026", "url": "https://aclanthology.org/2026.findings-emnlp/"},
   "award": "Spotlight Talk, SocialSim Workshop at COLM 2025",
   "identifier": [
-    {"@type": "PropertyValue", "propertyID": "arXiv", "value": "2505.23713"}
+    {"@type": "PropertyValue", "propertyID": "arXiv", "value": "2505.23713"},
+    {"@type": "PropertyValue", "propertyID": "DOI", "value": "10.18653/2026.findings-emnlp.1213"}
   ],
   "sameAs": [
+    "https://aclanthology.org/2026.findings-emnlp.1213/",
+    "https://doi.org/10.18653/2026.findings-emnlp.1213",
     "https://arxiv.org/abs/2505.23713",
     "https://huggingface.co/datasets/xzx34/SocialMaze",
     "https://github.com/xzx34/SocialMaze"
@@ -163,7 +172,7 @@
   "version": "2.0.0",
   "dateModified": "2026-09-20",
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "isBasedOn": "https://arxiv.org/abs/2505.23713",
+  "isBasedOn": "https://aclanthology.org/2026.findings-emnlp.1213/",
   "codeRepository": "https://github.com/xzx34/SocialMaze",
   "keywords": ["social reasoning", "hidden role deduction", "large language models", "benchmark"],
   "distribution": {
@@ -340,7 +349,7 @@ footer{margin-top:3.2em;padding-top:1.3em;border-top:1px solid var(--border);col
   </p>
 
   <nav class="btns" aria-label="Paper links">
-    <a class="btn" href="https://arxiv.org/abs/2505.23713">
+    <a class="btn" href="https://aclanthology.org/2026.findings-emnlp.1213/">
       <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M6.8 2.8h7l3.4 3.4V21.2H6.8z"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M9 12h6M9 15h6M9 18h4.5"/></svg>
       Paper
     </a>
@@ -517,14 +526,14 @@ ds = load_dataset("xzx34/SocialMaze", split="hard")</code></pre>
 <section id="resources" class="animate-on-scroll">
   <h2>Resources</h2>
   <ul class="reslist">
-    <li><a href="https://arxiv.org/abs/2505.23713">arXiv:2505.23713</a> &mdash; preprint abstract page.</li>
-    <li><a href="https://2026.emnlp.org/">EMNLP 2026</a> &mdash; accepted to Findings; proceedings metadata is forthcoming.</li>
+    <li><a href="https://aclanthology.org/2026.findings-emnlp.1213/">Findings of EMNLP 2026</a> &mdash; official publication, pp. 25621–25716. DOI: <a href="https://doi.org/10.18653/2026.findings-emnlp.1213">10.18653/2026.findings-emnlp.1213</a>.</li>
+    <li><a href="https://arxiv.org/abs/2505.23713">arXiv:2505.23713</a> &mdash; preprint abstract page and version history.</li>
     <li><a href="https://openreview.net/group?id=colmweb.org%2FCOLM%2F2025%2FWorkshop%2FSocial_Sim">SocialSim @ COLM 2025</a> &mdash; previously presented as a Spotlight Talk.</li>
     <li><a href="https://huggingface.co/datasets/xzx34/SocialMaze">Dataset on Hugging Face</a> &mdash; corrected expanded HRD v2.0.0 (200,000 instances, CC BY 4.0), loadable with the <code>datasets</code> library.</li>
     <li><a href="https://github.com/xzx34/SocialMaze">Code on GitHub</a> &mdash; maintained HRD code and corrected data tooling, with archived scripts and demonstration samples for the other five tasks.</li>
   </ul>
   <nav class="btns" aria-label="Paper links (repeated)">
-    <a class="btn" href="https://arxiv.org/abs/2505.23713">
+    <a class="btn" href="https://aclanthology.org/2026.findings-emnlp.1213/">
       <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M6.8 2.8h7l3.4 3.4V21.2H6.8z"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M9 12h6M9 15h6M9 18h4.5"/></svg>
       Paper
     </a>
@@ -542,7 +551,7 @@ ds = load_dataset("xzx34/SocialMaze", split="hard")</code></pre>
 <section id="bibtex" class="animate-on-scroll">
   <h2>BibTeX</h2>
   <div class="bibhead">
-    <span>Findings of EMNLP 2026 citation (proceedings metadata forthcoming)</span>
+    <span>Findings of EMNLP 2026 citation</span>
     <button class="copy" id="copybtn" type="button" onclick="copyBib()">Copy BibTeX</button>
   </div>
 <pre id="bibtex-code">@inproceedings{xu2026socialmaze,
@@ -553,11 +562,12 @@ ds = load_dataset("xzx34/SocialMaze", split="hard")</code></pre>
   year={2026},
   address={Budapest, Hungary},
   publisher={Association for Computational Linguistics},
-  note={To appear},
+  pages={25621--25716},
+  doi={10.18653/2026.findings-emnlp.1213},
   eprint={2505.23713},
   archivePrefix={arXiv},
   primaryClass={cs.CL},
-  url={https://arxiv.org/abs/2505.23713}
+  url={https://aclanthology.org/2026.findings-emnlp.1213/}
 }</pre>
 </section>
 

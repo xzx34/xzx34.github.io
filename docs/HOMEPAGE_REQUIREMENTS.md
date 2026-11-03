@@ -1,6 +1,6 @@
 # 主页与 CV 维护要求
 
-最后整理：2026-10-22
+最后整理：2026-11-02
 
 ## 1. 本文档的用途与更新方式
 
@@ -97,7 +97,8 @@
 | Latest Preprints：6 篇 | Grid-Bench → agent-risk → JevOut → AlgoWorlds → Inside the Unfair Judge → GTA |
 | Selected Work：4 篇 | SocialMaze → Cross-Lingual Pitfalls → Adaptive Distraction → DyFlow |
 | 完整论文页：20 篇 | 保持 `_data/publications.yml` 的完整序列 |
-| 仅完整论文页中的两篇 2025 预印本 | Beyond Survival；Evaluate Bias without Manual Test Sets |
+| 仅完整论文页中的 2025 预印本 | Evaluate Bias without Manual Test Sets |
+| Beyond Survival | EMNLP 2026 主会；仅完整论文页，保留原有位置 |
 
 SocialMaze 同时保留 **Findings of EMNLP 2026** 和 **SocialSim @ COLM 2025 · Spotlight**，不能因正式录用删除 workshop Spotlight；其 landing page 中这两项左对齐。
 
@@ -258,6 +259,18 @@ CV 维护属于本任务的长期职责，工作目录为 `/Users/zixiang/Amadeu
 | 排版检查与临时产物 | `tmp/pdfs/`；历史截图及临时文件 |
 
 ## 11. 待同步事项与变更记录
+
+### 2026-11-02：正式出版信息同步（实施中）
+
+- 用户批准更新 Beyond Survival、SocialMaze、两份标准 CV 与网站 CV 副本。Beyond Survival 只更新完整论文页的正式状态、作者核对与 Paper，不自动加入 Selected Work；首页分组、排序、News、研究正文和样式不变。Single-GPU Recipe 暂不纳入网站或 CV。
+- 已核实 Beyond Survival 正式记录为 `https://aclanthology.org/2026.emnlp-main.2208/`，EMNLP 2026，October，pages 50207–50243，DOI `10.18653/2026.emnlp-main.2208`；现有精简作者显示与正式作者顺序相符，保留原格式。
+- 已核实 SocialMaze 正式记录为 `https://aclanthology.org/2026.findings-emnlp.1213/`，Findings of EMNLP 2026，October，pages 25621–25716，DOI `10.18653/2026.findings-emnlp.1213`。正式记录成为 Paper 首选，arXiv 保留为补充版本入口；SocialSim @ COLM 2025 Spotlight 保留。
+- SocialMaze landing page、GitHub README/CFF/包资源链接、HF 数据卡及发布说明同步正式引用，移除 `To appear`；不改论文正式标题、摘要、作者、数据文件、软件版本或历史发布附件。HF 仅更新 README。
+- arXiv 的 journal reference／DOI 通过出版信息入口更新，不替换 PDF；未登录或平台尚未处理时明确记录待办，不声称已生效。
+- 本地验收：两份标准 CV 已重建并逐页检查，保持完整版 3 页 / 20 篇与单页版 1 页 / 9 篇；原顶部、元数据、其余正文不变，链接数量仍为 61 / 45。网站副本与标准完整版字节一致，并包含标准完整版 10 月 29 日已有的 WeLM 经历补充。
+- Paper 链接与模板检查通过（20 篇完整列表、6+4 首页分组、五个仓库内项目页）。原 bundle 缺依赖，使用临时 Liquid 4.0.4 执行原检查脚本；未改依赖或工作流。SocialMaze 268 项 pytest、CFF schema、三处 BibTeX 一致性及 wheel/sdist 构建通过。
+- HF 数据卡已发布为 `81447cf13b48fbe94ec063c4f21002d0b3c26db0`；仅 README 变更，其他 13 个文件与 arXiv 标签不变。GitHub/Pages 发布与线上验收结果待补充；arXiv 当前待登录。
+
 
 ### 2026-10-22：补齐 agent-risk 论文条目
 
@@ -421,7 +434,7 @@ CV 维护属于本任务的长期职责，工作目录为 `/Users/zixiang/Amadeu
   - Under the Shadow of Babel：[ACL Anthology](https://aclanthology.org/2025.findings-emnlp.1321/)。
 - GenUDC、MTFusion、Text-Based Face Retrieval 保留已有的 ACM / Springer 正式链接；GenUDC 的 DOI 由作者官方仓库交叉确认（本次网页抓取未能直接读取 ACM 页面）。
 - 仍需在以后资源发布时更新的项目：
-  - **SocialMaze**：已核实 arXiv v2 标题与当前论文一致，并标注 Findings of EMNLP 2026 录用；尚未核实到正式 proceedings 记录，当前回退至 [arXiv 摘要页](https://arxiv.org/abs/2505.23713)。Findings 与 workshop Spotlight 均保留。
+  - **SocialMaze（当时状态）**：当时回退至 arXiv 摘要页；2026-11-02 已核实正式 ACL Anthology 记录，迁移状态见本节最新记录。Findings 与 workshop Spotlight 均保留。
   - **Temporal-IRL**：本次未找到可核实的独立正式论文记录页，继续使用 [arXiv 摘要页](https://arxiv.org/abs/2506.19843)。不能将会议日程 PDF 当作 Paper 目标。
   - **GTA（当时状态）**：尚无已确认的公开 arXiv 编号或正式记录，主页、完整论文页与项目页均使用非跳转 Paper 占位入口；该待办已在 2026-09-20 随 arXiv:2609.12265 上线完成。
 - 已移除四个项目页的论文 PDF 按钮、正文直链、`citation_pdf_url` 及 GTA 的 PDF encoding 元数据；保留有效的摘要页、作者、引用等元数据。相同目的地的重复按钮已合并。

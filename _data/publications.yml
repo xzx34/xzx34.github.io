@@ -68,7 +68,7 @@
     - label: "Project Page"
       url: "/socialmaze/"
     - label: "Paper"
-      url: "https://arxiv.org/abs/2505.23713"
+      url: "https://aclanthology.org/2026.findings-emnlp.1213/"
     - label: "Code & Data"
       url: "https://github.com/xzx34/SocialMaze"
     - label: "Data"
@@ -189,13 +189,13 @@
       url: "https://dl.acm.org/doi/abs/10.1145/3664647.3681241"
 
 - title: "Beyond Survival: Evaluating LLMs in Social Deduction Games with Human-Aligned Strategies"
-  preprint: true
+  preprint: false
   venue:
-    - "Preprint 2025"
+    - "EMNLP 2026"
   authors: "Zirui Song, Yuan Huang, Junchang Liu, et al., <strong>Zixiang Xu</strong>, et al."
   links:
     - label: "Paper"
-      url: "https://arxiv.org/abs/2510.11389"
+      url: "https://aclanthology.org/2026.emnlp-main.2208/"
 
 - title: "Evaluate Bias without Manual Test Sets: A Concept Representation Perspective for LLMs"
   preprint: true
