@@ -31,9 +31,9 @@ academic_identity:
 author:
   name             : "Zixiang Xu（徐子翔）"
   pronunciation:
-    pinyin         : "Zǐxiáng Xú"
-    audio          : "/assets/audio/zixiang-xu.wav"
-    audio_note     : "Mandarin · synthesized voice"
+    given_name     : "dzuh-shyahng"
+    family_name    : "shü"
+    hint           : "For Xu, say “shee” with rounded lips."
   avatar           : "images/zp.jpg"
   bio              : "CS Ph.D. Student at USC"
   location         : "Los Angeles"

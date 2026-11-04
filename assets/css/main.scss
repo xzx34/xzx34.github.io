@@ -624,18 +624,6 @@ body {
         font-size: inherit;
     }
 
-    .author__pronunciation-name {
-        font-size: .95rem;
-        font-weight: 600;
-    }
-
-    audio {
-        display: block;
-        width: 100%;
-        min-width: 0;
-        height: 36px;
-    }
-
     .author__pronunciation-note {
         margin: .35rem 0 0;
         font-size: .65rem;
@@ -650,7 +638,6 @@ body {
         color: #c9d1d9;
     }
     summary { color: #58a6ff; }
-    audio { color-scheme: dark; }
     .author__pronunciation-note { color: #8b949e; }
 }
 

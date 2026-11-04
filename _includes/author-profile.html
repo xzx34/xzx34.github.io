@@ -14,15 +14,10 @@
     <details class="author__pronunciation">
       <summary>How to pronounce?</summary>
       <div class="author__pronunciation-content">
-        <p class="author__pronunciation-name" lang="zh-Latn">{{ author.pronunciation.pinyin }}</p>
-        <p>Zixiang is my given name; Xu is my family name.</p>
-        {% if author.pronunciation.audio %}
-        <audio controls preload="none" aria-label="Zixiang Xu pronounced in Mandarin">
-          <source src="{{ author.pronunciation.audio | relative_url }}" type="audio/wav">
-          Your browser does not support audio playback.
-        </audio>
-        <p class="author__pronunciation-note">{{ author.pronunciation.audio_note }}</p>
-        {% endif %}
+        <p><strong>Zixiang</strong> ≈ “{{ author.pronunciation.given_name }}”<br>
+        <strong>Xu</strong> ≈ “{{ author.pronunciation.family_name }}”</p>
+        <p>{{ author.pronunciation.hint }}</p>
+        <p class="author__pronunciation-note">English approximation. Xu is my family name.</p>
       </div>
     </details>
     {% endif %}
