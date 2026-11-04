@@ -143,7 +143,7 @@ SocialMaze 同时保留 **Findings of EMNLP 2026** 和 **SocialSim @ COLM 2025 �
 - 侧栏随页面自然滚动，避免恢复之前造成头像、姓名及联系方式滚动不同步的 sticky 行为。
 - 桌面和窄屏联系人顺序保持一致；不无故重复添加已有入口。
 - 在侧栏姓名下提供克制的 `How to pronounce?` 入口，参考 Danqi Chen 主页；默认收起，点击后显示英语使用者容易跟读的文字提示。保留现有侧栏滚动、明暗风格和移动布局，不增加新的主页栏目。
-- 用户确认只做文字读音提示，不使用汉语拼音，不录制、生成或播放音频。使用英语近似读法 `Zixiang ≈ “dzuh-shyahng”`、`Xu ≈ “shü”`，配以 `For Xu, say “shee” with rounded lips.`；明确是 English approximation，并说明 Xu 是姓。
+- 用户确认只做文字读音提示，不使用汉语拼音，不录制、生成或播放音频。使用英语近似读法 `Zixiang ≈ “dzuh-shyahng”`、`Xu ≈ “shoe”`；以英语母语者容易直接读出为优先，不使用 `shü` 或嘴形说明。明确是 English approximation，而非严格普通话音标，并说明 Xu 是姓。
 
 当前桌面顺序：
 
@@ -264,7 +264,8 @@ CV 维护属于本任务的长期职责，工作目录为 `/Users/zixiang/Amadeu
 
 ### 2026-11-04：姓名发音入口
 
-- 侧栏姓名下新增 `How to pronounce?` 小入口；按用户最终反馈采用纯文字英语近似读法与嘴形提示，去掉此前准备的拼音、合成音频与播放器。
+- 侧栏姓名下新增 `How to pronounce?` 小入口；按用户最终反馈采用纯文字英语近似读法，去掉此前准备的拼音、合成音频与播放器。
+- 随后按用户反馈将 `shü` 简化为英语单词 `shoe`，删掉嘴形教学；保留 `dzuh-shyahng` 的音节划分及 English approximation 标注。
 - 使用原生 details，支持键盘，无 JavaScript 时仍可展开；点击外部或按 Escape 收起。浮层不推挤原有身份与联系人布局，文字在 `_config.yml` 的 `author.pronunciation` 中维护。
 - 本轮仅涉及侧栏发音入口及维护规范；不修改研究介绍、论文条目、联系人、CV 或项目页。沿用原有 reduced-motion 规则。
 
