@@ -573,6 +573,87 @@ body {
     font-size: 1em;
 }
 
+/* A quiet, keyboard-accessible pronunciation disclosure below the name. */
+.sidebar:has(.author__pronunciation[open]) {
+    position: relative;
+    z-index: 10;
+}
+
+.author__pronunciation {
+    position: relative;
+    margin: .35rem 0 .65rem;
+    font-family: $sans-serif;
+    font-size: .75rem;
+    line-height: 1.5;
+
+    summary {
+        display: inline-block;
+        list-style: none;
+        color: $link-color;
+        cursor: pointer;
+        padding: .15rem 0;
+        text-underline-offset: .18em;
+
+        &::-webkit-details-marker { display: none; }
+        &:hover { text-decoration: underline; }
+        &:focus-visible {
+            outline: 2px solid currentColor;
+            outline-offset: 3px;
+            border-radius: 2px;
+        }
+    }
+
+    &[open] summary { text-decoration: underline; }
+
+    .author__pronunciation-content {
+        position: absolute;
+        top: calc(100% + .3rem);
+        left: 0;
+        z-index: 30;
+        width: 15rem;
+        max-width: calc(100vw - 120px);
+        padding: .75rem;
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 6px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, .12);
+    }
+
+    p {
+        margin: 0 0 .5rem;
+        font-size: inherit;
+    }
+
+    .author__pronunciation-name {
+        font-size: .95rem;
+        font-weight: 600;
+    }
+
+    audio {
+        display: block;
+        width: 100%;
+        min-width: 0;
+        height: 36px;
+    }
+
+    .author__pronunciation-note {
+        margin: .35rem 0 0;
+        font-size: .65rem;
+        color: #6b7280;
+    }
+}
+
+[data-theme="dark"] .author__pronunciation {
+    .author__pronunciation-content {
+        background: #161b22;
+        border-color: #30363d;
+        color: #c9d1d9;
+    }
+    summary { color: #58a6ff; }
+    audio { color-scheme: dark; }
+    .author__pronunciation-note { color: #8b949e; }
+}
+
 /* Section heading animations */
 .page__content .section-heading {
     position: relative;

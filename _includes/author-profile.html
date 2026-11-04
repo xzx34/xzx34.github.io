@@ -10,6 +10,22 @@
 
   <div class="author__content">
     <h3 class="author__name">{{ author.name }}</h3>
+    {% if author.pronunciation %}
+    <details class="author__pronunciation">
+      <summary>How to pronounce?</summary>
+      <div class="author__pronunciation-content">
+        <p class="author__pronunciation-name" lang="zh-Latn">{{ author.pronunciation.pinyin }}</p>
+        <p>Zixiang is my given name; Xu is my family name.</p>
+        {% if author.pronunciation.audio %}
+        <audio controls preload="none" aria-label="Zixiang Xu pronounced in Mandarin">
+          <source src="{{ author.pronunciation.audio | relative_url }}" type="audio/wav">
+          Your browser does not support audio playback.
+        </audio>
+        <p class="author__pronunciation-note">{{ author.pronunciation.audio_note }}</p>
+        {% endif %}
+      </div>
+    </details>
+    {% endif %}
     {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
   </div>
 
