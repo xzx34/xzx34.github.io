@@ -270,7 +270,8 @@ CV 维护属于本任务的长期职责，工作目录为 `/Users/zixiang/Amadeu
 
 - 按用户最新要求，两个项目在主页和两份 CV 中使用完整标题；RewardAudit 直接链接 `https://github.com/xzx34/RewardAudit`，移除 forthcoming / Coming soon，不修改仓库可见性。
 - 完整版 Tools and Platforms 移到第二页开头，两个项目后接 Publications；保留原页首、字号、20 篇论文及 3 页结构，仅将论文条目间距由 2.00em 微调至 1.70em。单页版仍为 1 页 / 7 篇，其他内容不改。
-- GitHub 官方已公告今日 Actions / Pages 故障并于 21:21 UTC 标记恢复；本轮将通过既有 Pages 发布并核对线上内容与 CV 字节，实际结果待记录。
+- GitHub 官方已公告今日 Actions / Pages 故障并于 21:21 UTC 标记恢复。本轮内容提交 `2c486dc` 的 [Pages 构建与部署](https://github.com/xzx34/xzx34.github.io/actions/runs/43104776616) 已成功；线上主页、完整论文页和 CV 均返回 200，两个完整标题、RewardAudit 直接链接、WeLM 与新增审稿信息已生效。主页仍为 6+4 篇，完整论文页 20 篇，既有论文文字/链接不变，Meta 未加入主页。
+- 两份 CV 逐页视觉、原页首坐标/字号、全部字体嵌入、元数据与边界检查通过，实际链接为 63 / 43。线上完整版 PDF 与标准源输出逐字节相同，SHA-256 为 `5e0c885fb564bc8aed0bd922af9a7e2593921ce70e0158d9185055ea5d0e40e4`；第二页开头的项目栏与两份 CV 完整标题已核对。未修改发布配置或依赖；桌面、390px 窄屏及明暗模式正常。
 
 ### 2026-11-11：工具平台、审稿经历与 CV 同步
 
@@ -280,7 +281,7 @@ CV 维护属于本任务的长期职责，工作目录为 `/Users/zixiang/Amadeu
 - 完整版仍为 3 页 / 20 篇；单页版仍为 1 页 / 7 篇。保留原联系页首、字体和字号；单页精简 WeChat AI / Earlier Research 描述以消除短尾行，小幅收紧栏目及奖项间距，论文条目保留原 0.40em 间距。主页仍为 6 篇 Latest Preprints、4 篇 Selected Work；研究介绍、News、照片、联系人顺序、论文数据及 Meta 不上主页的边界不变。
 - 两份正式源文件已用原 Makefile/Tectonic 重建；逐页视觉检查、原页首文字/坐标/字号、字体嵌入、文档元数据、页面边界与资源链接检查通过。完整版 / 单页版分别有 62 / 42 个实际链接，网站 CV 副本与标准完整版字节一致。
 - 原本地 Jekyll bundle 仍缺既有依赖；使用独立 Liquid 4.0.4 运行原 Paper 检查，20 篇、6+4 分组与五个项目页通过，不改依赖锁定或部署流程。使用现有线上样式及模板内容预览，桌面和 390px 窄屏的明暗两种模式检查通过；复用原入场动画及 reduced-motion 规则。新栏目使用 `#tools-platforms`，沿用 Latest Preprints 的滚动留白，防止标题被导航遮挡。
-- 发布受阻，尚未上线：网站修改及完整版 PDF 已提交并推送为 `bbef52d`。首次 [Pages 任务](https://github.com/xzx34/xzx34.github.io/actions/runs/43095741289) 长时间排队、没有 jobs；CLI 和网页取消均失败。通过 Pages 原生 build API 重试一次后，[重试任务](https://github.com/xzx34/xzx34.github.io/actions/runs/43096712726) 返回 `startup_failure`，仍无构建步骤。GitHub 网页注明内部 unexpected error 并已自动通知平台，request ID 为 `97c3412f-de0f-11f1-8e7d-32e2e8f15e83`。同期 Webhooks 故障与本次异常有时间重合，但不能确认因果。线上仍为旧版，平台恢复后需重跑 Pages 并执行 `outputs/cv-homepage-update-2026-11-11/verify-live.py`（在上层 project 工作目录中）。未修改发布配置，未批量反复重建，也未对外发送支持请求。
+- 首次发布曾受阻（已由本日后续发布恢复，见上条）：网站修改及完整版 PDF 当时提交并推送为 `bbef52d`。首次 [Pages 任务](https://github.com/xzx34/xzx34.github.io/actions/runs/43095741289) 长时间排队、没有 jobs；CLI 和网页取消均失败。通过 Pages 原生 build API 重试一次后，[重试任务](https://github.com/xzx34/xzx34.github.io/actions/runs/43096712726) 返回 `startup_failure`，仍无构建步骤。GitHub 网页注明内部 unexpected error 并已自动通知平台，request ID 为 `97c3412f-de0f-11f1-8e7d-32e2e8f15e83`。同期 Webhooks 故障与本次异常有时间重合，但不能确认因果。当时线上仍为旧版；后续平台恢复并完成 Pages 后已执行 `outputs/cv-homepage-update-2026-11-11/verify-live.py`（在上层 project 工作目录中）。未修改发布配置，未批量反复重建，也未对外发送支持请求。
 
 ### 2026-11-04：姓名发音入口
 
