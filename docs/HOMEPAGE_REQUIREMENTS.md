@@ -274,7 +274,8 @@ CV 维护属于本任务的长期职责，工作目录为 `/Users/zixiang/Amadeu
 
 - 用户确认发布新模板、四点 Research Summary 与恢复四川大学后的完整版 CV；本轮仅替换 `files/Zixiang_Xu_Full_CV.pdf` 并同步维护记录，不修改主页正文、论文/项目数据、链接顺序、样式或配置。
 - 网站候选副本与 Amadeus 标准完整版逐字节一致，SHA-256 为 `a31011e4bb458854980403dbc0d7bbef6e0cf20925f385fedef22754a1db073d`；四页、二十篇论文、六十三个实际 PDF 链接及既有文档元数据已核对。单页版继续保留在本地标准输出，不新增网站入口。
-- 原有 CV 下载地址保持不变；GitHub Pages 构建与线上字节一致性在本轮部署后验证。此前两条“尚未同步”记录描述各自任务结束时的历史状态，以本条最终发布核验为准。
+- 发布提交 `8d9acd7` 的 [GitHub Pages 构建与部署](https://github.com/xzx34/xzx34.github.io/actions/runs/43122242509) 已成功。线上原 CV 地址直接返回 200/application/pdf，与本地标准完整版逐字节一致；主页返回 200，CV 下载入口保留，HTML body 在统一 HTTP 换行符后与发布前完全一致。
+- 线上核验记录位于 `/Users/zixiang/project/outputs/cv-publish-2026-11-11/live-verification.json`。此前两条“尚未同步”记录描述各自任务结束时的历史状态；本次已完成公开下载副本同步，未修改主页正文。
 
 ### 2026-11-11：恢复本科教育并细分 CV Research Summary
 
