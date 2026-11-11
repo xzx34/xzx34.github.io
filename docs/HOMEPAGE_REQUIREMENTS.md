@@ -1,6 +1,6 @@
 # 主页与 CV 维护要求
 
-最后整理：2026-11-04
+最后整理：2026-11-11
 
 ## 1. 本文档的用途与更新方式
 
@@ -164,7 +164,8 @@ SocialMaze 同时保留 **Findings of EMNLP 2026** 和 **SocialSim @ COLM 2025 �
 ## 8. 其他栏目
 
 - **Tools & Platforms**：在 All publications 按钮之后、Honors and Awards 之前独立展示非论文工具与平台；数据维护于 `_data/projects.yml`，由 `_includes/project-list.html` 渲染，复用现有单列条目、按钮和动画。只展示项目名、简短用途、真实发布状态及可用入口，不虚构论文、会议或 Paper 按钮，不计入论文数量。
-- 未公开工具可以按用户要求预告，但仓库公开前仅展示禁用的 Coming soon 按钮；须核实公开访问后再启用链接，不因主页更新自动公开私有仓库。Arena 的展示名称及开放范围以正式网站为准。
+- 未公开工具通常使用禁用的 Coming soon 按钮；用户明确要求提前提供已知仓库链接时可按其要求启用，但不因主页更新自动公开私有仓库，也不虚构已经开源的状态。RewardAudit 已获用户授权提前启用 Code 链接并去除 forthcoming。Arena 的展示名称及开放范围以正式网站与用户确认的标题为准。
+- 两个项目完整标题为 `RewardAudit: Automated Testing of Rule-Based Verifiers for LLM Evaluation and RLVR` 和 `MathInsight Arena: Expert Evaluation of LLMs on Posing, Judging, and Developing Mathematical Research Problems`；主页与两份标准 CV 使用相同标题。
 - **Honors and Awards**：每项奖项提供简短、易理解的解释，以最新 CV 为依据；不能只列奖名，也不能编造获奖比例或含金量。
 - 当前主要奖项：USC Annenberg Fellowship（2026）、CCF Elite Collegiate Award（2024）、ICPC Asia Jinan Regional Gold Medal（2022）、NOI Silver Medal（2020）。
 - **Internships**：保留清晰的时间、团队和身份；WeChat AI 不加 Tencent 前缀，Notre Dame 经历明确为 MINE Lab。
@@ -241,6 +242,7 @@ CV 维护属于本任务的长期职责，工作目录为 `/Users/zixiang/Amadeu
 - CV 中的 Paper 链接沿用第 6 节的权威入口优先级；SocialMaze Data 必须指向维护版 `xzx34/SocialMaze`，不恢复 `MBZUAI/SocialMaze`。保留 CV 的紧凑 `Project` 标签与资源顺序。
 - 教育、经历、论文作者与状态、奖项等事实在两份版本之间保持一致；允许单页版合理压缩和选择内容，不要求逐字相同。用户最新确认的事实优先，不从旧申请快照恢复过时信息。
 - 更新后检查编译、链接、PDF 文档元数据及全部页面的视觉效果，单页版保持一页；采用现有排版，按实际任务调整内容。
+- 完整版的 Tools and Platforms 放在第二页开头、Publications 之前，不挤入第一页；单页版仍保持一页。项目使用完整标题并直接链接，避免重复解释标题已有的内容。
 - 顶部保留原版：27 pt 左对齐姓名及下方横线，左栏为 `Contact Information`，中间按原顺序纵向排列 Email、GitHub、X、LinkedIn、Google Scholar、Homepage，右侧保留 Ph.D. Student / Computer Science / University of Southern California / Los Angeles, CA 身份块。用户已明确否定三列两行的紧凑联系页首；未经明确要求，不重新设计顶部、缩小姓名或改变联系信息布局。
 - 排版以阅读与空间分配为先，不以“保持页数、无溢出”代替视觉验收。个人标准 CV 使用 `cv-layout.tex` 维护栏目顶端对齐和通栏论文区；不为保留空白侧栏而挤压论文，也不单独缩小续页栏目名。论文条目、作者贡献说明及链接组应具有稳定间距和合理换行。
 - 尽量消除正文段落只有 1–2 个单词的尾行：优先准确地精简或补足内容，不为凑行添加空话。正式论文标题、作者与贡献标记不能为排版而改写，可通过合理断行和短语不拆分来控制尾行；避免强制两端对齐产生异常字间距。独立栏目标签、年份、机构名等不是需要凑字的正文尾行。
@@ -264,14 +266,21 @@ CV 维护属于本任务的长期职责，工作目录为 `/Users/zixiang/Amadeu
 
 ## 11. 待同步事项与变更记录
 
+### 2026-11-11：项目完整标题、CV 分页与发布恢复
+
+- 按用户最新要求，两个项目在主页和两份 CV 中使用完整标题；RewardAudit 直接链接 `https://github.com/xzx34/RewardAudit`，移除 forthcoming / Coming soon，不修改仓库可见性。
+- 完整版 Tools and Platforms 移到第二页开头，两个项目后接 Publications；保留原页首、字号、20 篇论文及 3 页结构，仅将论文条目间距由 2.00em 微调至 1.70em。单页版仍为 1 页 / 7 篇，其他内容不改。
+- GitHub 官方已公告今日 Actions / Pages 故障并于 21:21 UTC 标记恢复；本轮将通过既有 Pages 发布并核对线上内容与 CV 字节，实际结果待记录。
+
 ### 2026-11-11：工具平台、审稿经历与 CV 同步
 
-- 新增 Tools & Platforms：RewardAudit 用于无模型、无 GPU 的 RLVR reward/verifier 审计；当前仓库仍为私有，标注 open-source release forthcoming，Code 为非跳转占位。MathInsight Arena 使用官网名称，链接 `https://insight-arena.org/`，说明专家盲评 AI 提出、评估和发展数学研究问题的能力；当前邀请数学研究者参与，不声称 leaderboard 已发布。
+- 新增 Tools & Platforms：RewardAudit 用于无模型、无 GPU 的 RLVR reward/verifier 审计；初版因仓库尚未公开而使用 forthcoming 与占位；已被本日用户要求提前给出直接链接的决定覆盖。MathInsight Arena 使用官网名称，链接 `https://insight-arena.org/`，说明专家盲评 AI 提出、评估和发展数学研究问题的能力；当前邀请数学研究者参与，不声称 leaderboard 已发布。
 - 主页与两份 CV 同步 ICLR 2027、ARR August/October 2026 和 VLM4RWD @ NeurIPS 2026 审稿；单页 CV 与主页补 WeLM post-training，主页 MBZUAI/Notre Dame 文案同步既有 CV 的后训练描述。保留 Led 与项目链接；不将 GTA/DyFlow 泛称为后训练实验。
 - 用户批准单页版减少 1–2 篇精选论文以给项目留空间：当前保留 7 篇，移除单页列表中的 Adaptive Distraction、DyFlow；两篇仍保留在完整版 CV 和网站。其余精选顺序不变；JevOut 紧跟 DyFlow 的规则继续适用于包含 DyFlow 的完整版。两份 CV 均加入独立 Tools and Platforms 栏目，不将工具计入论文数量。
-- 完整版仍为 3 页 / 20 篇；单页版仍为 1 页 / 7 篇。保留原联系页首、字体和字号；单页仅精简 Earlier Research 描述并收紧栏目、奖项和论文间距。主页仍为 6 篇 Latest Preprints、4 篇 Selected Work；研究介绍、News、照片、联系人顺序、论文数据及 Meta 不上主页的边界不变。
+- 完整版仍为 3 页 / 20 篇；单页版仍为 1 页 / 7 篇。保留原联系页首、字体和字号；单页精简 WeChat AI / Earlier Research 描述以消除短尾行，小幅收紧栏目及奖项间距，论文条目保留原 0.40em 间距。主页仍为 6 篇 Latest Preprints、4 篇 Selected Work；研究介绍、News、照片、联系人顺序、论文数据及 Meta 不上主页的边界不变。
 - 两份正式源文件已用原 Makefile/Tectonic 重建；逐页视觉检查、原页首文字/坐标/字号、字体嵌入、文档元数据、页面边界与资源链接检查通过。完整版 / 单页版分别有 62 / 42 个实际链接，网站 CV 副本与标准完整版字节一致。
-- 原本地 Jekyll bundle 仍缺既有依赖；使用独立 Liquid 4.0.4 运行原 Paper 检查，20 篇、6+4 分组与五个项目页通过，不改依赖锁定或部署流程。使用现有线上样式及模板内容预览，桌面和 390px 窄屏的明暗两种模式检查通过；复用原入场动画及 reduced-motion 规则。新栏目使用 `#tools-platforms`，沿用 Latest Preprints 的滚动留白，防止标题被导航遮挡。正式发布及线上验收待下方后续记录。
+- 原本地 Jekyll bundle 仍缺既有依赖；使用独立 Liquid 4.0.4 运行原 Paper 检查，20 篇、6+4 分组与五个项目页通过，不改依赖锁定或部署流程。使用现有线上样式及模板内容预览，桌面和 390px 窄屏的明暗两种模式检查通过；复用原入场动画及 reduced-motion 规则。新栏目使用 `#tools-platforms`，沿用 Latest Preprints 的滚动留白，防止标题被导航遮挡。
+- 发布受阻，尚未上线：网站修改及完整版 PDF 已提交并推送为 `bbef52d`。首次 [Pages 任务](https://github.com/xzx34/xzx34.github.io/actions/runs/43095741289) 长时间排队、没有 jobs；CLI 和网页取消均失败。通过 Pages 原生 build API 重试一次后，[重试任务](https://github.com/xzx34/xzx34.github.io/actions/runs/43096712726) 返回 `startup_failure`，仍无构建步骤。GitHub 网页注明内部 unexpected error 并已自动通知平台，request ID 为 `97c3412f-de0f-11f1-8e7d-32e2e8f15e83`。同期 Webhooks 故障与本次异常有时间重合，但不能确认因果。线上仍为旧版，平台恢复后需重跑 Pages 并执行 `outputs/cv-homepage-update-2026-11-11/verify-live.py`（在上层 project 工作目录中）。未修改发布配置，未批量反复重建，也未对外发送支持请求。
 
 ### 2026-11-04：姓名发音入口
 

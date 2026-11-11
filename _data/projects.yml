@@ -1,12 +1,10 @@
-- name: "RewardAudit"
+- name: "RewardAudit: Automated Testing of Rule-Based Verifiers for LLM Evaluation and RLVR"
   description: "Model-free audits of reward functions and verifiers for reinforcement learning with verifiable rewards, detecting false rewards and incorrectly rejected answers without a model or GPU."
-  status: "Open-source release forthcoming."
-  planned_repository: "https://github.com/xzx34/RewardAudit"
   links:
     - label: "Code"
-      url: null
+      url: "https://github.com/xzx34/RewardAudit"
 
-- name: "MathInsight Arena"
+- name: "MathInsight Arena: Expert Evaluation of LLMs on Posing, Judging, and Developing Mathematical Research Problems"
   description: "An arena for blind, expert comparisons of how frontier AI models pose, evaluate, and develop mathematical research problems."
   status: "Now inviting mathematicians."
   links:
