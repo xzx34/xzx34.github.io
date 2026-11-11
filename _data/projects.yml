@@ -1,0 +1,14 @@
+- name: "RewardAudit"
+  description: "Model-free audits of reward functions and verifiers for reinforcement learning with verifiable rewards, detecting false rewards and incorrectly rejected answers without a model or GPU."
+  status: "Open-source release forthcoming."
+  planned_repository: "https://github.com/xzx34/RewardAudit"
+  links:
+    - label: "Code"
+      url: null
+
+- name: "MathInsight Arena"
+  description: "An arena for blind, expert comparisons of how frontier AI models pose, evaluate, and develop mathematical research problems."
+  status: "Now inviting mathematicians."
+  links:
+    - label: "Project Page"
+      url: "https://insight-arena.org/"

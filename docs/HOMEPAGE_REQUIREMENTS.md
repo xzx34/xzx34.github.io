@@ -163,6 +163,8 @@ SocialMaze 同时保留 **Findings of EMNLP 2026** 和 **SocialSim @ COLM 2025 �
 
 ## 8. 其他栏目
 
+- **Tools & Platforms**：在 All publications 按钮之后、Honors and Awards 之前独立展示非论文工具与平台；数据维护于 `_data/projects.yml`，由 `_includes/project-list.html` 渲染，复用现有单列条目、按钮和动画。只展示项目名、简短用途、真实发布状态及可用入口，不虚构论文、会议或 Paper 按钮，不计入论文数量。
+- 未公开工具可以按用户要求预告，但仓库公开前仅展示禁用的 Coming soon 按钮；须核实公开访问后再启用链接，不因主页更新自动公开私有仓库。Arena 的展示名称及开放范围以正式网站为准。
 - **Honors and Awards**：每项奖项提供简短、易理解的解释，以最新 CV 为依据；不能只列奖名，也不能编造获奖比例或含金量。
 - 当前主要奖项：USC Annenberg Fellowship（2026）、CCF Elite Collegiate Award（2024）、ICPC Asia Jinan Regional Gold Medal（2022）、NOI Silver Medal（2020）。
 - **Internships**：保留清晰的时间、团队和身份；WeChat AI 不加 Tencent 前缀，Notre Dame 经历明确为 MINE Lab。
@@ -261,6 +263,15 @@ CV 维护属于本任务的长期职责，工作目录为 `/Users/zixiang/Amadeu
 | 排版检查与临时产物 | `tmp/pdfs/`；历史截图及临时文件 |
 
 ## 11. 待同步事项与变更记录
+
+### 2026-11-11：工具平台、审稿经历与 CV 同步
+
+- 新增 Tools & Platforms：RewardAudit 用于无模型、无 GPU 的 RLVR reward/verifier 审计；当前仓库仍为私有，标注 open-source release forthcoming，Code 为非跳转占位。MathInsight Arena 使用官网名称，链接 `https://insight-arena.org/`，说明专家盲评 AI 提出、评估和发展数学研究问题的能力；当前邀请数学研究者参与，不声称 leaderboard 已发布。
+- 主页与两份 CV 同步 ICLR 2027、ARR August/October 2026 和 VLM4RWD @ NeurIPS 2026 审稿；单页 CV 与主页补 WeLM post-training，主页 MBZUAI/Notre Dame 文案同步既有 CV 的后训练描述。保留 Led 与项目链接；不将 GTA/DyFlow 泛称为后训练实验。
+- 用户批准单页版减少 1–2 篇精选论文以给项目留空间：当前保留 7 篇，移除单页列表中的 Adaptive Distraction、DyFlow；两篇仍保留在完整版 CV 和网站。其余精选顺序不变；JevOut 紧跟 DyFlow 的规则继续适用于包含 DyFlow 的完整版。两份 CV 均加入独立 Tools and Platforms 栏目，不将工具计入论文数量。
+- 完整版仍为 3 页 / 20 篇；单页版仍为 1 页 / 7 篇。保留原联系页首、字体和字号；单页仅精简 Earlier Research 描述并收紧栏目、奖项和论文间距。主页仍为 6 篇 Latest Preprints、4 篇 Selected Work；研究介绍、News、照片、联系人顺序、论文数据及 Meta 不上主页的边界不变。
+- 两份正式源文件已用原 Makefile/Tectonic 重建；逐页视觉检查、原页首文字/坐标/字号、字体嵌入、文档元数据、页面边界与资源链接检查通过。完整版 / 单页版分别有 62 / 42 个实际链接，网站 CV 副本与标准完整版字节一致。
+- 原本地 Jekyll bundle 仍缺既有依赖；使用独立 Liquid 4.0.4 运行原 Paper 检查，20 篇、6+4 分组与五个项目页通过，不改依赖锁定或部署流程。使用现有线上样式及模板内容预览，桌面和 390px 窄屏的明暗两种模式检查通过；复用原入场动画及 reduced-motion 规则。新栏目使用 `#tools-platforms`，沿用 Latest Preprints 的滚动留白，防止标题被导航遮挡。正式发布及线上验收待下方后续记录。
 
 ### 2026-11-04：姓名发音入口
 

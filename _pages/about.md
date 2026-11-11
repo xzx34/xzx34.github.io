@@ -71,6 +71,11 @@ I am a Ph.D. student in [Computer Science](https://www.cs.usc.edu/) at the [Univ
   <a class="pub-btn pub-btn--all" href="/publications/">All publications <span aria-hidden="true">→</span></a>
 </div>
 
+## Tools & Platforms
+{: #tools-platforms .section-heading}
+
+{% include project-list.html %}
+
 <span class="anchor legacy-anchor" id="-honors-and-awards"></span>
 
 ## Honors and Awards
@@ -89,10 +94,10 @@ I am a Ph.D. student in [Computer Science](https://www.cs.usc.edu/) at the [Univ
 {: .section-heading}
 
 <div class="experience-list">
-  <div class="experience-item animate-on-scroll"><time>Jun. 2026 – Aug. 2026</time><div><strong>WeChat AI</strong><span>Research Intern · Foundation Model Group</span><p>Led <a href="/AlgoWorlds/">AlgoWorlds</a>, building verifiable tool-use environments for global optimization and generating agent trajectories for post-training.</p></div></div>
+  <div class="experience-item animate-on-scroll"><time>Jun. 2026 – Aug. 2026</time><div><strong>WeChat AI</strong><span>Research Intern · Foundation Model Group</span><p>Contributed to WeLM post-training. Led <a href="/AlgoWorlds/">AlgoWorlds</a>, building verifiable tool-use environments for global optimization and generating agent trajectories for post-training.</p></div></div>
   <div class="experience-item animate-on-scroll"><time>Mar. 2026 – May 2026</time><div><strong>Alibaba Group</strong><span>Research Intern</span><p>Led <a href="/unfair-judge/">Inside the Unfair Judge</a>, investigating internal mechanisms of LLM-as-a-judge scoring bias, causal bias control, and failure prediction.</p></div></div>
-  <div class="experience-item animate-on-scroll"><time>Mar. 2025 – Aug. 2025</time><div><strong>MBZUAI</strong><span>Research Intern</span><p>Led <a href="/socialmaze/">SocialMaze</a>, <a href="/gta/">GTA</a>, and <a href="https://proceedings.neurips.cc/paper_files/paper/2025/hash/fe9910d2b03324faeb5371a9658277bb-Abstract-Conference.html">DyFlow</a> on social reasoning, graph reasoning, and dynamic agent workflows.</p></div></div>
-  <div class="experience-item animate-on-scroll"><time>Oct. 2024 – Aug. 2025</time><div><strong>MINE Lab, University of Notre Dame</strong><span>Research Intern</span><p>Led <a href="/cross-lingual-pitfalls/">Cross-Lingual Pitfalls</a> and <a href="https://proceedings.neurips.cc/paper_files/paper/2025/hash/f13d74c6666087aa6eea3d17820e6a23-Abstract-Conference.html">Adaptive Distraction</a>, developing automated search methods to expose multilingual weaknesses and contextual reasoning failures.</p></div></div>
+  <div class="experience-item animate-on-scroll"><time>Mar. 2025 – Aug. 2025</time><div><strong>MBZUAI</strong><span>Research Intern</span><p>Led <a href="/socialmaze/">SocialMaze</a>, <a href="/gta/">GTA</a>, and <a href="https://proceedings.neurips.cc/paper_files/paper/2025/hash/fe9910d2b03324faeb5371a9658277bb-Abstract-Conference.html">DyFlow</a>: social-reasoning post-training with curated traces, algorithmic graph reasoning, and dynamic agent workflows.</p></div></div>
+  <div class="experience-item animate-on-scroll"><time>Oct. 2024 – Aug. 2025</time><div><strong>MINE Lab, University of Notre Dame</strong><span>Research Intern</span><p>Led <a href="/cross-lingual-pitfalls/">Cross-Lingual Pitfalls</a> and <a href="https://proceedings.neurips.cc/paper_files/paper/2025/hash/f13d74c6666087aa6eea3d17820e6a23-Abstract-Conference.html">Adaptive Distraction</a>, automating failure discovery and using cross-lingual failures for targeted post-training and transfer evaluation.</p></div></div>
   <div class="experience-item animate-on-scroll"><time>Aug. 2024</time><div><strong>MIT Center for Transportation &amp; Logistics</strong><span>Summer Research Student</span><p>Led <a href="https://arxiv.org/abs/2506.19843">Temporal-IRL</a> for port congestion and berth scheduling with inverse reinforcement learning (TRB 2025 oral presentation).</p></div></div>
   <div class="experience-item animate-on-scroll"><time>Jan. 2024 – Mar. 2024</time><div><strong>Microsoft (Asia) Internet Engineering Institute</strong><span>Research Intern</span><p>Led LLM and VLM evaluation, including GPT-4V capability assessment and reproduction.</p></div></div>
 </div>
@@ -104,9 +109,9 @@ I am a Ph.D. student in [Computer Science](https://www.cs.usc.edu/) at the [Univ
 {: .section-heading}
 
 <div class="service-list">
-  <div class="service-item animate-on-scroll"><strong>Conference Reviewer</strong><p>AAAI 2027; COLM 2026; ICLR 2026; NeurIPS 2026; NLPCC 2025.</p></div>
-  <div class="service-item animate-on-scroll"><strong>ACL Rolling Review Reviewer</strong><p>February and May 2025 cycles.</p></div>
-  <div class="service-item animate-on-scroll"><strong>Workshop Reviewer</strong><p>GroundLM and REALM at EMNLP 2026; Social Simulation with LLMs at COLM 2025.</p></div>
+  <div class="service-item animate-on-scroll"><strong>Conference Reviewer</strong><p>AAAI 2027; ICLR 2026–2027; COLM 2026; NeurIPS 2026; NLPCC 2025.</p></div>
+  <div class="service-item animate-on-scroll"><strong>ACL Rolling Review Reviewer</strong><p>February and May 2025; August and October 2026 cycles.</p></div>
+  <div class="service-item animate-on-scroll"><strong>Workshop Reviewer</strong><p>VLM4RWD at NeurIPS 2026; GroundLM and REALM at EMNLP 2026; Social Simulation with LLMs at COLM 2025.</p></div>
 </div>
 
 <span class="anchor legacy-anchor" id="-miscellaneous"></span>

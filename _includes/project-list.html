@@ -1,0 +1,19 @@
+<div class="publication-list">
+{% for project in site.data.projects %}
+  <article class="publication-item publication-item--preprint project-item animate-on-scroll">
+    <div class="publication-details">
+      <h3 class="publication-title">{{ project.name | escape }}</h3>
+      <p class="publication-authors">{{ project.description | escape }} {{ project.status | escape }}</p>
+      <div class="pub-links">
+        {% for link in project.links %}
+        {% if link.url and link.url != '' %}
+        <a class="pub-btn" href="{{ link.url }}" aria-label="{{ link.label | escape }} for {{ project.name | escape }}">{{ link.label | escape }}</a>
+        {% else %}
+        <span class="pub-btn pub-btn--pending" role="link" aria-disabled="true" title="Open-source release forthcoming" aria-label="{{ link.label | escape }} for {{ project.name | escape }} — forthcoming">{{ link.label | escape }} · Coming soon</span>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </article>
+{% endfor %}
+</div>
