@@ -235,18 +235,22 @@ CV 维护属于本任务的长期职责，工作目录为 `/Users/zixiang/Amadeu
 长期维护规则：
 
 - 主要修改 `career/resume/` 中的源文件，再编译生成 `output/pdf/` 中的上述两份 PDF；不直接编辑生成的 PDF，也不以网站副本反向覆盖源文件。
-- `resume.cls`、`fonts/`、`Makefile` 及源文件引用的其他排版依赖保留在原目录。沿用现有编译流程；当前 Makefile 通过 Tectonic 构建两份标准 CV，输出至 `../../output/pdf`。
+- 两份标准 CV 自 2026-11-11 起直接使用 [Yue Zhao 的 CV 模板](https://github.com/yzhao062/yzhao062.github.io/tree/main/cv)。`res.cls` 保持上游原文件及版权说明，个人适配集中在 `cv-yue-layout.tex`；来源和版本记录在 `TEMPLATE_SOURCE.md`。原 `resume.cls`、`cv-layout.tex`、`fonts/` 保留供历史材料使用。Makefile 继续通过 Tectonic 构建两份标准 CV，输出至 `../../output/pdf`。
+- CV Research Summary 保留用户确认的两条主线：**Evaluation and Post-Training** 与 **Trustworthy AI**；暂不设置 AI, Science, and Society。用户最新要求学习 Yue Zhao 的处理，细分为三个或四个具体方向；每点说明研究问题、方法与 insight，并以两列关键词呈现，不能只罗列领域名或逐篇串讲论文。当前完整版实现为四点，文案维护在 `research-summary.tex`；单页版使用 `research-summary-short.tex` 中对应的精简总述。这是 CV 的研究分类，不自动覆盖第 3 节仍有效的主页研究文案。JevOut 对应自然上下文引起的决策可靠性问题，不描述为资源使用研究；后训练相关描述须区分实际训练、环境与数据、反馈可靠性研究。
 - 两份 CV 共用 `career/resume/meta-experience.tex`。Meta AI 的身份使用 **Research Collaboration**，不能改写为实习或雇佣身份；更新该经历时维护共享文件，避免两份版本产生事实分歧。
-- 两份 CV 的 Education 仅保留 USC CS Ph.D.、Prof. Yue Zhao、FORTIS Lab 和预计 2030 年毕业；按用户最新要求不展示 Sichuan University 本科条目。此要求仅针对 CV Education，不反向删除主页 Previously at 中的 Sichuan University。
+- 两份 CV 的 Education 包含 USC CS Ph.D.、Prof. Yue Zhao、FORTIS Lab 和预计 2030 年毕业，以及四川大学本科。用户于 2026-11-11 要求恢复本科条目，覆盖此前删除要求；使用已核实的 `Sichuan University`、`B.Eng. in Computer Science and Technology`、`Sep. 2022 -- Jun. 2026`、`Chengdu, China`，不沿用社交简介中的 B.S. 简称，也不添加未经要求的 GPA。
 - 研究经历明确说明主导项目，并在项目名称上提供对应链接：Meta AI—Grid-Bench；WeChat AI—AlgoWorlds；Alibaba—Inside the Unfair Judge；MBZUAI—SocialMaze、GTA、DyFlow；MINE Lab / Notre Dame—Cross-Lingual Pitfalls、Adaptive Distraction；MIT CTL—Temporal-IRL。有项目页时优先链接项目页，否则使用已核实的正式论文页或 arXiv 摘要页。Microsoft 保留主导 LLM/VLM 评测的描述，不虚构项目名或链接；论文作者与共同贡献标记不因经历中的 Led 表述而改变。
+- 两份标准 CV 的论文列表均以 Grid-Bench、AlgoWorlds 开头，JevOut 紧跟 DyFlow；其他论文保留各版本原有相对顺序。此排序仅用于 CV，不自动改变首页的 Latest Preprints / Selected Work。
+- Research Experience 更明确呈现后训练关联：AlgoWorlds 的可验证环境与轨迹生成、SocialMaze 的推理轨迹后训练、Cross-Lingual Pitfalls 的失败样例驱动后训练与迁移评测，以及 Inside the Unfair Judge 对训练反馈可靠性的启示。区分实际训练实验、训练数据/环境和评测方法；不得写成 Unfair Judge 已开展端到端 RLHF/RLAIF，也不得将 GTA/DyFlow 泛称为后训练成果。
+- 经历文案以主导贡献为中心，不用“evaluated seven LLMs”这类单纯实验规模信息填充内容，也不为控制断行添加这类句子。
 - CV 中的 Paper 链接沿用第 6 节的权威入口优先级；SocialMaze Data 必须指向维护版 `xzx34/SocialMaze`，不恢复 `MBZUAI/SocialMaze`。保留 CV 的紧凑 `Project` 标签与资源顺序。
 - 教育、经历、论文作者与状态、奖项等事实在两份版本之间保持一致；允许单页版合理压缩和选择内容，不要求逐字相同。用户最新确认的事实优先，不从旧申请快照恢复过时信息。
-- 更新后检查编译、链接、PDF 文档元数据及全部页面的视觉效果，单页版保持一页；采用现有排版，按实际任务调整内容。
-- 完整版的 Tools and Platforms 放在第二页开头、Publications 之前，不挤入第一页；单页版仍保持一页。项目使用完整标题并直接链接，避免重复解释标题已有的内容。
-- 顶部保留原版：27 pt 左对齐姓名及下方横线，左栏为 `Contact Information`，中间按原顺序纵向排列 Email、GitHub、X、LinkedIn、Google Scholar、Homepage，右侧保留 Ph.D. Student / Computer Science / University of Southern California / Los Angeles, CA 身份块。用户已明确否定三列两行的紧凑联系页首；未经明确要求，不重新设计顶部、缩小姓名或改变联系信息布局。
-- 排版以阅读与空间分配为先，不以“保持页数、无溢出”代替视觉验收。个人标准 CV 使用 `cv-layout.tex` 维护栏目顶端对齐和通栏论文区；不为保留空白侧栏而挤压论文，也不单独缩小续页栏目名。论文条目、作者贡献说明及链接组应具有稳定间距和合理换行。
+- 更新后检查编译、链接、PDF 文档元数据及全部页面的视觉效果，单页版保持一页。使用当前 res.cls 模板的侧栏栏目名、Computer Modern / Latin Modern 字体、深红强调、蓝色链接和日期/页码页脚。完整版按内容自然分页，不为保持旧三页版而压缩研究介绍；当前为四页。
+- 新结构依次为 Contact Information、Research Summary、Education、Research Experience、Honors and Awards、Research Software & Platforms、Publications、Academic Service。Research Software & Platforms 位于奖项之后、论文之前；此结构覆盖此前固定放在第二页开头的分页要求。项目保留完整标题与直接链接，不重复解释标题内容。
+- 用户已明确要求整体改用 Yue 的模板，覆盖此前固定 27 pt 姓名与原字体的限制。页首使用该模板的左对齐姓名和横线；保留左侧 Contact Information、六行联系入口顺序（Email、GitHub、X、LinkedIn、Google Scholar、Homepage）与右侧 USC 身份信息。不恢复此前被否定的三列两行联系栏，也不复制参考模板作者的身份、地址、引用或开源数据。
+- 排版以阅读与空间分配为先，不以“保持页数、无溢出”代替视觉验收。新模板使用 res.cls 的侧栏结构；完整版论文采用作者在前、标题在后、随后列发表状态与链接的参考格式，完整记录位于 `publications-full.tex`，不改变作者、标题、状态或既定排序。单页版允许沿用紧凑的标题优先条目。论文条目、贡献说明和链接组不得跨页散落。
 - 尽量消除正文段落只有 1–2 个单词的尾行：优先准确地精简或补足内容，不为凑行添加空话。正式论文标题、作者与贡献标记不能为排版而改写，可通过合理断行和短语不拆分来控制尾行；避免强制两端对齐产生异常字间距。独立栏目标签、年份、机构名等不是需要凑字的正文尾行。
-- 修改个人 CV 的共享样式时，保持 `resume.cls`、匿名模板和历史申请快照不受影响；新增样式依赖必须加入 Makefile。验收应对比修改前后的正文、实际 PDF 链接和元数据，并检查全部页面、页脚、页边距及字体嵌入。
+- 修改个人 CV 的共享样式时，保持旧 `resume.cls`、匿名模板和历史申请快照不受影响；新增样式、联系信息、研究介绍及论文数据依赖均须加入 Makefile。验收应对比正文、实际 PDF 链接和元数据，并检查全部页面、页脚、页边距及字体嵌入。
 - 主页 `files/Zixiang_Xu_Full_CV.pdf` 是公开分发副本。任务包含网站 CV 更新时，使用已验证的标准完整版同步，并核对字节一致；记录维护职责本身不触发网站替换或发布。
 - 对外发送时从上述标准 PDF 中按用途选择；创建定制申请材料时另存快照。下表中的材料、匿名模板、备份和临时文件不自动随日常 CV 更新，也不自动删除或覆盖；Fellowship 专用源文件位于 `career/fellowships/`。
 
@@ -265,6 +269,30 @@ CV 维护属于本任务的长期职责，工作目录为 `/Users/zixiang/Amadeu
 | 排版检查与临时产物 | `tmp/pdfs/`；历史截图及临时文件 |
 
 ## 11. 待同步事项与变更记录
+
+### 2026-11-11：新版 CV 同步至网站
+
+- 用户确认发布新模板、四点 Research Summary 与恢复四川大学后的完整版 CV；本轮仅替换 `files/Zixiang_Xu_Full_CV.pdf` 并同步维护记录，不修改主页正文、论文/项目数据、链接顺序、样式或配置。
+- 网站候选副本与 Amadeus 标准完整版逐字节一致，SHA-256 为 `a31011e4bb458854980403dbc0d7bbef6e0cf20925f385fedef22754a1db073d`；四页、二十篇论文、六十三个实际 PDF 链接及既有文档元数据已核对。单页版继续保留在本地标准输出，不新增网站入口。
+- 原有 CV 下载地址保持不变；GitHub Pages 构建与线上字节一致性在本轮部署后验证。此前两条“尚未同步”记录描述各自任务结束时的历史状态，以本条最终发布核验为准。
+
+### 2026-11-11：恢复本科教育并细分 CV Research Summary
+
+- 用户要求两份 CV 补回四川大学，并参考 Yue Zhao 的详细问题阐述与 insight，将 Research Summary 拆成三或四点。本轮采用四点：Frontier Model Evaluation；Evaluation-Driven Post-Training；Automated Failure Discovery；Evaluator Reliability and Agent Risk。仍围绕 evaluation/post-training 与 trustworthy AI 两条主线，不新增 AI for Science and Society 大方向。
+- 完整版每点一段具体说明与六个关键词，共二十四个。内容分别强调评测的能力边界、失败能否转化为可迁移学习、固定测试平均分可能遗漏的条件性失败，以及评分/奖励/智能体决策的可信证据。单页版同步为涵盖四点的精简总述。
+- 本科正式学位与年月依据现有申请资料中的最终成绩单/CSSD 核对记录：B.Eng. in Computer Science and Technology，September 2022--June 2026；不恢复早期不准确的 B.S. 写法。
+- 完整版仍为四页：第一页联系方式与四点研究介绍；第二页教育、研究经历、奖项和两个项目；第三、四页论文与审稿。单页版仍为一页、七篇论文。现有字号、页首、模板、经历事实、项目标题与全部论文记录不变；仅移除旧的 Education 后强制分页，避免本科条目被单独留在一页。
+- 已完成 Tectonic 构建与逐页视觉检查；原有 63/43 个 PDF 链接、文档元数据、字体嵌入和页边界检查通过，完整版两页论文内容及渲染与修改前一致。备份位于 `/Users/zixiang/Amadeus/tmp/cv-research-four-directions-backup-20261111-151633/`，验收文件位于 `/Users/zixiang/project/outputs/cv-research-four-directions-2026-11-11/`。
+- 本轮只更新本地标准 CV 和维护文档；网站正文与 CV 下载副本未发布，仍待网站同步任务处理。Meta AI 继续仅在 CV 中使用 Research Collaboration。
+
+### 2026-11-11：迁移到 Yue Zhao 的 CV 模板
+
+- 用户确认两方向 Research Summary 样稿后，要求直接采用 Yue Zhao 仓库 `cv/` 的模板。两份标准 CV 已迁移到原版 `res.cls`，上游 blob 为 `44ce24ce88392d9a40ff3293c22deaa26f0ba343`；版权原文保留，适配样式、来源说明和 Makefile 依赖一并维护。
+- 完整版四页：第一页为联系方式、双方向研究介绍和 Education；第二页为 Research Experience、Honors and Awards、Research Software & Platforms；第三、四页为二十篇论文和 Academic Service。每个研究方向保留经用户确认的说明与十个关键词，采用两列方框列表。
+- 单页版仍为一页，七篇精选论文及两个项目完整标题均保留；研究介绍压缩为两方向总述。仅精简 WeChat AI 的重复 training 修饰词与 CCF 奖项描述以消除短尾行，不删除经历事实；所有论文标题、作者、贡献标记、状态和链接保持不变。
+- 新模板沿用六行联系入口与 USC 身份信息，姓名/字体/侧栏/页脚按参考模板调整。完整版使用参考的 Letter / 10 pt；单页版保留 A4 并使用 9.3 pt 正文与适当的文本宽度。Meta AI 仍为 Research Collaboration；Education 仍仅 USC。
+- 已在 Amadeus 正式源目录通过 Makefile/Tectonic 重建，最终两份 PDF 与审核样稿逐页渲染一致；二十篇/七篇论文记录、原有 63/43 个链接、字体嵌入、页边界及元数据检查通过。旧版备份位于 `/Users/zixiang/Amadeus/tmp/cv-yue-template-backup-20261111-150608/`，样稿与验收文件位于 `/Users/zixiang/project/outputs/cv-yue-template-2026-11-11/`。
+- 本轮为标准 CV 模板迁移；主页正文、项目页及网站公开 CV 下载副本未修改或发布。网站仍提供上一版三页 CV，待后续网站同步任务替换；不要把本地迁移写成线上已更新。
 
 ### 2026-11-11：项目完整标题、CV 分页与发布恢复
 
@@ -309,7 +337,16 @@ CV 维护属于本任务的长期职责，工作目录为 `/Users/zixiang/Amadeu
 - 首页 Latest Preprints 与完整论文页新增该条目；Paper 指向 `https://arxiv.org/abs/2610.16280`，Code & Data 指向 `https://github.com/yzhao062/agent-risk`。无已核实的独立项目页，不虚构 Project Page。原有论文相对顺序、Selected Work、News 和其他栏目不变。
 - 完整版 CV 在 Grid-Bench、AlgoWorlds 之后补入 agent-risk，顺延论文编号至 20；JevOut 继续紧跟 DyFlow。单页 CV 是精选版，保留原有 9 篇及一页排版，不强行加入全部论文；历史申请快照不变。
 - 已通过原 Makefile/Tectonic 重建及三页视觉检查；保持原页首、字号、间距和页数。网站下载副本同步最新标准完整版，也因此包含 10 月 21 日已批准的 CV 排序和后训练经历文案，不将 Meta 合作经历加入网站正文。
-- 原 `bundle exec` 仍缺既有依赖；在临时目录使用 Liquid 4.0.4 运行原 `docs/check-paper-links.rb`，20 篇完整列表、6+4 分组和五个项目页的链接/模板检查通过。未修改 Gemfile、锁文件或发布流程；正式构建及线上核验待本轮发布完成。
+- 原 `bundle exec` 仍缺既有依赖；在临时目录使用 Liquid 4.0.4 运行原 `docs/check-paper-links.rb`，20 篇完整列表、6+4 分组和五个项目页的链接/模板检查通过。未修改 Gemfile、锁文件或发布流程。
+- 发布提交 `104760f` 的 [GitHub Pages 构建与部署](https://github.com/xzx34/xzx34.github.io/actions/runs/39872776215) 已成功；线上首页与完整论文页均已核对新增条目、作者和按钮链接，线上 CV 与标准完整版逐字节相同。CV 第一页与修改前逐像素一致，原有论文内容及链接保留，实际链接由 59 增至 61。
+
+### 2026-10-21：CV 论文排序与后训练经历表述
+
+- 随后按用户反馈删除完整版 AlgoWorlds 描述中的 `evaluated seven LLMs`，保留环境构建及后训练轨迹生成；单页版原本无此句，不变。
+- 按用户要求将 Grid-Bench、AlgoWorlds 放在两份标准 CV 的最前面，JevOut 移到 DyFlow 后面；其他论文保留各自原有相对顺序。正式标题、作者、贡献标记、状态与资源链接不变。
+- 调整 WeChat AI、Alibaba、MBZUAI、Notre Dame 的经历描述，突出已有工作的后训练关联；保留 Led 与项目链接，不新增未经验证的训练算法、提升幅度或实验成果。Meta、MIT、Microsoft、教育、奖项、审稿和原版联系页首不变。
+- 已使用原 Makefile 重建并逐页渲染检查：完整版 3 页 / 19 篇论文，单页版 1 页 / 9 篇论文；59/45 个实际链接、论文内容与四项 PDF 元数据保持不变，页首文字/坐标/字号一致。正文未出现仅 1–2 个单词的尾行；未改共享样式、字号、Makefile 或 Meta 条目。修改前备份及检查结果保存在 `/private/tmp/cv-posttraining-20261021.SliGNl/`。
+- 本轮范围为两份本地标准 CV 与维护规范；不修改主页正文或论文排序，不同步/发布网站 CV 副本，也不覆盖历史申请快照。
 
 ### 2026-10-17：主页 Internships 同步项目主导经历
 
